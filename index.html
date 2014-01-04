@@ -1,0 +1,55 @@
+<!Doctype Html>
+<Html>
+<Head>
+<Meta Charset="Utf-8">
+<Meta Name="Application-name" Content="Přihláška na VŠ">
+<Meta Name="Author" Content="Pavel Dvořák, 8.O">
+<Meta Name="Description" Content="Online přihláška ke studiu na vysoké škole vytvořená ke zjednodušení vyplňování, posílání, tisku a následném schvalování.">
+<Meta Name="Keywords" Content="vysoká škola,přihláška,formuláře php,přihlášení,vš">
+<Meta Name="Robots" Content="Follow,index">
+<Link Type="Image/x-icon" Rel="Shortcut icon" Href="favicon.ico">
+<Link Type="Text/css" Rel="Stylesheet" Href="Aplikace/mfglabs_iconset.css">
+<Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
+<Style Type="Text/css">
+Body{Background-color:#eeeeee;Color:#111111;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0;Overflow:none;Text-align:center}
+A{Color:goldenrod;Font-weight:bold;Text-decoration:none}
+A:focus,A:hover,A:active{Color:gold}
+Header,Nav,Article,Footer{Width:100%;Margin:0 auto;Position:fixed;Left:0;Right:0}
+Header{Font-size:1.5em;Text-transform:uppercase;Top:0}
+Ul{List-style:none}
+Li{Display:inline-block;Margin-right:3em}
+Article{Position:absolute}
+Footer{Bottom:0}
+</Style>
+<Script Type="Text/javascript">
+function Posunout(){
+document.getElementsByTagName('Nav')[0].style.top=document.getElementsByTagName('Header')[0].offsetHeight+'px';
+document.getElementsByTagName('Article')[0].style.top=document.getElementsByTagName('Header')[0].offsetHeight+document.getElementsByTagName('Nav')[0].offsetHeight+'px';
+}
+</Script>
+<Title>Přihláška na VŠ</Title>
+</Head>
+<Body Onload="Posunout();">
+<Header>
+<H1>Přihláška na VŠ</H1>
+</Header>
+<Nav>
+<Ul>
+<Li><A Href="./" Title="Úvodní stránka"><I Class="icon-home icon3x"></I><Br>Domů</A></Li>
+<Li><A Href="Prihlaska/#Nova" Title="Nová přihláška"><I Class="icon-sheet icon3x"></I><Br>Nová</A></Li>
+<Li><A Href="Prihlaska/#Uprava" Title="Úprava uložené přihlášky"><I Class="icon-settings icon3x"></I><Br>Úprava</A></Li>
+<Li><A Href="Prihlaska/#Tisk" Title="Dodatečný tisk uložené přihlášky"><I Class="icon-printer icon3x"></I><Br>Tisk</A></Li>
+<Li><A Href="Pomoc.html" Title="Často pokládané dotazy a pomoc v nesnázích"><I Class="icon-white_question icon3x"></I><Br>Pomoc</A></Li>
+<Li><A Href="Info.html" Title="Informace o projektu"><I Class="icon-information_white icon3x"></I><Br>Info</A></Li>
+<Li><A Href="Vzkazy.html" Title="Připomínky, názory, chyby a dotazy"><I Class="icon-message icon3x"></I><Br>Vzkazy</A></Li>
+<Li><A Href="https://github.com/dvorapa/Formulare-v-PHP" Title="Vývoj a zdrojové kódy"><I Class="icon-octopus icon3x"></I><Br>GitHub</A></Li>
+</Ul>
+</Nav>
+<Article>
+<H1>Novinky</H1>
+</Article>
+<Footer>
+&copy; 2014 Pavel Dvořák
+</Footer>
+</Body>
+</Html>
