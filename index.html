@@ -11,58 +11,55 @@
 <Link Type="Text/css" Rel="Stylesheet" Href="Aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
 <Style Type="Text/css">
-Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0;Overflow:hidden;Text-align:center}
-A{Color:orange;Font-weight:bold;Text-decoration:none}
-A:focus,A:hover,A:active{Color:inherit}
-Header,Nav,Article,Footer{Width:100%;Margin:0 auto;Position:fixed;Left:0;Right:0}
-Header{Font-size:1.5em;Text-transform:uppercase;Top:0}
-Ul{List-style:none}
-Li{Display:inline-block;Margin-right:3em}
-Article{Position:absolute}
-Article A{Color:#999}
+Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0;Text-align:center}
+A{Color:#999;Font-weight:bold;Text-decoration:none}
+A:focus,A:hover,A:active{Text-shadow:0 0 0.5em}
+Header,Nav,Article,Footer{Width:100%;Margin:0 auto;Left:0;Right:0}
+Header{Font-size:1.5em;Text-transform:uppercase}
+Nav Li{Display:inline-block;List-style:none;Margin-right:3em}
+Nav Li:nth-of-type(3){Text-transform:uppercase}
+Nav A{Color:orange}
 Section{Width:66%;Margin:0 auto;Left:0;Right:0}
-Section Strong{Border:solid orange;Border-width:1px 0;Color:#999;Display:block;Left:17%;Padding:1em 0;Position:absolute;Width:6%}
-Section H1{Border-bottom:1px solid orange;Margin:0 0 0.5em 12%;Padding-bottom:0.25em;Text-align:left}
-Section P{Margin-left:12%;Text-align:left}
-Footer{Bottom:0}
+Section A{Color:#999}
+Footer{Margin-top:1em}
 </Style>
-<Script Type="Text/javascript">
-function Posunout(){
-document.getElementsByTagName('Nav')[0].style.top=document.getElementsByTagName('Header')[0].offsetHeight+'px';
-document.getElementsByTagName('Article')[0].style.top=document.getElementsByTagName('Header')[0].offsetHeight+document.getElementsByTagName('Nav')[0].offsetHeight+'px';
-}
-</Script>
 <Title>Přihláška na VŠ</Title>
 </Head>
-<Body Onload="Posunout();">
+<Body>
 <Header>
 <H1>Přihláška na VŠ</H1>
 </Header>
 <Nav>
 <Ul>
 <Li><A Href="./" Title="Úvodní stránka"><I Class="icon-home icon3x"></I><Br>Domů</A></Li>
-<Li><A Href="Prihlaska/#Nova" Title="Nová přihláška"><I Class="icon-sheet icon3x"></I><Br>Nová</A></Li>
-<Li><A Href="Prihlaska/#Uprava" Title="Úprava uložené přihlášky"><I Class="icon-settings icon3x"></I><Br>Úprava</A></Li>
-<Li><A Href="Prihlaska/#Tisk" Title="Dodatečný tisk uložené přihlášky"><I Class="icon-printer icon3x"></I><Br>Tisk</A></Li>
-<Li><A Href="Pomoc.html" Title="Často pokládané dotazy a pomoc v nesnázích"><I Class="icon-white_question icon3x"></I><Br>Pomoc</A></Li>
-<Li><A Href="Info.html" Title="Informace o projektu"><I Class="icon-information_white icon3x"></I><Br>Info</A></Li>
-<Li><A Href="Vzkazy.html" Title="Připomínky, názory, chyby, komentáře a dotazy"><I Class="icon-message icon3x"></I><Br>Vzkazy</A></Li>
-<Li><A Href="https://github.com/dvorapa/Formulare-v-PHP" Title="Vývoj a zdrojové kódy"><I Class="icon-octopus icon3x"></I><Br>GitHub</A></Li>
+<Li><A Href="Novinky.html" Title="Novinky a změny"><I Class="icon-newspaper icon3x"></I><Br>Novinky</A></Li>
+<Li><A Href="Prihlaska/" Title="Vyplnění nové a úprava nebo tisk staré přihlášky"><I Class="icon-pen icon3x"></I><Br>Přihláška</A></Li>
+<Li><A Href="https://github.com/dvorapa/Formulare-v-PHP" Title="Stav vývoje, hlášení chyb a zdrojové kódy"><I Class="icon-octopus icon3x"></I><Br>GitHub</A></Li>
+<Li><A Href="Vzkazy.html" Title="Připomínky, názory, komentáře a dotazy"><I Class="icon-message icon3x"></I><Br>Vzkazy</A></Li>
 </Ul>
 </Nav>
-<Article>
-<H1>Novinky</H1>
-<Section Id="2014-01-04">
-<Strong>4.1.<Br>2014</Strong>
-<H1>První návrh</H1>
-<P>
-První návrh online přihlášky na VŠ je na <A Href="https://github.com/dvorapa/Formulare-v-PHP" Title="dvorapa/Formulare-v-PHP">GitHubu</A>!
-Od teď tu můžete můžete testovat tuhle vývojovou verzi, která ale stále nepracuje tak, jak by měla (a díky chybějícím PHP a MySQL na GitHub Pages zatím ani pracovat nebude).
-Na GitHubu můžete sledovat aktuální stav vývoje nebo k vývoji přispět buď přímo vlastnoruční úpravou souborů, nebo alespoň nahlášením chyb.
-Vzkazy, připomínky a dotazy kdyžtak můžete psát <A Href="Vzkazy.html" Title="Připomínky, názory, chyby, komentáře a dotazy">sem</A>.
-</P>
+<Br>
+<Section>
+<H1>Přihláška na VŠ?</H1>
+Kdo se někdy hlásil na vysokou školu, tak ví, že každá škola to má jinak.
+Zatímco některé školy vyžadují jen standartní papírovou přihlášku prodejnou na školách a úřadech, jiné by raději vlastní papírovou přihlášku, která je k dostání přímo na dané fakultě.
+Některým stačí vlastní olnine formulář a další by raději, abyste se jim upsali osobně.
+A některé dokonce chtějí všechno dohromady a k tomu ještě přijímací pohovor.
+Buď jak buď studenti v tom mají docela guláš.
+A kdo se v tom má vyznat, když ne ti, kterých se to nejvíce týká?
+Chce-li se pak člověk hlásit na více škol a chce-li se někam dostat, musí se s tím prostě poprat a rozhodně to nemá lehké.
+Proto jsem vytvořil tuto aplikaci, která má za úkol poskytnout studentům snadnější způsob přihlášení se na vybranou vysokou školu, vybranou fakultu a vybraný obor.
 </Section>
-</Article>
+<Section>
+<H1>Aplikace</H1>
+K vytvoření uživatelsky přehledné a jednoduše ovladatelné aplikace, jsem použil volně přístupná data od dalších lidí nebo skupin lidí, které bych měl zmínit.
+Na texty jsem použil písmo <A Href="http://font.ubuntu.com/">Ubuntu</A> z dílen <A Href="http://www.canonical.com/">Canonical</A>.
+Navigaci jsem poskládal ze <A Href="http://mfglabs.github.io/mfglabs-iconset/">sady ikon</A> použité bez jakýchkoliv změn.
+Sada ikon je vyvinuta laboratořemi <A Href="http://mfglabs.com/">MFG Labs</A> a je dostupná pod licencí <A Href="http://creativecommons.org/licenses/by/3.0/deed.cs">CC BY-SA</A>.
+Vzkazník je tvořen webovou službou týmu <A Href="http://disqus.com/">Disqus</A>.
+Nesprávné chování ve starších prohlížečích jsem opravil aplikacemi <A Href="https://github.com/aFarkas/html5shiv/">HTML5 Shiv</A> Alexandra Farkase, (další přidám později).
+K samotnému vývoji jsem použil webovou službu <A Href="https://github.com/">GitHub</A> v kombinaci s textovým editorem <A Href="http://www.pspad.com/cz/">PSPad</A> Jana Fialy a webovým prohlížečem <A Href="https://www.google.com/intl/cs/chrome/">Chrome</A> od <A Href="https://www.google.cz/">Googlu</A>.
+</Section>
 <Footer>
 &copy; 2014 Pavel Dvořák
 </Footer>
