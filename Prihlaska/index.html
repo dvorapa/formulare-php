@@ -1,0 +1,90 @@
+<!Doctype Html>
+<Html>
+<Head>
+<Meta Charset="Utf-8">
+<Meta Name="Application-name" Content="Přihláška na VŠ">
+<Meta Name="Author" Content="Pavel Dvořák, 8.O">
+<Meta Name="Description" Content="Online přihláška ke studiu na vysoké škole vytvořená ke zjednodušení vyplňování, posílání, tisku a následném schvalování.">
+<Meta Name="Keywords" Content="vysoká škola,přihláška,formuláře php,přihlášení,vš">
+<Meta Name="Robots" Content="Follow,index">
+<Link Type="Image/x-icon" Rel="Shortcut icon" Href="../favicon.ico">
+<Link Type="Text/css" Rel="Stylesheet" Href="../Aplikace/mfglabs_iconset.css">
+<Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
+<Style Type="Text/css">
+Body{Background-color:#171717;Color:snow;Font-family:Ubuntu,"Open Sans",sans-serif;Font-size:1.5em;Margin:0;Overflow:hidden;Text-align:center}
+A{Color:snow;Font-weight:bold;Text-decoration:none}
+A:focus,A:hover,A:active{Text-shadow:0 0 0.5em}
+Header,Footer{Background-color:#171717;Position:fixed;Margin:0 auto;Left:0;Right:0;Z-index:1}
+Header{Text-transform:uppercase;Top:0}
+Nav,Article{Height:100%;Position:absolute;Width:100%;Z-index:0}
+Nav{Top:0}
+#Nova1{Top:100%}
+#Nova2{Top:200%}
+#Nova3{Top:300%}
+#Nova4{Top:400%}
+#Nova5{Top:500%}
+#Uprava1{Top:600%}
+#Export1{Top:700%}
+Nav Li{Display:inline-block;List-style:none;Margin:0 4em}
+Nav Li:nth-of-type(2){Text-transform:uppercase}
+Nav I,Article I{Font-size:8em}
+Footer{Bottom:0;Padding:1em 0}
+</Style>
+<Script Type="Text/javascript">
+var Stranky,Navigace,i;
+function Posunout(){
+Navigace=document.getElementsByTagName('Nav');
+for(i=0;i<Navigace.length;i++){
+Navigace[i].style.paddingTop=document.getElementsByTagName('Header')[0].offsetHeight+'px';
+Navigace[i].style.paddingBottom=document.getElementsByTagName('Footer')[0].offsetHeight+'px';
+}
+Stranky=document.getElementsByTagName('Article');
+for(i=0;i<Stranky.length;i++){
+Stranky[i].style.paddingTop=document.getElementsByTagName('Header')[0].offsetHeight+'px';
+Stranky[i].style.paddingBottom=document.getElementsByTagName('Footer')[0].offsetHeight+'px';
+}}
+</Script>
+<Title>Přihláška</Title>
+</Head>
+<Body Onload="Posunout();">
+<Header>
+<H1>Přihláška</H1>
+</Header>
+<Nav>
+<Ul>
+<Li><A Href="#Uprava1" Title="Úprava, kontrola a další podrobnosti uložené přihlášky"><I Class="icon-magnifying"></I><Br>Úprava</A></Li>
+<Li><A Href="#Nova1" Title="Vytvoření nové přihlášky a její následné zpracování"><I Class="icon-sheet"></I><Br>Nová</A></Li>
+<Li><A Href="#Export1" Title="Tisk, stažení nebo přeposlání uložené přihlášky"><I Class="icon-download"></I><Br>Export</A></Li>
+</Ul>
+</Nav>
+<Article Id="Nova1">
+Nová přihláška
+První stránka
+</Article>
+<Article Id="Nova2">
+Nová přihláška
+Druhá stránka
+</Article>
+<Article Id="Nova3">
+Nová přihláška
+Třetí stránka
+</Article>
+<Article Id="Nova4">
+Nová přihláška
+Čtvrtá stránka
+</Article>
+<Article Id="Nova5">
+Nová přihláška
+Pátá stránka
+</Article>
+<Article Id="Uprava1">
+Úprava přihlášky
+</Article>
+<Article Id="Export1">
+Export přihlášky
+</Article>
+<Footer>
+&copy; 2014 Pavel Dvořák
+</Footer>
+</Body>
+</Html>
