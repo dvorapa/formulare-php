@@ -13,4 +13,4 @@ TODO
 - [ ] [důležité] Sepsání postupu do maturitní práce (docx)
 - [ ] [později] Databáze vysokých škol a tvorba formuláře „na míru“
 
-⋅⋅⋅Databáze vysokých škol + fakult + oborů, z níž by aplikace poskládala formulář s přesnými instrukcemi přesně na míru a přesně zpracovala, případně připravila další vyžadované propriety a správně je zpracovala
+   Databáze vysokých škol + fakult + oborů, z níž by aplikace poskládala formulář s přesnými instrukcemi přesně na míru a přesně zpracovala, případně připravila další vyžadované propriety a správně je zpracovala
