@@ -3,15 +3,17 @@
 
 Maturitní práce na digitalizaci formuláře k přijetí na VŠ v předmětu Informačních a komunikačních technologií.
 
-TODO
-----
+Postup
+------
 
-- [x] ~~Počátek verzování (GitHub)~~
-- [x] ~~Vstupní stránka obsahující úvod + novinky + vzkazy (HTML a CSS, co nejméně JS)~~
-- [x] ~~Jednostránkové rozvržení aplikace (HTML a CSS, co nejméně JS)~~
-- [ ] [důležité] Vložení formuláře a procesu schválení do aplikace (PHP)
-- [ ] [důležité] Uložení, tisk, úprava apod. (PHP,MySQL,...)
-- [ ] [důležité] Sepsání postupu do maturitní práce (docx)
-- [ ] [později] Databáze vysokých škol a tvorba formuláře na míru (PHP/MySQL/JSON)\*
+1. ~~[✓] Vymyslet téma maturitní práce, podat příhlášku~~
+1. ~~[100%] Navrhnout aplikaci a funkce, napsat kód, základní testování (vzhled, funkčnost)~~
+2. [20%] Nahrát postupně kód na GitHub s poznámkami, rozvrhnout samotnou práci, pokročilé testování (prohlížeče, blbůvzdornost)
+3. [-%] Zpracovat verze a poznámky k 2, napsat první návrh práce, nechat zkritizovat
+4. [-krát] Opravit práci, odeslat k další kritice
+5. [-] Odevzdat finální práci, zpřístupnit škole/školám
 
-*\*Databáze vysokých škol + fakult + oborů, z níž by aplikace poskládala formulář s přesnými instrukcemi přesně na míru a přesně zpracovala, případně připravila další vyžadované propriety a správně je zpracovala.*
+Deadline
+--------
+
+**31.3.2013**
