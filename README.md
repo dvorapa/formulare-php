@@ -1,4 +1,4 @@
-[Formuláře v PHP](http://prihlaskanavs.wz.cz/)
+[Formuláře v PHP](http://prihlaskanavs.8u.cz/)
 ===============
 
 Maturitní práce na digitalizaci formuláře k přijetí na VŠ v předmětu Informačních a komunikačních technologií.
