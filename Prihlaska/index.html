@@ -5,7 +5,7 @@
 <Meta Name="Application-name" Content="Přihláška na VŠ">
 <Meta Name="Author" Content="Pavel Dvořák, 8.O">
 <Meta Name="Description" Content="Online přihláška ke studiu na vysoké škole vytvořená ke zjednodušení vyplňování, posílání, tisku a následném schvalování.">
-<Meta Name="Keywords" Content="vysoká škola,přihláška,formuláře php,přihlášení,vš">
+<Meta Name="Keywords" Content="vysoká škola,přihláška na vš,formuláře v php">
 <Meta Name="Robots" Content="Follow,index">
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="../favicon.ico">
 <Link Type="Text/css" Rel="Stylesheet" Href="../Aplikace/mfglabs_iconset.css">
@@ -61,6 +61,7 @@ Stranky[i].style.paddingBottom=document.getElementsByTagName('Footer')[0].offset
 <Li><A Href="#Export1" Title="Tisk, stažení nebo přeposlání uložené přihlášky"><I Class="icon-download"></I><Br>Export</A></Li>
 </Ul>
 </Nav>
+<Form Action="Nova.php" Method="Post">
 <Article Id="Nova1">
 <P>
 Nová přihláška
@@ -99,6 +100,7 @@ Nová přihláška
 Pátá stránka
 </P>
 </Article>
+</Form>
 <Article Id="Uprava1">
 Úprava přihlášky
 </Article>
