@@ -1,55 +1,77 @@
 <!Doctype Html>
-<Html>
+<Html Lang="Cs">
 <Head>
 <Meta Charset="Utf-8">
 <Meta Name="Application-name" Content="Přihláška na VŠ">
 <Meta Name="Author" Content="Pavel Dvořák, 8.O">
-<Meta Name="Description" Content="Online přihláška ke studiu na vysoké škole vytvořená ke zjednodušení vyplňování, posílání, tisku a následném schvalování.">
-<Meta Name="Keywords" Content="vysoká škola,přihláška na vš,formuláře v php">
+<Meta Name="Description" Content="Online přihláška ke studiu na vysoké škole vytvořená ke zjednodušení vyplňování, tisku a následném zasílání.">
+<Meta Name="Keywords" Content="přihláška,VŠ,formuláře,PHP,vysoké školy">
 <Meta Name="Robots" Content="Follow,index">
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="favicon.ico">
 <Link Type="Text/css" Rel="Stylesheet" Href="Aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
 <Style Type="Text/css">
-Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0;Text-align:center}
-A{Color:#999;Font-weight:bold;Text-decoration:none}
+@media (orientation:landscape){Body{Font-size:1.2em;Margin:0}
+Nav{Height:100%;Position:fixed;Width:22%}
+Nav:first-of-type{Left:0}
+Nav I:after{Content:" "}
+Nav A{Border-top:1px solid #242424;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
+Nav A:last-of-type{Border-bottom:1px solid #242424}
+Nav A:hover{Background-color:#242424}
+Article{Min-height:90%;Position:absolute;Top:5%;Width:56%}
+Nav:last-of-type{Right:0}
+Nav:last-of-type I{Font-size:3em}
+Nav:last-of-type I:after{Content:"\A";White-space:pre}
+}
+@media (orientation:portrait){Nav H1 I:after{Content:" "}
+Nav A{Display:inline-block;Margin:auto 0.5em}
+Nav A I{Font-size:3em}
+Nav A I:after{Content:"\A";White-space:pre}
+Article{Width:90%}
+}
+@media{Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Text-align:center}
+A{Color:#999;Text-decoration:none}
 A:focus,A:hover,A:active{Text-shadow:0 0 0.5em}
-Header,Nav,Section,Footer{Margin:0 auto;Left:0;Right:0}
-Header{Font-size:1.5em;Text-transform:uppercase}
-Nav Li{Display:inline-block;List-style:none;Margin-right:3em}
-Nav Li:nth-of-type(3){Text-transform:uppercase}
+H1,P{Margin:1em}
+H1{Font-weight:normal;Text-transform:uppercase}
 Nav A{Color:orange}
-Section{Width:66%}
-Section:first-of-type{Color:#999;Font-size:1.5em}
-Footer{Margin-top:1em}
+Article{Background-color:#242424;Margin:auto;Left:0;Right:0}
+}
 </Style>
+<!--[if lt IE 9]>
+<Script Type="Application/javascript" Src="Aplikace/html5shiv.js"></Script>
+<![endif]-->
 <Title>Přihláška na VŠ</Title>
 </Head>
 <Body>
-<Header>
-<H1>Přihláška na VŠ</H1>
-</Header>
 <Nav>
-<Ul>
-<Li><A Href="./" Title="Úvodní stránka"><I Class="icon-home icon3x"></I><Br>Domů</A></Li>
-<Li><A Href="Novinky.html" Title="Novinky a změny"><I Class="icon-newspaper icon3x"></I><Br>Novinky</A></Li>
-<Li><A Href="Prihlaska/" Title="Vyplnění nové a úprava nebo tisk staré přihlášky"><I Class="icon-pen icon3x"></I><Br>Přihláška</A></Li>
-<Li><A Href="https://github.com/dvorapa/Formulare-v-PHP" Title="Stav vývoje, hlášení chyb a zdrojové kódy"><I Class="icon-octopus icon3x"></I><Br>GitHub</A></Li>
-<Li><A Href="Vzkazy.html" Title="Připomínky, názory, komentáře a dotazy"><I Class="icon-message icon3x"></I><Br>Vzkazy</A></Li>
-</Ul>
+<H1><I Class="icon-list"></I>Přihláška na VŠ</H1>
+<A Href="/" Title="Úvodní stránka"><I Class="icon-home"></I>Domů</A>
+<A Href="Novinky.html" Title="Novinky a změny"><I Class="icon-newspaper"></I>Novinky</A>
+<A Href="https://github.com/dvorapa/Formulare-v-PHP" Title="Hlášení chyb a zdrojové kódy"><I Class="icon-octopus"></I>GitHub</A>
+<A Href="Vzkazy.html" Title="Připomínky a dotazy"><I Class="icon-message"></I>Vzkazy</A>
 </Nav>
-<Br>
-<Section>
+
+
+
+<Article>
 <H1>Přihláška na VŠ?</H1>
+<P>
 Kdo se někdy hlásil na vysokou školu, tak ví, že každá škola to má s přihláškou jinak.
 Zatímco některé školy vyžadují vlastní papírovou přihlášku, jiným stačí vlastní online formulář a další by raději, abyste se jim upsali osobně.
 Ale většina škol podporuje standardizovanou papírovou přihlášku společnosti SEVT (oranžový dvoulist).
 Jenže vyplnění takhle důležité přihlášky je velmi obtížné, zdlouhavé a nesmí se udělat jakákoliv, byť jen minimální chyba.
 Chce-li se pak člověk hlásit na více škol a chce-li se někam dostat, musí se s tím prostě poprat a rozhodně to nemá lehké.
 Proto jsem vytvořil tuto aplikaci, která má za úkol tuto přihlášku snadno vyplnit online.
-</Section>
-<Footer>
-&copy; 2014 Pavel Dvořák
-</Footer>
+</P>
+</Article>
+
+
+
+<Nav>
+<H1><I Class="icon-pen"></I>Vchod</H1>
+<A Href="Nova/" Title="Vytvoření nové přihlášky"><I Class="icon-sheet"></I>Nová</A>
+<A Href="Uprava/" Title="Úprava staré přihlášky"><I Class="icon-magnifying"></I>Úprava</A>
+</Nav>
 </Body>
 </Html>

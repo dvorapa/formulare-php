@@ -1,75 +1,83 @@
 <!Doctype Html>
-<Html>
+<Html Lang="Cs">
 <Head>
 <Meta Charset="Utf-8">
 <Meta Name="Application-name" Content="Přihláška na VŠ">
 <Meta Name="Author" Content="Pavel Dvořák, 8.O">
-<Meta Name="Description" Content="Online přihláška ke studiu na vysoké škole vytvořená ke zjednodušení vyplňování, posílání, tisku a následném schvalování.">
-<Meta Name="Keywords" Content="vysoká škola,přihláška na vš,formuláře v php">
+<Meta Name="Description" Content="Online přihláška ke studiu na vysoké škole vytvořená ke zjednodušení vyplňování, tisku a následném zasílání.">
+<Meta Name="Keywords" Content="přihláška,VŠ,formuláře,PHP,vysoké školy">
 <Meta Name="Robots" Content="Follow,index">
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="favicon.ico">
 <Link Type="Text/css" Rel="Stylesheet" Href="Aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
 <Style Type="Text/css">
-Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0;Text-align:center}
-A{Color:#999;Font-weight:bold;Text-decoration:none}
+@media (orientation:landscape){Body{Font-size:1.2em;Margin:0}
+Nav{Height:100%;Position:fixed;Width:22%}
+Nav:first-of-type{Left:0}
+Nav I:after{Content:" "}
+Nav A{Border-top:1px solid #242424;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
+Nav A:last-of-type{Border-bottom:1px solid #242424}
+Nav A:hover{Background-color:#242424}
+Article{Min-height:90%;Position:absolute;Top:5%;Width:56%}
+Nav:last-of-type{Right:0}
+Nav:last-of-type I{Font-size:3em}
+Nav:last-of-type I:after{Content:"\A";White-space:pre}
+}
+@media (orientation:portrait){Nav H1 I:after{Content:" "}
+Nav A{Display:inline-block;Margin:auto 0.5em}
+Nav A I{Font-size:3em}
+Nav A I:after{Content:"\A";White-space:pre}
+Article{Width:90%}
+}
+@media{Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Text-align:center}
+A{Color:#999;Text-decoration:none}
 A:focus,A:hover,A:active{Text-shadow:0 0 0.5em}
-Header,Nav,Article,Footer{Margin:0 auto;Left:0;Right:0}
-Header{Font-size:1.5em;Text-transform:uppercase}
-Nav Li{Display:inline-block;List-style:none;Margin-right:3em}
-Nav Li:nth-of-type(3){Text-transform:uppercase}
+H1,P{Margin:1em}
+H1{Font-weight:normal;Text-transform:uppercase}
 Nav A{Color:orange}
-Article{Width:66%}
-Section>A{Border:solid orange;Border-width:1px 0;Display:block;Left:17%;Padding:1em 0;Position:absolute;Width:6%}
-Section>H1,Section>P{Margin-left:12%;Text-align:left}
+Article{Background-color:#242424;Margin:auto;Left:0;Right:0}
+Section>A{Border:solid orange;Border-width:1px 0;Display:block;Left:5%;Padding:1em 0;Position:absolute;Width:10%}
+Section>H1,Section>P{Margin-left:20%;Text-align:left}
 Section>H1{Border-bottom:1px solid orange;Margin-bottom:0.5em;Padding-bottom:0.25em}
-Footer{Margin-top:1em}
+}
 </Style>
+<!--[if lt IE 9]>
+<Script Type="Application/javascript" Src="Aplikace/html5shiv.js"></Script>
+<![endif]-->
 <Title>Novinky | Přihláška na VŠ</Title>
 </Head>
 <Body>
-<Header>
-<H1>Přihláška na VŠ</H1>
-</Header>
 <Nav>
-<Ul>
-<Li><A Href="./" Title="Úvodní stránka"><I Class="icon-home icon3x"></I><Br>Domů</A></Li>
-<Li><A Href="Novinky.html" Title="Novinky a změny"><I Class="icon-newspaper icon3x"></I><Br>Novinky</A></Li>
-<Li><A Href="Prihlaska/" Title="Vyplnění nové a úprava nebo tisk staré přihlášky"><I Class="icon-pen icon3x"></I><Br>Přihláška</A></Li>
-<Li><A Href="https://github.com/dvorapa/Formulare-v-PHP" Title="Stav vývoje, hlášení chyb a zdrojové kódy"><I Class="icon-octopus icon3x"></I><Br>GitHub</A></Li>
-<Li><A Href="Vzkazy.html" Title="Připomínky, názory, komentáře a dotazy"><I Class="icon-message icon3x"></I><Br>Vzkazy</A></Li>
-</Ul>
+<H1><I Class="icon-list"></I>Přihláška na VŠ</H1>
+<A Href="/" Title="Úvodní stránka"><I Class="icon-home"></I>Domů</A>
+<A Href="Novinky.html" Title="Novinky a změny"><I Class="icon-newspaper"></I>Novinky</A>
+<A Href="https://github.com/dvorapa/Formulare-v-PHP" Title="Hlášení chyb a zdrojové kódy"><I Class="icon-octopus"></I>GitHub</A>
+<A Href="Vzkazy.html" Title="Připomínky a dotazy"><I Class="icon-message"></I>Vzkazy</A>
 </Nav>
-<Br>
+
+
+
 <Article>
 <H1>Novinky</H1>
-<Section Id="2014-01-04">
-<A Href="#2014-01-06">
-6.1.<Br>2014
+<Section Id="2014-02-09">
+<A Href="#2014-02-09">
+9.2.<Br>2014
 </A>
-<H1>Druhá meta</H1>
+<H1>Finální verze hotová!</H1>
 <P>
-Úvodní stránka aplikace a rozvržení dalších stránek formuláře je na <A Href="https://github.com/dvorapa/Formulare-v-PHP" Title="dvorapa/Formulare-v-PHP">GitHubu</A>!
-Vložení odpovídajících formulářových prvků budu nejspíše řešit vkládáním pomocí PHP, více proto zatím nefunguje a ani fungovat nebude.
-Ještě promyslím, na který freehosting demo umístím, aby vše (PHP a MySQL) fungovalo tak, jak má.
-Vzkazy, připomínky a dotazy kdyžtak můžete psát <A Href="Vzkazy.html" Title="Připomínky, názory, chyby, komentáře a dotazy">sem</A>.
-</P>
-</Section>
-<Section Id="2014-01-04">
-<A Href="#2014-01-04">
-4.1.<Br>2014
-</A>
-<H1>První návrh</H1>
-<P>
-První návrh online přihlášky na VŠ je na <A Href="https://github.com/dvorapa/Formulare-v-PHP" Title="dvorapa/Formulare-v-PHP">GitHubu</A>!
-Od teď tu můžete testovat tuhle vývojovou verzi, která ale stále nepracuje tak, jak by měla (a díky chybějícím PHP a MySQL na GitHub Pages zatím ani pracovat nebude).
-Na GitHubu můžete také sledovat aktuální stav vývoje nebo k vývoji přispět buď přímo vlastnoruční úpravou souborů, nebo alespoň nahlášením chyb.
-Vzkazy, připomínky a dotazy kdyžtak můžete psát <A Href="Vzkazy.html" Title="Připomínky, názory, chyby, komentáře a dotazy">sem</A>.
+Finální verze online přihlášky na VŠ je na <A Href="https://github.com/dvorapa/Formulare-v-PHP">GitHubu</A>.
+Přihláška je plně funkční a připravená na nápor testování na <A Href="http://prihlaskanavs.8u.cz/">této adrese</A>.
+Vzkazy, připomínky a dotazy kdyžtak můžete psát <A Href="Vzkazy.html">do vzkazů</A>.
 </P>
 </Section>
 </Article>
-<Footer>
-&copy; 2014 Pavel Dvořák
-</Footer>
+
+
+
+<Nav>
+<H1><I Class="icon-pen"></I>Vchod</H1>
+<A Href="Nova/" Title="Vytvoření nové přihlášky"><I Class="icon-sheet"></I>Nová</A>
+<A Href="Uprava/" Title="Úprava staré přihlášky"><I Class="icon-magnifying"></I>Úprava</A>
+</Nav>
 </Body>
 </Html>
