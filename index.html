@@ -4,38 +4,23 @@
 <Meta Charset="Utf-8">
 <Meta Name="Application-name" Content="Přihláška na VŠ">
 <Meta Name="Author" Content="Pavel Dvořák, 8.O">
-<Meta Name="Description" Content="Online přihláška ke studiu na vysoké škole vytvořená ke zjednodušení vyplňování, tisku a následném zasílání.">
+<Meta Name="Description" Content="Online přihláška ke studiu na vysoké škole vytvořená ke zjednodušení vyplňování, tisku a následném zasílání">
 <Meta Name="Keywords" Content="přihláška,VŠ,formuláře,PHP,vysoké školy">
 <Meta Name="Robots" Content="Follow,index">
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="favicon.ico">
 <Link Type="Text/css" Rel="Stylesheet" Href="Aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
+<Link Type="Text/css" Rel="Stylesheet" Href="Styly.css">
 <Style Type="Text/css">
-@media (orientation:landscape){Body{Font-size:1.2em;Margin:0}
-Nav{Height:100%;Position:fixed;Width:22%}
-Nav:first-of-type{Left:0}
-Nav I:after{Content:" "}
-Nav A{Border-top:1px solid #242424;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
-Nav A:last-of-type{Border-bottom:1px solid #242424}
+@media (orientation:landscape){
+Nav A,Nav A:last-of-type{Border-color:#242424}
 Nav A:hover{Background-color:#242424}
-Article{Min-height:90%;Position:absolute;Top:5%;Width:56%}
-Nav:last-of-type{Right:0}
-Nav:last-of-type I{Font-size:3em}
-Nav:last-of-type I:after{Content:"\A";White-space:pre}
 }
-@media (orientation:portrait){Nav H1 I:after{Content:" "}
-Nav A{Display:inline-block;Margin:auto 0.5em}
-Nav A I{Font-size:3em}
-Nav A I:after{Content:"\A";White-space:pre}
-Article{Width:90%}
-}
-@media{Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Text-align:center}
-A{Color:#999;Text-decoration:none}
-A:focus,A:hover,A:active{Text-shadow:0 0 0.5em}
-H1,P{Margin:1em}
-H1{Font-weight:normal;Text-transform:uppercase}
+@media{
+Body{Background-color:#171717;Color:#737373}
+A{Color:darkgray}
 Nav A{Color:orange}
-Article{Background-color:#242424;Margin:auto;Left:0;Right:0}
+Article{Background-color:#242424}
 }
 </Style>
 <!--[if lt IE 9]>

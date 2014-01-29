@@ -1,0 +1,33 @@
+@media (orientation:landscape){
+Body{Font-size:1.2em;Margin:0}
+Nav{Height:100%;Position:fixed;Width:18%}
+Nav:first-of-type{Left:0}
+Nav I:after{Content:" "}
+Nav A{Border-top:1px solid;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
+Nav A:last-of-type{Border-bottom:1px solid}
+Article,Form{Min-height:90%;Position:absolute;Top:5%;Width:64%}
+Nav:last-of-type{Right:0}
+Nav:last-of-type I{Font-size:3em}
+Nav:last-of-type I:after{Content:"\A";White-space:pre}
+}
+
+
+
+@media (orientation:portrait){
+Nav H1 I:after{Content:" "}
+Nav A{Display:inline-block;Margin:auto 0.5em}
+Nav A I{Font-size:3em}
+Nav A I:after{Content:"\A";White-space:pre}
+Article,Form{Width:90%}
+}
+
+
+
+@media{
+Body{Font-family:Ubuntu,"Open Sans",sans-serif;Text-align:center}
+A{Text-decoration:none}
+A:focus,A:hover,A:active{Text-shadow:0 0 0.5em}
+Body>*>Div,Body>*>P,Body>*>Section{Margin:2em}
+Body>*>H1{Font-weight:normal;Margin:1em;Text-transform:uppercase}
+Article,Form{Margin:auto;Left:0;Right:0}
+}
