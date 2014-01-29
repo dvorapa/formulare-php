@@ -3,8 +3,7 @@ Body{Font-size:1.2em;Margin:0}
 Nav{Height:100%;Position:fixed;Width:18%}
 Nav:first-of-type{Left:0}
 Nav I:after{Content:" "}
-Nav A{Border-top:1px solid;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
-Nav A:last-of-type{Border-bottom:1px solid}
+Nav A{Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
 Article,Form{Min-height:90%;Position:absolute;Top:5%;Width:64%}
 Nav:last-of-type{Right:0}
 Nav:last-of-type I{Font-size:3em}
