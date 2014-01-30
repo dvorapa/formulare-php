@@ -96,13 +96,14 @@ $_SESSION["PObor"]=$_POST["PObor"];
 $_SESSION["POd"]=$_POST["POd"];
 $_SESSION["PDo"]=$_POST["PDo"];
 $_SESSION["PTitul"]=$_POST["PTitul"];
+}
 
 /*  __                                   */
 /* (_ |_ _ _\/_ _ /   _ _    |_  _  _    */
 /* __)|_(_|/_(-| )|  _)(_)|_||_)(_)| |_| */
 /*                                       */
 $n=SID;
-$Sklad="$_POST['kekel'].SID".SID;//file_get_contents("Nova.php");
+$Sklad=file_get_contents("Nova.php");
 $Funkce=fopen($n.".html","r+");
 fwrite($Funkce,$Sklad);
 fclose($Funkce);
@@ -111,7 +112,8 @@ fclose($Funkce);
 /*  _/ _/ _ . _  /  /  \/  \|_/||_  */
 /* /__(_||_)|_)  \__\__/\__/| \||__ */
 /*       |                          */
-$d=time()+60*60*24*1;
+if(!empty($_POST["cookie"])){
+$d=time()+60*60*24*$_POST["cookie"];
 /*Úvod*/
 setcookie("AkadRok",$AkadRok,$d);
 setcookie("Program",$Program,$d);
@@ -203,12 +205,11 @@ setcookie("PObor",$PObor,$d);
 setcookie("POd",$POd,$d);
 setcookie("PDo",$PDo,$d);
 setcookie("PTitul",$PTitul,$d);
-setcookie("Kelek",$_POST["kekel"],$d)
+}
 
 /* ___                                 */
 /*  _/ _/ _ . _   _| _ |_ _ |_  _/_  _ */
 /* /__(_||_)|_)  (_|(_||_(_||_)(_|/_(- */
 /*       |                             */
 
-}
 ?>
