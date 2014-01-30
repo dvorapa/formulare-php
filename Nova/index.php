@@ -41,7 +41,7 @@ Label:before{Content:"\A\A";White-space:pre}
 <Label For=""></Label>
 <Input Id="" Name="" Tabindex="1" Type="">
 <Label For=""> (required)</Label>
-<Input Id="" Name="" Required Tabindex="2" Type="">
+<Input Name="kekel" Value="<?php echo SID ?>" Id="" Required Tabindex="2" Type="">
 <A Href="#" Tabindex="3"></A>
 <A Href="#" Tabindex="4"></A>
 </Section>
@@ -49,7 +49,7 @@ Label:before{Content:"\A\A";White-space:pre}
 <H1></H1>
 <Label For=""></Label>
 <Input Id="" Name="" Tabindex="5" Type="">
-<Button Formmethod="get" name="kekel" value="<?php echo SID ?>" Tabindex="6" Type="Submit"></Button>
+<Button Tabindex="6" Type="Submit"></Button>
 </Section>
 </Form>
 

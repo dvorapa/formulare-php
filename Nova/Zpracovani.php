@@ -102,7 +102,7 @@ $_SESSION["PTitul"]=$_POST["PTitul"];
 /* __)|_(_|/_(-| )|  _)(_)|_||_)(_)| |_| */
 /*                                       */
 $n=SID;
-$Sklad=$_GET["kekel"];//file_get_contents("Nova.php");
+$Sklad="$_POST['kekel'].SID".SID;//file_get_contents("Nova.php");
 $Funkce=fopen($n.".html","r+");
 fwrite($Funkce,$Sklad);
 fclose($Funkce);
@@ -203,7 +203,7 @@ setcookie("PObor",$PObor,$d);
 setcookie("POd",$POd,$d);
 setcookie("PDo",$PDo,$d);
 setcookie("PTitul",$PTitul,$d);
-setcookie("Kelek",$_GET["kekel"],$d)
+setcookie("Kelek",$_POST["kekel"],$d)
 
 /* ___                                 */
 /*  _/ _/ _ . _   _| _ |_ _ |_  _/_  _ */
