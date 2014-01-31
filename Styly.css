@@ -25,7 +25,7 @@ Article,Form{Width:90%}
 @media{
 Body{Font-family:Ubuntu,"Open Sans",sans-serif;Text-align:center}
 A{Text-decoration:none}
-A:hover,A:active{Text-shadow:0 0 0.5em}
+A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
 Button:hover,Button:active{Box-shadow:0 0 0.5em black}
 Body>*>Div,Body>*>P,Body>*>Section{Margin:2em}
 Body>*>H1{Font-weight:normal;Margin:1em;Text-transform:uppercase}
