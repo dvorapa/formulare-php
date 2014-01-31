@@ -25,8 +25,9 @@ Article,Form{Width:90%}
 @media{
 Body{Font-family:Ubuntu,"Open Sans",sans-serif;Text-align:center}
 A{Text-decoration:none}
-A:focus,A:hover,A:active{Text-shadow:0 0 0.5em}
+A:focus,A:hover,A:active,Button:focus,Button:hover,Button:active{Box-shadow:0 0 0.5em black;Text-shadow:0 0 0.5em}
 Body>*>Div,Body>*>P,Body>*>Section{Margin:2em}
 Body>*>H1{Font-weight:normal;Margin:1em;Text-transform:uppercase}
-Article,Form{Margin:auto;Left:0;Right:0}
+Article,Form{Margin:auto;Left:0;Right:0;Z-index:1}
+Button{Background-color:#737373;Border:0;Border-radius:0.25em;Color:#FFBF00;Cursor:pointer;Font-size:1em;Padding:0.5em 2em;Text-transform:uppercase}
 }
