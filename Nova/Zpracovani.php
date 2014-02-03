@@ -4,28 +4,69 @@
 /* /__|_)| (_|(_(_)\/(_|| )|.  |   |  ||    */
 /*    |                                     */
 session_start();
-$Pole=array("AkadRok","Program","Forma","Jazyk");############################### Proměnné
+$_SESSION["Pole"]=array(
+/*Úvod*/
+"AkadRok","Program","Forma","Jazyk",
+
+/*Vysoká škola*/
+"VSkola","VFakulta","VProgram","VOborA","VOborB","VOborC",
+
+/*Osobní údaje*/
+"Jmeno","Prijmeni","Rodne","Tituly","Pohlavi","StatniPris",
+
+/*Narození*/
+"DenNar","MesicNar","RokNar","MistoNar","OkresNar","CisloOP","RCislo","CisloP",
+
+/*Adresa trvalého bydliště*/
+"TUlice","TCislo","TCast","TObec","TOkres","TPSC","TTel","TPosta","TStat",
+
+/*Kontaktní adresa*/
+"KUlice","KCislo","KCast","KObec","KOkres","KPSC","KTel","KPosta","KStat",
+
+/*Střední škola*/
+"SNazev","SAdresa","SObor","SKOV","SObor","SKOV","SIZO","SRokMat",
+
+/*Uchazeč se hlásí*/
+"Odkud",
+
+/*Zájmová činnost*/
+"Zajmy",
+
+/*Průběh zaměstnání*/
+"Zamestnavatel","Zarazeni","ZOd","ZDo",
+
+/*Předchozí vysoká škola*/
+"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul"
+);
+
+/*Prospěch*/
+for($i=1;$i<28;$i++){
+$_SESSION["Pole"][]="Predmet".$i;
+$_SESSION["Pole"][]="Maturita".$i;
+for($j=1;$j<6;$j++){
+$_SESSION["Pole"][]="Predmet".$i."Rocnik".$j;
+}}
 
 /* ___                                   */
 /*  _/ _/ _ . _   _| _    _ _ _ _. _  _  */
 /* /__(_||_)|_)  (_|(_)  _)(-_)_)|(_)| ) */
 /*       |                               */
 if(!empty($_POST)){
-foreach($Pole as $Promenna){
-!empty($_POST[$Promenna])?$_SESSION[$Promenna]=$_POST[$Promenna]:$_SESSION[$Promenna]="";
-}
-}
+foreach($_SESSION["Pole"] as $Promenna){
+if(!empty($_POST[$Promenna])){
+$_SESSION[$Promenna]=$_POST[$Promenna];
+}}}
 
 /* ___                                 */
 /*  _/ _/ _ . _   _| _    _ _  _ | . _ */
 /* /__(_||_)|_)  (_|(_)  (_(_)(_)|(|(- */
 /*       |                             */
 if(!empty($_POST["Cookie"])){
-$d=time()+60*60*24*$_POST["Cookie"];############################################ $d => $_SESSION["d"]?
-foreach($Pole as $Promenna){
-setcookie($Promenna,$_SESSION[$Promenna],$d);
-}
-}
+$_SESSION["d"]=time()+60*60*24*$_POST["Cookie"];
+foreach($_SESSION["Pole"] as $Promenna){
+if(!empty($_POST[$Promenna])){
+setcookie($Promenna,$_SESSION[$Promenna],$_SESSION["d"]);
+}}}
 
 /* ___                                         */
 /*  _/ _/ _ . _   _| _    _| _ |_ _ |_  _/_  _ */
@@ -39,11 +80,30 @@ if(!empty($_POST["Databaze"])){
 /*  _/ _/ _ . _   _| _    _ _    |_  _  _    */
 /* /__(_||_)|_)  (_|(_)  _)(_)|_||_)(_)| |_| */
 /*       |                                   */
-$n=session_id();################################################################ $n => $_SESSION["n"]?
+if(!empty($_POST["Soubor"])){
+$_SESSION["n"]=session_id();
 $Sklad=file_get_contents("Nova.php");
-$Funkce=fopen("../Export/$n.php","w+");
+$Funkce=fopen("../Export/".$_SESSION["n"].".php","w+");
 fwrite($Funkce,$Sklad);
 fclose($Funkce);
-header("Location: Vysledek.php");
+}
 
+/*  __                                        */
+/* /  \ _| _|_  _ _/ _ /   _ _    |_  _  _    */
+/* \__/(_|(-|_)| (_|| )|  _)(_)|_||_)(_)| |_| */
+/*                                            */
+$Slozka="../Export/";
+$Soubory=array_diff(scandir($Slozka),array(".",".."));
+foreach($Soubory as $Soubor){
+if(filemtime($Slozka.$Soubor)<(time()-60*60*24*31)){
+unlink($Slozka.$Soubor);
+}}
+
+/*  __                          */
+/* |__)_˅_ _ _  _˅_ _    _/ _ / */
+/* |  | (-_)|||(-| (_)\/(_|| )| */
+/*                              */
+if(!empty($_POST["Kam"])){
+header("Location: ".$_POST["Kam"]);
+}
 ?>
