@@ -6,8 +6,6 @@ Nav I:after{Content:" "}
 Nav A{Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
 Article,Form{Min-height:90%;Position:absolute;Top:5%;Width:64%}
 Nav:last-of-type{Right:0}
-Nav:last-of-type I{Font-size:3em}
-Nav:last-of-type I:after{Content:"\A";White-space:pre}
 }
 
 
@@ -30,5 +28,7 @@ Button:hover,Button:active{Box-shadow:0 0 0.5em black}
 Body>*>Div,Body>*>P,Body>*>Section{Margin:2em}
 Body>*>H1{Font-weight:normal;Margin:1em;Text-transform:uppercase}
 Article,Form{Margin:auto;Left:0;Right:0;Z-index:1}
-Button{Background-color:#737373;Border:0;Border-radius:0.25em;Color:#FFBF00;Cursor:pointer;Font-size:1em;Padding:0.5em 2em;Text-transform:uppercase}
+Button{Background-color:#242424;Border:0;Border-radius:0.25em;Color:white;Cursor:pointer;Font-size:1em;Padding:0.5em 2em;Text-transform:uppercase}
+Button.Green{Background-color:red}
+Button.Red{Background-color:green}
 }
