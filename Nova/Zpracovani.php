@@ -105,5 +105,7 @@ unlink($Slozka.$Soubor);
 /*                              */
 if(!empty($_POST["Kam"])){
 header("Location: ".$_POST["Kam"]);
+}else{
+header("Location: ./Chyba.php");
 }
 ?>
