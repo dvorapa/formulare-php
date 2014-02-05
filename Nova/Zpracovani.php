@@ -15,7 +15,7 @@ $_SESSION["Pole"]=array(
 "Jmeno","Prijmeni","Rodne","Tituly","Pohlavi","StatniPris",
 
 /*Narození*/
-"DenNar","MesicNar","RokNar","MistoNar","OkresNar","CisloOP","RCislo","CisloP",
+"DatumNar","MistoNar","OkresNar","CisloOP","RCislo","CisloP",
 
 /*Adresa trvalého bydliště*/
 "TUlice","TCislo","TCast","TObec","TOkres","TPSC","TTel","TPosta","TStat",
@@ -24,7 +24,7 @@ $_SESSION["Pole"]=array(
 "KUlice","KCislo","KCast","KObec","KOkres","KPSC","KTel","KPosta","KStat",
 
 /*Střední škola*/
-"SNazev","SAdresa","SObor","SKOV","SObor","SKOV","SIZO","SRokMat",
+"SNazev","SAdresa","SJObor","SJKOV","SKObor","SKKOV","SIZO","SRokMat",
 
 /*Uchazeč se hlásí*/
 "Odkud",
@@ -33,10 +33,13 @@ $_SESSION["Pole"]=array(
 "Zajmy",
 
 /*Průběh zaměstnání*/
-"Zamestnavatel","Zarazeni","ZOd","ZDo",
+"Zamestnavatel","Zarazeni","ZOdDo",
 
 /*Předchozí vysoká škola*/
-"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul"
+"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul",
+
+/*Závěr*/
+"PHPSESSID","Email","Heslo"
 );
 
 /*Prospěch*/
@@ -73,7 +76,13 @@ setcookie($Promenna,$_SESSION[$Promenna],$_SESSION["d"]);
 /* /__(_||_)|_)  (_|(_)  (_|(_||_(_||_)(_|/_(- */
 /*       |                                     */
 if(!empty($_POST["Databaze"])){
-################################################################################ Databáze
+$Databaze=mysqli_connect("localhost","dvorapa","cepetauhacac","databazeprihlasek");
+foreach($_SESSION["Pole"] as $Promenna){
+if(!empty($_POST[$Promenna])){
+$_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
+mysqli_query($Databaze,"insert into Prihlasky (".$Promenna.") values (".$_SESSION[$Promenna].")");
+}}
+mysqli_close($Databaze);
 }
 
 /* ___                                       */
