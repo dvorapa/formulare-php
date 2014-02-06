@@ -1,8 +1,8 @@
 <?php
-/* ___                          __      __  */
-/*  _/ _  _ _  _ _    _/ _ /   |__)|__||__) */
-/* /__|_)| (_|(_(_)\/(_|| )|.  |   |  ||    */
-/*    |                                     */
+/* ___                            ______ __  */
+/*  _/ _  _ _  _ _    _/ _ /  |__| |  | |__) */
+/* /__|_)| (_|(_(_)\/(_|| )|  |  | |  | |    */
+/*    |                                      */
 session_start();
 $_SESSION["Pole"]=array(
 /*Úvod*/
@@ -38,8 +38,8 @@ $_SESSION["Pole"]=array(
 /*Předchozí vysoká škola*/
 "PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul",
 
-/*Závěr*/
-"PHPSESSID","Email","Heslo"
+/*Session ID*/
+"PHPSESSID"
 );
 
 /*Prospěch*/
@@ -50,22 +50,29 @@ for($j=1;$j<6;$j++){
 $_SESSION["Pole"][]="Predmet".$i."Rocnik".$j;
 }}
 
-/* ___                                   */
-/*  _/ _/ _ . _   _| _    _ _ _ _. _  _  */
-/* /__(_||_)|_)  (_|(_)  _)(-_)_)|(_)| ) */
-/*       |                               */
+/*  __                                    */
+/* |__)_˅_ _ . _   _| _    _ _ _ _. _  _  */
+/* |  | (-|_)|_)  (_|(_)  _)(-_)_)|(_)| ) */
+/*        |                               */
 if(!empty($_POST)){
 foreach($_SESSION["Pole"] as $Promenna){
 if(!empty($_POST[$Promenna])){
 $_SESSION[$Promenna]=$_POST[$Promenna];
 }}}
 
+/*                               */
+/* \  / /|_  _˅_  |  _ | _|  _ _ */
+/*  \/ \/|_)(-|   |((_)|(-|((_(- */
+/*     /                         */
+foreach($_POST as $Kolekce){
+if((is_array($Kolekce))&&(array_key_exists("Kam",$Kolekce))){
+
 /* ___                                 */
 /*  _/ _/ _ . _   _| _    _ _  _ | . _ */
 /* /__(_||_)|_)  (_|(_)  (_(_)(_)|(|(- */
 /*       |                             */
-if(!empty($_POST["Cookie"])){
-$_SESSION["d"]=time()+60*60*24*$_POST["Cookie"];
+if(array_key_exists("Cookie",$Kolekce)){
+$_SESSION["d"]=time()+60*60*24*$Kolekce["Cookie"];
 foreach($_SESSION["Pole"] as $Promenna){
 if(!empty($_POST[$Promenna])){
 setcookie($Promenna,$_SESSION[$Promenna],$_SESSION["d"]);
@@ -75,7 +82,7 @@ setcookie($Promenna,$_SESSION[$Promenna],$_SESSION["d"]);
 /*  _/ _/ _ . _   _| _    _| _ |_ _ |_  _/_  _ */
 /* /__(_||_)|_)  (_|(_)  (_|(_||_(_||_)(_|/_(- */
 /*       |                                     */
-if(!empty($_POST["Databaze"])){
+if(array_key_exists("Databaze",$Kolekce)){
 $Databaze=mysqli_connect("localhost","dvorapa","cepetauhacac","databazeprihlasek");
 foreach($_SESSION["Pole"] as $Promenna){
 if(!empty($_POST[$Promenna])){
@@ -89,7 +96,7 @@ mysqli_close($Databaze);
 /*  _/ _/ _ . _   _| _    _ _    |_  _  _    */
 /* /__(_||_)|_)  (_|(_)  _)(_)|_||_)(_)| |_| */
 /*       |                                   */
-if(!empty($_POST["Soubor"])){
+if(array_key_exists("Soubor",$Kolekce)){
 $_SESSION["n"]=session_id();
 $Sklad=file_get_contents("Nova.php");
 $Funkce=fopen("../Export/".$_SESSION["n"].".php","w+");
@@ -97,24 +104,10 @@ fwrite($Funkce,$Sklad);
 fclose($Funkce);
 }
 
-/*  __                                        */
-/* /  \ _| _|_  _ _/ _ /   _ _    |_  _  _    */
-/* \__/(_|(-|_)| (_|| )|  _)(_)|_||_)(_)| |_| */
-/*                                            */
-$Slozka="../Export/";
-$Soubory=array_diff(scandir($Slozka),array(".",".."));
-foreach($Soubory as $Soubor){
-if(filemtime($Slozka.$Soubor)<(time()-60*60*24*31)){
-unlink($Slozka.$Soubor);
-}}
-
 /*  __                          */
 /* |__)_˅_ _ _  _˅_ _    _/ _ / */
 /* |  | (-_)|||(-| (_)\/(_|| )| */
 /*                              */
-if(!empty($_POST["Kam"])){
-header("Location: ".$_POST["Kam"]);
-}else{
-header("Location: ./Chyba.php");
-}
+header("Location: ".$Kolekce["Kam"]);
+}}
 ?>
