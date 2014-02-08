@@ -24,7 +24,7 @@ $_SESSION["Pole"]=array(
 "KUlice","KCislo","KCast","KObec","KOkres","KPSC","KTel","KPosta","KStat",
 
 /*Střední škola*/
-"SNazev","SAdresa","SJObor","SJKOV","SKObor","SKKOV","SIZO","SRokMat",
+"SSkola","SAdresa","SJObor","SJKOV","SKObor","SKKOV","SIZO","SRokMat",
 
 /*Uchazeč se hlásí*/
 "Odkud",
@@ -33,7 +33,7 @@ $_SESSION["Pole"]=array(
 "Zajmy",
 
 /*Průběh zaměstnání*/
-"Zamestnavatel","Zarazeni","ZOdDo",
+"Zamestnavatel","Zarazeni","ZOd","ZDo",
 
 /*Předchozí vysoká škola*/
 "PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul",
