@@ -1,34 +1,39 @@
-@media (orientation:landscape){
-Body{Font-size:1.2em;Margin:0}
-Nav{Height:100%;Position:fixed;Width:18%}
-Nav:first-of-type{Left:0}
+Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0;Text-align:center}
+A{Color:darkgray;Text-decoration:none}
+A:hover,A:active{Text-shadow:0 0 0.5em}
+H1{Font-weight:normal;Text-transform:uppercase}
+Nav{Position:fixed;Z-index:1}
+Nav:first-of-type{Top:0;Left:0}
 Nav I:after{Content:" "}
-Nav A{Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
-Article,Form{Min-height:90%;Position:absolute;Top:5%;Width:64%}
-Nav:last-of-type{Right:0}
+Nav A{Color:orange}
+Article{Background-color:#242424;Margin:auto;Position:absolute}
+Nav:last-of-type{Bottom:0;Right:0}
+Nav:last-of-type I:after{Content:"\A";White-space:pre}
+
+
+
+@media (orientation:landscape){
+Body{Font-size:1.2em}
+H1{Margin:1em auto;Word-wrap:break-word}
+Nav{Width:18%}
+Nav A{Border-top:1px solid #242424;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
+Nav A:last-of-type{Border-bottom:1px solid #242424}
+Nav A:hover,Nav A:active{Background-color:#242424}
+Article{Min-height:90%;Width:64%;Top:5%;Left:0;Right:0}
+Section{Display:inline}
+Nav:last-of-type I{Font-size:3em}
 }
 
 
 
 @media (orientation:portrait){
-Nav H1 I:after{Content:" "}
-Nav A{Display:inline-block;Margin:auto 0.5em}
-Nav A I{Font-size:3em}
-Nav A I:after{Content:"\A";White-space:pre}
-Article,Form{Width:90%}
-}
-
-
-
-@media{
-Body{Font-family:Ubuntu,"Open Sans",sans-serif;Text-align:center}
-A{Text-decoration:none}
-A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
-Button:hover,Button:active{Box-shadow:0 0 0.5em black}
-Body>*>Div,Body>*>P,Body>*>Section{Margin:2em}
-Body>*>H1{Font-weight:normal;Margin:1em;Text-transform:uppercase}
-Article,Form{Margin:auto;Left:0;Right:0;Z-index:1}
-Button{Background-color:#242424;Border:0;Border-radius:0.25em;Color:white;Cursor:pointer;Font-size:1em;Padding:0.5em 2em;Text-transform:uppercase}
-Button.Green{Background-color:red}
-Button.Red{Background-color:green}
+Body{Overflow-y:hidden}
+Nav:first-of-type{Text-align:left}
+Nav>*{Margin:1em}
+Nav A{Display:inline-block}
+Article{Height:50%;Width:200%;Top:0;Bottom:0}
+Article H1{Position:fixed;Margin:auto;Left:0;Right:0}
+Section{Display:inline-block;Margin:6%;Width:36%}
+Nav:last-of-type>*{Display:inline-block}
+Nav:last-of-type I{Font-size:2em}
 }

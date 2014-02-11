@@ -12,20 +12,7 @@
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
 <Link Type="Text/css" Rel="Stylesheet" Href="Styly.css">
 <Style Type="Text/css">
-@media (orientation:landscape){
-Nav:last-of-type I{Font-size:3em}
-Nav:last-of-type I:after{Content:"\A";White-space:pre}
-Nav A{Border-top:1px solid}
-Nav A:last-of-type{Border-bottom:1px solid}
-Nav A,Nav A:last-of-type{Border-color:#242424}
-Nav A:hover,Nav A:active{Background-color:#242424}
-}
-@media{
-Body{Background-color:#171717;Color:#737373}
-A{Color:darkgray}
-Nav A{Color:orange}
-Article{Background-color:#242424}
-}
+
 </Style>
 <!--[if lt IE 9]>
 <Script Type="Application/javascript" Src="Aplikace/html5shiv.js"></Script>
@@ -45,22 +32,24 @@ Article{Background-color:#242424}
 
 <Article>
 <H1>Přihláška na VŠ?</H1>
-<P>
+<Section>
 Kdo se někdy hlásil na vysokou školu, tak ví, že každá škola to má s přihláškou jinak.
 Zatímco některé školy vyžadují vlastní papírovou přihlášku, jiným stačí vlastní online formulář a další by raději, abyste se jim upsali osobně.
 Ale většina škol podporuje standardizovanou papírovou přihlášku společnosti SEVT (oranžový dvoulist).
+</Section>
+<Section>
 Jenže vyplnění takhle důležité přihlášky je velmi obtížné, zdlouhavé a nesmí se udělat jakákoliv, byť jen minimální chyba.
 Chce-li se pak člověk hlásit na více škol a chce-li se někam dostat, musí se s tím prostě poprat a rozhodně to nemá lehké.
 Proto jsem vytvořil tuto aplikaci, která má za úkol tuto přihlášku snadno vyplnit online.
-</P>
+</Section>
 </Article>
 
 
 
 <Nav>
-<H1><I Class="icon-pen"></I>Vchod</H1>
 <A Href="Nova/" Title="Vytvoření nové přihlášky"><I Class="icon-sheet"></I>Nová</A>
 <A Href="Uprava/" Title="Úprava staré přihlášky"><I Class="icon-magnifying"></I>Úprava</A>
+<H1><I Class="icon-pen"></I>Vchod</H1>
 </Nav>
 </Body>
 </Html>
