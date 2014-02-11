@@ -1,39 +1,16 @@
-Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0;Text-align:center}
+Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Font-size:1.2em;Margin:0;Text-align:center}
 A{Color:darkgray;Text-decoration:none}
 A:hover,A:active{Text-shadow:0 0 0.5em}
-H1{Font-weight:normal;Text-transform:uppercase}
-Nav{Position:fixed;Z-index:1}
+Nav{Position:fixed;Width:18%;Z-index:1}
 Nav:first-of-type{Top:0;Left:0}
 Nav I:after{Content:" "}
-Nav A{Color:orange}
-Article{Background-color:#242424;Margin:auto;Position:absolute}
-Nav:last-of-type{Bottom:0;Right:0}
-Nav:last-of-type I:after{Content:"\A";White-space:pre}
-
-
-
-@media (orientation:landscape){
-Body{Font-size:1.2em}
-H1{Margin:1em auto;Word-wrap:break-word}
-Nav{Width:18%}
-Nav A{Border-top:1px solid #242424;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
+Nav H1{Font-weight:normal;Margin:1em auto;Word-wrap:break-word;Text-transform:uppercase}
+Nav A{Border-top:1px solid #242424;Color:orange;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
 Nav A:last-of-type{Border-bottom:1px solid #242424}
 Nav A:hover,Nav A:active{Background-color:#242424}
-Article{Min-height:90%;Width:64%;Top:5%;Left:0;Right:0}
-Section{Display:inline}
+Article{Background-color:#242424;Margin:auto;Min-height:90%;Position:absolute;Width:64%;Top:5%;Left:0;Right:0}
+Section{Margin:1em}
+Nav:last-of-type{Bottom:0;Right:0}
 Nav:last-of-type I{Font-size:3em}
-}
-
-
-
-@media (orientation:portrait){
-Body{Overflow-y:hidden}
-Nav:first-of-type{Text-align:left}
-Nav>*{Margin:1em}
-Nav A{Display:inline-block}
-Article{Height:50%;Width:200%;Top:0;Bottom:0}
-Article H1{Position:fixed;Margin:auto;Left:0;Right:0}
-Section{Display:inline-block;Margin:6%;Width:36%}
-Nav:last-of-type>*{Display:inline-block}
-Nav:last-of-type I{Font-size:2em}
-}
+Nav:last-of-type I:after{Content:"\A";White-space:pre}
+Footer{Margin:auto;Position:absolute;Left:0;Bottom:0;Right:0}

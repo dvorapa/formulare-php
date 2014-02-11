@@ -8,14 +8,11 @@
 <Meta Name="Keywords" Content="přihláška,VŠ,formuláře,PHP,vysoké školy">
 <Meta Name="Robots" Content="Nofollow,index">
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="favicon.ico">
-<Link Type="Text/css" Rel="Stylesheet" Href="Aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
+<Link Type="Text/css" Rel="Stylesheet" Href="Aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="Styly.css">
-<Style Type="Text/css">
-
-</Style>
-<!--[if lte IE 9]>
-<Script Type="Application/javascript" Src="Aplikace/html5shiv.js"></Script>
+<!--[if lt IE 9]>
+<Script Src="Aplikace/html5shiv.js"></Script>
 <![endif]-->
 <Title>Vzkazy | Přihláška na VŠ</Title>
 </Head>
@@ -32,6 +29,7 @@
 
 <Article>
 <H1>Vzkazy</H1>
+<Section>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -45,14 +43,15 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</Section>
 </Article>
 
 
 
 <Nav>
-<H1><I Class="icon-pen"></I>Vchod</H1>
 <A Href="Nova/" Title="Vytvoření nové přihlášky"><I Class="icon-sheet"></I>Nová</A>
 <A Href="Uprava/" Title="Úprava staré přihlášky"><I Class="icon-magnifying"></I>Úprava</A>
+<H1><I Class="icon-pen"></I>Vchod</H1>
 </Nav>
 </Body>
 </Html>
