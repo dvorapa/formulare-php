@@ -6,6 +6,7 @@ Nav{Position:fixed;Width:18%;Z-index:1}
 Nav:first-of-type{Top:0;Left:0}
 Nav I:after{Content:" "}
 Nav H1{Font-weight:normal;Margin:1em auto;Word-wrap:break-word;Text-transform:uppercase}
+Nav:last-of-type H1:first-of-type{Display:none}
 Nav A{Border-top:1px solid #242424;Color:orange;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
 Nav A:last-of-type{Border-bottom:1px solid #242424}
 Nav A:hover,Nav A:active{Background-color:#242424}
@@ -25,9 +26,10 @@ Nav H1{Font-weight:normal;Margin:1em auto;Word-wrap:break-word;Text-transform:up
 Nav A{Border-top:1px solid #242424;Color:orange;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
 Nav A:last-of-type{Border-bottom:1px solid #242424}
 Nav A:hover,Nav A:active{Background-color:#242424}
+Nav:last-of-type H1:last-of-type{Display:none}
+Nav:last-of-type A{Border:1px dashed #242424;Display:inline-block;Margin:0 1em;Width:5em}
 Nav:last-of-type I{Font-size:3em}
 Nav:last-of-type I:after{Content:"\A";White-space:pre}
-Nav:last-of-type A{Border-bottom:1px solid #242424;Display:inline-block;Margin:4em;Width:5em}
-Nav:last-of-type H1{Position:relative;Top:-8.5em;Z-index:-1}
+Nav:last-of-type H1{Display:inline-block;Margin:0 1em}
 Section{Margin:1em}
 }
