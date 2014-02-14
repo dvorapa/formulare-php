@@ -1,3 +1,4 @@
+@media (orientation:landscape){
 Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Font-size:1.2em;Margin:0;Text-align:center}
 A{Color:darkgray;Text-decoration:none}
 A:hover,A:active{Text-shadow:0 0 0.5em}
@@ -14,3 +15,15 @@ Nav:last-of-type{Bottom:0;Right:0}
 Nav:last-of-type I{Font-size:3em}
 Nav:last-of-type I:after{Content:"\A";White-space:pre}
 Footer{Margin:auto;Position:absolute;Left:0;Bottom:0;Right:0}
+}
+@media (orientation:portrait){
+Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Font-size:1.2em;Margin:0;Text-align:center}
+A{Color:darkgray;Text-decoration:none}
+A:hover,A:active{Text-shadow:0 0 0.5em}
+Nav I:after{Content:" "}
+Nav H1{Font-weight:normal;Margin:1em auto;Word-wrap:break-word;Text-transform:uppercase}
+Nav A{Border-top:1px solid #242424;Color:orange;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
+Nav A:last-of-type{Border-bottom:1px solid #242424}
+Nav A:hover,Nav A:active{Background-color:#242424}
+Section{Margin:1em}
+}
