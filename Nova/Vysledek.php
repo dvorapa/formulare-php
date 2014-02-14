@@ -43,5 +43,9 @@ Form{Background-color:white}
 <H1></H1>
 <A Href="" Title=""><I Class="icon-"></I></A>
 </Nav>
+
+<Footer>
+<Endora>
+</Footer>
 </Body>
 </Html>

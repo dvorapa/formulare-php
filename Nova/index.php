@@ -362,5 +362,9 @@ echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["P
 <Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
 <Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="./"><I Class="icon-upload"></I></Button>
 </Nav>
+
+<Footer>
+<Endora>
+</Footer>
 </Body>
 </Html>
