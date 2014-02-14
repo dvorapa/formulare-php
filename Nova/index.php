@@ -1,4 +1,15 @@
-<?php session_start(); ?>
+<?php
+session_start();
+if(!empty($_GET["Cookie"])){
+if(!empty($_COOKIE["Co"])){
+$_SESSION["c"]="";
+}else{
+$_SESSION["c"]="?".session_id();
+}}else{
+setcookie("Co","To",time()+60*60);
+header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
+}
+?>
 <!Doctype Html>
 <Html Lang="Cs">
 <Head>
@@ -8,6 +19,7 @@
 <Meta Name="Description" Content="Online přihláška ke studiu na vysoké škole vytvořená ke zjednodušení vyplňování, tisku a následném zasílání">
 <Meta Name="Keywords" Content="přihláška,VŠ,formuláře,PHP,vysoké školy">
 <Meta Name="Robots" Content="Follow,index">
+<Meta Name="Viewport" Content="width=device-width">
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="/favicon.ico">
 <Link Type="Text/css" Rel="Stylesheet" Href="/Aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
@@ -15,8 +27,8 @@
 <Style Type="Text/css">
 
 </Style>
-<!--[if lt IE 9]>
-<Script Type="Application/javascript" Src="Aplikace/html5shiv.js"></Script>
+<!--[if lte IE 9]>
+<Script Src="Aplikace/html5shiv.js"></Script>
 <![endif]-->
 <Title>Přihláška</Title>
 </Head>
@@ -27,7 +39,7 @@
 
 
 
-<Form Action="Zpracovani.php" Id="Formular" Method="Post">
+<Form Action="Zpracovani.php<?php echo $_SESSION["c"]; ?>" Id="Formular" Method="Post">
 <Section Id="Uvod">
 <H1>Úvod</H1>
 <Label For="AkadRok">Akademický rok</Label>

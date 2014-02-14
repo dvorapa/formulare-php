@@ -36,10 +36,7 @@ $_SESSION["Pole"]=array(
 "Zamestnavatel","Zarazeni","ZOd","ZDo",
 
 /*Předchozí vysoká škola*/
-"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul",
-
-/*Session ID*/
-"PHPSESSID"
+"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul"
 );
 
 /*Prospěch*/
@@ -84,6 +81,7 @@ setcookie($Promenna,$_SESSION[$Promenna],$_SESSION["d"]);
 /*       |                                     */
 if(array_key_exists("Databaze",$Kolekce)){
 $Databaze=mysqli_connect("localhost","dvorapa","cepetauhacac","databazeprihlasek");
+mysqli_query($Databaze,"insert into Prihlasky (PHPSESSID) values (".session_id().")");
 foreach($_SESSION["Pole"] as $Promenna){
 if(!empty($_POST[$Promenna])){
 $_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
@@ -97,9 +95,8 @@ mysqli_close($Databaze);
 /* /__(_||_)|_)  (_|(_)  _)(_)|_||_)(_)| |_| */
 /*       |                                   */
 if(array_key_exists("Soubor",$Kolekce)){
-$_SESSION["n"]=session_id();
 $Sklad=file_get_contents("Nova.php");
-$Funkce=fopen("../Export/".$_SESSION["n"].".php","w+");
+$Funkce=fopen("../Export/".session_id().".php".$_SESSION["c"],"w+");
 fwrite($Funkce,$Sklad);
 fclose($Funkce);
 }
@@ -108,6 +105,6 @@ fclose($Funkce);
 /* |__)_˅_ _ _  _˅_ _    _/ _ / */
 /* |  | (-_)|||(-| (_)\/(_|| )| */
 /*                              */
-header("Location: ".$Kolekce["Kam"]);
+header("Location: ".$Kolekce["Kam"].$_SESSION["c"]);
 }}
 ?>
