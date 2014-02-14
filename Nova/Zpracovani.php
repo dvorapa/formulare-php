@@ -81,11 +81,11 @@ setcookie($Promenna,$_SESSION[$Promenna],$_SESSION["d"]);
 /*       |                                     */
 if(array_key_exists("Databaze",$Kolekce)){
 $Databaze=mysqli_connect("localhost","dvorapa","cepetauhacac","databazeprihlasek");
-mysqli_query($Databaze,"insert into Prihlasky (PHPSESSID) values (".session_id().")");
+mysqli_query($Databaze,"insert into Prihlasky (PHPSESSID) values ('".session_id()."')");
 foreach($_SESSION["Pole"] as $Promenna){
 if(!empty($_POST[$Promenna])){
 $_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
-mysqli_query($Databaze,"insert into Prihlasky (".$Promenna.") values (".$_SESSION[$Promenna].")");
+mysqli_query($Databaze,"insert into Prihlasky (".$Promenna.") values ('".$_SESSION[$Promenna]."')");
 }}
 mysqli_close($Databaze);
 }
