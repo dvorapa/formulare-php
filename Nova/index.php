@@ -15,7 +15,6 @@
 <Style Type="Text/css">
 
 </Style>
-<Script Type="Application/javascript" Src="Skripty.js"></Script>
 <!--[if lt IE 9]>
 <Script Type="Application/javascript" Src="Aplikace/html5shiv.js"></Script>
 <![endif]-->
@@ -28,7 +27,7 @@
 
 
 
-<Form Action="Zpracovani.php" Id="Formular" Method="Post" Onsubmit="OpravitRequired(event);">
+<Form Action="Zpracovani.php" Id="Formular" Method="Post">
 <Section Id="Uvod">
 <H1>Úvod</H1>
 <Label For="AkadRok">Akademický rok</Label>
@@ -46,7 +45,7 @@
 <Input Id="distanční" Name="Forma" Tabindex="6" Type="Radio" Value="distanční"<?php echo (!empty($_SESSION['Forma'])&&$_SESSION['Forma']=='distanční')?' Checked':''; ?>>
 <Label For="distanční">distanční</Label>
 <Label For="Jazyk">Zvolený jazyk</Label>
-<Input Id="Jazyk" Name="Jazyk" Required Tabindex="7" Type="Text" Value="<?php echo !empty($_SESSION['Jazyk'])?$_SESSION['Jazyk']:''; ?>">
+<Input Id="Jazyk" Name="Jazyk" Tabindex="7" Type="Text" Value="<?php echo !empty($_SESSION['Jazyk'])?$_SESSION['Jazyk']:''; ?>">
 <Button Name="Dale[Kam]" Tabindex="8" Type="Submit" Value="./#VysokaSkola">Dále</Button>
 </Section>
 <Section Id="VysokaSkola">
