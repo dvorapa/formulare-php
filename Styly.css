@@ -1,6 +1,7 @@
 Body{Background-color:#171717;Color:#737373;Font-family:Ubuntu,"Open Sans",sans-serif;Font-size:1.2em;Margin:0;Text-align:center}
 A{Color:darkgray;Text-decoration:none}
-A:hover,A:active{Text-shadow:0 0 0.5em}Nav I:after{Content:" "}
+A:hover,A:active{Text-shadow:0 0 0.5em}
+Nav I:after{Content:" "}
 Nav H1{Font-weight:normal;Margin:1em auto;Word-wrap:break-word;Text-transform:uppercase}
 Nav A{Border-top:1px solid #242424;Color:orange;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
 Nav A:last-of-type{Border-bottom:1px solid #242424}
