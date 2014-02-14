@@ -63,6 +63,8 @@ $_SESSION[$Promenna]=$_POST[$Promenna];
 /*     /                         */
 foreach($_POST as $Kolekce){
 if((is_array($Kolekce))&&(array_key_exists("Kam",$Kolekce))){
+$_SESSION["Pole"][]="PHPSESSID";
+$_SESSION["PHPSESSID"]=session_id();
 
 /* ___                                 */
 /*  _/ _/ _ . _   _| _    _ _  _ | . _ */
