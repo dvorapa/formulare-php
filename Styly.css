@@ -25,9 +25,5 @@ Nav H1{Font-weight:normal;Margin:1em auto;Word-wrap:break-word;Text-transform:up
 Nav A{Border-top:1px solid #242424;Color:orange;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
 Nav A:last-of-type{Border-bottom:1px solid #242424}
 Nav A:hover,Nav A:active{Background-color:#242424}
-Nav:last-of-type I{Font-size:3em}
-Nav:last-of-type I:after{Content:"\A";White-space:pre}
-Nav:last-of-type A{Border-bottom:1px solid #242424;Display:inline-block;Margin:4em;Width:5em}
-Nav:last-of-type H1{Position:relative;Top:-8.5em;Z-index:-1}
 Section{Margin:1em}
 }
