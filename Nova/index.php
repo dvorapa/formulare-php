@@ -43,7 +43,7 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Section Id="Uvod">
 <H1>Úvod</H1>
 <Label For="AkadRok">Akademický rok</Label>
-<Input Id="AkadRok" Name="AkadRok" Tabindex="1" Type="Text" Value="<?php echo !empty($_SESSION['AkadRok'])?$_SESSION['AkadRok']:idate("Y")."/".(idate("Y")+1); ?>">
+<Input Id="AkadRok" Name="AkadRok" Tabindex="1" Type="Text" Value="<?php echo !empty($_SESSION['AkadRok'])?$_SESSION['AkadRok']:idate("Y")."/".(idate("Y")+1); ?>"><Br>
 <Label>Studijní program</Label>
 <Input Id="magisterský" Name="Program" Tabindex="2" Type="Radio" Value="bakalářský"<?php echo (!empty($_SESSION['Program'])&&$_SESSION['Program']=='bakalářský')?' Checked':''; ?>>
 <Label For="magisterský">magisterský</Label>
@@ -57,116 +57,112 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Input Id="distanční" Name="Forma" Tabindex="6" Type="Radio" Value="distanční"<?php echo (!empty($_SESSION['Forma'])&&$_SESSION['Forma']=='distanční')?' Checked':''; ?>>
 <Label For="distanční">distanční</Label>
 <Label For="Jazyk">Zvolený jazyk</Label>
-<Input Id="Jazyk" Name="Jazyk" Tabindex="7" Type="Text" Value="<?php echo !empty($_SESSION['Jazyk'])?$_SESSION['Jazyk']:''; ?>">
+<Input Id="Jazyk" Name="Jazyk" Tabindex="7" Type="Text" Value="<?php echo !empty($_SESSION['Jazyk'])?$_SESSION['Jazyk']:''; ?>"><Br>
 <Button Name="Dale[Kam]" Tabindex="8" Type="Submit" Value="./#VysokaSkola">Dále</Button>
 </Section>
 <Section Id="VysokaSkola">
 <H1>Vysoká škola</H1>
 <Label For="VSkola">Vysoká škola</Label>
-<Input Id="VSkola" Name="VSkola" Tabindex="9" Type="Text" Value="<?php echo !empty($_SESSION['VSkola'])?$_SESSION['VSkola']:''; ?>">
+<Input Id="VSkola" Name="VSkola" Tabindex="9" Type="Text" Value="<?php echo !empty($_SESSION['VSkola'])?$_SESSION['VSkola']:''; ?>"><Br>
 <Label For="VFakulta">Fakulta</Label>
-<Input Id="VFakulta" Name="VFakulta" Tabindex="10" Type="Text" Value="<?php echo !empty($_SESSION['VFakulta'])?$_SESSION['VFakulta']:''; ?>">
+<Input Id="VFakulta" Name="VFakulta" Tabindex="10" Type="Text" Value="<?php echo !empty($_SESSION['VFakulta'])?$_SESSION['VFakulta']:''; ?>"><Br>
 <Label For="VProgram">Studijní program</Label>
-<Input Id="VProgram" Name="VProgram" Tabindex="11" Type="Text" Value="<?php echo !empty($_SESSION['VProgram'])?$_SESSION['VProgram']:''; ?>">
+<Input Id="VProgram" Name="VProgram" Tabindex="11" Type="Text" Value="<?php echo !empty($_SESSION['VProgram'])?$_SESSION['VProgram']:''; ?>"><Br>
 <Label>Studijní obory</Label>
-<Input Id="VOborA" Name="VOborA" Tabindex="12" Type="Text" Value="<?php echo !empty($_SESSION['VOborA'])?$_SESSION['VOborA']:''; ?>">
-<Input Id="VOborB" Name="VOborB" Tabindex="13" Type="Text" Value="<?php echo !empty($_SESSION['VOborB'])?$_SESSION['VOborB']:''; ?>">
-<Input Id="VOborC" Name="VOborC" Tabindex="14" Type="Text" Value="<?php echo !empty($_SESSION['VOborC'])?$_SESSION['VOborC']:''; ?>">
+<Input Id="VOborA" Name="VOborA" Tabindex="12" Type="Text" Value="<?php echo !empty($_SESSION['VOborA'])?$_SESSION['VOborA']:''; ?>"><Br>
+<Input Id="VOborB" Name="VOborB" Tabindex="13" Type="Text" Value="<?php echo !empty($_SESSION['VOborB'])?$_SESSION['VOborB']:''; ?>"><Br>
+<Input Id="VOborC" Name="VOborC" Tabindex="14" Type="Text" Value="<?php echo !empty($_SESSION['VOborC'])?$_SESSION['VOborC']:''; ?>"><Br>
 <Button Name="Dale[Kam]" Tabindex="15" Type="Submit" Value="./#OsobniUdaje">Dále</Button>
 </Section>
 <Section Id="OsobniUdaje">
 <H1>Osobní údaje</H1>
 <Label For="Jmeno">Jméno</Label>
-<Input Id="Jmeno" Name="Jmeno" Tabindex="16" Type="Text" Value="<?php echo !empty($_SESSION['Jmeno'])?$_SESSION['Jmeno']:''; ?>">
+<Input Id="Jmeno" Name="Jmeno" Tabindex="16" Type="Text" Value="<?php echo !empty($_SESSION['Jmeno'])?$_SESSION['Jmeno']:''; ?>"><Br>
 <Label For="Prijmeni">Příjmení</Label>
-<Input Id="Prijmeni" Name="Prijmeni" Tabindex="17" Type="Text" Value="<?php echo !empty($_SESSION['Prijmeni'])?$_SESSION['Prijmeni']:''; ?>">
+<Input Id="Prijmeni" Name="Prijmeni" Tabindex="17" Type="Text" Value="<?php echo !empty($_SESSION['Prijmeni'])?$_SESSION['Prijmeni']:''; ?>"><Br>
 <Label For="Rodne">Rodné</Label>
-<Input Id="Rodne" Name="Rodne" Tabindex="18" Type="Text" Value="<?php echo !empty($_SESSION['Rodne'])?$_SESSION['Rodne']:''; ?>">
+<Input Id="Rodne" Name="Rodne" Tabindex="18" Type="Text" Value="<?php echo !empty($_SESSION['Rodne'])?$_SESSION['Rodne']:''; ?>"><Br>
 <Label For="Tituly">Tituly</Label>
-<Input Id="Tituly" Name="Tituly" Tabindex="19" Type="Text" Value="<?php echo !empty($_SESSION['Tituly'])?$_SESSION['Tituly']:''; ?>">
+<Input Id="Tituly" Name="Tituly" Tabindex="19" Type="Text" Value="<?php echo !empty($_SESSION['Tituly'])?$_SESSION['Tituly']:''; ?>"><Br>
 <Label>Pohlaví</Label>
 <Input Id="muz" Name="Pohlavi" Tabindex="20" Type="Radio" Value="muž"<?php echo (!empty($_SESSION['Pohlavi'])&&$_SESSION['Pohlavi']=='muž')?' Checked':''; ?>>
 <Label For="muz">muž</Label>
 <Input Id="zena" Name="Pohlavi" Tabindex="21" Type="Radio" Value="žena"<?php echo (!empty($_SESSION['Pohlavi'])&&$_SESSION['Pohlavi']=='žena')?' Checked':''; ?>>
 <Label For="zena">žena</Label>
 <Label For="StatniPris">Státní příslušnost</Label>
-<Input Id="StatniPris" Name="StatniPris" Tabindex="22" Type="Text" Value="<?php echo !empty($_SESSION['StatniPris'])?$_SESSION['StatniPris']:''; ?>">
+<Input Id="StatniPris" Name="StatniPris" Tabindex="22" Type="Text" Value="<?php echo !empty($_SESSION['StatniPris'])?$_SESSION['StatniPris']:''; ?>"><Br>
 <Button Name="Dale[Kam]" Tabindex="23" Type="Submit" Value="./#Narozeni">Dále</Button>
 </Section>
 <Section Id="Narozeni">
 <H1>Narození</H1>
 <Label For="DatumNar">Datum narození</Label>
-<Input Id="DatumNar" Name="DatumNar" Tabindex="24" Type="Date" Value="<?php echo !empty($_SESSION['DatumNar'])?$_SESSION['DatumNar']:''; ?>">
+<Input Id="DatumNar" Name="DatumNar" Tabindex="24" Type="Date" Value="<?php echo !empty($_SESSION['DatumNar'])?$_SESSION['DatumNar']:''; ?>"><Br>
 <Label For="MistoNar">Místo narození</Label>
-<Input Id="MistoNar" Name="MistoNar" Tabindex="25" Type="Text" Value="<?php echo !empty($_SESSION['MistoNar'])?$_SESSION['MistoNar']:''; ?>">
+<Input Id="MistoNar" Name="MistoNar" Tabindex="25" Type="Text" Value="<?php echo !empty($_SESSION['MistoNar'])?$_SESSION['MistoNar']:''; ?>"><Br>
 <Label For="OkresNar">Okres</Label>
-<Input Id="OkresNar" Name="OkresNar" Tabindex="26" Type="Text" Value="<?php echo !empty($_SESSION['OkresNar'])?$_SESSION['OkresNar']:''; ?>">
+<Input Id="OkresNar" Name="OkresNar" Tabindex="26" Type="Text" Value="<?php echo !empty($_SESSION['OkresNar'])?$_SESSION['OkresNar']:''; ?>"><Br>
 <Label For="CisloOP">Číslo občanského průkazu</Label>
-<Input Id="CisloOP" Name="CisloOP" Tabindex="27" Type="Number" Value="<?php echo !empty($_SESSION['CisloOP'])?$_SESSION['CisloOP']:''; ?>">
+<Input Id="CisloOP" Name="CisloOP" Tabindex="27" Type="Number" Value="<?php echo !empty($_SESSION['CisloOP'])?$_SESSION['CisloOP']:''; ?>"><Br>
 <Label For="RCislo">Rodné číslo</Label>
-<Input Id="RCislo" Name="RCislo" Tabindex="28" Type="Number" Value="<?php echo !empty($_SESSION['RCislo'])?$_SESSION['RCislo']:''; ?>">
+<Input Id="RCislo" Name="RCislo" Tabindex="28" Type="Number" Value="<?php echo !empty($_SESSION['RCislo'])?$_SESSION['RCislo']:''; ?>"><Br>
 <Label For="CisloP">Číslo pasu</Label>
-<Input Id="CisloP" Name="CisloP" Tabindex="29" Type="Number" Value="<?php echo !empty($_SESSION['CisloP'])?$_SESSION['CisloP']:''; ?>">
+<Input Id="CisloP" Name="CisloP" Tabindex="29" Type="Number" Value="<?php echo !empty($_SESSION['CisloP'])?$_SESSION['CisloP']:''; ?>"><Br>
 <Button Name="Dale[Kam]" Tabindex="30" Type="Submit" Value="./#AdresaTrvalehoBydliste">Dále</Button>
 </Section>
 <Section Id="AdresaTrvalehoBydliste">
 <H1>Adresa trvalého bydliště</H1>
 <Label For="TUlice">Ulice a číslo domu</Label>
 <Input Id="TUlice" Name="TUlice" Tabindex="31" Type="Text" Value="<?php echo !empty($_SESSION['TUlice'])?$_SESSION['TUlice']:''; ?>">
-<Input Id="TCislo" Name="TCislo" Tabindex="32" Type="Text" Value="<?php echo !empty($_SESSION['TCislo'])?$_SESSION['TCislo']:''; ?>">
+<Input Id="TCislo" Name="TCislo" Tabindex="32" Type="Text" Value="<?php echo !empty($_SESSION['TCislo'])?$_SESSION['TCislo']:''; ?>"><Br>
+<Label For="TCast">Část obce</Label>
+<Input Id="TCast" Name="TCast" Tabindex="33" Type="Text" Value="<?php echo !empty($_SESSION['TCast'])?$_SESSION['TCast']:''; ?>"><Br>
 <Label For="TObec">Obec a PSČ</Label>
 <Input Id="TObec" Name="TObec" Tabindex="34" Type="Text" Value="<?php echo !empty($_SESSION['TObec'])?$_SESSION['TObec']:''; ?>">
-<Input Id="TPSC" Max="99999" Name="TPSC" Tabindex="36" Type="Number" Value="<?php echo !empty($_SESSION['TPSC'])?$_SESSION['TPSC']:''; ?>">
-<Label For="TCast">Část obce</Label>
-<Input Id="TCast" Name="TCast" Tabindex="33" Type="Text" Value="<?php echo !empty($_SESSION['TCast'])?$_SESSION['TCast']:''; ?>">
-<Label For="TOkres">Okres</Label>
-<Input Id="TOkres" Name="TOkres" Tabindex="35" Type="Text" Value="<?php echo !empty($_SESSION['TOkres'])?$_SESSION['TOkres']:''; ?>">
-<Label For="TTel">Telefon</Label>
-<Input Id="TTel" Name="TTel" Tabindex="37" Type="Tel" Value="<?php echo !empty($_SESSION['TTel'])?$_SESSION['TTel']:''; ?>">
+<Input Id="TPSC" Max="99999" Name="TPSC" Tabindex="35" Type="Number" Value="<?php echo !empty($_SESSION['TPSC'])?$_SESSION['TPSC']:''; ?>"><Br>
 <Label For="TPosta">Pošta</Label>
-<Input Id="TPosta" Name="TPosta" Tabindex="38" Type="Text" Value="<?php echo !empty($_SESSION['TPosta'])?$_SESSION['TPosta']:''; ?>">
-<Label For="TStat">Stát</Label>
-<Input Id="TStat" Name="TStat" Tabindex="39" Type="Text" Value="<?php echo !empty($_SESSION['TStat'])?$_SESSION['TStat']:''; ?>">
+<Input Id="TPosta" Name="TPosta" Tabindex="36" Type="Text" Value="<?php echo !empty($_SESSION['TPosta'])?$_SESSION['TPosta']:''; ?>"><Br>
+<Label For="TOkres">Okres a stát</Label>
+<Input Id="TOkres" Name="TOkres" Tabindex="37" Type="Text" Value="<?php echo !empty($_SESSION['TOkres'])?$_SESSION['TOkres']:''; ?>">
+<Input Id="TStat" Name="TStat" Tabindex="38" Type="Text" Value="<?php echo !empty($_SESSION['TStat'])?$_SESSION['TStat']:''; ?>"><Br>
+<Label For="TTel">Telefon</Label>
+<Input Id="TTel" Name="TTel" Tabindex="39" Type="Tel" Value="<?php echo !empty($_SESSION['TTel'])?$_SESSION['TTel']:''; ?>"><Br>
 <Button Name="Dale[Kam]" Tabindex="40" Type="Submit" Value="./#KontaktniAdresa">Dále</Button>
 </Section>
 <Section Id="KontaktniAdresa">
 <H1>Kontaktní adresa</H1>
 <Label For="KUlice">Ulice a číslo domu</Label>
 <Input Id="KUlice" Name="KUlice" Tabindex="41" Type="Text" Value="<?php echo !empty($_SESSION['KUlice'])?$_SESSION['KUlice']:''; ?>">
-<Input Id="KCislo" Name="KCislo" Tabindex="42" Type="Text" Value="<?php echo !empty($_SESSION['KCislo'])?$_SESSION['KCislo']:''; ?>">
+<Input Id="KCislo" Name="KCislo" Tabindex="42" Type="Text" Value="<?php echo !empty($_SESSION['KCislo'])?$_SESSION['KCislo']:''; ?>"><Br>
+<Label For="KCast">Část obce</Label>
+<Input Id="KCast" Name="KCast" Tabindex="43" Type="Text" Value="<?php echo !empty($_SESSION['KCast'])?$_SESSION['KCast']:''; ?>"><Br>
 <Label For="KObec">Obec a PSČ</Label>
 <Input Id="KObec" Name="KObec" Tabindex="44" Type="Text" Value="<?php echo !empty($_SESSION['KObec'])?$_SESSION['KObec']:''; ?>">
-<Input Id="KPSC" Max="99999" Name="KPSC" Tabindex="46" Type="Number" Value="<?php echo !empty($_SESSION['KPSC'])?$_SESSION['KPSC']:''; ?>">
-<Label For="KCast">Část obce</Label>
-<Input Id="KCast" Name="KCast" Tabindex="43" Type="Text" Value="<?php echo !empty($_SESSION['KCast'])?$_SESSION['KCast']:''; ?>">
-<Label For="KOkres">Okres</Label>
-<Input Id="KOkres" Name="KOkres" Tabindex="45" Type="Text" Value="<?php echo !empty($_SESSION['KOkres'])?$_SESSION['KOkres']:''; ?>">
-<Label For="KTel">Telefon</Label>
-<Input Id="KTel" Name="KTel" Tabindex="47" Type="Tel" Value="<?php echo !empty($_SESSION['KTel'])?$_SESSION['KTel']:''; ?>">
+<Input Id="KPSC" Max="99999" Name="KPSC" Tabindex="45" Type="Number" Value="<?php echo !empty($_SESSION['KPSC'])?$_SESSION['KPSC']:''; ?>"><Br>
 <Label For="KPosta">Pošta</Label>
-<Input Id="KPosta" Name="KPosta" Tabindex="48" Type="Text" Value="<?php echo !empty($_SESSION['KPosta'])?$_SESSION['KPosta']:''; ?>">
-<Label For="KStat">Stát</Label>
-<Input Id="KStat" Name="KStat" Tabindex="49" Type="Text" Value="<?php echo !empty($_SESSION['KStat'])?$_SESSION['KStat']:''; ?>">
+<Input Id="KPosta" Name="KPosta" Tabindex="46" Type="Text" Value="<?php echo !empty($_SESSION['KPosta'])?$_SESSION['KPosta']:''; ?>"><Br>
+<Label For="KOkres">Okres a stát</Label>
+<Input Id="KOkres" Name="KOkres" Tabindex="47" Type="Text" Value="<?php echo !empty($_SESSION['KOkres'])?$_SESSION['KOkres']:''; ?>">
+<Input Id="KStat" Name="KStat" Tabindex="48" Type="Text" Value="<?php echo !empty($_SESSION['KStat'])?$_SESSION['KStat']:''; ?>"><Br>
+<Label For="KTel">Telefon</Label>
+<Input Id="KTel" Name="KTel" Tabindex="49" Type="Tel" Value="<?php echo !empty($_SESSION['KTel'])?$_SESSION['KTel']:''; ?>"><Br>
 <Button Name="Dale[Kam]" Tabindex="50" Type="Submit" Value="./#StredniSkola">Dále</Button>
 </Section>
 <Section Id="StredniSkola">
 <H1>Střední škola</H1>
 <Label For="SSkola">Název</Label>
-<Input Id="SSkola" Name="SSkola" Tabindex="51" Type="Text" Value="<?php echo !empty($_SESSION['SSkola'])?$_SESSION['SSkola']:''; ?>">
+<Input Id="SSkola" Name="SSkola" Tabindex="51" Type="Text" Value="<?php echo !empty($_SESSION['SSkola'])?$_SESSION['SSkola']:''; ?>"><Br>
 <Label For="SAdresa">Adresa</Label>
-<Input Id="SAdresa" Name="SAdresa" Tabindex="52" Type="Text" Value="<?php echo !empty($_SESSION['SAdresa'])?$_SESSION['SAdresa']:''; ?>">
-<Label For="SJObor">Obor</Label>
+<Input Id="SAdresa" Name="SAdresa" Tabindex="52" Type="Text" Value="<?php echo !empty($_SESSION['SAdresa'])?$_SESSION['SAdresa']:''; ?>"><Br>
+<Label For="SJObor">Obor a JKOV</Label>
 <Input Id="SJObor" Name="SJObor" Tabindex="53" Type="Text" Value="<?php echo !empty($_SESSION['SJObor'])?$_SESSION['SJObor']:''; ?>">
-<Label For="SJKOV">JKOV</Label>
-<Input Id="SJKOV" Name="SJKOV" Tabindex="54" Type="Number" Value="<?php echo !empty($_SESSION['SJKOV'])?$_SESSION['SJKOV']:''; ?>">
-<Label For="SKObor">Obor</Label>
+<Input Id="SJKOV" Name="SJKOV" Tabindex="54" Type="Number" Value="<?php echo !empty($_SESSION['SJKOV'])?$_SESSION['SJKOV']:''; ?>"><Br>
+<Label For="SKObor">Obor a KKOV</Label>
 <Input Id="SKObor" Name="SKObor" Tabindex="55" Type="Text" Value="<?php echo !empty($_SESSION['SKObor'])?$_SESSION['SKObor']:''; ?>">
-<Label For="SKKOV">KKOV</Label>
-<Input Id="SKKOV" Name="SKKOV" Tabindex="56" Type="Text" Value="<?php echo !empty($_SESSION['SKKOV'])?$_SESSION['SKKOV']:''; ?>">
+<Input Id="SKKOV" Name="SKKOV" Tabindex="56" Type="Text" Value="<?php echo !empty($_SESSION['SKKOV'])?$_SESSION['SKKOV']:''; ?>"><Br>
 <Label For="SIZO">IZO</Label>
-<Input Id="SIZO" Name="SIZO" Tabindex="57" Type="Number" Value="<?php echo !empty($_SESSION['SIZO'])?$_SESSION['SIZO']:''; ?>">
+<Input Id="SIZO" Name="SIZO" Tabindex="57" Type="Number" Value="<?php echo !empty($_SESSION['SIZO'])?$_SESSION['SIZO']:''; ?>"><Br>
 <Label For="SRokMat">Rok maturitní zkoušky</Label>
-<Input Id="SRokMat" Name="SRokMat" Tabindex="58" Type="Number" Value="<?php echo !empty($_SESSION['SRokMat'])?$_SESSION['SRokMat']:''; ?>">
+<Input Id="SRokMat" Name="SRokMat" Tabindex="58" Type="Number" Value="<?php echo !empty($_SESSION['SRokMat'])?$_SESSION['SRokMat']:''; ?>"><Br>
 <Button Name="Dale[Kam]" Tabindex="59" Type="Submit" Value="./#UchazecSeHlasi">Dále</Button>
 </Section>
 <Section Id="UchazecSeHlasi">
@@ -194,56 +190,59 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Section Id="ZajmovaCinnost">
 <H1>Zájmová činnost</H1>
 <Label For="Zajmy">Zájmy, úspěchy</Label>
-<Textarea Id="Zajmy" Name="Zajmy" Tabindex="70"><?php echo !empty($_SESSION['Zajmy'])?$_SESSION['Zajmy']:''; ?></Textarea>
+<Textarea Id="Zajmy" Name="Zajmy" Tabindex="70"><?php echo !empty($_SESSION['Zajmy'])?$_SESSION['Zajmy']:''; ?></Textarea><Br>
 <Button Name="Dale[Kam]" Tabindex="71" Type="Submit" Value="./#PrubehZamestnani">Dále</Button>
 </Section>
 <Section Id="PrubehZamestnani">
 <H1>Průběh zaměstnání</H1>
 <Label For="Zamestnavatel">Zaměstnavatel</Label>
-<Input Id="Zamestnavatel" Name="Zamestnavatel" Tabindex="72" Type="Text" Value="<?php echo !empty($_SESSION['Zamestnavatel'])?$_SESSION['Zamestnavatel']:''; ?>">
+<Input Id="Zamestnavatel" Name="Zamestnavatel" Tabindex="72" Type="Text" Value="<?php echo !empty($_SESSION['Zamestnavatel'])?$_SESSION['Zamestnavatel']:''; ?>"><Br>
 <Label For="Zarazeni">Pracovní zařazení</Label>
-<Input Id="Zarazeni" Name="Zarazeni" Tabindex="73" Type="Text" Value="<?php echo !empty($_SESSION['Zarazeni'])?$_SESSION['Zarazeni']:''; ?>">
-<Label For="ZOd">Od</Label>
+<Input Id="Zarazeni" Name="Zarazeni" Tabindex="73" Type="Text" Value="<?php echo !empty($_SESSION['Zarazeni'])?$_SESSION['Zarazeni']:''; ?>"><Br>
+<Label For="ZOd">Od - do</Label>
 <Input Id="ZOd" Name="ZOd" Tabindex="74" Type="Date" Value="<?php echo !empty($_SESSION['ZOd'])?$_SESSION['ZOd']:''; ?>">
-<Label For="ZDo">Do</Label>
-<Input Id="ZDo" Name="ZOdDo" Tabindex="74" Type="Date" Value="<?php echo !empty($_SESSION['ZDo'])?$_SESSION['ZDo']:''; ?>">
+<Input Id="ZDo" Name="ZOdDo" Tabindex="74" Type="Date" Value="<?php echo !empty($_SESSION['ZDo'])?$_SESSION['ZDo']:''; ?>"><Br>
 <Button Name="Dale[Kam]" Tabindex="75" Type="Submit" Value="./#PredchoziVysokaSkola">Dále</Button>
 </Section>
 <Section Id="PredchoziVysokaSkola">
 <H1>Předchozí vysoká škola</H1>
 <Label For="PSkola">Vysoká škola</Label>
-<Input Id="PSkola" Name="PSkola" Tabindex="76" Type="Text" Value="<?php echo !empty($_SESSION['PSkola'])?$_SESSION['PSkola']:''; ?>">
+<Input Id="PSkola" Name="PSkola" Tabindex="76" Type="Text" Value="<?php echo !empty($_SESSION['PSkola'])?$_SESSION['PSkola']:''; ?>"><Br>
 <Label For="PFakulta">Fakulta</Label>
-<Input Id="PFakulta" Name="PFakulta" Tabindex="77" Type="Text" Value="<?php echo !empty($_SESSION['PFakulta'])?$_SESSION['PFakulta']:''; ?>">
+<Input Id="PFakulta" Name="PFakulta" Tabindex="77" Type="Text" Value="<?php echo !empty($_SESSION['PFakulta'])?$_SESSION['PFakulta']:''; ?>"><Br>
 <Label For="PProgram">Studijní program</Label>
-<Input Id="PProgram" Name="PProgram" Tabindex="78" Type="Text" Value="<?php echo !empty($_SESSION['PProgram'])?$_SESSION['PProgram']:''; ?>">
+<Input Id="PProgram" Name="PProgram" Tabindex="78" Type="Text" Value="<?php echo !empty($_SESSION['PProgram'])?$_SESSION['PProgram']:''; ?>"><Br>
 <Label For="PObor">Studijní obor</Label>
-<Input Id="PObor" Name="PObor" Tabindex="79" Type="Text" Value="<?php echo !empty($_SESSION['PObor'])?$_SESSION['PObor']:''; ?>">
-<Label For="POd">Od</Label>
+<Input Id="PObor" Name="PObor" Tabindex="79" Type="Text" Value="<?php echo !empty($_SESSION['PObor'])?$_SESSION['PObor']:''; ?>"><Br>
+<Label For="POd">Od - do</Label>
 <Input Id="POd" Name="POd" Tabindex="80" Type="Date" Value="<?php echo !empty($_SESSION['POd'])?$_SESSION['POd']:''; ?>">
-<Label For="PDo">Do</Label>
-<Input Id="PDo" Name="PDo" Tabindex="81" Type="Date" Value="<?php echo !empty($_SESSION['PDo'])?$_SESSION['PDo']:''; ?>">
+<Input Id="PDo" Name="PDo" Tabindex="81" Type="Date" Value="<?php echo !empty($_SESSION['PDo'])?$_SESSION['PDo']:''; ?>"><Br>
 <Label For="PTitul">Udělený titul</Label>
-<Input Id="PTitul" Name="PTitul" Tabindex="82" Type="Text" Value="<?php echo !empty($_SESSION['PTitul'])?$_SESSION['PTitul']:''; ?>">
+<Input Id="PTitul" Name="PTitul" Tabindex="82" Type="Text" Value="<?php echo !empty($_SESSION['PTitul'])?$_SESSION['PTitul']:''; ?>"><Br>
 <Button Name="Dale[Kam]" Tabindex="83" Type="Submit" Value="./#Prospech">Dále</Button>
 </Section>
 <Section Id="Prospech">
 <H1>Prospěch</H1>
-<Label For=""></Label>
+<Table>
+<Tr><Th Rowspan="2">Předmět</Th><Th Colspan="5">Ročník</Th><Th Rowspan="2">Maturita</Th></Tr>
+<Tr><Th>I</Th><Th>II</Th><Th>III</Th><Th>IV</Th><Th>V</Th></Tr>
+<Tr><Td>
 <Input Id="" Name="" Tabindex="84" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
-<Label For=""></Label>
-<Input Id="" Name="" Tabindex="85" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
-<Label For=""></Label>
-<Input Id="" Name="" Tabindex="86" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
-<Label For=""></Label>
-<Input Id="" Name="" Tabindex="87" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
-<Label For=""></Label>
-<Input Id="" Name="" Tabindex="88" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
-<Label For=""></Label>
-<Input Id="" Name="" Tabindex="89" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
-<Label For=""></Label>
-<Input Id="" Name="" Tabindex="90" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
-<A Onclick=""><I Class="icon-plus"></I></A>
+</Td><Td>
+<Input Class="Znamka" Id="" Name="" Tabindex="85" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
+</Td><Td>
+<Input Class="Znamka" Id="" Name="" Tabindex="86" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
+</Td><Td>
+<Input Class="Znamka" Id="" Name="" Tabindex="87" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
+</Td><Td>
+<Input Class="Znamka" Id="" Name="" Tabindex="88" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
+</Td><Td>
+<Input Class="Znamka" Id="" Name="" Tabindex="89" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
+</Td><Td>
+<Input Class="Znamka" Id="" Name="" Tabindex="90" Type="Text" Value="<?php echo !empty($_SESSION[''])?$_SESSION['']:''; ?>">
+</Td></Tr>
+</Table>
+<A Onclick=""><I Class="icon-plus"></I></A><Br>
 <Button Name="Dale[Kam]" Type="Submit" Value="./#Kontrola">Dále</Button>
 </Section>
 <Section Id="Kontrola">
