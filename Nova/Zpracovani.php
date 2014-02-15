@@ -4,7 +4,7 @@
 /* /__|_)| (_|(_(_)\/(_|| )|  |  | |  | |    */
 /*    |                                      */
 session_start();
-$_SESSION["Pole"]=array(
+$Pole=array(
 /*Úvod*/
 "AkadRok","Program","Forma","Jazyk",
 
@@ -41,10 +41,10 @@ $_SESSION["Pole"]=array(
 
 /*Prospěch*/
 for($i=1;$i<28;$i++){
-$_SESSION["Pole"][]="Predmet".$i;
-$_SESSION["Pole"][]="Maturita".$i;
+$Pole[]="Predmet".$i;
+$Pole[]="Maturita".$i;
 for($j=1;$j<6;$j++){
-$_SESSION["Pole"][]="Predmet".$i."Rocnik".$j;
+$Pole[]="Predmet".$i."Rocnik".$j;
 }}
 
 /*  __                                    */
@@ -52,7 +52,7 @@ $_SESSION["Pole"][]="Predmet".$i."Rocnik".$j;
 /* |  | (-|_)|_)  (_|(_)  _)(-_)_)|(_)| ) */
 /*        |                               */
 if(!empty($_POST)){
-foreach($_SESSION["Pole"] as $Promenna){
+foreach($Pole as $Promenna){
 if(!empty($_POST[$Promenna])){
 $_SESSION[$Promenna]=$_POST[$Promenna];
 }}}
@@ -70,7 +70,7 @@ if((is_array($Kolekce))&&(array_key_exists("Kam",$Kolekce))){
 /*       |                             */
 if(array_key_exists("Cookie",$Kolekce)){
 $_SESSION["d"]=time()+60*60*24*$Kolekce["Cookie"];
-foreach($_SESSION["Pole"] as $Promenna){
+foreach($Pole as $Promenna){
 if(!empty($_POST[$Promenna])){
 setcookie($Promenna,$_SESSION[$Promenna],$_SESSION["d"]);
 }}}
@@ -81,11 +81,14 @@ setcookie($Promenna,$_SESSION[$Promenna],$_SESSION["d"]);
 /*       |                                     */
 if(array_key_exists("Databaze",$Kolekce)){
 $Databaze=mysqli_connect("localhost","dvorapa","cepetauhacac","databazeprihlasek");
-mysqli_query($Databaze,"insert into Prihlasky (PHPSESSID) values ('".session_id()."')");
-foreach($_SESSION["Pole"] as $Promenna){
+$Sklad="insert into Prihlasky set ";
+foreach($Pole as $Promenna){
 if(!empty($_POST[$Promenna])){
-mysqli_query($Databaze,"insert into Prihlasky ($Promenna) values ('{$_SESSION[$Promenna]}')");
+$_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
+$Sklad.="$Promenna='{$_SESSION[$Promenna]}',";
 }}
+$Sklad.="PHPSESSID='".session_id()."'";
+mysqli_query($Databaze,$Sklad);
 mysqli_close($Databaze);
 }
 
