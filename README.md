@@ -8,8 +8,8 @@ Postup
 
 1. ~~[✓] Vymyslet téma maturitní práce, podat příhlášku~~
 1. ~~[100%] Navrhnout aplikaci a funkce, napsat kód, základní testování (vzhled, funkčnost)~~
-2. [40%] Nahrát postupně kód na GitHub s poznámkami, rozvrhnout samotnou práci, pokročilé testování (prohlížeče, blbůvzdornost)
-3. [-%] Zpracovat verze a poznámky k předchozím bodům (zachytit postup), napsat první návrh práce (napsat postup), nechat zkritizovat
+2. [60%] Nahrát postupně kód na GitHub s poznámkami, rozvrhnout samotnou práci, pokročilé testování (prohlížeče, blbůvzdornost)
+3. [5%] Zpracovat verze a poznámky k předchozím bodům (zachytit postup), napsat první návrh práce (napsat postup), nechat zkritizovat
 4. [-krát] Opravit práci, odeslat k další kritice
 5. [-] Odevzdat finální práci, zpřístupnit škole/školám
 
