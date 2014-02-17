@@ -9,18 +9,18 @@ Input:not([Type="Radio"]):not(.Znamka){Width:20em}
 Textarea{Width:100%}
 Label:after{Content:"\A";White-space:pre}
 Nav I:after{Content:" "}
-Nav H1{Font-weight:normal;Margin:1em auto;Word-wrap:break-word;Text-transform:uppercase}
-Nav A{Border-top:1px solid #242424;Color:orange;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
+Nav H1{Font-weight:normal;Margin:1em;Word-wrap:break-word;Text-transform:uppercase}
+/*Nav A{Border-top:1px solid #242424;Color:orange;Display:block;Letter-spacing:1px;Padding:1em;Text-transform:uppercase}
 Nav A:last-of-type{Border-bottom:1px solid #242424}
-Nav A:hover,Nav A:active{Background-color:#242424}
+Nav A:hover,Nav A:active{Background-color:#242424}*/
 Section{Background-color:white;Margin-bottom:100%;Padding:2em}
-Table{Vertical-align:top}
+Section:last-of-type{Margin-bottom:5%}
+Th{Vertical-align:top}
 
 @media (orientation:landscape){
 Nav{Position:fixed;Text-align:center;Width:18%;Z-index:1}
 Nav:first-of-type{Top:0;Left:0}
-Form{Margin:auto;Min-height:90%;Position:absolute;Text-align:left;Width:64%;Top:5%;Left:0;Right:0}
+Form{Margin:auto;Position:absolute;Width:64%;Top:5%;Left:0;Right:0}
 Nav:last-of-type{Bottom:0;Right:0}
-Nav:last-of-type I:after{Content:"\A";White-space:pre}
-Footer{Margin:auto;Position:absolute;Left:0;Bottom:0;Right:0}
+Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }

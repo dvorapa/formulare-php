@@ -15,5 +15,5 @@ Article{Background-color:#242424;Margin:auto;Min-height:90%;Position:absolute;Wi
 Nav:last-of-type{Bottom:0;Right:0}
 Nav:last-of-type I{Font-size:3em}
 Nav:last-of-type I:after{Content:"\A";White-space:pre}
-Footer{Margin:auto;Position:absolute;Left:0;Bottom:0;Right:0}
+Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }
