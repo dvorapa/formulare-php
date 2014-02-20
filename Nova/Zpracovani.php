@@ -4,7 +4,7 @@
 /* /__|_)| (_|(_(_)\/(_|| )|  |  | |  | |    */
 /*    |                                      */
 session_start();
-$Pole=array(
+$_SESSION["PoleHodnot"]=array(
 /*Úvod*/
 "AkadRok","Program","Forma","Jazyk",
 
@@ -41,10 +41,10 @@ $Pole=array(
 
 /*Prospěch*/
 for($i=1;$i<28;$i++){
-$Pole[]="Predmet".$i;
-$Pole[]="Maturita".$i;
+$_SESSION["PoleHodnot"][]="Predmet".$i;
+$_SESSION["PoleHodnot"][]="Maturita".$i;
 for($j=1;$j<6;$j++){
-$Pole[]="Predmet".$i."Rocnik".$j;
+$_SESSION["PoleHodnot"][]="Predmet".$i."Rocnik".$j;
 }}
 
 /*  __                                    */
@@ -52,7 +52,7 @@ $Pole[]="Predmet".$i."Rocnik".$j;
 /* |  | (-|_)|_)  (_|(_)  _)(-_)_)|(_)| ) */
 /*        |                               */
 if(!empty($_POST)){
-foreach($Pole as $Promenna){
+foreach($_SESSION["PoleHodnot"] as $Promenna){
 if(!empty($_POST[$Promenna])){
 $_SESSION[$Promenna]=$_POST[$Promenna];
 }}}
@@ -70,7 +70,7 @@ if((is_array($Kolekce))&&(array_key_exists("Kam",$Kolekce))){
 /*       |                             */
 if(array_key_exists("Cookie",$Kolekce)){
 $_SESSION["d"]=time()+60*60*24*$Kolekce["Cookie"];
-foreach($Pole as $Promenna){
+foreach($_SESSION["PoleHodnot"] as $Promenna){
 if(!empty($_POST[$Promenna])){
 setcookie($Promenna,$_SESSION[$Promenna],$_SESSION["d"]);
 }}}
@@ -82,13 +82,13 @@ setcookie($Promenna,$_SESSION[$Promenna],$_SESSION["d"]);
 if(array_key_exists("Databaze",$Kolekce)){
 $Databaze=mysqli_connect("localhost","dvorapa","cepetauhacac","databazeprihlasek");
 $Sklad="insert into Prihlasky set ";
-foreach($Pole as $Promenna){
+foreach($_SESSION["PoleHodnot"] as $Promenna){
 if(!empty($_POST[$Promenna])){
-$_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);# Blbne kódování
+$_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
 $Sklad.="$Promenna='{$_SESSION[$Promenna]}',";
 }}
 $Sklad.="PHPSESSID='".session_id()."'";
-mysqli_query($Databaze,$Sklad);
+mysqli_query($Databaze,$Sklad);################################################# Blbne kódování
 mysqli_close($Databaze);
 }
 

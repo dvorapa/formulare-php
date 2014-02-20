@@ -1,4 +1,8 @@
 <?php
+/*                                    */
+/* \  /   _  _    |_ _/  _ _  _ | . _ */
+/*  \/ \/|_)| )|_||_(-  (_(_)(_)|(|(- */
+/*     / |                            */
 session_start();
 if(!empty($_GET["Cookie"])){
 if(!empty($_COOKIE["Co"])){
@@ -9,6 +13,26 @@ $_SESSION["c"]="?".session_id();
 setcookie("Co","To",time()+60*60);
 header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 }
+
+/*  __                         */
+/* (_ |_ _ _/ _ |  _    _/ _ / */ 
+/* __)|_| (_|| )|((_)\/(_|| )| */
+/*                             */
+$_SESSION["PoleStran"]=array(
+array(1,"Uvod","Úvod"),
+array(2,"VysokaSkola","Vysoká škola"),
+array(3,"OsobniUdaje","Osobní údaje"),
+array(4,"Narozeni","Narození"),
+array(5,"AdresaTrvalehoBydliste","Adresa trvalého bydliště"),
+array(6,"KontaktniAdresa","Kontaktní adresa"),
+array(7,"StredniSkola","Střední škola"),
+array(8,"UchazecSeHlasi","Uchazeč se hlásí"),
+array(9,"ZajmovaCinnost","Zájmová činnost"),
+array(10,"PrubehZamestnani","Průběh zaměstnání"),
+array(11,"PredchoziVysokaSkola","Předchozí vysoká škola"),
+array(12,"Prospech","Prospěch"),
+array(13,"Kontrola","Kontrola")
+);
 ?>
 <!Doctype Html>
 <Html Lang="Cs">
@@ -34,7 +58,12 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 </Head>
 <Body>
 <Nav>
-<H1>Přihláška</H1>
+<H1></H1>
+<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./">Zpět</Button><Br>
+<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./">Dále</Button><Br>
+<Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="1">
+<Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
+<Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="./">Uložit</Button>
 </Nav>
 
 
@@ -58,7 +87,7 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Label For="distanční">distanční</Label>
 <Label For="Jazyk">Zvolený jazyk</Label>
 <Input Id="Jazyk" Name="Jazyk" Tabindex="7" Type="Text" Value="<?php echo !empty($_SESSION['Jazyk'])?$_SESSION['Jazyk']:''; ?>"><Br>
-<Button Name="Dale[Kam]" Tabindex="8" Type="Submit" Value="./#VysokaSkola">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="8" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="VysokaSkola">
 <H1>Vysoká škola</H1>
@@ -72,7 +101,7 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Input Id="VOborA" Name="VOborA" Tabindex="12" Type="Text" Value="<?php echo !empty($_SESSION['VOborA'])?$_SESSION['VOborA']:''; ?>"><Br>
 <Input Id="VOborB" Name="VOborB" Tabindex="13" Type="Text" Value="<?php echo !empty($_SESSION['VOborB'])?$_SESSION['VOborB']:''; ?>"><Br>
 <Input Id="VOborC" Name="VOborC" Tabindex="14" Type="Text" Value="<?php echo !empty($_SESSION['VOborC'])?$_SESSION['VOborC']:''; ?>"><Br>
-<Button Name="Dale[Kam]" Tabindex="15" Type="Submit" Value="./#OsobniUdaje">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="15" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="OsobniUdaje">
 <H1>Osobní údaje</H1>
@@ -91,7 +120,7 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Label For="zena">žena</Label>
 <Label For="StatniPris">Státní příslušnost</Label>
 <Input Id="StatniPris" Name="StatniPris" Tabindex="22" Type="Text" Value="<?php echo !empty($_SESSION['StatniPris'])?$_SESSION['StatniPris']:''; ?>"><Br>
-<Button Name="Dale[Kam]" Tabindex="23" Type="Submit" Value="./#Narozeni">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="23" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="Narozeni">
 <H1>Narození</H1>
@@ -107,7 +136,7 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Input Id="RCislo" Name="RCislo" Tabindex="28" Type="Number" Value="<?php echo !empty($_SESSION['RCislo'])?$_SESSION['RCislo']:''; ?>"><Br>
 <Label For="CisloP">Číslo pasu</Label>
 <Input Id="CisloP" Name="CisloP" Tabindex="29" Type="Number" Value="<?php echo !empty($_SESSION['CisloP'])?$_SESSION['CisloP']:''; ?>"><Br>
-<Button Name="Dale[Kam]" Tabindex="30" Type="Submit" Value="./#AdresaTrvalehoBydliste">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="30" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="AdresaTrvalehoBydliste">
 <H1>Adresa trvalého bydliště</H1>
@@ -126,7 +155,7 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Input Id="TStat" Name="TStat" Tabindex="38" Type="Text" Value="<?php echo !empty($_SESSION['TStat'])?$_SESSION['TStat']:''; ?>"><Br>
 <Label For="TTel">Telefon</Label>
 <Input Id="TTel" Name="TTel" Tabindex="39" Type="Tel" Value="<?php echo !empty($_SESSION['TTel'])?$_SESSION['TTel']:''; ?>"><Br>
-<Button Name="Dale[Kam]" Tabindex="40" Type="Submit" Value="./#KontaktniAdresa">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="40" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="KontaktniAdresa">
 <H1>Kontaktní adresa</H1>
@@ -145,7 +174,7 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Input Id="KStat" Name="KStat" Tabindex="48" Type="Text" Value="<?php echo !empty($_SESSION['KStat'])?$_SESSION['KStat']:''; ?>"><Br>
 <Label For="KTel">Telefon</Label>
 <Input Id="KTel" Name="KTel" Tabindex="49" Type="Tel" Value="<?php echo !empty($_SESSION['KTel'])?$_SESSION['KTel']:''; ?>"><Br>
-<Button Name="Dale[Kam]" Tabindex="50" Type="Submit" Value="./#StredniSkola">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="50" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="StredniSkola">
 <H1>Střední škola</H1>
@@ -163,7 +192,7 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Input Id="SIZO" Name="SIZO" Tabindex="57" Type="Number" Value="<?php echo !empty($_SESSION['SIZO'])?$_SESSION['SIZO']:''; ?>"><Br>
 <Label For="SRokMat">Rok maturitní zkoušky</Label>
 <Input Id="SRokMat" Name="SRokMat" Tabindex="58" Type="Number" Value="<?php echo !empty($_SESSION['SRokMat'])?$_SESSION['SRokMat']:''; ?>"><Br>
-<Button Name="Dale[Kam]" Tabindex="59" Type="Submit" Value="./#UchazecSeHlasi">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="59" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="UchazecSeHlasi">
 <H1>Uchazeč se hlásí</H1>
@@ -185,13 +214,13 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Label For="Voj">z vojenské služby</Label>
 <Input Id="Odj" Name="Odkud" Tabindex="68" Type="Radio" Value="jiné"<?php echo (!empty($_SESSION['Odkud'])&&$_SESSION['Odkud']=='jiné')?' Checked':''; ?>>
 <Label For="Odj">odjinud</Label>
-<Button Name="Dale[Kam]" Tabindex="69" Type="Submit" Value="./#ZajmovaCinnost">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="69" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="ZajmovaCinnost">
 <H1>Zájmová činnost</H1>
 <Label For="Zajmy">Zájmy, úspěchy</Label>
 <Textarea Id="Zajmy" Name="Zajmy" Tabindex="70"><?php echo !empty($_SESSION['Zajmy'])?$_SESSION['Zajmy']:''; ?></Textarea><Br>
-<Button Name="Dale[Kam]" Tabindex="71" Type="Submit" Value="./#PrubehZamestnani">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="71" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="PrubehZamestnani">
 <H1>Průběh zaměstnání</H1>
@@ -202,7 +231,7 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Label For="ZOd">Od - do</Label>
 <Input Id="ZOd" Name="ZOd" Tabindex="74" Type="Date" Value="<?php echo !empty($_SESSION['ZOd'])?$_SESSION['ZOd']:''; ?>">
 <Input Id="ZDo" Name="ZOdDo" Tabindex="74" Type="Date" Value="<?php echo !empty($_SESSION['ZDo'])?$_SESSION['ZDo']:''; ?>"><Br>
-<Button Name="Dale[Kam]" Tabindex="75" Type="Submit" Value="./#PredchoziVysokaSkola">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="75" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="PredchoziVysokaSkola">
 <H1>Předchozí vysoká škola</H1>
@@ -219,7 +248,7 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 <Input Id="PDo" Name="PDo" Tabindex="81" Type="Date" Value="<?php echo !empty($_SESSION['PDo'])?$_SESSION['PDo']:''; ?>"><Br>
 <Label For="PTitul">Udělený titul</Label>
 <Input Id="PTitul" Name="PTitul" Tabindex="82" Type="Text" Value="<?php echo !empty($_SESSION['PTitul'])?$_SESSION['PTitul']:''; ?>"><Br>
-<Button Name="Dale[Kam]" Tabindex="83" Type="Submit" Value="./#Prospech">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="83" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="Prospech">
 <H1>Prospěch</H1>
@@ -243,7 +272,7 @@ header("Location: {$_SERVER['PHP_SELF']}?Cookie=true");
 </Td></Tr>
 </Table>
 <A Onclick=""><I Class="icon-plus"></I></A><Br>
-<Button Name="Dale[Kam]" Type="Submit" Value="./#Kontrola">Dále</Button>
+<Button Name="Prejit[Kam]" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="Kontrola">
 <H1>Kontrola</H1>
@@ -357,9 +386,11 @@ echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["P
 
 <Nav>
 <H1></H1>
-<Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="1">
-<Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
-<Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="./"><I Class="icon-upload"></I></Button>
+<?php
+foreach($_SESSION["PoleStran"] as $Promenna){
+echo "<A Href='#{$Promenna[1]}'>{$Promenna[0]}. {$Promenna[2]}</A>";
+}
+?>
 </Nav>
 
 <Footer>
