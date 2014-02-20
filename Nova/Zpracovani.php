@@ -88,7 +88,7 @@ $_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
 $Sklad.="$Promenna='{$_SESSION[$Promenna]}',";
 }}
 $Sklad.="PHPSESSID='".session_id()."'";
-mysqli_query($Databaze,$Sklad);################################################# Blbne kódování
+mysqli_query($Databaze,$Sklad);
 mysqli_close($Databaze);
 }
 
