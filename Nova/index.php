@@ -119,7 +119,7 @@ array(13,"Kontrola","Kontrola")
 <Input Id="zena" Name="Pohlavi" Tabindex="21" Type="Radio" Value="žena"<?php echo (!empty($_SESSION['Pohlavi'])&&$_SESSION['Pohlavi']=='žena')?' Checked':''; ?>>
 <Label For="zena">žena</Label>
 <Label For="StatniPris">Státní příslušnost</Label>
-<Input Id="StatniPris" Name="StatniPris" Tabindex="22" Type="Text" Value="<?php echo !empty($_SESSION['StatniPris'])?$_SESSION['StatniPris']:''; ?>"><Br>
+<Input Id="StatniPris" Name="StatniPris" Tabindex="22" Type="Text" Value="<?php echo !empty($_SESSION['StatniPris'])?$_SESSION['StatniPris']:'Česká republika'; ?>"><Br>
 <Button Name="Prejit[Kam]" Tabindex="23" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="Narozeni">
@@ -191,7 +191,7 @@ array(13,"Kontrola","Kontrola")
 <Label For="SIZO">IZO</Label>
 <Input Id="SIZO" Name="SIZO" Tabindex="57" Type="Number" Value="<?php echo !empty($_SESSION['SIZO'])?$_SESSION['SIZO']:''; ?>"><Br>
 <Label For="SRokMat">Rok maturitní zkoušky</Label>
-<Input Id="SRokMat" Name="SRokMat" Tabindex="58" Type="Number" Value="<?php echo !empty($_SESSION['SRokMat'])?$_SESSION['SRokMat']:''; ?>"><Br>
+<Input Id="SRokMat" Name="SRokMat" Tabindex="58" Type="Number" Value="<?php echo !empty($_SESSION['SRokMat'])?$_SESSION['SRokMat']:idate("Y"); ?>"><Br>
 <Button Name="Prejit[Kam]" Tabindex="59" Type="Submit" Value="./">Dále</Button>
 </Section>
 <Section Id="UchazecSeHlasi">
