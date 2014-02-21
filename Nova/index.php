@@ -74,10 +74,10 @@ array(13,"Kontrola","Kontrola")
 <Label For="AkadRok">Akademický rok</Label>
 <Input Id="AkadRok" Name="AkadRok" Tabindex="1" Type="Text" Value="<?php echo !empty($_SESSION['AkadRok'])?$_SESSION['AkadRok']:idate("Y")."/".(idate("Y")+1); ?>"><Br>
 <Label>Studijní program</Label>
-<Input Id="magisterský" Name="Program" Tabindex="2" Type="Radio" Value="bakalářský"<?php echo (!empty($_SESSION['Program'])&&$_SESSION['Program']=='bakalářský')?' Checked':''; ?>>
-<Label For="magisterský">magisterský</Label>
-<Input Id="bakalářský" Name="Program" Tabindex="3" Type="Radio" Value="magisterský"<?php echo (!empty($_SESSION['Program'])&&$_SESSION['Program']=='magisterský')?' Checked':''; ?>>
+<Input Id="bakalářský" Name="Program" Tabindex="2" Type="Radio" Value="bakalářský"<?php echo (!empty($_SESSION['Program'])&&$_SESSION['Program']=='bakalářský')?' Checked':''; ?>>
 <Label For="bakalářský">bakalářský</Label>
+<Input Id="magisterský" Name="Program" Tabindex="3" Type="Radio" Value="magisterský"<?php echo (!empty($_SESSION['Program'])&&$_SESSION['Program']=='magisterský')?' Checked':''; ?>>
+<Label For="magisterský">magisterský</Label>
 <Label>Forma studia</Label>
 <Input Id="prezenční" Name="Forma" Tabindex="4" Type="Radio" Value="prezenční"<?php echo (!empty($_SESSION['Forma'])&&$_SESSION['Forma']=='prezenční')?' Checked':''; ?>>
 <Label For="prezenční">prezenční</Label>
