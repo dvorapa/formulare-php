@@ -22,7 +22,9 @@ Form{Margin:auto;Position:absolute;Left:10%;Right:10%}
 Header H1{Margin:0.5em 0}
 Header I{Font-size:3em}
 Section{Border:1px dashed;Margin-bottom:1em;Padding:1em}
-@media (orientation:landscape){Form{Left:18%;Right:18%}
+
+@media (orientation:landscape){
+Form{Left:18%;Right:18%}
 Section{Float:left;Margin-right:3em;Text-align:center;Width:40%}
 Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }
