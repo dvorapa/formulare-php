@@ -73,7 +73,7 @@ $Databaze=mysqli_connect("localhost","dvorapa","cepetauhacac","databazeprihlasek
 $Sklad="insert into Prihlasky set ";
 foreach($_SESSION["PoleHodnot"] as $Promenna){
 if(!empty($_POST[$Promenna])){
-$_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
+#$_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);# Chyba v kódování
 $Sklad.="$Promenna='{$_SESSION[$Promenna]}',";
 }}
 $Sklad.="PHPSESSID='".session_id()."'";
