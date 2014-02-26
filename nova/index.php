@@ -503,7 +503,11 @@ array(13,"Kontrola","Kontrola")
 <A Href="#Prospech">
 <I Class="icon-pen"></I></A>
 <P>
-<?phpfor($i=1;$i<=27;$i++){echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["Predmet$i"."Rocnik1"])?$_SESSION["Predmet$i"."Rocnik1"]:"<B>Chybí</B>").(!empty($_SESSION["Predmet$i"."Rocnik2"])?$_SESSION["Predmet$i"."Rocnik2"]:"<B>Chybí</B>").(!empty($_SESSION["Predmet$i"."Rocnik3"])?$_SESSION["Predmet$i"."Rocnik3"]:"<B>Chybí</B>").(!empty($_SESSION["Predmet$i"."Rocnik4"])?$_SESSION["Predmet$i"."Rocnik4"]:"<B>Chybí</B>").(!empty($_SESSION["Predmet$i"."Rocnik5"])?$_SESSION["Predmet$i"."Rocnik5"]:"<B>Chybí</B>").(!empty($_SESSION["Maturita$i"])?$_SESSION["Maturita$i"]:"<B>Chybí</B>")."<Br>"):"<B>Chybí</B><Br>";}?>
+<?php
+for($i=1;$i<=27;$i++){
+echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["Predmet$i"."Rocnik1"])?$_SESSION["Predmet$i"."Rocnik1"]:"<B>Chybí</B>").(!empty($_SESSION["Predmet$i"."Rocnik2"])?$_SESSION["Predmet$i"."Rocnik2"]:"<B>Chybí</B>").(!empty($_SESSION["Predmet$i"."Rocnik3"])?$_SESSION["Predmet$i"."Rocnik3"]:"<B>Chybí</B>").(!empty($_SESSION["Predmet$i"."Rocnik4"])?$_SESSION["Predmet$i"."Rocnik4"]:"<B>Chybí</B>").(!empty($_SESSION["Predmet$i"."Rocnik5"])?$_SESSION["Predmet$i"."Rocnik5"]:"<B>Chybí</B>").(!empty($_SESSION["Maturita$i"])?$_SESSION["Maturita$i"]:"<B>Chybí</B>")."<Br>"):"<B>Chybí</B><Br>";
+}
+?>
 </P>
 -->
 <Input Name="Odeslat[Databaze]" Type="Hidden" Value="true">
