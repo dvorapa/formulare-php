@@ -162,21 +162,21 @@ array(13,"Kontrola","Kontrola")
 <H1>Adresa trvalého bydliště</H1>
 <Label For="TUlice">Ulice a číslo domu</Label>
 <Input Id="TUlice" Name="TUlice" Tabindex="31" Type="Text" Value="<?php echo !empty($_SESSION['TUlice'])?$_SESSION['TUlice']:''; ?>">
-<Input Id="TCislo" Name="TCislo" Tabindex="32" Type="Text" Value="<?php echo !empty($_SESSION['TCislo'])?$_SESSION['TCislo']:''; ?>">
+<Input Class="Kratky" Id="TCislo" Name="TCislo" Tabindex="32" Type="Text" Value="<?php echo !empty($_SESSION['TCislo'])?$_SESSION['TCislo']:''; ?>">
 <Br>
 <Label For="TCast">Část obce</Label>
 <Input Id="TCast" Name="TCast" Tabindex="33" Type="Text" Value="<?php echo !empty($_SESSION['TCast'])?$_SESSION['TCast']:''; ?>">
 <Br>
 <Label For="TObec">Obec a PSČ</Label>
 <Input Id="TObec" Name="TObec" Tabindex="34" Type="Text" Value="<?php echo !empty($_SESSION['TObec'])?$_SESSION['TObec']:''; ?>">
-<Input Id="TPSC" Max="99999" Name="TPSC" Tabindex="35" Type="Number" Value="<?php echo !empty($_SESSION['TPSC'])?$_SESSION['TPSC']:''; ?>">
+<Input Class="Kratky" Id="TPSC" Max="99999" Name="TPSC" Tabindex="35" Type="Number" Value="<?php echo !empty($_SESSION['TPSC'])?$_SESSION['TPSC']:''; ?>">
 <Br>
 <Label For="TPosta">Pošta</Label>
 <Input Id="TPosta" Name="TPosta" Tabindex="36" Type="Text" Value="<?php echo !empty($_SESSION['TPosta'])?$_SESSION['TPosta']:''; ?>">
 <Br>
 <Label For="TOkres">Okres a stát</Label>
 <Input Id="TOkres" Name="TOkres" Tabindex="37" Type="Text" Value="<?php echo !empty($_SESSION['TOkres'])?$_SESSION['TOkres']:''; ?>">
-<Input Id="TStat" Name="TStat" Tabindex="38" Type="Text" Value="<?php echo !empty($_SESSION['TStat'])?$_SESSION['TStat']:''; ?>">
+<Input Class="Kratky" Id="TStat" Name="TStat" Tabindex="38" Type="Text" Value="<?php echo !empty($_SESSION['TStat'])?$_SESSION['TStat']:''; ?>">
 <Br>
 <Label For="TTel">Telefon</Label>
 <Input Id="TTel" Name="TTel" Tabindex="39" Type="Tel" Value="<?php echo !empty($_SESSION['TTel'])?$_SESSION['TTel']:''; ?>">
@@ -188,21 +188,21 @@ array(13,"Kontrola","Kontrola")
 <H1>Kontaktní adresa</H1>
 <Label For="KUlice">Ulice a číslo domu</Label>
 <Input Id="KUlice" Name="KUlice" Tabindex="41" Type="Text" Value="<?php echo !empty($_SESSION['KUlice'])?$_SESSION['KUlice']:''; ?>">
-<Input Id="KCislo" Name="KCislo" Tabindex="42" Type="Text" Value="<?php echo !empty($_SESSION['KCislo'])?$_SESSION['KCislo']:''; ?>">
+<Input Class="Kratky" Id="KCislo" Name="KCislo" Tabindex="42" Type="Text" Value="<?php echo !empty($_SESSION['KCislo'])?$_SESSION['KCislo']:''; ?>">
 <Br>
 <Label For="KCast">Část obce</Label>
 <Input Id="KCast" Name="KCast" Tabindex="43" Type="Text" Value="<?php echo !empty($_SESSION['KCast'])?$_SESSION['KCast']:''; ?>">
 <Br>
 <Label For="KObec">Obec a PSČ</Label>
 <Input Id="KObec" Name="KObec" Tabindex="44" Type="Text" Value="<?php echo !empty($_SESSION['KObec'])?$_SESSION['KObec']:''; ?>">
-<Input Id="KPSC" Max="99999" Name="KPSC" Tabindex="45" Type="Number" Value="<?php echo !empty($_SESSION['KPSC'])?$_SESSION['KPSC']:''; ?>">
+<Input Class="Kratky" Id="KPSC" Max="99999" Name="KPSC" Tabindex="45" Type="Number" Value="<?php echo !empty($_SESSION['KPSC'])?$_SESSION['KPSC']:''; ?>">
 <Br>
 <Label For="KPosta">Pošta</Label>
 <Input Id="KPosta" Name="KPosta" Tabindex="46" Type="Text" Value="<?php echo !empty($_SESSION['KPosta'])?$_SESSION['KPosta']:''; ?>">
 <Br>
 <Label For="KOkres">Okres a stát</Label>
 <Input Id="KOkres" Name="KOkres" Tabindex="47" Type="Text" Value="<?php echo !empty($_SESSION['KOkres'])?$_SESSION['KOkres']:''; ?>">
-<Input Id="KStat" Name="KStat" Tabindex="48" Type="Text" Value="<?php echo !empty($_SESSION['KStat'])?$_SESSION['KStat']:''; ?>">
+<Input Class="Kratky" Id="KStat" Name="KStat" Tabindex="48" Type="Text" Value="<?php echo !empty($_SESSION['KStat'])?$_SESSION['KStat']:''; ?>">
 <Br>
 <Label For="KTel">Telefon</Label>
 <Input Id="KTel" Name="KTel" Tabindex="49" Type="Tel" Value="<?php echo !empty($_SESSION['KTel'])?$_SESSION['KTel']:''; ?>">
@@ -220,11 +220,11 @@ array(13,"Kontrola","Kontrola")
 <Br>
 <Label For="SJObor">Obor a JKOV</Label>
 <Input Id="SJObor" Name="SJObor" Tabindex="53" Type="Text" Value="<?php echo !empty($_SESSION['SJObor'])?$_SESSION['SJObor']:''; ?>">
-<Input Id="SJKOV" Name="SJKOV" Tabindex="54" Type="Number" Value="<?php echo !empty($_SESSION['SJKOV'])?$_SESSION['SJKOV']:''; ?>">
+<Input Class="Kratky" Id="SJKOV" Name="SJKOV" Tabindex="54" Type="Number" Value="<?php echo !empty($_SESSION['SJKOV'])?$_SESSION['SJKOV']:''; ?>">
 <Br>
 <Label For="SKObor">Obor a KKOV</Label>
 <Input Id="SKObor" Name="SKObor" Tabindex="55" Type="Text" Value="<?php echo !empty($_SESSION['SKObor'])?$_SESSION['SKObor']:''; ?>">
-<Input Id="SKKOV" Name="SKKOV" Tabindex="56" Type="Text" Value="<?php echo !empty($_SESSION['SKKOV'])?$_SESSION['SKKOV']:''; ?>">
+<Input Class="Kratky" Id="SKKOV" Name="SKKOV" Tabindex="56" Type="Text" Value="<?php echo !empty($_SESSION['SKKOV'])?$_SESSION['SKKOV']:''; ?>">
 <Br>
 <Label For="SIZO">IZO</Label>
 <Input Id="SIZO" Name="SIZO" Tabindex="57" Type="Number" Value="<?php echo !empty($_SESSION['SIZO'])?$_SESSION['SIZO']:''; ?>">
@@ -277,8 +277,8 @@ array(13,"Kontrola","Kontrola")
 <Input Id="Zarazeni" Name="Zarazeni" Tabindex="73" Type="Text" Value="<?php echo !empty($_SESSION['Zarazeni'])?$_SESSION['Zarazeni']:''; ?>">
 <Br>
 <Label For="ZOd">Od - do</Label>
-<Input Id="ZOd" Name="ZOd" Tabindex="74" Type="Date" Value="<?php echo !empty($_SESSION['ZOd'])?$_SESSION['ZOd']:''; ?>">
-<Input Id="ZDo" Name="ZOdDo" Tabindex="74" Type="Date" Value="<?php echo !empty($_SESSION['ZDo'])?$_SESSION['ZDo']:''; ?>">
+<Input Class="Kratky" Id="ZOd" Name="ZOd" Tabindex="74" Type="Date" Value="<?php echo !empty($_SESSION['ZOd'])?$_SESSION['ZOd']:''; ?>">
+<Input Class="Kratky" Id="ZDo" Name="ZOdDo" Tabindex="74" Type="Date" Value="<?php echo !empty($_SESSION['ZDo'])?$_SESSION['ZDo']:''; ?>">
 <Br>
 <Button Name="Prejit[Kam]" Tabindex="75" Type="Submit" Value="./#PredchoziVysokaSkola">Dále</Button>
 </Section>
@@ -298,8 +298,8 @@ array(13,"Kontrola","Kontrola")
 <Input Id="PObor" Name="PObor" Tabindex="79" Type="Text" Value="<?php echo !empty($_SESSION['PObor'])?$_SESSION['PObor']:''; ?>">
 <Br>
 <Label For="POd">Od - do</Label>
-<Input Id="POd" Name="POd" Tabindex="80" Type="Date" Value="<?php echo !empty($_SESSION['POd'])?$_SESSION['POd']:''; ?>">
-<Input Id="PDo" Name="PDo" Tabindex="81" Type="Date" Value="<?php echo !empty($_SESSION['PDo'])?$_SESSION['PDo']:''; ?>">
+<Input Class="Kratky" Id="POd" Name="POd" Tabindex="80" Type="Date" Value="<?php echo !empty($_SESSION['POd'])?$_SESSION['POd']:''; ?>">
+<Input Class="Kratky" Id="PDo" Name="PDo" Tabindex="81" Type="Date" Value="<?php echo !empty($_SESSION['PDo'])?$_SESSION['PDo']:''; ?>">
 <Br>
 <Label For="PTitul">Udělený titul</Label>
 <Input Id="PTitul" Name="PTitul" Tabindex="82" Type="Text" Value="<?php echo !empty($_SESSION['PTitul'])?$_SESSION['PTitul']:''; ?>">
