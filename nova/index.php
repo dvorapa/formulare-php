@@ -34,7 +34,7 @@ array(12,"Prospech","Prospěch"),
 array(13,"Kontrola","Kontrola")
 );
 $k=$_SESSION["k"];
-if($_SESSION["k"]=null){
+if($_SESSION["k"]=0){
 $_SESSION["k"]=0;
 }
 ?>
