@@ -16,7 +16,7 @@ Section:last-of-type{Margin-bottom:5%}
 Th{Vertical-align:top}
 
 @media (orientation:landscape){
-Nav{Height:100%;Margin:auto 0;Position:fixed;Text-align:center;Width:18%;Z-index:1}
+Nav{Height:100%;Margin:auto 0;Position:fixed;Text-align:center;Width:18%;Z-index:1;Vertical-align:middle}
 Nav:first-of-type{Top:0;Left:0;Bottom:0}
 Form{Margin:auto;Position:absolute;Width:64%;Top:5%;Left:0;Right:0}
 Nav:last-of-type{Top:0;Bottom:0;Right:0}
