@@ -33,7 +33,7 @@ array(11,"PredchoziVysokaSkola","Předchozí vysoká škola"),
 array(12,"Prospech","Prospěch"),
 array(13,"Kontrola","Kontrola")
 );
-if(!$_SESSION["k"]){
+if(empty($_SESSION["k"])){
 $_SESSION["k"]=0;
 }
 ?>
@@ -59,7 +59,7 @@ $_SESSION["k"]=0;
 <H1></H1>
 <Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./#<?php $_SESSION["k"]--;echo $_SESSION["PoleStran"][$_SESSION["k"]][1]; ?>">Zpět</Button>
 <Br>
-<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./#<?php $_SESSION["k"]+=2;echo $_SESSION["PoleStran"][$_SESSION["k"]][1]; ?>">Dále</Button>
+<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./#<?php $_SESSION["k"]++;echo $_SESSION["PoleStran"][$_SESSION["k"]][1]; ?>">Dále</Button>
 <Br>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="1">
 <Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
