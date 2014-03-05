@@ -10,15 +10,15 @@ Textarea{Width:100%}
 Label:after{Content:"\A";White-space:pre}
 Nav I:after{Content:" "}
 Nav H1{Font-weight:normal;Margin:1em;Text-align:center;Text-transform:uppercase;Word-wrap:break-word}
-Nav Button{Border-radius:100%;Margin:0 1em;Padding:0}
+Nav Button{Border-radius:100%;Margin:0 0.5em;Padding:0}
 Section{Background-color:white;Margin-bottom:100%;Padding:2em}
 Section:last-of-type{Margin-bottom:5%}
 Th{Vertical-align:top}
 
 @media (orientation:landscape){
-Nav{Position:fixed;Text-align:center;Width:18%;Z-index:1}
-Nav:first-of-type{Top:0;Left:0}
+Nav{Margin:auto;Position:fixed;Text-align:center;Width:18%;Z-index:1}
+Nav:first-of-type{Top:0;Left:0;Bottom:0}
 Form{Margin:auto;Position:absolute;Width:64%;Top:5%;Left:0;Right:0}
-Nav:last-of-type{Bottom:0;Right:0}
+Nav:last-of-type{Top:0;Bottom:0;Right:0}
 Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }
