@@ -517,7 +517,7 @@ echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["P
 <Nav>
 <?php
 foreach($_SESSION["PoleStran"] as $Promenna){
-echo "<Button Name='Prejit[Kam]' Type='Submit' Value='./#{$Promenna[1]}'>.</Button><Br>";
+echo "<Button Name='Prejit[Kam]' Type='Submit' Value='./#{$Promenna[1]}'>&middot;</Button><Br>";
 }
 ?>
 <H1></H1>
