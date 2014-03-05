@@ -20,6 +20,6 @@ Th{Vertical-align:top}
 Nav{Position:fixed;Text-align:right;Width:18%;Z-index:1}
 Nav:first-of-type{Top:0;Left:0}
 Form{Margin:auto;Position:absolute;Width:64%;Top:5%;Left:0;Right:0}
-Nav:last-of-type{Height:auto;Margin:auto;Top:0;Bottom:0;Right:0}
+Nav:last-of-type{Height:auto;Margin:13.5em;Top:0;Bottom:0;Right:0}
 Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }
