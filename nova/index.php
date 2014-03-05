@@ -314,29 +314,29 @@ array(13,"Kontrola","Kontrola")
 <Tr><Th>I</Th><Th>II</Th><Th>III</Th><Th>IV</Th><Th>V</Th></Tr>
 <?php
 !empty($_SESSION["p"])?"":$_SESSION["p"]=3;
-for($i=1,$t=84;$i<=$_SESSION["p"],$t<=273;$i++,$t+=7){
+for($i=1,$t=84;$i<=$_SESSION["p"],$t<=272;$i++,$t+=7){
 echo <<<EOT
 <Tr><Td>
 <Input Name="Predmet{$i}" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik1" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik1'])?$_SESSION['Predmet{$i}Rocnik1']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik1" Tabindex="{++$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik1'])?$_SESSION['Predmet{$i}Rocnik1']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik2" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik2'])?$_SESSION['Predmet{$i}Rocnik2']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik2" Tabindex="{++$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik2'])?$_SESSION['Predmet{$i}Rocnik2']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik3" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik3'])?$_SESSION['Predmet{$i}Rocnik3']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik3" Tabindex="{++$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik3'])?$_SESSION['Predmet{$i}Rocnik3']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik4" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik4'])?$_SESSION['Predmet{$i}Rocnik4']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik4" Tabindex="{++$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik4'])?$_SESSION['Predmet{$i}Rocnik4']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik5" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik5'])?$_SESSION['Predmet{$i}Rocnik5']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik5" Tabindex="{++$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik5'])?$_SESSION['Predmet{$i}Rocnik5']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Maturita{$i}" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
+<Input Class="Znamka" Name="Maturita{$i}" Tabindex="{++$t}" Type="Text" Value="${!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
 </Td></Tr>
 EOT;
 ?>
 </Table>
-<A Onclick=""><I Class="icon-plus"></I></A>
+<A Onclick="" Tabindex="273"><I Class="icon-plus"></I></A>
 <Br>
-<Button Name="Prejit[Kam]" Type="Submit" Value="./#Kontrola">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="274" Type="Submit" Value="./#Kontrola">Dále</Button>
 </Section>
 
 <Section Id="Kontrola">
@@ -517,7 +517,7 @@ echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["P
 -->
 <Input Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Name="Odeslat[Soubor]" Type="Hidden" Value="true">
-<Button Name="Odeslat[Kam]" Type="Submit" Value="vysledek.php">Odeslat</Button>
+<Button Name="Odeslat[Kam]" Tabindex="275" Type="Submit" Value="vysledek.php">Odeslat</Button>
 </Section>
 </Form>
 
