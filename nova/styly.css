@@ -10,7 +10,7 @@ Textarea{Width:100%}
 Label:after{Content:"\A";White-space:pre}
 Nav I:after{Content:" "}
 Nav H1{Font-weight:normal;Margin:1em;Text-align:center;Text-transform:uppercase;Word-wrap:break-word}
-Nav A{Display:block;Padding:0.5em;Text-align:right}
+Nav A{Display:block;Font-size:3em;Text-align:right}
 Nav A:hover,Nav A:active{Text-shadow:0 0 0.5em #242424;Color:#FFBF00}
 Section{Background-color:white;Margin-bottom:100%;Padding:2em}
 Section:last-of-type{Margin-bottom:5%}
