@@ -33,6 +33,9 @@ array(11,"PredchoziVysokaSkola","Předchozí vysoká škola"),
 array(12,"Prospech","Prospěch"),
 array(13,"Kontrola","Kontrola")
 );
+if(!$_SESSION["k"]){
+$_SESSION["k"]=1;
+}
 ?>
 <!Doctype Html>
 <Html Lang="Cs">
@@ -56,7 +59,7 @@ array(13,"Kontrola","Kontrola")
 <H1></H1>
 <Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./">Zpět</Button>
 <Br>
-<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./">Dále</Button>
+<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./<?php $_SESSION["k"]=2;echo $_SESSION["PoleStran"][1][1]; ?>">Dále</Button>
 <Br>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="1">
 <Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
@@ -519,12 +522,12 @@ echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["P
 
 
 <Nav>
-<H1></H1>
 <?php
 foreach($_SESSION["PoleStran"] as $Promenna){
-echo "<A Href='#{$Promenna[1]}'>{$Promenna[0]}. {$Promenna[2]}</A>";
+echo "<A Href='#{$Promenna[1]}'>&middot;</A>";
 }
 ?>
+<H1></H1>
 </Nav>
 
 
