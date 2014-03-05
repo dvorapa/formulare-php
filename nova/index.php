@@ -57,9 +57,9 @@ $_SESSION["k"]=0;
 <Body>
 <Nav>
 <H1></H1>
-<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./#<?php echo $_SESSION["PoleStran"][$_SESSION["k"]--][1]; ?>">Zpět</Button>
+<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./#<?php $_SESSION["k"]--;echo $_SESSION["PoleStran"][$_SESSION["k"]][1]; ?>">Zpět</Button>
 <Br>
-<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./#<?php echo $_SESSION["PoleStran"][$_SESSION["k"]++][1]; ?>">Dále</Button>
+<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./#<?php $_SESSION["k"]++;echo $_SESSION["PoleStran"][$_SESSION["k"]][1]; ?>">Dále</Button>
 <Br>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="1">
 <Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
