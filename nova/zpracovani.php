@@ -29,10 +29,10 @@ $_SESSION["PoleHodnot"]=array(
 "PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul"
 );
 /*Prospěch*/
-for($i=1;$i<28;$i++){
+for($i=1;$i<=27;$i++){
 $_SESSION["PoleHodnot"][]="Predmet".$i;
 $_SESSION["PoleHodnot"][]="Maturita".$i;
-for($j=1;$j<6;$j++){
+for($j=1;$j<=5;$j++){
 $_SESSION["PoleHodnot"][]="Predmet".$i."Rocnik".$j;
 }}
 

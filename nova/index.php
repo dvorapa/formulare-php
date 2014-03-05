@@ -314,7 +314,7 @@ array(13,"Kontrola","Kontrola")
 <Tr><Th>I</Th><Th>II</Th><Th>III</Th><Th>IV</Th><Th>V</Th></Tr>
 <?php
 !empty($_SESSION["p"])?"":$_SESSION["p"]=3;
-for($i=1,$t=84;$i<=$_SESSION["p"],$t<=;$i++,$t+=7){
+for($i=1,$t=84;$i<=$_SESSION["p"],$t<=273;$i++,$t+=7){
 echo <<<EOD
 <Tr><Td>
 <Input Name="Predmet{$i}" Tabindex="{$t}" Type="Text" Value="<?php echo !empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''; ?>">
