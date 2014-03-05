@@ -3,13 +3,13 @@ A{Color:#242424;Text-decoration:none}
 Button{Background-color:white;Border:0;Color:#242424;Cursor:pointer;Font-size:1em;Margin:1em 0;Padding:0.5em 2em;Text-transform:uppercase}
 A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
 Button:hover,Button:active{Box-shadow:0 0 0.5em white}
-Input:not([Type="Radio"]),Textarea{Border:1px solid silver;Border-radius:0.25em;Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Margin-right:0.5em;Padding:0.5em}
+Input:not([Type="Radio"]),Textarea{Border:1px solid silver;Border-radius:0.25em;Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Padding:0.5em}
 Input:not([Type="Radio"]):not(.Znamka):not(.Kratky){Width:20em}
 .Znamka{Width:1em}
-.Kratky{Width:9em}
+.Kratky{Margin-right:0.5em;Width:9em}
 Textarea{Width:100%}
-Label{Margin-top:0.5em}
-Label:after{Content:"\A";White-space:pre}
+Label:before,Label:after{Content:"\A";White-space:pre}
+Input+Label:before{Content:""}
 Nav I:after{Content:" "}
 Nav H1{Font-weight:normal;Margin:1em;Text-align:center;Text-transform:uppercase;Word-wrap:break-word}
 Nav:last-of-type Button{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
