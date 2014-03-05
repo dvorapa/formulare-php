@@ -332,6 +332,7 @@ echo <<<EOT
 <Input Class="Znamka" Name="Maturita{$i}" Tabindex="{++$t}" Type="Text" Value="${!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
 </Td></Tr>
 EOT;
+EOT;
 ?>
 </Table>
 <A Onclick="" Tabindex="273"><I Class="icon-plus"></I></A>
