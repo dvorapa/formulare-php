@@ -317,19 +317,19 @@ array(13,"Kontrola","Kontrola")
 for($i=1,$t=84;$i<=$_SESSION["p"],$t<=273;$i++,$t+=7){
 echo <<<EOD
 <Tr><Td>
-<Input Name="Predmet{$i}" Tabindex="{$t}" Type="Text" Value="<?php echo !empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''; ?>">
+<Input Name="Predmet{$i}" Tabindex="{$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik1" Tabindex="{++$t}" Type="Text" Value="<?php echo !empty($_SESSION['Predmet{$i}Rocnik1'])?$_SESSION['Predmet{$i}Rocnik1']:''; ?>">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik1" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik1'])?$_SESSION['Predmet{$i}Rocnik1']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik2" Tabindex="{++$t}" Type="Text" Value="<?php echo !empty($_SESSION['Predmet{$i}Rocnik2'])?$_SESSION['Predmet{$i}Rocnik2']:''; ?>">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik2" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik2'])?$_SESSION['Predmet{$i}Rocnik2']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik3" Tabindex="{++$t}" Type="Text" Value="<?php echo !empty($_SESSION['Predmet{$i}Rocnik3'])?$_SESSION['Predmet{$i}Rocnik3']:''; ?>">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik3" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik3'])?$_SESSION['Predmet{$i}Rocnik3']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik4" Tabindex="{++$t}" Type="Text" Value="<?php echo !empty($_SESSION['Predmet{$i}Rocnik4'])?$_SESSION['Predmet{$i}Rocnik4']:''; ?>">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik4" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik4'])?$_SESSION['Predmet{$i}Rocnik4']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik5" Tabindex="{++$t}" Type="Text" Value="<?php echo !empty($_SESSION['Predmet{$i}Rocnik5'])?$_SESSION['Predmet{$i}Rocnik5']:''; ?>">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik5" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik5'])?$_SESSION['Predmet{$i}Rocnik5']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Maturita{$i}" Tabindex="{++$t}" Type="Text" Value="<?php echo !empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''; ?>">
+<Input Class="Znamka" Name="Maturita{$i}" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
 </Td></Tr>
 EOD;
 ?>
