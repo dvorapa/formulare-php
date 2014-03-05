@@ -10,7 +10,7 @@ Textarea{Width:100%}
 Label:after{Content:"\A";White-space:pre}
 Nav I:after{Content:" "}
 Nav H1{Font-weight:normal;Margin:1em;Text-align:center;Text-transform:uppercase;Word-wrap:break-word}
-Nav:last-of-type Button{Background-color:silver;Border-radius:10px;Display:block;Height:6px;Width:6px}
+Nav:last-of-type Button{Background-color:#737373;Border-radius:10px;Display:block;Height:6px;Padding:0;Width:6px}
 Nav:last-of-type Button:hover,Nav:last-of-type Button:active{Background-color:#242424}
 Section{Background-color:white;Margin-bottom:100%;Padding:2em}
 Section:last-of-type{Margin-bottom:5%}
