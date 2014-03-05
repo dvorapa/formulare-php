@@ -317,7 +317,7 @@ array(13,"Kontrola","Kontrola")
 for($i=1,$t=84;$i<=$_SESSION["p"],$t<=273;$i++,$t+=7){
 echo <<<EOT
 <Tr><Td>
-<Input Name="Predmet{$i}" Tabindex="{$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
+<Input Name="Predmet{$i}" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
 </Td><Td>
 <Input Class="Znamka" Name="Predmet{$i}Rocnik1" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik1'])?$_SESSION['Predmet{$i}Rocnik1']:''}">
 </Td><Td>
