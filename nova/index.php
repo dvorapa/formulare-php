@@ -33,7 +33,7 @@ array(11,"PredchoziVysokaSkola","Předchozí vysoká škola"),
 array(12,"Prospech","Prospěch"),
 array(13,"Kontrola","Kontrola")
 );
-if(empty($_SESSION["k"])){
+if(!isset($_SESSION["k"])){
 $_SESSION["k"]=0;
 }
 ?>
