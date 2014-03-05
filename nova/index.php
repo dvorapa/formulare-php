@@ -34,7 +34,7 @@ array(12,"Prospech","Prospěch"),
 array(13,"Kontrola","Kontrola")
 );
 if(!$_SESSION["k"]){
-$_SESSION["k"]=1;
+$_SESSION["k"]=0;
 }
 ?>
 <!Doctype Html>
@@ -57,9 +57,9 @@ $_SESSION["k"]=1;
 <Body>
 <Nav>
 <H1></H1>
-<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./">Zpět</Button>
+<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./#<?php $_SESSION["k"]-=1;echo $_SESSION["PoleStran"][$_SESSION["k"]][1]; ?>">Zpět</Button>
 <Br>
-<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./#<?php $_SESSION["k"]=1;echo $_SESSION["PoleStran"][$_SESSION["k"]][1]; ?>">Dále</Button>
+<Button Form="Formular" Name="Prejit[Kam]" Type="Submit" Value="./#<?php $_SESSION["k"]+=1;echo $_SESSION["PoleStran"][$_SESSION["k"]][1]; ?>">Dále</Button>
 <Br>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="1">
 <Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
