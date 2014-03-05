@@ -315,7 +315,7 @@ array(13,"Kontrola","Kontrola")
 <?php
 !empty($_SESSION["p"])?"":$_SESSION["p"]=3;
 for($i=1,$t=84;$i<=$_SESSION["p"],$t<=272;$i++,$t+=7){
-echo <<<EOT
+echo <<<"EOT"
 <Tr><Td>
 <Input Name="Predmet{$i}" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
 </Td><Td>
@@ -331,7 +331,6 @@ echo <<<EOT
 </Td><Td>
 <Input Class="Znamka" Name="Maturita{$i}" Tabindex="{++$t}" Type="Text" Value="${!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
 </Td></Tr>
-EOT;
 EOT;
 ?>
 </Table>
