@@ -33,7 +33,8 @@ array(11,"PredchoziVysokaSkola","Předchozí vysoká škola"),
 array(12,"Prospech","Prospěch"),
 array(13,"Kontrola","Kontrola")
 );
-if(!isset($_SESSION["k"])){
+$k=$_SESSION["k"];
+if($_SESSION["k"]=null){
 $_SESSION["k"]=0;
 }
 ?>
@@ -72,7 +73,7 @@ $_SESSION["k"]=0;
 
 <Section Id="Uvod">
 <H1>Úvod</H1>
-<Label For="AkadRok">Akademický rok</Label>
+<Label For="AkadRok">Akademický rok<?php echo $k; ?></Label>
 <Input Id="AkadRok" Name="AkadRok" Tabindex="1" Type="Text" Value="<?php echo !empty($_SESSION['AkadRok'])?$_SESSION['AkadRok']:idate("Y")."/".(idate("Y")+1); ?>">
 <Br>
 <Label>Studijní program</Label>
