@@ -74,7 +74,7 @@ mysqli_set_charset($Databaze,"utf8");
 $Sklad="insert into Prihlasky set ";
 foreach($_SESSION["PoleHodnot"] as $Promenna){
 if(!empty($_POST[$Promenna])){
-$_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);### Chyba v kódování
+$_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
 $Sklad.="$Promenna='{$_SESSION[$Promenna]}',";
 }}
 $Sklad.="PHPSESSID='".session_id()."'";
