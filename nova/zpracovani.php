@@ -97,6 +97,6 @@ fclose($Funkce);
 /* |  | (-_)|||(-| (_)\/(_|| )| */
 /*                              */
 $_SESSION["Kam"]=$Kolekce["Kam"];
-header("Location: ./".$_SESSION["c"].$_SESSION["Kam"]);
+header("Location: ./".$_SESSION["c"].$Kolekce["Kam"]);
 }}
 ?>
