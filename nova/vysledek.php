@@ -46,13 +46,13 @@ Budete-li v budoucnu potřebovat tuto přihlášku znovu použít, zapište si p
 <Section>
 Vyberte prosím, jakým způsobem chcete přihlášku získat:
 <Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="/export/<?php echo session_id(); ?>.php?Tisk">Tisk</Button>
+<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php?Tisk">Tisk</Button>
 <Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="/export/<?php echo session_id(); ?>.php?Pdf">Pdf</Button>
+<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php?Pdf">Pdf</Button>
 <Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="/export/<?php echo session_id(); ?>.php?Docx">Docx</Button>
+<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php?Docx">Docx</Button>
 <Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="/export/<?php echo session_id(); ?>.php?Html">Html</Button>
+<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php?Html">Html</Button>
 <Br>
 <A Href="/export/<?php echo session_id(); ?>.php?Dalsi">Další</A>
 </Section>
