@@ -46,15 +46,15 @@ Budete-li v budoucnu potřebovat tuto přihlášku znovu použít, zapište si p
 <Section>
 Vyberte prosím, jakým způsobem chcete přihlášku získat:
 <Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php?Tisk">Tisk</Button>
+<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php<?php echo $_SESSION["c"]; ?>&Tisk">Tisk</Button>
 <Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php?Pdf">Pdf</Button>
+<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php<?php echo $_SESSION["c"]; ?>&Pdf">Pdf</Button>
 <Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php?Docx">Docx</Button>
+<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php<?php echo $_SESSION["c"]; ?>&Docx">Docx</Button>
 <Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php?Html">Html</Button>
+<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php<?php echo $_SESSION["c"]; ?>&Html">Html</Button>
 <Br>
-<A Href="/export/<?php echo session_id(); ?>.php?Dalsi">Další</A>
+<A Href="/export/<?php echo session_id(); ?>.php<?php echo $_SESSION["c"]; ?>&Dalsi">Další</A>
 </Section>
 
 
@@ -62,15 +62,15 @@ Vyberte prosím, jakým způsobem chcete přihlášku získat:
 <Section>
 Nebudete-li se k této přihlášce již vracet nebo chcete smazat uložené údaje, klikněte sem:
 <Br>
-<Button Name="Smazat[Kam]" Type="Submit" Value="/"><I Class="icon-trash_can"></I></Button>
+<Button Name="Smazat[Kam]" Type="Submit" Value=""><I Class="icon-trash_can"></I></Button>
 <Br>
 Potřebujete-li upravit starší přihlášku nebo vytvořit novou, klikněte sem:
 <Br>
-<Button Name="Prejit[Kam]" Type="Submit" Value="/"><I Class="icon-home"></I></Button>
+<Button Name="Prejit[Kam]" Type="Submit" Value=""><I Class="icon-home"></I></Button>
 <Br>
 Není-li žádná z předchozích možností vhodná nebo si nejste jist(a), klikněte sem:
 <Br>
-<Button Name="Odejit[Kam]" Type="Submit" Value="/"><I Class="icon-cross_mark"></I></Button>
+<Button Name="Odejit[Kam]" Type="Submit" Value=""><I Class="icon-cross_mark"></I></Button>
 </Section>
 </Form>
 

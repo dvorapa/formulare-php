@@ -87,7 +87,7 @@ mysqli_close($Databaze);
 /*       |                                   */
 if(array_key_exists("Soubor",$Kolekce)){
 $Sklad=file_get_contents("predloha.php");
-$Funkce=fopen("../export/".session_id().".php".$_SESSION["c"],"w+");
+$Funkce=fopen("/export/".session_id().".php".$_SESSION["c"],"w+");
 fwrite($Funkce,$Sklad);
 fclose($Funkce);
 }
@@ -97,6 +97,6 @@ fclose($Funkce);
 /* |  | (-_)|||(-| (_)\/(_|| )| */
 /*                              */
 $_SESSION["Kam"]=$Kolekce["Kam"];
-header("Location: /".$_SESSION["c"].$Kolekce["Kam"]);
+header("Location: /".$Kolekce["Kam"]);
 }}
 ?>

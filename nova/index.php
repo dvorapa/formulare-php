@@ -4,11 +4,17 @@
 /*  \/ \/|_)| )|_||_(-  (_(_)(_)|(|(- */
 /*     / |                            */
 session_start();
-if(!empty($_GET["Cookie"])){
-if(!empty($_COOKIE["Co"])){
-$_SESSION["c"]="";
+if(!isset($_COOKIE["Cookie"])){
+if(!isset($_GET["Cookie"])){
+setcookie("Cookie","1",time()+60*60);
+$_SESSION["c"]="?Cookie";
+if(empty($_SESSION["Kam"])){
+$_SESSION["Kam"]="nova/{$_SESSION['c']}";
+}
+header("Location: /{$_SESSION['Kam']}");
 }else{
 $_SESSION["c"]="?".session_id();
+<<<<<<< HEAD
 }}else{
 setcookie("Co","To",time()+60*60);
 header("Location: ./?Cookie=true{$_SESSION['Kam']}");
@@ -33,6 +39,9 @@ array(11,"PredchoziVysokaSkola","Předchozí vysoká škola"),
 array(12,"Prospech","Prospěch"),
 array(13,"Kontrola","Kontrola")
 );
+=======
+}}
+>>>>>>> 2a4b6df... Navigace
 ?>
 <!Doctype Html>
 <Html Lang="Cs">
@@ -56,10 +65,10 @@ array(13,"Kontrola","Kontrola")
 <H1></H1>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="1">
 <Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
-<Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="nova/">Uložit</Button><Br>
+<Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="<?php echo $_SESSION["Kam"]; ?>">Uložit</Button><Br>
 <Input Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Name="Odeslat[Soubor]" Type="Hidden" Value="true">
-<Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="nova/vysledek.php">Odeslat</Button>
+<Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="nova/vysledek.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
 </Nav>
 
 
@@ -87,10 +96,14 @@ array(13,"Kontrola","Kontrola")
 <Input Id="Jazyk" Name="Jazyk" Tabindex="7" Type="Text" Value="<?php echo !empty($_SESSION['Jazyk'])?$_SESSION['Jazyk']:''; ?>">
 <Br>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <Button Name="Prejit[Kam]" Tabindex="8" Type="Submit" Value="./#VysokaSkola">Dále</Button>
 =======
 <Button Name="Prejit[Kam]" Tabindex="8" Type="Submit" Value="nova/#VysokaSkola">Dále</Button>
 >>>>>>> d43a8f2... Závěrečné opravy navigace
+=======
+<Button Name="Prejit[Kam]" Tabindex="8" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#VysokaSkola">Dále</Button>
+>>>>>>> 2a4b6df... Navigace
 </Section>
 
 <Section Id="VysokaSkola">
@@ -522,7 +535,7 @@ echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["P
 -->
 <Input Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Name="Odeslat[Soubor]" Type="Hidden" Value="true">
-<Button Name="Odeslat[Kam]" Tabindex="275" Type="Submit" Value="nova/vysledek.php">Odeslat</Button>
+<Button Name="Odeslat[Kam]" Tabindex="275" Type="Submit" Value="nova/vysledek.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
 </Section>
 </Form>
 
@@ -531,7 +544,7 @@ echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["P
 <Nav>
 <?php
 foreach($_SESSION["PoleStran"] as $Promenna){
-echo "<Button Form='Formular' Name='Prejit[Kam]' Type='Submit' Value='#{$Promenna[1]}'>&nbsp;</Button><Br>";
+echo "<Button Form='Formular' Name='Prejit[Kam]' Type='Submit' Value='nova/{$_SESSION[\"c\"]}#{$Promenna[1]}'>&nbsp;</Button><Br>";
 }
 ?>
 <H1></H1>
