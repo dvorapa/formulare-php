@@ -56,7 +56,7 @@ array(13,"Kontrola","Kontrola")
 <H1></H1>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="1">
 <Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
-<Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="./">Uložit</Button>
+<Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="./">Uložit</Button><Br>
 <Input Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Name="Odeslat[Soubor]" Type="Hidden" Value="true">
 <Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="vysledek.php">Odeslat</Button>
