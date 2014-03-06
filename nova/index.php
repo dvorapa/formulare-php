@@ -56,10 +56,10 @@ array(13,"Kontrola","Kontrola")
 <H1></H1>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="1">
 <Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
-<Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="">Uložit</Button><Br>
+<Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="nova/">Uložit</Button><Br>
 <Input Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Name="Odeslat[Soubor]" Type="Hidden" Value="true">
-<Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="vysledek.php">Odeslat</Button>
+<Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="nova/vysledek.php">Odeslat</Button>
 </Nav>
 
 
@@ -86,7 +86,11 @@ array(13,"Kontrola","Kontrola")
 <Label For="Jazyk">Zvolený jazyk</Label>
 <Input Id="Jazyk" Name="Jazyk" Tabindex="7" Type="Text" Value="<?php echo !empty($_SESSION['Jazyk'])?$_SESSION['Jazyk']:''; ?>">
 <Br>
+<<<<<<< HEAD
 <Button Name="Prejit[Kam]" Tabindex="8" Type="Submit" Value="./#VysokaSkola">Dále</Button>
+=======
+<Button Name="Prejit[Kam]" Tabindex="8" Type="Submit" Value="nova/#VysokaSkola">Dále</Button>
+>>>>>>> d43a8f2... Závěrečné opravy navigace
 </Section>
 
 <Section Id="VysokaSkola">
@@ -107,7 +111,7 @@ array(13,"Kontrola","Kontrola")
 <Br>
 <Input Id="VOborC" Name="VOborC" Tabindex="14" Type="Text" Value="<?php echo !empty($_SESSION['VOborC'])?$_SESSION['VOborC']:''; ?>">
 <Br>
-<Button Name="Prejit[Kam]" Tabindex="15" Type="Submit" Value="#OsobniUdaje">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="15" Type="Submit" Value="nova/#OsobniUdaje">Dále</Button>
 </Section>
 
 <Section Id="OsobniUdaje">
@@ -132,7 +136,7 @@ array(13,"Kontrola","Kontrola")
 <Label For="StatniPris">Státní příslušnost</Label>
 <Input Id="StatniPris" Name="StatniPris" Tabindex="22" Type="Text" Value="<?php echo !empty($_SESSION['StatniPris'])?$_SESSION['StatniPris']:'Česká republika'; ?>">
 <Br>
-<Button Name="Prejit[Kam]" Tabindex="23" Type="Submit" Value="#Narozeni">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="23" Type="Submit" Value="nova/#Narozeni">Dále</Button>
 </Section>
 
 <Section Id="Narozeni">
@@ -155,7 +159,7 @@ array(13,"Kontrola","Kontrola")
 <Label For="CisloP">Číslo pasu</Label>
 <Input Id="CisloP" Name="CisloP" Tabindex="29" Type="Number" Value="<?php echo !empty($_SESSION['CisloP'])?$_SESSION['CisloP']:''; ?>">
 <Br>
-<Button Name="Prejit[Kam]" Tabindex="30" Type="Submit" Value="#AdresaTrvalehoBydliste">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="30" Type="Submit" Value="nova/#AdresaTrvalehoBydliste">Dále</Button>
 </Section>
 
 <Section Id="AdresaTrvalehoBydliste">
@@ -181,7 +185,7 @@ array(13,"Kontrola","Kontrola")
 <Label For="TTel">Telefon</Label>
 <Input Id="TTel" Name="TTel" Tabindex="39" Type="Tel" Value="<?php echo !empty($_SESSION['TTel'])?$_SESSION['TTel']:''; ?>">
 <Br>
-<Button Name="Prejit[Kam]" Tabindex="40" Type="Submit" Value="#KontaktniAdresa">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="40" Type="Submit" Value="nova/#KontaktniAdresa">Dále</Button>
 </Section>
 
 <Section Id="KontaktniAdresa">
@@ -207,7 +211,7 @@ array(13,"Kontrola","Kontrola")
 <Label For="KTel">Telefon</Label>
 <Input Id="KTel" Name="KTel" Tabindex="49" Type="Tel" Value="<?php echo !empty($_SESSION['KTel'])?$_SESSION['KTel']:''; ?>">
 <Br>
-<Button Name="Prejit[Kam]" Tabindex="50" Type="Submit" Value="#StredniSkola">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="50" Type="Submit" Value="nova/#StredniSkola">Dále</Button>
 </Section>
 
 <Section Id="StredniSkola">
@@ -232,7 +236,7 @@ array(13,"Kontrola","Kontrola")
 <Label For="SRokMat">Rok maturitní zkoušky</Label>
 <Input Id="SRokMat" Name="SRokMat" Tabindex="58" Type="Number" Value="<?php echo !empty($_SESSION['SRokMat'])?$_SESSION['SRokMat']:idate("Y"); ?>">
 <Br>
-<Button Name="Prejit[Kam]" Tabindex="59" Type="Submit" Value="#UchazecSeHlasi">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="59" Type="Submit" Value="nova/#UchazecSeHlasi">Dále</Button>
 </Section>
 
 <Section Id="UchazecSeHlasi">
@@ -255,7 +259,7 @@ array(13,"Kontrola","Kontrola")
 <Label For="Voj">z vojenské služby</Label>
 <Input Id="Odj" Name="Odkud" Tabindex="68" Type="Radio" Value="jiné"<?php echo (!empty($_SESSION['Odkud'])&&$_SESSION['Odkud']=='jiné')?' Checked':''; ?>>
 <Label For="Odj">odjinud</Label>
-<Button Name="Prejit[Kam]" Tabindex="69" Type="Submit" Value="#ZajmovaCinnost">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="69" Type="Submit" Value="nova/#ZajmovaCinnost">Dále</Button>
 </Section>
 
 <Section Id="ZajmovaCinnost">
@@ -265,7 +269,7 @@ array(13,"Kontrola","Kontrola")
 <?php echo !empty($_SESSION['Zajmy'])?$_SESSION['Zajmy']:''; ?>
 </Textarea>
 <Br>
-<Button Name="Prejit[Kam]" Tabindex="71" Type="Submit" Value="#PrubehZamestnani">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="71" Type="Submit" Value="nova/#PrubehZamestnani">Dále</Button>
 </Section>
 
 <Section Id="PrubehZamestnani">
@@ -280,7 +284,7 @@ array(13,"Kontrola","Kontrola")
 <Input Class="Kratky" Id="ZOd" Name="ZOd" Tabindex="74" Type="Date" Value="<?php echo !empty($_SESSION['ZOd'])?$_SESSION['ZOd']:''; ?>">
 <Input Class="Kratky" Id="ZDo" Name="ZOdDo" Tabindex="74" Type="Date" Value="<?php echo !empty($_SESSION['ZDo'])?$_SESSION['ZDo']:''; ?>">
 <Br>
-<Button Name="Prejit[Kam]" Tabindex="75" Type="Submit" Value="#PredchoziVysokaSkola">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="75" Type="Submit" Value="nova/#PredchoziVysokaSkola">Dále</Button>
 </Section>
 
 <Section Id="PredchoziVysokaSkola">
@@ -304,7 +308,7 @@ array(13,"Kontrola","Kontrola")
 <Label For="PTitul">Udělený titul</Label>
 <Input Id="PTitul" Name="PTitul" Tabindex="82" Type="Text" Value="<?php echo !empty($_SESSION['PTitul'])?$_SESSION['PTitul']:''; ?>">
 <Br>
-<Button Name="Prejit[Kam]" Tabindex="83" Type="Submit" Value="#Prospech">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="83" Type="Submit" Value="nova/#Prospech">Dále</Button>
 </Section>
 
 <Section Id="Prospech">
@@ -337,7 +341,7 @@ EOT;
 </Table>
 <A Onclick="" Tabindex="273"><I Class="icon-plus"></I></A>
 <Br>
-<Button Name="Prejit[Kam]" Tabindex="274" Type="Submit" Value="#Kontrola">Dále</Button>
+<Button Name="Prejit[Kam]" Tabindex="274" Type="Submit" Value="nova/#Kontrola">Dále</Button>
 </Section>
 
 <Section Id="Kontrola">
@@ -518,7 +522,7 @@ echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["P
 -->
 <Input Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Name="Odeslat[Soubor]" Type="Hidden" Value="true">
-<Button Name="Odeslat[Kam]" Tabindex="275" Type="Submit" Value="vysledek.php">Odeslat</Button>
+<Button Name="Odeslat[Kam]" Tabindex="275" Type="Submit" Value="nova/vysledek.php">Odeslat</Button>
 </Section>
 </Form>
 
@@ -527,7 +531,7 @@ echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["P
 <Nav>
 <?php
 foreach($_SESSION["PoleStran"] as $Promenna){
-echo "<Button Form='Formular' Name='Prejit[Kam]' Type='Submit' Value='#{$Promenna[1]}'>kekel</Button><Br>";
+echo "<Button Form='Formular' Name='Prejit[Kam]' Type='Submit' Value='#{$Promenna[1]}'>&nbsp;</Button><Br>";
 }
 ?>
 <H1></H1>
