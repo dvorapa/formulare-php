@@ -11,7 +11,7 @@ $_SESSION["c"]="";
 $_SESSION["c"]="?".session_id();
 }}else{
 setcookie("Co","To",time()+60*60);
-header("Location: ./{$_SESSION['Kam']}?Cookie=true");
+header("Location: ./?Cookie=true{$_SESSION['Kam']}");
 }
 
 /*  __                         */
