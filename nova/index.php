@@ -62,12 +62,13 @@ array(13,"Kontrola","Kontrola")
 </Head>
 <Body>
 <Nav>
+<H1></H1>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="1">
 <Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
-<Br><Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="<?php echo $_SESSION["Kam"]; ?>">Uložit</Button>
+<Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="<?php echo $_SESSION["Kam"]; ?>">Uložit</Button><Br>
 <Input Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Name="Odeslat[Soubor]" Type="Hidden" Value="true">
-<Br><Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="nova/vysledek.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
+<Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="nova/vysledek.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
 </Nav>
 
 
@@ -334,8 +335,8 @@ $j=$_GET["j"];
 }else{
 $j=5;
 }
-$r=84+($j*7);
-for($i=1,$t=84;$i<=$j,$t<=$r;$i++,$t+=7){
+for($i=1;$i<=$j;$i++){
+for($t=84+(($j-1)*7);$t<=84+($j*7);$t++){
 echo <<<EOT
 <Tr><Td>
 <Input Name="Predmet{$i}" Tabindex="${$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
@@ -353,7 +354,7 @@ echo <<<EOT
 <Input Class="Znamka" Name="Maturita{$i}" Tabindex="${++$t}" Type="Text" Value="${!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
 </Td></Tr>
 EOT;
-}
+}}
 ?>
 </Table>
 <Button Name="Pridat[Kam]" Tabindex="273" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech"><I Class="icon-plus"></I></Button>
