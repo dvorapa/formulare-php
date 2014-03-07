@@ -329,10 +329,13 @@ array(13,"Kontrola","Kontrola")
 <Tr><Th Rowspan="2">Předmět</Th><Th Colspan="5">Ročník</Th><Th Rowspan="2">Maturita</Th></Tr>
 <Tr><Th>I</Th><Th>II</Th><Th>III</Th><Th>IV</Th><Th>V</Th></Tr>
 <?php
-!empty($_GET["j"])?$j=$_GET["j"]:$j=5;
-$k=$j;
-$r=84+($k*7);
-for($i=1,$t=84;$i<=$k,$t<=272;$i++,$t+=7){
+if(!empty($_GET["j"])){
+$j=$_GET["j"];
+}else{
+$j=5;
+}
+$r=84+($j*7);
+for($i=1,$t=84;$i<=$j,$t<=$r;$i++,$t+=7){
 echo <<<EOT
 <Tr><Td>
 <Input Name="Predmet{$i}" Tabindex="${$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
