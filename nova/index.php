@@ -336,7 +336,6 @@ $j=$_GET["j"];
 $j=5;
 }
 for($i=1;$i<=$j;$i++){
-for($t=84+(($j-1)*7);$t<=84+($j*7);$t++){
 echo <<<EOT
 <Tr><Td>
 <Input Name="Predmet{$i}" Tabindex="${$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
@@ -354,7 +353,7 @@ echo <<<EOT
 <Input Class="Znamka" Name="Maturita{$i}" Tabindex="${++$t}" Type="Text" Value="${!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
 </Td></Tr>
 EOT;
-}}
+}
 ?>
 </Table>
 <Button Name="Pridat[Kam]" Tabindex="273" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech"><I Class="icon-plus"></I></Button>
