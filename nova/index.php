@@ -357,9 +357,9 @@ EOT;
 }
 ?>
 </Table>
-<Button Class="Vlevo" Name="Prejit[Kam]" Tabindex="273" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Zpět</Button>
+<Button Class="Vlevo" Name="Pridat[Kam]" Tabindex="274" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech">+ řádek</Button>
 <Br>
-<Button Class="Vlevo" Name="Pridat[Kam]" Tabindex="274" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech">Přidat řádek</Button>
+<Button Class="Vlevo" Name="Prejit[Kam]" Tabindex="273" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Zpět</Button>
 <Br>
 <Button Class="Dole" Name="Prejit[Kam]" Tabindex="275" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Kontrola">Dále</Button>
 </Section>
