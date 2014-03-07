@@ -329,13 +329,9 @@ array(13,"Kontrola","Kontrola")
 <Tr><Th Rowspan="2">Předmět</Th><Th Colspan="5">Ročník</Th><Th Rowspan="2">Maturita</Th></Tr>
 <Tr><Th>I</Th><Th>II</Th><Th>III</Th><Th>IV</Th><Th>V</Th></Tr>
 <?php
-if(!empty($_SESSION["p"])){
-$_SESSION["p"]=$_GET["p"];
-}else{
-$_SESSION["p"]=5;
-}
-$r=84+($_SESSION["p"]*7);
-for($i=1,$t=84;$i<=$_SESSION["p"],$t<=$r;$i++,$t+=7){
+!empty($_GET["j"])?$j=$_GET["j"]:$j=5;
+$r=84+($j*7);
+for($i=1,$t=84;$i<=$j,$t<=$r;$i++,$t+=7){
 echo <<<EOT
 <Tr><Td>
 <Input Name="Predmet{$i}" Tabindex="${$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
@@ -356,7 +352,7 @@ EOT;
 }
 ?>
 </Table>
-<Button Name="Pridat[Kam]" Tabindex="273" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>&p=<?php echo $_SESSION["p"]++; ?>#Prospech"><I Class="icon-plus"></I></Button>
+<Button Name="Pridat[Kam]" Tabindex="273" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech"><I Class="icon-plus"></I></Button>
 <Br>
 <Button Name="Prejit[Kam]" Tabindex="274" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Kontrola">Dále</Button>
 </Section>
