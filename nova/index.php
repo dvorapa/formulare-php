@@ -62,7 +62,6 @@ array(13,"Kontrola","Kontrola")
 </Head>
 <Body>
 <Nav>
-<H1></H1>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="1">
 <Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
 <Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="<?php echo $_SESSION["Kam"]; ?>">Uložit</Button><Br>
@@ -330,7 +329,7 @@ array(13,"Kontrola","Kontrola")
 <Tr><Th Rowspan="2">Předmět</Th><Th Colspan="5">Ročník</Th><Th Rowspan="2">Maturita</Th></Tr>
 <Tr><Th>I</Th><Th>II</Th><Th>III</Th><Th>IV</Th><Th>V</Th></Tr>
 <?php
-$_SESSION["p"]=3;
+empty($_SESSION["p"])?$_SESSION["p"]=5:'';
 for($i=1,$t=84;$i<=$_SESSION["p"],$t<=272;$i++,$t+=7){
 echo <<<EOT
 <Tr><Td>
@@ -352,7 +351,7 @@ EOT;
 }
 ?>
 </Table>
-<A Onclick="" Tabindex="273"><I Class="icon-plus"></I></A>
+<Button Name="" Tabindex="273" Type="Submit" Value="nova/<?php echo $_SESSION["c"]."&p=".$_SESSION["p"]; ?>#Prospech"><I Class="icon-plus"></I></Button>
 <Br>
 <Button Name="Prejit[Kam]" Tabindex="274" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Kontrola">Dále</Button>
 </Section>
@@ -547,7 +546,6 @@ foreach($_SESSION["PoleStran"] as $Promenna){
 echo "<Button Form='Formular' Name='Prejit[Kam]' Type='Submit' Value='nova/".$_SESSION["c"]."#{$Promenna[1]}'>&nbsp;</Button><Br>"."\r\n";
 }
 ?>
-<H1></H1>
 </Nav>
 
 
