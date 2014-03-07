@@ -380,7 +380,7 @@ EOT;
 }
 ?>
 </Table>
-<Button Name="Pridat[Kam]" Tabindex="283" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech">Přidat řádek</Button>
+<A Href="/nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech" Tabindex="283"><I Class="icon-plus"></I></A>
 <Br>
 <Button Name="Zpet[Kam]" Tabindex="284" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Zpět</Button>
 <Br>
