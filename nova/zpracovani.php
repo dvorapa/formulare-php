@@ -18,7 +18,7 @@ $_SESSION["PoleHodnot"]=array(
 /*Kontaktní adresa*/
 "KUlice","KCislo","KCast","KObec","KOkres","KPSC","KTel","KPosta","KStat",
 /*Střední škola*/
-"SSkola","SAdresa","SJObor","SJKOV","SKObor","SKKOV","SIZO","SRokMat",
+"SSkola","SAdresa","SObor","SJKOV","SKKOV","SIZO","SRokMat",
 /*Uchazeč se hlásí*/
 "Odkud",
 /*Zájmová činnost*/
