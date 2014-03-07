@@ -356,7 +356,7 @@ EOT;
 }
 ?>
 </Table>
-<Button Name="" Tabindex="273" Type="Submit" Value="nova/<?php echo $_SESSION["c"]."&p=".$_SESSION["p"]; ?>#Prospech"><I Class="icon-plus"></I></Button>
+<Button Name="Pridat[Kam]" Tabindex="273" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>&p=<?php echo $_SESSION["p"]++; ?>#Prospech"><I Class="icon-plus"></I></Button>
 <Br>
 <Button Name="Prejit[Kam]" Tabindex="274" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Kontrola">Dále</Button>
 </Section>
