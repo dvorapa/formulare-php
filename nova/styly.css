@@ -14,8 +14,9 @@ Nav I:after{Content:" "}
 Nav H1{Font-weight:normal;Margin:1em;Text-align:center;Text-transform:uppercase;Word-wrap:break-word}
 Nav:last-of-type Button{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
 Nav:last-of-type Button:hover,Nav:last-of-type Button:active{Background-color:#242424}
-Form Button{Background-color:#242424;Border-radius:0.25em;Color:white}
-Form Button:hover,Form Button:active{Box-shadow:0 0 0.5em #242424}
+.Dole{Background-color:#242424;Border-radius:0.25em;Color:white}
+.Dole:hover,.Dole:active{Box-shadow:0 0 0.5em #242424}
+.Vlevo{Position:absolute;Right:100%}
 Section{Background-color:white;Margin-bottom:100%;Padding:2em}
 Th{Vertical-align:top}
 

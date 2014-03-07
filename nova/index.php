@@ -357,9 +357,11 @@ EOT;
 }
 ?>
 </Table>
-<Button Name="Pridat[Kam]" Tabindex="273" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech"><I Class="icon-plus"></I></Button>
+<Button Class="Vlevo" Name="Prejit[Kam]" Tabindex="273" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Zpět</Button>
 <Br>
-<Button Name="Prejit[Kam]" Tabindex="274" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Kontrola">Dále</Button>
+<Button Class="Vlevo" Name="Pridat[Kam]" Tabindex="274" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech">Přidat řádek</Button>
+<Br>
+<Button Class="Dole" Name="Prejit[Kam]" Tabindex="275" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Kontrola">Dále</Button>
 </Section>
 
 <Section Id="Kontrola">
@@ -540,7 +542,7 @@ echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["P
 -->
 <Input Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Name="Odeslat[Soubor]" Type="Hidden" Value="true">
-<Button Name="Odeslat[Kam]" Tabindex="275" Type="Submit" Value="nova/vysledek.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
+<Button Name="Odeslat[Kam]" Tabindex="276" Type="Submit" Value="nova/vysledek.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
 </Section>
 </Form>
 
