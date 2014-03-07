@@ -329,7 +329,7 @@ array(13,"Kontrola","Kontrola")
 <Tr><Th Rowspan="2">Předmět</Th><Th Colspan="5">Ročník</Th><Th Rowspan="2">Maturita</Th></Tr>
 <Tr><Th>I</Th><Th>II</Th><Th>III</Th><Th>IV</Th><Th>V</Th></Tr>
 <?php
-empty($_SESSION["p"])?$_SESSION["p"]=5:'';
+!empty($_SESSION["p"])?$_SESSION["p"]=$_GET["p"]:$_SESSION["p"]=5;
 for($i=1,$t=84;$i<=$_SESSION["p"],$t<=272;$i++,$t+=7){
 echo <<<EOT
 <Tr><Td>
