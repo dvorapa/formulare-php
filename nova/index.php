@@ -15,6 +15,8 @@ header("Location: /{$_SESSION['Kam']}");
 }else{
 $_SESSION["c"]="?".session_id();
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 }}else{
 setcookie("Co","To",time()+60*60);
 header("Location: ./?Cookie=true{$_SESSION['Kam']}");
@@ -40,8 +42,17 @@ array(12,"Prospech","Prospěch"),
 array(13,"Kontrola","Kontrola")
 );
 =======
+=======
+}else{
+$_SESSION["c"]="?Cookie";
+>>>>>>> c809163... Oprava bugu
 }}
 >>>>>>> 2a4b6df... Navigace
+=======
+}}else{
+$_SESSION["c"]="?Cookie";
+}
+>>>>>>> 903a586... Oprava bugu, výmaz kontroly (je v historii)
 ?>
 <!Doctype Html>
 <Html Lang="Cs">
@@ -379,9 +390,8 @@ echo <<<EOT
 EOT;
 }
 ?>
+<Tr><Td Colspan="7"><A Href="/nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech" Tabindex="283"><I Class="icon-plus"></I></A></Td></Tr>
 </Table>
-<A Href="/nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech" Tabindex="283"><I Class="icon-plus"></I></A>
-<Br>
 <Button Name="Zpet[Kam]" Tabindex="284" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Zpět</Button>
 <Br>
 <Button Name="Dale[Kam]" Tabindex="285" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Kontrola">Dále</Button>
@@ -389,180 +399,6 @@ EOT;
 
 <Section Id="Kontrola">
 <H1>Kontrola</H1>
-<!--
-<A Href="#Uvod"><I Class="icon-pen"></I></A>
-<P>Akademický rok:
-<?php echo !empty($_SESSION["AkadRok"])?$_SESSION["AkadRok"]:"<B>Chybí</B>"; ?>
-<Br>Program:
-<?php echo !empty($_SESSION["Program"])?$_SESSION["Program"]:"<B>Chybí</B>"; ?>
-<Br>Forma:
-<?php echo !empty($_SESSION["Forma"])?$_SESSION["Forma"]:"<B>Chybí</B>"; ?>
-<Br>Jazyk:
-<?php echo !empty($_SESSION["Jazyk"])?$_SESSION["Jazyk"]:"<B>Chybí</B>"; ?>
-<Br>
-</P>
-<A Href="#VysokaSkola">
-<I Class="icon-pen"></I></A>
-<P>Vysoká škola:
-<?php echo !empty($_SESSION["VSkola"])?$_SESSION["VSkola"]:"<B>Chybí</B>"; ?>
-<Br>Fakulta:
-<?php echo !empty($_SESSION["VFakulta"])?$_SESSION["VFakulta"]:"<B>Chybí</B>"; ?>
-<Br>Studijní program:
-<?php echo !empty($_SESSION["VProgram"])?$_SESSION["VProgram"]:"<B>Chybí</B>"; ?>
-<Br>Studijní obory:
-<?php echo !empty($_SESSION["VOborA"])?$_SESSION["VOborA"]:"<B>Chybí</B>"; ?>
-<?php echo !empty($_SESSION["VOborB"])?", ".$_SESSION["VOborB"]:""; ?>
-<?php echo !empty($_SESSION["VOborC"])?", ".$_SESSION["VOborC"]:""; ?>
-<Br>
-</P>
-<A Href="#OsobniUdaje">
-<I Class="icon-pen"></I></A>
-<P>Jméno:
-<?php echo !empty($_SESSION["Jmeno"])?$_SESSION["Jmeno"]:"<B>Chybí</B>"; ?>
-<Br>Příjmení:
-<?php echo !empty($_SESSION["Prijmeni"])?$_SESSION["Prijmeni"]:"<B>Chybí</B>"; ?>
-<Br>Rodné:
-<?php echo !empty($_SESSION["Rodne"])?$_SESSION["Rodne"]:"<B>Chybí</B>"; ?>
-<Br>Tituly:
-<?php echo !empty($_SESSION["Tituly"])?$_SESSION["Tituly"]:"<B>Chybí</B>"; ?>
-<Br>Pohlaví:
-<?php echo !empty($_SESSION["Pohlavi"])?$_SESSION["Pohlavi"]:"<B>Chybí</B>"; ?>
-<Br>Státní příslušnost:
-<?php echo !empty($_SESSION["StatniPris"])?$_SESSION["StatniPris"]:"<B>Chybí</B>"; ?>
-<Br>
-</P>
-<A Href="#Narozeni">
-<I Class="icon-pen"></I></A>
-<P>Datum narození:
-<?php echo !empty($_SESSION["DatumNar"])?$_SESSION["DatumNar"]:"<B>Chybí</B>"; ?>
-<Br>Místo narození:
-<?php echo !empty($_SESSION["MistoNar"])?$_SESSION["MistoNar"]:"<B>Chybí</B>"; ?>
-<Br>Okres narození:
-<?php echo !empty($_SESSION["OkresNar"])?$_SESSION["OkresNar"]:"<B>Chybí</B>"; ?>
-<Br>Číslo občanského průkazu:
-<?php echo !empty($_SESSION["CisloOP"])?$_SESSION["CisloOP"]:"<B>Chybí</B>"; ?>
-<Br>Rodné číslo:
-<?php echo !empty($_SESSION["RCislo"])?$_SESSION["RCislo"]:"<B>Chybí</B>"; ?>
-<Br>Číslo pasu:
-<?php echo !empty($_SESSION["CisloP"])?$_SESSION["CisloP"]:"<B>Chybí</B>"; ?>
-<Br>
-</P>
-<A Href="#AdresaTrvalehoBydliste">
-<I Class="icon-pen"></I></A>
-<P>Ulice:
-<?php echo !empty($_SESSION["TUlice"])?$_SESSION["TUlice"]:"<B>Chybí</B>"; ?>
-<Br>Číslo:
-<?php echo !empty($_SESSION["TCislo"])?$_SESSION["TCislo"]:"<B>Chybí</B>"; ?>
-<Br>Část obce:
-<?php echo !empty($_SESSION["TCast"])?$_SESSION["TCast"]:"<B>Chybí</B>"; ?>
-<Br>Obec:
-<?php echo !empty($_SESSION["TObec"])?$_SESSION["TObec"]:"<B>Chybí</B>"; ?>
-<Br>Okres:
-<?php echo !empty($_SESSION["TOkres"])?$_SESSION["TOkres"]:"<B>Chybí</B>"; ?>
-<Br>PSČ:
-<?php echo !empty($_SESSION["TPSC"])?$_SESSION["TPSC"]:"<B>Chybí</B>"; ?>
-<Br>Telefon:
-<?php echo !empty($_SESSION["TTel"])?$_SESSION["TTel"]:"<B>Chybí</B>"; ?>
-<Br>Pošta:
-<?php echo !empty($_SESSION["TPosta"])?$_SESSION["TPosta"]:"<B>Chybí</B>"; ?>
-<Br>Stát:
-<?php echo !empty($_SESSION["TStat"])?$_SESSION["TStat"]:"<B>Chybí</B>"; ?>
-<Br>
-</P>
-<A Href="#KontaktniAdresa">
-<I Class="icon-pen"></I></A>
-<P>Ulice:
-<?php echo !empty($_SESSION["KUlice"])?$_SESSION["KUlice"]:"<B>Chybí</B>"; ?>
-<Br>Číslo:
-<?php echo !empty($_SESSION["KCislo"])?$_SESSION["KCislo"]:"<B>Chybí</B>"; ?>
-<Br>Část obce:
-<?php echo !empty($_SESSION["KCast"])?$_SESSION["KCast"]:"<B>Chybí</B>"; ?>
-<Br>Obec:
-<?php echo !empty($_SESSION["KObec"])?$_SESSION["KObec"]:"<B>Chybí</B>"; ?>
-<Br>Okres:
-<?php echo !empty($_SESSION["KOkres"])?$_SESSION["KOkres"]:"<B>Chybí</B>"; ?>
-<Br>PSČ:
-<?php echo !empty($_SESSION["KPSC"])?$_SESSION["KPSC"]:"<B>Chybí</B>"; ?>
-<Br>Telefon:
-<?php echo !empty($_SESSION["KTel"])?$_SESSION["KTel"]:"<B>Chybí</B>"; ?>
-<Br>Pošta:
-<?php echo !empty($_SESSION["KPosta"])?$_SESSION["KPosta"]:"<B>Chybí</B>"; ?>
-<Br>Stát:
-<?php echo !empty($_SESSION["KStat"])?$_SESSION["KStat"]:"<B>Chybí</B>"; ?>
-<Br>
-</P>
-<A Href="#StredniSkola">
-<I Class="icon-pen"></I></A>
-<P>Název:
-<?php echo !empty($_SESSION["SSkola"])?$_SESSION["SSkola"]:"<B>Chybí</B>"; ?>
-<Br>Adresa:
-<?php echo !empty($_SESSION["SAdresa"])?$_SESSION["SAdresa"]:"<B>Chybí</B>"; ?>
-<Br>Obor:
-<?php echo !empty($_SESSION["SJObor"])?$_SESSION["SJObor"]:"<B>Chybí</B>"; ?>
-<Br>JKOV:
-<?php echo !empty($_SESSION["SJKOV"])?$_SESSION["SJKOV"]:"<B>Chybí</B>"; ?>
-<Br>Obor:
-<?php echo !empty($_SESSION["SKObor"])?$_SESSION["SKObor"]:"<B>Chybí</B>"; ?>
-<Br>KKOV:
-<?php echo !empty($_SESSION["SKKOV"])?$_SESSION["SKKOV"]:"<B>Chybí</B>"; ?>
-<Br>IZO:
-<?php echo !empty($_SESSION["SIZO"])?$_SESSION["SIZO"]:"<B>Chybí</B>"; ?>
-<Br>Rok maturitní zkoušky:
-<?php echo !empty($_SESSION["SRokMat"])?$_SESSION["SRokMat"]:"<B>Chybí</B>"; ?>
-<Br>
-</P>
-<A Href="#UchazecSeHlasi">
-<I Class="icon-pen"></I></A>
-<P>Uchazeč se hlásí (z/ze/přes):
-<?php echo !empty($_SESSION["Odkud"])?$_SESSION["Odkud"]:"<B>Chybí</B>"; ?>
-<Br>
-</P>
-<A Href="#ZajmovaCinnost">
-<I Class="icon-pen"></I></A>
-<P>Zájmová činnost, úspěchy:
-<?php echo !empty($_SESSION["Zajmy"])?$_SESSION["Zajmy"]:"<B>Chybí</B>"; ?>
-<Br>
-</P>
-<A Href="#PrubehZamestnani">
-<I Class="icon-pen"></I></A>
-<P>Zaměstnavatel:
-<?php echo !empty($_SESSION["Zamestnavatel"])?$_SESSION["Zamestnavatel"]:"<B>Chybí</B>"; ?>
-<Br>Pracovní zařazení:
-<?php echo !empty($_SESSION["Zarazeni"])?$_SESSION["Zarazeni"]:"<B>Chybí</B>"; ?>
-<Br>Od:
-<?php echo !empty($_SESSION["ZOd"])?$_SESSION["ZOd"]:"<B>Chybí</B>"; ?>
-<Br>Do:
-<?php echo !empty($_SESSION["ZDo"])?$_SESSION["ZDo"]:"<B>Chybí</B>"; ?>
-<Br>
-</P>
-<A Href="#PredchoziVysokaSkola">
-<I Class="icon-pen"></I></A>
-<P>Vysoká škola:
-<?php echo !empty($_SESSION["PSkola"])?$_SESSION["PSkola"]:"<B>Chybí</B>"; ?>
-<Br>Fakulta:
-<?php echo !empty($_SESSION["PFakulta"])?$_SESSION["PFakulta"]:"<B>Chybí</B>"; ?>
-<Br>Program:
-<?php echo !empty($_SESSION["PProgram"])?$_SESSION["PProgram"]:"<B>Chybí</B>"; ?>
-<Br>Obor:
-<?php echo !empty($_SESSION["PObor"])?$_SESSION["PObor"]:"<B>Chybí</B>"; ?>
-<Br>Od:
-<?php echo !empty($_SESSION["POd"])?$_SESSION["POd"]:"<B>Chybí</B>"; ?>
-<Br>Do:
-<?php echo !empty($_SESSION["PDo"])?$_SESSION["PDo"]:"<B>Chybí</B>"; ?>
-<Br>Udělený titul:
-<?php echo !empty($_SESSION["PTitul"])?$_SESSION["PTitul"]:"<B>Chybí</B>"; ?>
-<Br>
-</P>
-<A Href="#Prospech">
-<I Class="icon-pen"></I></A>
-<P>
-<?php
-for($i=1;$i<=27;$i++){
-echo !empty($_SESSION["Predmet$i"])?($_SESSION["Predmet$i"].(!empty($_SESSION["Predmet$i"."Rocnik1"])?$_SESSION["Predmet$i"."Rocnik1"]:"<B>Chybí</B>").(!empty($_SESSION["Predmet$i"."Rocnik2"])?$_SESSION["Predmet$i"."Rocnik2"]:"<B>Chybí</B>").(!empty($_SESSION["Predmet$i"."Rocnik3"])?$_SESSION["Predmet$i"."Rocnik3"]:"<B>Chybí</B>").(!empty($_SESSION["Predmet$i"."Rocnik4"])?$_SESSION["Predmet$i"."Rocnik4"]:"<B>Chybí</B>").(!empty($_SESSION["Predmet$i"."Rocnik5"])?$_SESSION["Predmet$i"."Rocnik5"]:"<B>Chybí</B>").(!empty($_SESSION["Maturita$i"])?$_SESSION["Maturita$i"]:"<B>Chybí</B>")."<Br>"):"<B>Chybí</B><Br>";
-}
-?>
-</P>
--->
 <Button Name="Zpet[Kam]" Tabindex="286" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Prospech">Zpět</Button>
 <Br>
 <Input Name="Odeslat[Databaze]" Type="Hidden" Value="true">

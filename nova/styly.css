@@ -10,8 +10,6 @@ Input:not([Type="Radio"]):not(.Znamka):not(.Kratky){Width:20em}
 Textarea{Width:100%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
-Nav I:after{Content:" "}
-Nav H1{Font-weight:normal;Margin:1em;Text-align:center;Text-transform:uppercase;Word-wrap:break-word}
 Nav:last-of-type Button{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
 Nav:last-of-type Button:hover,Nav:last-of-type Button:active{Background-color:#242424}
 Form Button:not([name="Zpet[Kam]"]){Background-color:#242424;Border-radius:0.25em;Color:white}
