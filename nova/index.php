@@ -373,10 +373,9 @@ $j=$_GET["j"];
 }else{
 $j=5;
 }
-$pp="++";
+$u=++$t;
 for($i=1;$i<=$j;$i++){
 $t=94+(($i-1)*7);
-    error_reporting(0);
 echo <<<EOT
 <Tr><Td>
 <Input Name="Predmet{$i}" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
@@ -385,13 +384,13 @@ echo <<<EOT
 </Td><Td>
 <Input Class="Znamka" Name="Predmet{$i}Rocnik2" Tabindex="{++{$t}}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik2'])?$_SESSION['Predmet{$i}Rocnik2']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik3" Tabindex="" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik3'])?$_SESSION['Predmet{$i}Rocnik3']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik3" Tabindex="{$u}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik3'])?$_SESSION['Predmet{$i}Rocnik3']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik4" Tabindex="" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik4'])?$_SESSION['Predmet{$i}Rocnik4']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik4" Tabindex="${u}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik4'])?$_SESSION['Predmet{$i}Rocnik4']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik5" Tabindex="{${++${t}}}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik5'])?$_SESSION['Predmet{$i}Rocnik5']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik5" Tabindex="" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik5'])?$_SESSION['Predmet{$i}Rocnik5']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Maturita{$i}" Tabindex="${++${t}}" Type="Text" Value="${!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
+<Input Class="Znamka" Name="Maturita{$i}" Tabindex="" Type="Text" Value="${!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
 </Td></Tr>
 EOT;
 }
