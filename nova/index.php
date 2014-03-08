@@ -375,7 +375,7 @@ $j=5;
 }
 for($i=1;$i<=$j;$i++){
 $t=94+(($i-1)*7);
-$u=$t++;
+$u=function(){++$t};
 echo <<<EOT
 <Tr><Td>
 <Input Name="Predmet{$i}" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
