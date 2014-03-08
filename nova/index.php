@@ -139,9 +139,9 @@ $_SESSION["c"]="?Cookie";
 <Br>
 <Input Id="VOborC" Name="VOborC" Tabindex="14" Type="Text" Value="<?php echo !empty($_SESSION['VOborC'])?$_SESSION['VOborC']:''; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="15" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Uvod">Zpět</Button>
+<Button Name="Zpet[Kam]" Tabindex="16" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Uvod">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="16" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#OsobniUdaje">Dále</Button>
+<Button Name="Dale[Kam]" Tabindex="15" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#OsobniUdaje">Dále</Button>
 </Section>
 
 <Section Id="OsobniUdaje">
@@ -166,9 +166,9 @@ $_SESSION["c"]="?Cookie";
 <Label For="StatniPris">Státní příslušnost</Label>
 <Input Id="StatniPris" Name="StatniPris" Tabindex="23" Type="Text" Value="<?php echo !empty($_SESSION['StatniPris'])?$_SESSION['StatniPris']:'Česká republika'; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="24" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#VysokaSkola">Zpět</Button>
+<Button Name="Zpet[Kam]" Tabindex="25" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#VysokaSkola">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="25" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Narozeni">Dále</Button>
+<Button Name="Dale[Kam]" Tabindex="24" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Narozeni">Dále</Button>
 </Section>
 
 <Section Id="Narozeni">
@@ -191,9 +191,9 @@ $_SESSION["c"]="?Cookie";
 <Label For="CisloP">Číslo pasu (u cizinců)</Label>
 <Input Id="CisloP" Name="CisloP" Tabindex="31" Type="Number" Value="<?php echo !empty($_SESSION['CisloP'])?$_SESSION['CisloP']:''; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="32" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#OsobniUdaje">Zpět</Button>
+<Button Name="Zpet[Kam]" Tabindex="33" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#OsobniUdaje">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="33" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#AdresaTrvalehoBydliste">Dále</Button>
+<Button Name="Dale[Kam]" Tabindex="32" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#AdresaTrvalehoBydliste">Dále</Button>
 </Section>
 
 <Section Id="AdresaTrvalehoBydliste">
@@ -221,9 +221,9 @@ $_SESSION["c"]="?Cookie";
 <Label For="TTel">Telefon</Label>
 <Input Id="TTel" Name="TTel" Tabindex="42" Type="Tel" Value="<?php echo !empty($_SESSION['TTel'])?$_SESSION['TTel']:''; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="43" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Narozeni">Zpět</Button>
+<Button Name="Zpet[Kam]" Tabindex="44" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Narozeni">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="44" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#KontaktniAdresa">Dále</Button>
+<Button Name="Dale[Kam]" Tabindex="43" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#KontaktniAdresa">Dále</Button>
 </Section>
 
 <Section Id="KontaktniAdresa">
@@ -251,9 +251,9 @@ $_SESSION["c"]="?Cookie";
 <Label For="KTel">Telefon</Label>
 <Input Id="KTel" Name="KTel" Tabindex="53" Type="Tel" Value="<?php echo !empty($_SESSION['KTel'])?$_SESSION['KTel']:''; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="54" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#AdresaTrvalehoBydliste">Zpět</Button>
+<Button Name="Zpet[Kam]" Tabindex="55" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#AdresaTrvalehoBydliste">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="55" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#StredniSkola">Dále</Button>
+<Button Name="Dale[Kam]" Tabindex="54" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#StredniSkola">Dále</Button>
 </Section>
 
 <Section Id="StredniSkola">
@@ -277,9 +277,9 @@ $_SESSION["c"]="?Cookie";
 <Label For="SRokMat">Rok maturitní zkoušky</Label>
 <Input Class="Kratky" Id="SRokMat" Name="SRokMat" Tabindex="62" Type="Number" Value="<?php echo !empty($_SESSION['SRokMat'])?$_SESSION['SRokMat']:idate("Y"); ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="63" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#KontaktniAdresa">Zpět</Button>
+<Button Name="Zpet[Kam]" Tabindex="64" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#KontaktniAdresa">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="64" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#UchazecSeHlasi">Dále</Button>
+<Button Name="Dale[Kam]" Tabindex="63" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#UchazecSeHlasi">Dále</Button>
 </Section>
 
 <Section Id="UchazecSeHlasi">
@@ -302,9 +302,9 @@ $_SESSION["c"]="?Cookie";
 <Label For="Voj">z vojenské služby</Label>
 <Input Id="Odj" Name="Odkud" Tabindex="73" Type="Radio" Value="jiné"<?php echo (!empty($_SESSION['Odkud'])&&$_SESSION['Odkud']=='jiné')?' Checked':''; ?>>
 <Label For="Odj">odjinud</Label>
-<Button Name="Zpet[Kam]" Tabindex="74" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#StredniSkola">Zpět</Button>
+<Button Name="Zpet[Kam]" Tabindex="75" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#StredniSkola">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="75" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#ZajmovaCinnost">Dále</Button>
+<Button Name="Dale[Kam]" Tabindex="74" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#ZajmovaCinnost">Dále</Button>
 </Section>
 
 <Section Id="ZajmovaCinnost">
@@ -314,9 +314,9 @@ $_SESSION["c"]="?Cookie";
 <?php echo !empty($_SESSION['Zajmy'])?$_SESSION['Zajmy']:''; ?>
 </Textarea>
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="77" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#UchazecSeHlasi">Zpět</Button>
+<Button Name="Zpet[Kam]" Tabindex="78" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#UchazecSeHlasi">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="78" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PrubehZamestnani">Dále</Button>
+<Button Name="Dale[Kam]" Tabindex="77" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PrubehZamestnani">Dále</Button>
 </Section>
 
 <Section Id="PrubehZamestnani">
@@ -331,9 +331,9 @@ $_SESSION["c"]="?Cookie";
 <Input Class="Pulka" Id="ZOd" Name="ZOd" Tabindex="81" Type="Date" Value="<?php echo !empty($_SESSION['ZOd'])?$_SESSION['ZOd']:''; ?>">
 <Input Class="Pulka" Id="ZDo" Name="ZOdDo" Tabindex="82" Type="Date" Value="<?php echo !empty($_SESSION['ZDo'])?$_SESSION['ZDo']:''; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="83" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#ZajmovaCinnost">Zpět</Button>
+<Button Name="Zpet[Kam]" Tabindex="84" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#ZajmovaCinnost">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="84" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Dále</Button>
+<Button Name="Dale[Kam]" Tabindex="83" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Dále</Button>
 </Section>
 
 <Section Id="PredchoziVysokaSkola">
@@ -357,9 +357,9 @@ $_SESSION["c"]="?Cookie";
 <Label For="PTitul">Udělený titul</Label>
 <Input Id="PTitul" Name="PTitul" Tabindex="91" Type="Text" Value="<?php echo !empty($_SESSION['PTitul'])?$_SESSION['PTitul']:''; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="92" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PrubehZamestnani">Zpět</Button>
+<Button Name="Zpet[Kam]" Tabindex="93" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PrubehZamestnani">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="93" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Prospech">Dále</Button>
+<Button Name="Dale[Kam]" Tabindex="92" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Prospech">Dále</Button>
 </Section>
 
 <Section Id="Prospech">
@@ -377,28 +377,28 @@ for($i=1;$i<=$j;$i++){
 $t=94+(($i-1)*7);
 echo <<<EOT
 <Tr><Td>
-<Input Name="Predmet{$i}" Tabindex="${$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
+<Input Name="Predmet{$i}" Tabindex="{$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik1" Tabindex="${++$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik1'])?$_SESSION['Predmet{$i}Rocnik1']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik1" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik1'])?$_SESSION['Predmet{$i}Rocnik1']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik2" Tabindex="${++$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik2'])?$_SESSION['Predmet{$i}Rocnik2']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik2" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik2'])?$_SESSION['Predmet{$i}Rocnik2']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik3" Tabindex="${++$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik3'])?$_SESSION['Predmet{$i}Rocnik3']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik3" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik3'])?$_SESSION['Predmet{$i}Rocnik3']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik4" Tabindex="${++$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik4'])?$_SESSION['Predmet{$i}Rocnik4']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik4" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik4'])?$_SESSION['Predmet{$i}Rocnik4']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik5" Tabindex="${++$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik5'])?$_SESSION['Predmet{$i}Rocnik5']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik5" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Predmet{$i}Rocnik5'])?$_SESSION['Predmet{$i}Rocnik5']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Maturita{$i}" Tabindex="${++$t}" Type="Text" Value="${!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
+<Input Class="Znamka" Name="Maturita{$i}" Tabindex="{++$t}" Type="Text" Value="{!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
 </Td></Tr>
 EOT;
 }
 ?>
 <Tr><Td Colspan="7"><A Href="/nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech" Tabindex="283"><I Class="icon-plus"></I></A></Td></Tr>
 </Table>
-<Button Name="Zpet[Kam]" Tabindex="284" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Zpět</Button>
+<Button Name="Zpet[Kam]" Tabindex="285" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="285" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Kontrola">Dále</Button>
+<Button Name="Dale[Kam]" Tabindex="284" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#Kontrola">Dále</Button>
 </Section>
 
 <Section Id="Kontrola">
