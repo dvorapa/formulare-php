@@ -374,22 +374,22 @@ $j=$_GET["j"];
 $j=5;
 }
 for($i=1;$i<=$j;$i++){
-$t=94+($i-1);
+$t=94+(($i-1)*7);
 echo <<<EOT
 <Tr><Td>
 <Input Name="Predmet{$i}" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik1" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik1'])?$_SESSION['Predmet{$i}Rocnik1']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik1" Tabindex="{$t+1}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik1'])?$_SESSION['Predmet{$i}Rocnik1']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik2" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik2'])?$_SESSION['Predmet{$i}Rocnik2']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik2" Tabindex="{$t+2}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik2'])?$_SESSION['Predmet{$i}Rocnik2']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik3" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik3'])?$_SESSION['Predmet{$i}Rocnik3']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik3" Tabindex="{$t+3}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik3'])?$_SESSION['Predmet{$i}Rocnik3']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik4" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik4'])?$_SESSION['Predmet{$i}Rocnik4']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik4" Tabindex="{$t+4}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik4'])?$_SESSION['Predmet{$i}Rocnik4']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik5" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik5'])?$_SESSION['Predmet{$i}Rocnik5']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik5" Tabindex="{$t+5}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik5'])?$_SESSION['Predmet{$i}Rocnik5']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Maturita{$i}" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
+<Input Class="Znamka" Name="Maturita{$i}" Tabindex="{$t+6}" Type="Text" Value="${!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
 </Td></Tr>
 EOT;
 }
