@@ -382,7 +382,7 @@ echo <<<EOT
 </Td><Td>
 <Input Class="Znamka" Name="Predmet{$i}Rocnik1" Tabindex="{${{$pp}$t}}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik1'])?$_SESSION['Predmet{$i}Rocnik1']:''}">
 </Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik2" Tabindex="{${++$t}}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik2'])?$_SESSION['Predmet{$i}Rocnik2']:''}">
+<Input Class="Znamka" Name="Predmet{$i}Rocnik2" Tabindex="++{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik2'])?$_SESSION['Predmet{$i}Rocnik2']:''}">
 </Td><Td>
 <Input Class="Znamka" Name="Predmet{$i}Rocnik3" Tabindex="{${++$t}}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik3'])?$_SESSION['Predmet{$i}Rocnik3']:''}">
 </Td><Td>
