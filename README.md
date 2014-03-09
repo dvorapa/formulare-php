@@ -1,12 +1,7 @@
-[Formuláře v PHP](https://raw.github.com/dvorapa/Formulare-v-PHP/master/prace/2014_8.O_Dvořák_Pavel.docx)
+[Formuláře v PHP](http://prihlaskanavs.8u.cz/)
 ===============
 
-Maturitní práce zabývající se tématem digitalizace formuláře pomocí programovacího jazyka PHP v předmětu Informačních a komunikačních technologií.
-
-[Přihláška na VŠ](http://prihlaskanavs.8u.cz/).
----------------
-
-Výstupem této práce je online formulář k vyplnění a případnému zpracování, či odeslání na vysokou školu.
+Maturitní práce na digitalizaci formuláře k přijetí na VŠ v předmětu Informačních a komunikačních technologií.
 
 Postup
 ------
