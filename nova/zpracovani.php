@@ -88,7 +88,7 @@ mysqli_close($Databaze);
 /*       |                                   */
 if(array_key_exists("Soubor",$Kolekce)){
 $Prihlaska=file_get_contents("prihlaska.php");
-$Funkce=fopen("../export/".session_id().".php","w+");
+$Funkce=fopen("../export/".session_id().".html","w+");
 fwrite($Funkce,$Prihlaska);
 fclose($Funkce);
 }
