@@ -383,7 +383,7 @@ $j=5;
 for($i=1;$i<=$j;$i++){
 $t=94+(($i-1)*7);
 echo "<Tr>"
-.$PoleProspechu[0]."Predmet".$i.$PoleProspechu[2].(++$t).$PoleProspechu[3].(!empty($_SESSION["Predmet{$i}"])?$_SESSION["Predmet{$i}"]:"").$PoleProspechu[4]
+.$PoleProspechu[0].$PoleProspechu[1]."Predmet".$i.$PoleProspechu[2].(++$t).$PoleProspechu[3].(!empty($_SESSION["Predmet{$i}"])?$_SESSION["Predmet{$i}"]:"").$PoleProspechu[4]
 .$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik1".$PoleProspechu[2].(++$t).$PoleProspechu[3].(!empty($_SESSION["Predmet{$i}Rocnik1"])?$_SESSION["Predmet{$i}Rocnik1"]:"").$PoleProspechu[4]
 .$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik2".$PoleProspechu[2].(++$t).$PoleProspechu[3].(!empty($_SESSION["Predmet{$i}Rocnik2"])?$_SESSION["Predmet{$i}Rocnik2"]:"").$PoleProspechu[4]
 .$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik3".$PoleProspechu[2].(++$t).$PoleProspechu[3].(!empty($_SESSION["Predmet{$i}Rocnik3"])?$_SESSION["Predmet{$i}Rocnik3"]:"").$PoleProspechu[4]
