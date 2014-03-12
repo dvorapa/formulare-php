@@ -6,7 +6,7 @@
 <Title>Přihláška na VŠ</Title>
 </Head>
 <Body>
-Vážený uchazeči,
+Vážený uchazeči <?php print $_SESSION["Jmeno"]; ?>,
 <Br>
 Vámi podaná přihláška na vysokou školu byla úspěšně uložena.
 <Br><Br>
@@ -16,7 +16,6 @@ Vyplnění nové přihlášky nebo tisk, úprava, či odstranění této přihl�
 <Br><Br>
 K přihlášení budete potřebovat Vaše rodné číslo (<?php echo $_SESSION["RCislo"]; ?>) a tento kód:
 <Br>
-    <?php print $_SESSION["Jmeno"]; ?>
 <H2><?php echo session_id(); ?></H2>
 <Br><Br>
 Tato zpráva byla vygenerována automaticky webovou aplikací Přihláška na VŠ.
