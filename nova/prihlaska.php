@@ -21,7 +21,7 @@ Table{Background-color:#FDB850;Margin:9.5mm 13.75mm;Padding-top:5mm;Padding-left
 <Div>
 <Table>
 <Tr><Td Rowspan="4"></Td><Td></Td><Td></Td></Tr>
-<Tr><Td></Td><Td></Td></Tr>
+<Tr><Td><?php echo $_SESSION["Jmeno"]; ?></Td><Td></Td></Tr>
 <Tr><Td></Td><Td></Td></Tr>
 <Tr><Td></Td><Td></Td></Tr>
 <Tr><Td></Td><Td></Td><Td></Td></Tr>

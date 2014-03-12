@@ -14,9 +14,9 @@ Vyplnění nové přihlášky nebo tisk, úprava, či odstranění této přihl�
 <Br>
 <A Href="http://prihlaskanavs.8u.cz/uprava/">http://prihlaskanavs.8u.cz/</A>
 <Br><Br>
-K přihlášení budete potřebovat Vaše rodné číslo (<?php $_SESSION["RCislo"]; ?>) a tento kód:
+K přihlášení budete potřebovat Vaše rodné číslo (<?php echo $_SESSION["RCislo"]; ?>) a tento kód:
 <Br>
-<H2>{session_id()}</H2>
+<H2><?php echo session_id(); ?></H2>
 <Br><Br>
 Tato zpráva byla vygenerována automaticky webovou aplikací Přihláška na VŠ.
 <Br>
