@@ -369,9 +369,11 @@ $_SESSION["c"]="?Cookie";
 <Tr><Th>I</Th><Th>II</Th><Th>III</Th><Th>IV</Th><Th>V</Th></Tr>
 <?php
 $PoleProspechu=array(
-"<Td><Input Name='",
+"<Td><Input Class='",
+"' Name='",
 "' Tabindex='",
-"' Type='Text' Value='",
+"' Type='",
+"' Value='",
 "'></Td>"
 );
 if(!empty($_GET["j"])){
@@ -382,13 +384,13 @@ $j=5;
 for($i=1;$i<=$j;$i++){
 $t=94+(($i-1)*7);
 echo "<Tr>"
-.$PoleProspechu[0]."Predmet".$i.$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Predmet{$i}"])?$_SESSION["Predmet{$i}"]:"").$PoleProspechu[3]
-.$PoleProspechu[0]."Predmet".$i."Rocnik1".$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Predmet{$i}Rocnik1"])?$_SESSION["Predmet{$i}Rocnik1"]:"").$PoleProspechu[3]
-.$PoleProspechu[0]."Predmet".$i."Rocnik2".$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Predmet{$i}Rocnik2"])?$_SESSION["Predmet{$i}Rocnik2"]:"").$PoleProspechu[3]
-.$PoleProspechu[0]."Predmet".$i."Rocnik3".$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Predmet{$i}Rocnik3"])?$_SESSION["Predmet{$i}Rocnik3"]:"").$PoleProspechu[3]
-.$PoleProspechu[0]."Predmet".$i."Rocnik4".$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Predmet{$i}Rocnik4"])?$_SESSION["Predmet{$i}Rocnik4"]:"").$PoleProspechu[3]
-.$PoleProspechu[0]."Predmet".$i."Rocnik5".$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Predmet{$i}Rocnik5"])?$_SESSION["Predmet{$i}Rocnik5"]:"").$PoleProspechu[3]
-.$PoleProspechu[0]."Maturita".$i.$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Maturita{$i}"])?$_SESSION["Maturita{$i}"]:"").$PoleProspechu[3]
+.$PoleProspechu[0]."Predmet".$i.$PoleProspechu[2].(++$t).$PoleProspechu[3]."Text".$PoleProspechu[4].(!empty($_SESSION["Predmet{$i}"])?$_SESSION["Predmet{$i}"]:"").$PoleProspechu[5]
+.$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik1".$PoleProspechu[2].(++$t).$PoleProspechu[3]."Number".$PoleProspechu[4].(!empty($_SESSION["Predmet{$i}Rocnik1"])?$_SESSION["Predmet{$i}Rocnik1"]:"").$PoleProspechu[5]
+.$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik2".$PoleProspechu[2].(++$t).$PoleProspechu[3]."Number".$PoleProspechu[4].(!empty($_SESSION["Predmet{$i}Rocnik2"])?$_SESSION["Predmet{$i}Rocnik2"]:"").$PoleProspechu[5]
+.$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik3".$PoleProspechu[2].(++$t).$PoleProspechu[3]."Number".$PoleProspechu[4].(!empty($_SESSION["Predmet{$i}Rocnik3"])?$_SESSION["Predmet{$i}Rocnik3"]:"").$PoleProspechu[5]
+.$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik4".$PoleProspechu[2].(++$t).$PoleProspechu[3]."Number".$PoleProspechu[4].(!empty($_SESSION["Predmet{$i}Rocnik4"])?$_SESSION["Predmet{$i}Rocnik4"]:"").$PoleProspechu[5]
+.$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik5".$PoleProspechu[2].(++$t).$PoleProspechu[3]."Number".$PoleProspechu[4].(!empty($_SESSION["Predmet{$i}Rocnik5"])?$_SESSION["Predmet{$i}Rocnik5"]:"").$PoleProspechu[5]
+.$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Maturita".$i.$PoleProspechu[2].(++$t).$PoleProspechu[3]."Number".$PoleProspechu[4].(!empty($_SESSION["Maturita{$i}"])?$_SESSION["Maturita{$i}"]:"").$PoleProspechu[5]
 ."</Tr>";
 }
 ?>
