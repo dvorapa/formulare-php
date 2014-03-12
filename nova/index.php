@@ -368,30 +368,28 @@ $_SESSION["c"]="?Cookie";
 <Tr><Th Rowspan="2">Předmět</Th><Th Colspan="5">Ročník</Th><Th Rowspan="2">Maturita</Th></Tr>
 <Tr><Th>I</Th><Th>II</Th><Th>III</Th><Th>IV</Th><Th>V</Th></Tr>
 <?php
+$PoleProspechu=array(
+"<Td><Input Name='",
+"' Tabindex='",
+"' Type='Text' Value='",
+"'></Td>"
+);
 if(!empty($_GET["j"])){
 $j=$_GET["j"];
 }else{
 $j=5;
 }
 for($i=1;$i<=$j;$i++){
-$t=94+($i-1);
-echo <<<EOT
-<Tr><Td>
-<Input Name="Predmet{$i}" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}'])?$_SESSION['Predmet{$i}']:''}">
-</Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik1" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik1'])?$_SESSION['Predmet{$i}Rocnik1']:''}">
-</Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik2" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik2'])?$_SESSION['Predmet{$i}Rocnik2']:''}">
-</Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik3" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik3'])?$_SESSION['Predmet{$i}Rocnik3']:''}">
-</Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik4" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik4'])?$_SESSION['Predmet{$i}Rocnik4']:''}">
-</Td><Td>
-<Input Class="Znamka" Name="Predmet{$i}Rocnik5" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Predmet{$i}Rocnik5'])?$_SESSION['Predmet{$i}Rocnik5']:''}">
-</Td><Td>
-<Input Class="Znamka" Name="Maturita{$i}" Tabindex="{$t}" Type="Text" Value="${!empty($_SESSION['Maturita{$i}'])?$_SESSION['Maturita{$i}']:''}">
-</Td></Tr>
-EOT;
+$t=94+(($i-1)*7);
+echo "<Tr>"
+.$PoleProspechu[0]."Predmet".$i.$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Predmet{$i}"])?$_SESSION["Predmet{$i}"]:"").$PoleProspechu[3]
+.$PoleProspechu[0]."Predmet".$i."Rocnik1".$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Predmet{$i}Rocnik1"])?$_SESSION["Predmet{$i}Rocnik1"]:"").$PoleProspechu[3]
+.$PoleProspechu[0]."Predmet".$i."Rocnik2".$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Predmet{$i}Rocnik2"])?$_SESSION["Predmet{$i}Rocnik2"]:"").$PoleProspechu[3]
+.$PoleProspechu[0]."Predmet".$i."Rocnik3".$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Predmet{$i}Rocnik3"])?$_SESSION["Predmet{$i}Rocnik3"]:"").$PoleProspechu[3]
+.$PoleProspechu[0]."Predmet".$i."Rocnik4".$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Predmet{$i}Rocnik4"])?$_SESSION["Predmet{$i}Rocnik4"]:"").$PoleProspechu[3]
+.$PoleProspechu[0]."Predmet".$i."Rocnik5".$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Predmet{$i}Rocnik5"])?$_SESSION["Predmet{$i}Rocnik5"]:"").$PoleProspechu[3]
+.$PoleProspechu[0]."Maturita".$i.$PoleProspechu[1].(++$t).$PoleProspechu[2].(!empty($_SESSION["Maturita{$i}"])?$_SESSION["Maturita{$i}"]:"").$PoleProspechu[3]
+."</Tr>";
 }
 ?>
 <Tr><Td Colspan="7"><A Href="/nova/<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech" Tabindex="283"><I Class="icon-plus"></I></A></Td></Tr>
