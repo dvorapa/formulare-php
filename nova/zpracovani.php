@@ -87,10 +87,23 @@ mysqli_close($Databaze);
 /* /__(_||_)|_)  (_|(_)  _)(_)|_||_)(_)| |_| */
 /*       |                                   */
 if(array_key_exists("Soubor",$Kolekce)){
-$Sklad=file_get_contents("predloha.php");
+$Prihlaska=file_get_contents("prihlaska.php");
 $Funkce=fopen("../export/".session_id().".php","w+");
-fwrite($Funkce,$Sklad);
+fwrite($Funkce,$Prihlaska);
 fclose($Funkce);
+}
+
+/*  __                                */
+/* /  \ _| _ _| _/ _ /   _ _  _ .|    */
+/* \__/(_|(-_)|(_|| )|  (-|||(_||||_| */
+/*                                    */
+if(array_key_exists("Email",$Kolekce)){
+$Email=file_get_contents("email.php");
+$Email=wordwrap($Email,70,PHP_EOL);
+$Hlavicka="MIME-Version: 1.0".PHP_EOL
+."Content-type: text/html; charset=utf-8".PHP_EOL
+."From: Přihláška na VŠ <info@prihlaskanavs.8u.cz>".PHP_EOL;
+mail($Kolekce["Email"],"Podrobnosti o přihlášce na VŠ",$Email,$Hlavicka);
 }
 
 /*  __                          */
