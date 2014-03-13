@@ -51,15 +51,15 @@ Budete-li v budoucnu potřebovat tuto přihlášku znovu použít, zapište si p
 <Section>
 Vyberte prosím, jakým způsobem chcete přihlášku získat:
 <Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php<?php echo $_SESSION["c"]; ?>&Tisk">Tisk</Button>
+<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.html&Tisk">Tisk</Button>
 <Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php<?php echo $_SESSION["c"]; ?>&Pdf">Pdf</Button>
+<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.html&Pdf">Pdf</Button>
 <Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php<?php echo $_SESSION["c"]; ?>&Docx">Docx</Button>
+<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.html&Docx">Docx</Button>
 <Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.php<?php echo $_SESSION["c"]; ?>&Html">Html</Button>
+<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.html&Html">Html</Button>
 <Br>
-<A Href="/export/<?php echo session_id(); ?>.php<?php echo $_SESSION["c"]; ?>&Dalsi">Další</A>
+<A Href="/export/<?php echo session_id(); ?>.html&Dalsi">Další</A>
 </Section>
 
 

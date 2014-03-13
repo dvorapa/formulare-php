@@ -6,7 +6,7 @@
 <Title>Přihláška na VŠ</Title>
 </Head>
 <Body>
-Vážený uchazeči <?php echo $_SESSION["Jmeno"]; ?>,
+Vážený uchazeči,
 <Br>
 Vámi podaná přihláška na vysokou školu byla úspěšně uložena.
 <Br><Br>
