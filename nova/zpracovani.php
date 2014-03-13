@@ -101,7 +101,10 @@ fclose($Funkce);
 /* \__/(_|(-_)|(_|| )|  (-|||(_||||_| */
 /*                                    */
 if(array_key_exists("Email",$Kolekce)){
-$Email=readfile("email.php");
+ob_start();
+include "email.php";
+$Email=ob_get_contents();
+ob_end_clean();
 $Email=wordwrap($Email,70,PHP_EOL);
 $Hlavicka="MIME-Version: 1.0".PHP_EOL
 ."Content-type: text/html; charset=utf-8".PHP_EOL
