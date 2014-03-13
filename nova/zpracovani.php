@@ -87,8 +87,11 @@ mysqli_close($Databaze);
 /* /__(_||_)|_)  (_|(_)  _)(_)|_||_)(_)| |_| */
 /*       |                                   */
 if(array_key_exists("Soubor",$Kolekce)){
-$Prihlaska=file_get_contents("prihlaska.php");
-$Funkce=fopen("../export/".session_id().".php","w+");
+ob_start();
+include "prihlaska.php";
+$Prihlaska=ob_get_contents();
+ob_end_clean();
+$Funkce=fopen("../export/".session_id().".html","w+");
 fwrite($Funkce,$Prihlaska);
 fclose($Funkce);
 }
@@ -98,7 +101,7 @@ fclose($Funkce);
 /* \__/(_|(-_)|(_|| )|  (-|||(_||||_| */
 /*                                    */
 if(array_key_exists("Email",$Kolekce)){
-$Email=file_get_contents("email.php");
+$Email=readfile("email.php");
 $Email=wordwrap($Email,70,PHP_EOL);
 $Hlavicka="MIME-Version: 1.0".PHP_EOL
 ."Content-type: text/html; charset=utf-8".PHP_EOL
