@@ -4,7 +4,7 @@
 /* /__|_)| (_|(_(_)\/(_|| )|  |  | |  | |    */
 /*    |                                      */
 session_start();
-$_SESSION["PoleHodnot"]=array(
+$PoleHodnot=array(
 /*Úvod*/
 "AkadRok","Program","Forma","Jazyk",
 /*Vysoká škola*/
@@ -14,11 +14,11 @@ $_SESSION["PoleHodnot"]=array(
 /*Narození*/
 "DatumNar","MistoNar","OkresNar","CisloOP","RCislo","CisloP",
 /*Adresa trvalého bydliště*/
-"TUlice","TCislo","TCast","TObec","TOkres","TPSC","TTel","TPosta","TStat",
+"TUlice","TCislo","TCast","TObec","TOkres","TPSC","TTel","TEmail","TPosta","TStat",
 /*Kontaktní adresa*/
-"KUlice","KCislo","KCast","KObec","KOkres","KPSC","KTel","KPosta","KStat",
+"KUlice","KCislo","KCast","KObec","KOkres","KPSC","KPosta","KStat",
 /*Střední škola*/
-"SSkola","SAdresa","SObor","SJKOV","SKKOV","SIZO","SRokMat",
+"SSkola","SAdresa","SObor","SKKOV","SIZO","SRokMat",
 /*Uchazeč se hlásí*/
 "Odkud",
 /*Zájmová činnost*/
@@ -30,10 +30,10 @@ $_SESSION["PoleHodnot"]=array(
 );
 /*Prospěch*/
 for($i=1;$i<=27;$i++){
-$_SESSION["PoleHodnot"][]="Predmet".$i;
-$_SESSION["PoleHodnot"][]="Maturita".$i;
+$PoleHodnot[]="Predmet".$i;
+$PoleHodnot[]="Maturita".$i;
 for($j=1;$j<=5;$j++){
-$_SESSION["PoleHodnot"][]="Predmet".$i."Rocnik".$j;
+$PoleHodnot[]="Predmet".$i."Rocnik".$j;
 }}
 
 /*  __                                    */
@@ -41,7 +41,7 @@ $_SESSION["PoleHodnot"][]="Predmet".$i."Rocnik".$j;
 /* |  | (-|_)|_)  (_|(_)  _)(-_)_)|(_)| ) */
 /*        |                               */
 if(!empty($_POST)){
-foreach($_SESSION["PoleHodnot"] as $Promenna){
+foreach($PoleHodnot as $Promenna){
 if(!empty($_POST[$Promenna])){
 $_SESSION[$Promenna]=$_POST[$Promenna];
 }}}
@@ -58,10 +58,10 @@ if((is_array($Kolekce))&&(array_key_exists("Kam",$Kolekce))){
 /* /__(_||_)|_)  (_|(_)  (_(_)(_)|(|(- */
 /*       |                             */
 if(array_key_exists("Cookie",$Kolekce)){
-$_SESSION["d"]=time()+60*60*24*$Kolekce["Cookie"];
-foreach($_SESSION["PoleHodnot"] as $Promenna){
+$d=time()+60*60*24*$Kolekce["Cookie"];
+foreach($PoleHodnot as $Promenna){
 if(!empty($_POST[$Promenna])){
-setcookie($Promenna,$_SESSION[$Promenna],$_SESSION["d"]);
+setcookie($Promenna,$_SESSION[$Promenna],$d);
 }}}
 
 /* ___                                         */
@@ -72,7 +72,7 @@ if(array_key_exists("Databaze",$Kolekce)){
 $Databaze=mysqli_connect("localhost","dvorapa","cepetauhacac","databazeprihlasek");
 mysqli_set_charset($Databaze,"utf8");
 $Sklad="insert into Prihlasky set ";
-foreach($_SESSION["PoleHodnot"] as $Promenna){
+foreach($PoleHodnot as $Promenna){
 if(!empty($_POST[$Promenna])){
 $_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
 $Sklad.="$Promenna='{$_SESSION[$Promenna]}',";
@@ -109,7 +109,7 @@ $Email=wordwrap($Email,70,PHP_EOL);
 $Hlavicka="MIME-Version: 1.0".PHP_EOL
 ."Content-type: text/html; charset=utf-8".PHP_EOL
 ."From: Přihláška na VŠ <info@prihlaskanavs.8u.cz>".PHP_EOL;
-mail($Kolekce["Email"],"Podrobnosti o přihlášce na VŠ",$Email,$Hlavicka);
+mail($_SESSION["TEmail"],"Podrobnosti o přihlášce na VŠ",$Email,$Hlavicka);
 }
 
 /*  __                          */

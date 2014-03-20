@@ -40,10 +40,6 @@ Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 Budete-li v budoucnu potřebovat tuto přihlášku znovu použít, zapište si prosím následující kód:
 <Br>
 <H2><?php echo session_id(); ?></H2>
-<Label For="Email">a zadejte prosím svůj email:</Label>
-<Br>
-<Input Id="Email" Name="Odeslat[Email]" Type="Email">
-<Button Name="Odeslat[Kam]" Type="Submit" Value="nova/vysledek.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
 </Header>
 
 
