@@ -74,7 +74,7 @@ $_SESSION["c"]="?Cookie";
 <Body>
 <Nav>
 <H1></H1>
-<Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="1">
+<Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="30">
 <Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
 <Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="<?php echo $_SESSION["Kam"]; ?>">Uložit</Button><Br>
 <Input Form="Formular" Name="Odeslat[Databaze]" Type="Hidden" Value="true">
