@@ -59,6 +59,7 @@ if((is_array($Kolekce))&&(array_key_exists("Kam",$Kolekce))){
 /*       |                             */
 if(array_key_exists("Cookie",$Kolekce)){
 $d=time()+60*60*24*$Kolekce["Cookie"];
+setcookie(PHPSESSID,session_id(),$d);
 foreach($PoleHodnot as $Promenna){
 if(!empty($_POST[$Promenna])){
 setcookie($Promenna,$_SESSION[$Promenna],$d);
@@ -71,14 +72,14 @@ setcookie($Promenna,$_SESSION[$Promenna],$d);
 if(array_key_exists("Databaze",$Kolekce)){
 $Databaze=mysqli_connect("localhost","dvorapa","heslododatabaze","databazeprihlasek");
 mysqli_set_charset($Databaze,"utf8");
-$Sklad="insert into Prihlasky set ";
+$Prikaz="insert into Prihlasky set ";
 foreach($PoleHodnot as $Promenna){
 if(!empty($_POST[$Promenna])){
-$_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
-$Sklad.="$Promenna='{$_SESSION[$Promenna]}',";
+$Prikaz.="$Promenna='{$_SESSION[$Promenna]}',";
 }}
-$Sklad.="PHPSESSID='".session_id()."'";
-mysqli_query($Databaze,$Sklad);
+$Prikaz.="PHPSESSID='".session_id()."'";
+$Prikaz=mysqli_real_escape_string($Databaze,$Prikaz);
+mysqli_query($Databaze,$Prikaz);
 mysqli_close($Databaze);
 }
 
