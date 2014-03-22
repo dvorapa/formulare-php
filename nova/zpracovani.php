@@ -105,11 +105,11 @@ ob_start();
 include "email.php";
 $Email=ob_get_contents();
 ob_end_clean();
-$Email=wordwrap($Email,70,PHP_EOL);
-$Hlavicka="MIME-Version: 1.0".PHP_EOL
-."Content-type: text/html; charset=utf-8".PHP_EOL
-."From: Přihláška na VŠ <info@prihlaskanavs.8u.cz>".PHP_EOL;
-mail($_SESSION["TEmail"],"Podrobnosti o přihlášce na VŠ",$Email,$Hlavicka);
+$Hlavicka=array();
+$Hlavicka[]="MIME-Version: 1.0";
+$Hlavicka[]="Content-type: text/html; charset=utf-8";
+$Hlavicka[]="From: Přihláška na VŠ <info@prihlaskanavs.8u.cz>";
+mail($_SESSION["TEmail"],"Podrobnosti o přihlášce na VŠ",wordwrap($Email,70,"\r\n"),implode("\r\n",$Hlavicka));
 }
 
 /*  __                          */
