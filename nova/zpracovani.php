@@ -59,7 +59,6 @@ if((is_array($Kolekce))&&(array_key_exists("Kam",$Kolekce))){
 /*       |                             */
 if(array_key_exists("Cookie",$Kolekce)){
 $d=time()+60*60*24*$Kolekce["Cookie"];
-setcookie(PHPSESSID,session_id(),$d);
 foreach($PoleHodnot as $Promenna){
 if(!empty($_POST[$Promenna])){
 setcookie($Promenna,$_SESSION[$Promenna],$d);
