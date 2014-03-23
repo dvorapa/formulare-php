@@ -47,13 +47,13 @@ fclose($Soubor);
 <Style Type="Text/css">
 Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0 auto;Position:absolute;Left:10%;Right:10%}
 H1{Margin:0.5em 0}
-A:not(Small A){Background-color:#242424;Border-radius:0.25em;Color:#FFBF00;Display:inline-block;Margin:1em 0;Margin-right:1em;Padding:0.5em 2em;Text-decoration:none;Text-transform:uppercase}
+A:not(:last-of-type){Background-color:#242424;Border-radius:0.25em;Color:#FFBF00;Display:inline-block;Margin:1em 0;Margin-right:1em;Padding:0.5em 2em;Text-decoration:none;Text-transform:uppercase}
 A:hover,A:active{Box-shadow:0 0 0.5em #242424;Text-shadow:0 0 0.5em}
 
 @media (orientation:landscape){
 Body{Left:18%;Right:18%}
 P,A{Font-size:1.2em}
-Small{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
+Endora{Display:inline-block;Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }
 </Style>
 <Title>Chyba</Title>
@@ -69,6 +69,6 @@ Chyba je na naší straně, někde jsme na něco určitě zapomněli.
 <?php echo !empty($_SERVER["HTTP_REFERER"])?"<A Href='".$_SERVER["HTTP_REFERER"]."'>Zpět</A>":""; ?>
 <A Href="/">Domů</A>
 
-<Small><Endora></Small>
+<Endora>
 </Body>
 </Html>
