@@ -1,6 +1,35 @@
 <?php
 session_start();
 error_reporting(0);
+if(!empty($_GET)){
+$Text=array();
+if($_GET["Kod"]==1){
+$Text[]="HTTP 403/404";
+$Text[]=$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+$Text[]=$_SERVER["HTTP_REFERER"];
+}elseif($_GET["Kod"]==2){
+$Text[]="HTTP 503";
+$Text[]=$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+$Text[]=$_SERVER["HTTP_REFERER"];
+}elseif($_GET["Kod"]==3){
+$Text[]="empty($_POST)";
+$Text[]=print_r($_POST,true);
+$Text[]=$_SERVER["REQUEST_METHOD"];
+$Text[]=$_SERVER["HTTP_USER_AGENT"];
+}elseif($_GET["Kod"]==4){
+$Text[]="in_array($Kolekce[Kam],$_POST)";
+$Text[]=print_r($_POST,true);
+$Text[]=$_SERVER["REQUEST_METHOD"];
+$Text[]=$_SERVER["HTTP_USER_AGENT"];
+}else{
+$Text[]="Jiná chyba";
+$Text[]=print_r($GLOBALS,true);
+$Text[]=print_r(get_headers($_SERVER["HTTP_REFERER"]),true);
+}
+$Soubor=fopen("chyby.log","a+");
+fwrite($Soubor,implode(PHP_EOL,$Text).PHP_EOL.PHP_EOL);
+fclose($Soubor);
+}
 ?>
 <!Doctype Html>
 <Html Lang="Cs">
@@ -20,7 +49,6 @@ Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-
 H1{Margin:0.5em 0}
 A{Background-color:#242424;Border-radius:0.25em;Color:#FFBF00;Display:inline-block;Margin:1em 0;Margin-right:1em;Padding:0.5em 2em;Text-decoration:none;Text-transform:uppercase}
 A:hover,A:active{Box-shadow:0 0 0.5em #242424;Text-shadow:0 0 0.5em}
-Div{Visibility:hidden}
 
 @media (orientation:landscape){
 Body{Left:18%;Right:18%}
@@ -40,40 +68,6 @@ Chyba je na naší straně, někde jsme na něco určitě zapomněli.
 
 <?php echo !empty($_SERVER["HTTP_REFERER"])?"<A Href='".$_SERVER["HTTP_REFERER"]."'>Zpět</A>":""; ?>
 <A Href="/">Domů</A>
-
-<Div>
-<?php
-if(!empty($_GET)){
-$Text=array();
-if($_GET["Kod"]==1){
-$Text[]="HTTP 403/404";
-$Text[]=$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-$Text[]=$_SERVER["HTTP_REFERER"];
-}elseif($_GET["Kod"]==2){
-$Text[]="HTTP 503";
-$Text[]=$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-$Text[]=$_SERVER["HTTP_REFERER"];
-}elseif($_GET["Kod"]==3){
-$Text[]="empty($_POST)";
-$Text[]=print_r($_POST);
-$Text[]=$_SERVER["REQUEST_METHOD"];
-$Text[]=$_SERVER["HTTP_USER_AGENT"];
-}elseif($_GET["Kod"]==4){
-$Text[]="in_array($Kolekce[Kam],$_POST)";
-$Text[]=print_r($_POST);
-$Text[]=$_SERVER["REQUEST_METHOD"];
-$Text[]=$_SERVER["HTTP_USER_AGENT"];
-}else{
-$Text[]="Jiná chyba";
-$Text[]=$GLOBALS;
-$Text[]=print_r(get_headers($_SERVER["HTTP_REFERER"]));
-}
-$Soubor=fopen("chyby.log","a+");
-fwrite($Soubor,implode(PHP_EOL,$Text).PHP_EOL.PHP_EOL);
-fclose($Soubor);
-}
-?>
-</Div>
 
 <Endora>
 </Body>
