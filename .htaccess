@@ -1,1 +1,1 @@
-ErrorDocument 404 /Chyba.php
+ErrorDocument 404 /Chyba/index.php
