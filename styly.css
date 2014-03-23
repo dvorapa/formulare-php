@@ -15,5 +15,5 @@ Nav:first-of-type{Top:0;Left:0}
 Article{Background-color:#242424;Margin:auto;Min-height:90%;Position:absolute;Width:64%;Top:5%;Left:0;Right:0}
 Nav:last-of-type{Bottom:0;Right:0}
 Nav:last-of-type H1{Width:80%}
-Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
+Footer{Position:absolute;Z-index:-1;Bottom:0}
 }

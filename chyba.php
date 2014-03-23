@@ -54,6 +54,7 @@ Footer A{Color:#242424;Display:inline;Margin:0;Padding:0;Text-decoration:none;Te
 @media (orientation:landscape){
 Body{Left:18%;Right:18%}
 P,A{Font-size:1.2em}
+Footer{Position:absolute;Z-index:-1;Bottom:0}
 }
 </Style>
 <Title>Chyba</Title>
