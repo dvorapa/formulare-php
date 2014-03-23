@@ -317,6 +317,20 @@ CREATE TABLE `ZajmovaCinnost` (
   PRIMARY KEY (`PHPSESSID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+create table Prihlasky as
+select * from Uvod
+join VysokaSkola using (PHPSESSID)
+join OsobniUdaje using (PHPSESSID)
+join Narozeni using (PHPSESSID)
+join AdresaTrvalehoBydliste using (PHPSESSID)
+join KontaktniAdresa using (PHPSESSID)
+join StredniSkola using (PHPSESSID)
+join UchazecSeHlasi using (PHPSESSID)
+join Prospech using (PHPSESSID)
+join ZajmovaCinnost using (PHPSESSID)
+join PrubehZamestnani using (PHPSESSID)
+join PredchoziVysokaSkola using (PHPSESSID);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
