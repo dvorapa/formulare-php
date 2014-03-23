@@ -53,7 +53,7 @@ header("Location: /chyba.php".$_SESSION["c"]."&Kod=3");
 /*  \/ \/|_)(-|   |((_)|(-|((_(- */
 /*     /                         */
 foreach($_POST as $Kolekce){
-if(is_array($Kolekce)){
+while(is_array($Kolekce)){
 if(array_key_exists("Kam",$Kolekce)){
 
 /* ___                                 */
@@ -123,7 +123,5 @@ $_SESSION["Kam"]=$Kolekce["Kam"];
 header("Location: /".$Kolekce["Kam"]);
 }else{
 header("Location: /chyba.php".$_SESSION["c"]."&Kod=4");
-}}else{
-header("Location: /chyba.php".$_SESSION["c"]."&Kod=5");
 }}
 ?>
