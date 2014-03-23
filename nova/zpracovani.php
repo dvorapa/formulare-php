@@ -123,5 +123,5 @@ $_SESSION["Kam"]=$Kolekce["Kam"];
 header("Location: /".$Kolekce["Kam"]);
 }else{
 header("Location: /chyba.php".$_SESSION["c"]."&Kod=4");
-}}
+}}}
 ?>
