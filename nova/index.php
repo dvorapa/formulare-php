@@ -4,6 +4,7 @@
 /*  \/ \/|_)| )|_||_(-  (_(_)(_)|(|(- */
 /*     / |                            */
 session_start();
+ini_set("session.use_trans_sid","1");
 if(!isset($_COOKIE["Cookie"])){
 if(!isset($_GET["Cookie"])){
 setcookie("Cookie","1",time()+60*60);
@@ -13,6 +14,7 @@ $_SESSION["Kam"]="nova/{$_SESSION['c']}";
 }
 header("Location: /{$_SESSION['Kam']}");
 }else{
+<<<<<<< HEAD
 $_SESSION["c"]="?".session_id();
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +51,9 @@ $_SESSION["c"]="?Cookie";
 }}
 >>>>>>> 2a4b6df... Navigace
 =======
+=======
+$_SESSION["c"]="?".htmlspecialchars(SID);
+>>>>>>> c9fb372... Oprava předávání SID
 }}else{
 $_SESSION["c"]="?Cookie";
 }
