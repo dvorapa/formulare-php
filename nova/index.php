@@ -274,7 +274,7 @@ $_SESSION["c"]="?Cookie";
 <Input Id="SObor" Name="SObor" Tabindex="58" Type="Text" Value="<?php echo !empty($_SESSION['SObor'])?$_SESSION['SObor']:''; ?>">
 <Br>
 <Label For="SKKOV">KKOV</Label>
-<Input Id="SKKOV" Name="SKKOV" Tabindex="59" Type="Number" Value="<?php echo !empty($_SESSION['SKKOV'])?$_SESSION['SKKOV']:''; ?>">
+<Input Id="SKKOV" Name="SKKOV" Tabindex="59" Type="Text" Value="<?php echo !empty($_SESSION['SKKOV'])?$_SESSION['SKKOV']:''; ?>">
 <Br>
 <Label For="SIZO">IZO</Label>
 <Input Id="SIZO" Name="SIZO" Tabindex="60" Type="Number" Value="<?php echo !empty($_SESSION['SIZO'])?$_SESSION['SIZO']:''; ?>">

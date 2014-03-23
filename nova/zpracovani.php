@@ -53,8 +53,7 @@ header("Location: /chyba.php".$_SESSION["c"]."&Kod=3");
 /*  \/ \/|_)(-|   |((_)|(-|((_(- */
 /*     /                         */
 foreach($_POST as $Kolekce){
-if(is_array($Kolekce)){
-if(array_key_exists("Kam",$Kolekce)){
+if((is_array($Kolekce))&&(array_key_exists("Kam",$Kolekce))){
 
 /* ___                                 */
 /*  _/ _/ _ . _   _| _    _ _  _ | . _ */
@@ -121,7 +120,5 @@ mail($_SESSION["TEmail"],"Podrobnosti o přihlášce na VŠ",wordwrap($Email,70,
 /*                              */
 $_SESSION["Kam"]=$Kolekce["Kam"];
 header("Location: /".$Kolekce["Kam"]);
-}else{
-header("Location: /chyba.php".$_SESSION["c"]."&Kod=4");
-}}}
+}}
 ?>
