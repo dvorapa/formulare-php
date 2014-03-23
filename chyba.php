@@ -13,18 +13,18 @@ $Text[]=$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
 $Text[]=$_SERVER["HTTP_REFERER"];
 }elseif($_GET["Kod"]==3){
 $Text[]="empty($_POST)";
-$Text[]=print_r($_POST);
+$Text[]=var_export($_POST);
 $Text[]=$_SERVER["REQUEST_METHOD"];
 $Text[]=$_SERVER["HTTP_USER_AGENT"];
 }elseif($_GET["Kod"]==4){
 $Text[]="in_array($Kolekce[Kam],$_POST)";
-$Text[]=print_r($_POST);
+$Text[]=var_export($_POST);
 $Text[]=$_SERVER["REQUEST_METHOD"];
 $Text[]=$_SERVER["HTTP_USER_AGENT"];
 }else{
 $Text[]="Jiná chyba";
-$Text[]=print_r($GLOBALS);
-$Text[]=print_r(get_headers($_SERVER["HTTP_REFERER"]));
+$Text[]=var_export($GLOBALS);
+$Text[]=var_export(get_headers($_SERVER["HTTP_REFERER"]));
 }
 $Soubor=fopen("chyby.log","a+");
 fwrite($Soubor,implode(PHP_EOL,$Text).PHP_EOL.PHP_EOL);
