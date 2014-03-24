@@ -12,12 +12,7 @@ $Text[]="HTTP 503";
 $Text[]=$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
 $Text[]=$_SERVER["HTTP_REFERER"];
 }elseif($_GET["Kod"]==3){
-$Text[]="empty($_POST)";
-$Text[]=print_r($_POST,true);
-$Text[]=$_SERVER["REQUEST_METHOD"];
-$Text[]=$_SERVER["HTTP_USER_AGENT"];
-}elseif($_GET["Kod"]==4){
-$Text[]="in_array($Kolekce[Kam],$_POST)";
+$Text[]="empty POST";
 $Text[]=print_r($_POST,true);
 $Text[]=$_SERVER["REQUEST_METHOD"];
 $Text[]=$_SERVER["HTTP_USER_AGENT"];
@@ -41,8 +36,8 @@ fclose($Soubor);
 <Meta Name="Keywords" Content="přihláška,VŠ,formuláře,PHP,vysoké školy">
 <Meta Name="Robots" Content="Follow,noindex">
 <Meta Name="Viewport" Content="width=device-width">
-<Link Type="Image/x-icon" Rel="Shortcut icon" Href="favicon.ico">
-<Link Rel="Stylesheet" Href="aplikace/mfglabs_iconset.css">
+<Link Type="Image/x-icon" Rel="Shortcut icon" Href="/favicon.ico">
+<Link Rel="Stylesheet" Href="/aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
 <Style Type="Text/css">
 Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0 auto;Position:absolute;Left:10%;Right:10%}
@@ -55,7 +50,7 @@ A.Tlacitko:hover,A.Tlacitko:active{Box-shadow:0 0 0.5em #242424}
 @media (orientation:landscape){
 Body{Left:18%;Right:18%}
 P,A{Font-size:1.2em}
-Footer{Position:absolute;Text-align:center;Z-index:-1;Bottom:0}
+Div{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }
 </Style>
 <Title>Chyba</Title>
@@ -71,8 +66,8 @@ Chyba je na naší straně, někde jsme na něco určitě zapomněli.
 <?php echo !empty($_SERVER["HTTP_REFERER"])?"<A Class='' Href='".$_SERVER["HTTP_REFERER"]."'>Zpět</A>":""; ?>
 <A Class="Tlacitko" Href="/">Domů</A>
 
-<Footer>
+<Div>
 <Endora>
-</Footer>
+</Div>
 </Body>
 </Html>

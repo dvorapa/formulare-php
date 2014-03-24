@@ -27,7 +27,7 @@ Input{Border:1px solid silver;Border-radius:0.25em;Box-shadow:inset 0 1px 1px rg
 @media (orientation:landscape){
 Form{Left:18%;Right:18%}
 Section{Float:left;Margin-right:3em;Text-align:center;Width:40%}
-Footer{Position:absolute;Z-index:-1;Bottom:0}
+Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }
 </Style>
 <!--[if lt IE 10]><Script Src="/aplikace/html5shiv.js"></Script><![endif]-->
