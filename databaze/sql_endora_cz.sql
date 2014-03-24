@@ -279,7 +279,7 @@ CREATE TABLE `StredniSkola` (
   `SSkola` varchar(40) NOT NULL,
   `SAdresa` varchar(80) NOT NULL,
   `SObor` varchar(40) NOT NULL,
-  `SKKOV` varchar(40) NOT NULL,
+  `SKKOV` varchar(20) NOT NULL,
   `SIZO` varchar(40) NOT NULL,
   `SRokMat` year(4) NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
