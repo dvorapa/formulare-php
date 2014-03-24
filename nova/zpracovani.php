@@ -76,10 +76,10 @@ mysqli_set_charset($Databaze,"utf8");
 $Prikaz="insert into Prihlasky set ";
 foreach($PoleHodnot as $Promenna){
 if(!empty($_POST[$Promenna])){
+$_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
 $Prikaz.="$Promenna='{$_SESSION[$Promenna]}',";
 }}
 $Prikaz.="PHPSESSID='".session_id()."'";
-$Prikaz=mysqli_real_escape_string($Databaze,$Prikaz);
 mysqli_query($Databaze,$Prikaz);
 mysqli_close($Databaze);
 }

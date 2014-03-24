@@ -55,7 +55,7 @@ A.Tlacitko:hover,A.Tlacitko:active{Box-shadow:0 0 0.5em #242424}
 @media (orientation:landscape){
 Body{Left:18%;Right:18%}
 P,A{Font-size:1.2em}
-Footer{Position:absolute;Z-index:-1;Bottom:0}
+Footer{Position:absolute;Text-align:center;Z-index:-1;Bottom:0}
 }
 </Style>
 <Title>Chyba</Title>
