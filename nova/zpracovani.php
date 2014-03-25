@@ -3,6 +3,7 @@
 /*  _/ _  _ _  _ _    _/ _ /  |__| |  | |__) */
 /* /__|_)| (_|(_(_)\/(_|| )|  |  | |  | |    */
 /*    |                                      */
+ini_set("session.cookie_httponly","1");
 session_start();
 $PoleHodnot=array(
 /*Úvod*/
@@ -110,7 +111,7 @@ ob_end_clean();
 $Hlavicka=array();
 $Hlavicka[]="MIME-Version: 1.0";
 $Hlavicka[]="Content-type: text/html; charset=utf-8";
-$Hlavicka[]="From: Přihláška na VŠ <info@prihlaskanavs.8u.cz>";
+$Hlavicka[]="From: info@prihlaskanavs.8u.cz";
 mail($_SESSION["TEmail"],"Podrobnosti o přihlášce na VŠ",wordwrap($Email,70,"\r\n"),implode("\r\n",$Hlavicka));
 }
 

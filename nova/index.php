@@ -3,11 +3,11 @@
 /* \  /   _  _    |_ _/  _ _  _ | . _ */
 /*  \/ \/|_)| )|_||_(-  (_(_)(_)|(|(- */
 /*     / |                            */
+ini_set("session.cookie_httponly","1");
 session_start();
-ini_set("session.use_trans_sid","1");
 if(!isset($_COOKIE["Cookie"])){
 if(!isset($_GET["Cookie"])){
-setcookie("Cookie","1",time()+60*60);
+setcookie("Cookie","1");
 $_SESSION["c"]="?Cookie";
 if(empty($_SESSION["Kam"])){
 $_SESSION["Kam"]="nova/{$_SESSION['c']}";
@@ -80,11 +80,11 @@ $_SESSION["c"]="?Cookie";
 <Nav>
 <H1></H1>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="30">
-<Input Form="Formular" Name="Ulozit[Databaze]" Type="Hidden" Value="true">
-<Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="<?php echo $_SESSION["Kam"]; ?>">Uložit</Button><Br>
+<Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="nova/ulozeno.php<?php echo $_SESSION["c"]; ?>">Uložit</Button><Br>
 <Input Form="Formular" Name="Odeslat[Databaze]" Type="Hidden" Value="true">
+<Input Form="Formular" Name="Odeslat[Email]" Type="Hidden" Value="true">
 <Input Form="Formular" Name="Odeslat[Soubor]" Type="Hidden" Value="true">
-<Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="nova/vysledek.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
+<Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="nova/odeslano.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
 </Nav>
 
 
@@ -413,7 +413,7 @@ echo "<Tr>"
 <Input Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Name="Odeslat[Email]" Type="Hidden" Value="true">
 <Input Name="Odeslat[Soubor]" Type="Hidden" Value="true">
-<Button Name="Odeslat[Kam]" Tabindex="285" Type="Submit" Value="nova/vysledek.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
+<Button Name="Odeslat[Kam]" Tabindex="285" Type="Submit" Value="nova/odeslano.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
 </Section>
 </Form>
 

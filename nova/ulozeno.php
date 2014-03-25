@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+ini_set("session.cookie_httponly","1");
+session_start();
+?>
 <!Doctype Html>
 <Html Lang="Cs">
 <Head>
@@ -35,41 +38,11 @@ Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 <Body>
 <Form Action="zpracovani.php<?php echo $_SESSION["c"]; ?>" Method="Post">
 <Header>
-<H1><I Class="icon-check icon3x"></I><Br>Hotovo</H1>
-Budete-li v budoucnu potřebovat tuto přihlášku znovu použít, zapište si prosím následující kód:
+<H1><I Class="icon-hourglass icon3x"></I><Br>Uloženo</H1>
+Budete-li v budoucnu chtít pokračovat ve vyplňování, zapište si prosím následující kód:
 <Br>
 <H2><?php echo session_id(); ?></H2>
 </Header>
-
-
-
-<Section>
-Vyberte prosím, jakým způsobem chcete přihlášku získat:
-<Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.html?Tisk">Tisk</Button>
-<Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.pdf">Pdf</Button>
-<Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.docx">Docx</Button>
-<Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.html">Html</Button>
-</Section>
-
-
-
-<Section>
-Nebudete-li se k této přihlášce již vracet nebo chcete smazat uložené údaje, klikněte sem:
-<Br>
-<Button Name="Smazat[Kam]" Type="Submit" Value=""><I Class="icon-trash_can"></I></Button>
-<Br>
-Potřebujete-li upravit starší přihlášku nebo vytvořit novou, klikněte sem:
-<Br>
-<Button Name="Prejit[Kam]" Type="Submit" Value=""><I Class="icon-home"></I></Button>
-<Br>
-Není-li žádná z předchozích možností vhodná nebo si nejste jist(a), klikněte sem:
-<Br>
-<Button Name="Odejit[Kam]" Type="Submit" Value=""><I Class="icon-cross_mark"></I></Button>
-</Section>
 </Form>
 
 

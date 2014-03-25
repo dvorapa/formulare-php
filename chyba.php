@@ -1,4 +1,5 @@
 <?php
+ini_set("session.cookie_httponly","1");
 session_start();
 error_reporting(0);
 if(!empty($_GET)){
