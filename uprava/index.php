@@ -1,7 +1,4 @@
-<?php
-$_SESSION["SesID"]=session_id();
-session_start();
-?>
+<?php session_start(); ?>
 <!Doctype Html>
 <Html Lang="Cs">
 <Head>
@@ -38,10 +35,10 @@ Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 <Form Action="/nova/zpracovani.php<?php echo $_SESSION["c"]; ?>" Method="Post">
 <Header>
 <H1><I Class="icon-magnifying icon3x"></I><Br>Upravit</H1>
-Vložte prosím svůj kód:
-<Br>
-<Input Name="" Type="Text" Value="<?php echo !empty($_SESSION["SesID"])?$_SESSION["SesID"]:""; ?>">
-<Input Name="" Type="Text" Value="<?php echo !empty($_SESSION["RCislo"])?$_SESSION["RCislo"]:""; ?>">
+<Label>Vložte prosím svůj kód:</Label><Br>
+<Input Name="" Type="Text" Value=""><Br><Br>
+<Label>a svoje rodné číslo:</Label><Br>
+<Input Name="" Type="Text" Value=""><Br>
 <Button Name="" Type="Submit" Value="nova/?">Načíst</Button>
 </Header>
 </Form>
