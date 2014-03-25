@@ -20,7 +20,6 @@ A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
 Button:hover,Button:active{Box-shadow:0 0 0.5em #242424}
 Form{Margin:auto;Position:absolute;Left:10%;Right:10%}
 Header H1{Margin:0.5em 0}
-Header I{Font-size:3em}
 Section{Border:1px dashed;Margin-bottom:1em;Padding:1em}
 Input{Border:1px solid silver;Border-radius:0.25em;Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Padding:0.5em;Width:18em}
 
@@ -36,7 +35,7 @@ Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 <Body>
 <Form Action="zpracovani.php<?php echo $_SESSION["c"]; ?>" Method="Post">
 <Header>
-<H1><I Class="icon-check"></I><Br>Hotovo</H1>
+<H1><I Class="icon-check icon3x"></I><Br>Hotovo</H1>
 Budete-li v budoucnu potřebovat tuto přihlášku znovu použít, zapište si prosím následující kód:
 <Br>
 <H2><?php echo session_id(); ?></H2>
