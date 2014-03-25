@@ -1,5 +1,5 @@
 <?php
-$_SESSION["SesID"]=session_id()
+$_SESSION["SesID"]=session_id();
 session_start();
 ?>
 <!Doctype Html>
