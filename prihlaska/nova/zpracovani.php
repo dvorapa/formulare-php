@@ -120,6 +120,6 @@ mail($_SESSION["TEmail"],"Podrobnosti o přihlášce na VŠ",wordwrap($Email,70,
 /* |  | (-_)|||(-| (_)\/(_|| )| */
 /*                              */
 $_SESSION["Kam"]=$Kolekce["Kam"];
-header("Location: /".$Kolekce["Kam"]);
+header("Location: /prihlaska/nova/".$Kolekce["Kam"]);
 }}
 ?>

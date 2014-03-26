@@ -11,19 +11,21 @@
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="/favicon.ico">
 <Link Rel="Stylesheet" Href="/aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
-<Link Type="Text/css" Rel="Stylesheet" Href="/nova/styly.css">
+<Link Type="Text/css" Rel="Stylesheet" Href="../styly.css">
 <!--[if lt IE 10]><Script Src="/aplikace/html5shiv.js"></Script><![endif]-->
-<Title>Úprava</Title>
+<Title>Stav</Title>
 </Head>
 <Body>
 <Header>
-<H1><I Class="icon-settings icon3x"></I><Br>Úprava</H1>
+<H1><I Class="icon-magnifying icon3x"></I><Br>Stav</H1>
 </Header>
 
 <Form Action="zpracovani.php" Method="Post">
-<Label For="">K úpravě dříve uložené přihlášky zadejte prosím její kód:</Label><Br>
+<Label For="">Ke zobrazení průběhu zpracování přihlášky zadejte prosím její kód:</Label><Br>
 <Input Autofocus Id="" Name="" Tabindex="1" Type="Text" Value=""><Br>
-<Button Name="" Tabindex="2" Type="Submit" Value="">Načíst</Button>
+<Label For="">a svoje rodné číslo:</Label><Br>
+<Input Autofocus Id="" Name="" Tabindex="2" Type="Text" Value=""><Br>
+<Button Name="" Tabindex="3" Type="Submit" Value="">Načíst</Button>
 </Form>
 
 <Footer>

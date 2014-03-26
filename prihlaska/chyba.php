@@ -1,7 +1,7 @@
 <?php
+error_reporting(0);
 ini_set("session.cookie_httponly","1");
 session_start();
-error_reporting(0);
 if(!empty($_GET)){
 $Text=array();
 if($_GET["Kod"]==1){
@@ -35,40 +35,28 @@ fclose($Soubor);
 <Meta Name="Author" Content="Pavel Dvořák, 8.O">
 <Meta Name="Description" Content="Online přihláška ke studiu na vysoké škole vytvořená ke zjednodušení vyplňování, tisku a následném zasílání">
 <Meta Name="Keywords" Content="přihláška,VŠ,formuláře,PHP,vysoké školy">
-<Meta Name="Robots" Content="Follow,noindex">
+<Meta Name="Robots" Content="Nofollow,noindex">
 <Meta Name="Viewport" Content="width=device-width">
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="/favicon.ico">
 <Link Rel="Stylesheet" Href="/aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
 <Style Type="Text/css">
-Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0 auto;Position:absolute;Left:10%;Right:10%}
-H1{Margin:0.5em 0}
-A{Color:#242424;Text-decoration:none}
-A:hover,A:active{Text-shadow:0 0 0.5em}
-A.Tlacitko{Background-color:#242424;Border-radius:0.25em;Color:#FFBF00;Display:inline-block;Margin:1em 0;Margin-right:1em;Padding:0.5em 2em;Text-decoration:none;Text-transform:uppercase}
-A.Tlacitko:hover,A.Tlacitko:active{Box-shadow:0 0 0.5em #242424}
 
-@media (orientation:landscape){
-Body{Left:18%;Right:18%}
-P,A{Font-size:1.2em}
-Div{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
-}
 </Style>
 <Title>Chyba</Title>
 </Head>
 <Body>
 <H1><I Class="icon-cross_mark icon3x"></I><Br>Chyba</H1>
 
-<P>
 Omlouváme se, ale stránku nelze správně načíst.<Br>
-Chyba je na naší straně, někde jsme na něco určitě zapomněli.
-</P>
+Chyba je na naší straně, někde jsme na něco určitě zapomněli.<Br>
 
-<?php echo !empty($_SERVER["HTTP_REFERER"])?"<A Class='' Href='".$_SERVER["HTTP_REFERER"]."'>Zpět</A>":""; ?>
-<A Class="Tlacitko" Href="/">Domů</A>
+<A Class="Tlacitko" Href="/" Title="Zpět na domovskou stránku"><I Class="icon-home"></I></A>
+<A Class="Tlacitko" Href="javascript:window.close();" Title="Odejít pryč z aplikace"><I Class="icon-cross_mark"></I>
+<?php if(!empty($_SERVER["HTTP_REFERER"])): ?>
+<A Class="Tlacitko" Href="<?php echo $_SERVER["HTTP_REFERER"]; ?>" Title="Zpět na předcházející stránku"><I Class="icon-arrow_left"></I></A>
+<?php endif; ?>
 
-<Div>
 <Endora>
-</Div>
 </Body>
 </Html>

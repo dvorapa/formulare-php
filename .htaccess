@@ -1,3 +1,0 @@
-ErrorDocument 403 /chyba.php?Kod=1
-ErrorDocument 404 /chyba.php?Kod=1
-ErrorDocument 503 /chyba.php?Kod=2
