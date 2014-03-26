@@ -1,7 +1,3 @@
-<?php
-ini_set("session.cookie_httponly","1");
-session_start();
-?>
 <!Doctype Html>
 <Html Lang="Cs">
 <Head>
@@ -17,22 +13,20 @@ session_start();
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
 <Link Type="Text/css" Rel="Stylesheet" Href="/nova/styly.css">
 <!--[if lt IE 10]><Script Src="/aplikace/html5shiv.js"></Script><![endif]-->
-<Title>Uloženo</Title>
+<Title>Stav</Title>
 </Head>
 <Body>
 <Header>
-<H1><I Class="icon-hourglass icon3x"></I><Br>Uloženo</H1>
-Budete-li v budoucnu chtít pokračovat ve vyplňování, zapište si prosím následující kód:<Br>
-<H2><?php echo session_id(); ?></H2>
+<H1><I Class="icon-magnifying icon3x"></I><Br>Stav</H1>
 </Header>
 
-<Section>
-<A Class="Tlacitko" Href="/" Title="Zpět na domovskou stránku"><I Class="icon-home"></I></A><Br>
-<A Class="Tlacitko" Href="javascript:window.close();" Title="Odejít pryč z aplikace"><I Class="icon-cross_mark"></I></A>
-<?php if(!empty($_SERVER["HTTP_REFERER"])): ?>
-<A Class="Tlacitko" Href="<?php echo $_SERVER["HTTP_REFERER"]; ?>" Title="Zpět na předcházející stránku"><I Class="icon-arrow_left"></I></A>
-<?php endif; ?>
-</Section>
+<Form Action="zpracovani.php" Method="Post">
+<Label For="">Ke zobrazení průběhu zpracování přihlášky zadejte prosím její kód:</Label><Br>
+<Input Autofocus Id="" Name="" Tabindex="1" Type="Text" Value=""><Br>
+<Label For="">a svoje rodné číslo:</Label><Br>
+<Input Autofocus Id="" Name="" Tabindex="2" Type="Text" Value=""><Br>
+<Button Name="" Tabindex="3" Type="Submit" Value="">Načíst</Button>
+</Form>
 
 <Footer>
 <Endora>

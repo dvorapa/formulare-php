@@ -15,67 +15,34 @@ session_start();
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="/favicon.ico">
 <Link Rel="Stylesheet" Href="/aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
-<Style Type="Text/css">
-Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0}
-A{Color:#242424;Text-decoration:none}
-Button{Background-color:#242424;Border:0;Border-radius:0.25em;Color:#FFBF00;Cursor:pointer;Font-size:1em;Margin:1em 0;Padding:0.5em 2em;Text-transform:uppercase}
-A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
-Button:hover,Button:active{Box-shadow:0 0 0.5em #242424}
-Form{Margin:auto;Position:absolute;Left:10%;Right:10%}
-Header H1{Margin:0.5em 0}
-Section{Border:1px dashed;Margin-bottom:1em;Padding:1em}
-Input{Border:1px solid silver;Border-radius:0.25em;Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Padding:0.5em;Width:18em}
-
-@media (orientation:landscape){
-Form{Left:18%;Right:18%}
-Section{Float:left;Margin-right:3em;Text-align:center;Width:40%}
-Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
-}
-</Style>
+<Link Type="Text/css" Rel="Stylesheet" Href="/nova/styly.css">
 <!--[if lt IE 10]><Script Src="/aplikace/html5shiv.js"></Script><![endif]-->
-<Title>Přihláška</Title>
+<Title>Odesláno</Title>
 </Head>
 <Body>
-<Form Action="zpracovani.php<?php echo $_SESSION["c"]; ?>" Method="Post">
 <Header>
 <H1><I Class="icon-check icon3x"></I><Br>Odesláno</H1>
-Budete-li v budoucnu potřebovat tuto přihlášku znovu použít, zapište si prosím následující kód:
-<Br>
+K budoucímu zobrazení stavu zpracování přihlášky si prosím uložte následující kód:<Br>
 <H2><?php echo session_id(); ?></H2>
+a také svoje rodné číslo:<Br>
+<H2><?php echo $_SESSION["RCislo"]; ?></H2>
 </Header>
 
-
-
 <Section>
-Vyberte prosím, jakým způsobem chcete přihlášku získat:
-<Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.html?Tisk">Tisk</Button>
-<Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.pdf">Pdf</Button>
-<Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.docx">Docx</Button>
-<Br>
-<Button Name="Stahnout[Kam]" Type="Submit" Value="export/<?php echo session_id(); ?>.html">Html</Button>
+Vyberte prosím, jakým způsobem chcete přihlášku získat:<Br>
+<A Class="Tlacitko" Href="/export/<?php echo session_id(); ?>.html?Tisk" Title="Vytisknout přihlášku">Tisk</A><Br>
+<A Class="Tlacitko" Href="/export/<?php echo session_id(); ?>.pdf" Title="Stáhnout přihlášku">Pdf</A><Br>
+<A Class="Tlacitko" Href="/export/<?php echo session_id(); ?>.docx" Title="Stáhnout přihlášku">Docx</A><Br>
+<A Class="Tlacitko" Href="/export/<?php echo session_id(); ?>.html" Title="Zobrazit přihlášku">Html</A><Br>
 </Section>
 
-
-
 <Section>
-Nebudete-li se k této přihlášce již vracet nebo chcete smazat uložené údaje, klikněte sem:
-<Br>
-<Button Name="Smazat[Kam]" Type="Submit" Value=""><I Class="icon-trash_can"></I></Button>
-<Br>
-Potřebujete-li upravit starší přihlášku nebo vytvořit novou, klikněte sem:
-<Br>
-<Button Name="Prejit[Kam]" Type="Submit" Value=""><I Class="icon-home"></I></Button>
-<Br>
-Není-li žádná z předchozích možností vhodná nebo si nejste jist(a), klikněte sem:
-<Br>
-<Button Name="Odejit[Kam]" Type="Submit" Value=""><I Class="icon-cross_mark"></I></Button>
+<A Class="Tlacitko" Href="/" Title="Zpět na domovskou stránku"><I Class="icon-home"></I></A><Br>
+<A Class="Tlacitko" Href="javascript:window.close();" Title="Odejít pryč z aplikace"><I Class="icon-cross_mark"></I></A>
+<?php if(!empty($_SERVER["HTTP_REFERER"])): ?>
+<A Class="Tlacitko" Href="<?php echo $_SERVER["HTTP_REFERER"]; ?>" Title="Zpět na předcházející stránku"><I Class="icon-arrow_left"></I></A>
+<?php endif; ?>
 </Section>
-</Form>
-
-
 
 <Footer>
 <Endora>
