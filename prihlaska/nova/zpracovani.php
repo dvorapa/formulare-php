@@ -90,17 +90,17 @@ fclose($Funkce);
 /*                                         */
 require_once "../../aplikace/CloudConvert.class.php";
 $Klic="PjhG91m1XL8USbB-aw-wLS9qCoVVnySTfYWZIfK3CLQtIFZ-CkgPpCSkZr1dZ10IwU_i4TltCmOau0MrdkWBiw";
-$Konverze=CloudConvert::createProcess("html","pdf",$Klic);
-$Konverze->upload($Cesta.".html","pdf");
-if($Konverze->waitForConversion()){
-$Konverze->download($Cesta.".pdf");
+$KonverzePdf=CloudConvert::createProcess("html","pdf",$Klic);
+$KonverzePdf->upload($Cesta.".html","pdf");
+if($KonverzePdf->waitForConversion()){
+$KonverzePdf->download($Cesta.".pdf");
 }else{
 header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=5");
 }
-$Konverze=CloudConvert::createProcess("html","docx",$Klic);
-$Konverze->upload($Cesta.".html","docx");
-if($Konverze->waitForConversion()){
-$Konverze->download($Cesta.".docx");
+$KonverzeDocx=CloudConvert::createProcess("html","docx",$Klic);
+$KonverzeDocx->upload($Cesta.".html","docx");
+if($KonverzeDocx->waitForConversion()){
+$KonverzeDocx->download($Cesta.".docx");
 }else{
 header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=5");
 }}
