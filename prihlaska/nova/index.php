@@ -83,13 +83,13 @@ Input:not([Type="Radio"]){Width:18em}
 .Znamka{Width:1em !important}
 .Kratky{Width:6em !important}
 .Pulka{Width:9em !important}
-Textarea{Width:90%}
+Textarea{Width:95%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
 
 Header,Footer{Background-color:#FFBF00;Height:100%;Padding-left:18%;Padding-right:18%;Width:64%;Z-index:1}
 Header{Margin:auto;Position:absolute;Top:0;Left:0;Bottom:0;Right:0}
-Fieldset{Background-color:white;Border:0;Margin-top:100%;Padding:1em}
+Fieldset{Background-color:white;Border:0;Margin:0;Margin-top:100%;Padding:1em}
 Fieldset:last-of-type{Margin-bottom:100%}
 Table{Text-align:center}
 Th{Vertical-align:top}
@@ -502,7 +502,7 @@ foreach($PoleStran as $Promenna):
 
 
 <Footer Id="Kontrola">
-<H1><I Class="icon-upload icon3x"></I><Br>Kontrola</H1>
+<H1><I Class="icon-sheet icon3x"></I><Br>Kontrola</H1>
 <Button Form="Formular" Name="Zpet[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Prospech">Zpět</Button>
 <Br>
 <Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="odeslano.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
