@@ -92,7 +92,7 @@ Nav Button,Form Button[Name="Zpet[Kam]"]{Background-color:white;Color:#242424}
 Form Button[Name="Zpet[Kam]"]{Position:absolute;Right:100%}
 Fieldset{Background-color:white;Border:0;Margin:0;Margin-top:100%;Padding:1em}
 Fieldset:last-of-type{Margin-bottom:100%}
-Form Button{Background-color:$242424;Border-radius:0.25em;Color:white}
+Form Button{Background-color:#242424;Border-radius:0.25em;Color:white}
 Table{Text-align:center}
 Th{Vertical-align:top}
 Nav:last-of-type Button{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}

@@ -48,4 +48,7 @@ $_SESSION[$Promenna]=$_COOKIE[$Promenna];
 }}}else{
 header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4");
 }
+
+
+header("Location: /prihlaska/nova/".$_SESSION["c"])
 ?>

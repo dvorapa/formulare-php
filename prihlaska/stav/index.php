@@ -24,7 +24,7 @@
 <Label For="ID">Ke zobrazení průběhu zpracování přihlášky zadejte prosím její kód:</Label><Br>
 <Input Autofocus Id="ID" Name="ID" Required Tabindex="1" Type="Text" Value="<?php echo $_COOKIE["PHPSESSID"]; ?>"><Br>
 <Label For="RCislo">a svoje rodné číslo:</Label><Br>
-<Input Id="RCislo" Name="RCislo" Required Tabindex="2" Type="Text" Value="<?php echo $_COOKIE["RCislo"]; ?>">><Br>
+<Input Id="RCislo" Name="RCislo" Required Tabindex="2" Type="Text" Value="<?php echo $_COOKIE["RCislo"]; ?>"><Br>
 <Button Tabindex="3" Type="Submit">Otevřít</Button>
 </Form>
 
