@@ -87,7 +87,8 @@ Textarea{Width:90%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
 
-Fieldset{Background-color:white;Border-color:white;Margin-bottom:100%;Padding:1em}
+Header{Background-color:#FFBF00;Width:100%}
+Fieldset{Background-color:white;Border:0;Margin-bottom:100%;Padding:1em}
 Table{Text-align:center}
 Th{Vertical-align:top}
 Form Button:not([Name="Zpet[Kam]"]){Background-color:#242424;Border-radius:0.25em;Color:white}
@@ -119,13 +120,16 @@ Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 
 
 
-<Form Action="zpracovani.php<?php echo $_SESSION["c"]; ?>" Id="Formular" Method="Post">
-<Fieldset>
+
+<Header>
 <H1><I Class="icon-sheet icon3x"></I><Br>Přihláška</H1>
 <Input Form="Formular" Name="Dale[Cookie]" Type="Hidden" Value="1">
 <Button Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Uvod">Vyplnit</Button>
-</Fieldset>
+</Header>
 
+
+
+<Form Action="zpracovani.php<?php echo $_SESSION["c"]; ?>" Id="Formular" Method="Post">
 <Fieldset Id="Uvod">
 <H1>Úvod</H1>
 <Label For="AkadRok">Akademický rok</Label>
