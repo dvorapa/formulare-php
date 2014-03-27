@@ -21,9 +21,9 @@
 </Header>
 
 <Form Action="zpracovani.php" Method="Post">
-<Label For="">K úpravě dříve uložené přihlášky zadejte prosím její kód:</Label><Br>
-<Input Autofocus Id="" Name="" Tabindex="1" Type="Text" Value=""><Br>
-<Button Name="" Tabindex="2" Type="Submit" Value="">Načíst</Button>
+<Label For="ID">K úpravě dříve uložené přihlášky zadejte prosím její kód:</Label><Br>
+<Input Autofocus Id="ID" Name="ID" Required Tabindex="1" Type="Text" Value="<?php echo $_COOKIE["PHPSESSID"]; ?>"><Br>
+<Button Tabindex="2" Type="Submit">Načíst</Button>
 </Form>
 
 <Footer>

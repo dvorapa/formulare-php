@@ -17,6 +17,11 @@ $Text[]="empty POST";
 $Text[]=print_r($_POST,true);
 $Text[]=$_SERVER["REQUEST_METHOD"];
 $Text[]=$_SERVER["HTTP_USER_AGENT"];
+}elseif($_GET["Kod"]==4){
+$Text[]="empty COOKIE";
+$Text[]=print_r($_COOKIE,true);
+$Text[]=$_SERVER["REQUEST_METHOD"];
+$Text[]=$_SERVER["HTTP_USER_AGENT"];
 }else{
 $Text[]="Jiná chyba";
 $Text[]=print_r($GLOBALS,true);

@@ -75,9 +75,8 @@ $_SESSION["c"]="?Cookie";
 <Style Type="Text/css">
 Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0}
 A{Color:#242424;Text-decoration:none}
-Button{Background-color:white;Border:0;Color:#242424;Cursor:pointer;Font-size:1em;Margin:1em 0;Padding:0.5em 2em;Text-transform:uppercase}
+Button{Border:0;Cursor:pointer;Font-size:1em;Margin:1em 0;Padding:0.5em 2em;Text-transform:uppercase}
 A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
-Button:hover,Button:active{Box-shadow:0 0 0.5em white}
 Input:not([Type="Radio"]),Textarea{Border:1px solid silver;Border-radius:0.25em;Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Padding:0.5em}
 Input:not([Type="Radio"]){Width:18em}
 .Znamka{Width:1em !important}
@@ -87,21 +86,21 @@ Textarea{Width:95%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
 
-Header,Footer{Background-color:#FFBF00;Height:100%;Padding-left:18%;Padding-right:18%;Width:64%;Z-index:1}
-Header{Margin:auto;Position:absolute;Top:0;Left:0;Bottom:0;Right:0}
+Header,Footer{Background-color:#FFBF00;Margin-bottom:100%;Z-index:1}
+Header Button,Footer Button{Background-color:$242424;Border-radius:0.25em;Color:#FFBF00}
+Nav Button,Button[Name="Zpet[Kam]"]{Background-color:white;Color:#242424}
 Fieldset{Background-color:white;Border:0;Margin:0;Margin-top:100%;Padding:1em}
 Fieldset:last-of-type{Margin-bottom:100%}
+Form Button{Background-color:$242424;Border-radius:0.25em;Color:white}
 Table{Text-align:center}
 Th{Vertical-align:top}
-Form Button:not([Name="Zpet[Kam]"]){Background-color:#242424;Border-radius:0.25em;Color:white}
-Form Button:not([Name="Zpet[Kam]"]):hover,Form Button:not([Name="Zpet[Kam]"]):active{Box-shadow:0 0 0.5em #242424}
-Button[Name="Zpet[Kam]"]{Position:absolute;Right:100%}
 Nav:last-of-type Button{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
 
 @media (orientation:landscape){
+Header,Footer{Padding-left:18%;Padding-right:18%;Width:64%}
 Nav{Position:fixed;Text-align:right;Width:18%}
 Nav:first-of-type{Top:0;Left:0}
-Form{Margin:auto;Position:absolute;Width:64%;Top:0;Left:0;Right:0}
+Form{Padding-left:18%;Padding-right:18%;Width:64%}
 Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 }
 </Style>
@@ -121,6 +120,7 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="30">
 <Input Form="Formular" Name="Ulozit[Email]" Type="Hidden" Value="ulozeno">
 <Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="ulozeno.php<?php echo $_SESSION["c"]; ?>">Uložit</Button><Br>
+<Input Form="Formular" Name="ElPrijat" Type="Hidden" Value="ano">
 <Input Form="Formular" Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Form="Formular" Name="Odeslat[Soubor]" Type="Hidden" Value="true">
 <Input Form="Formular" Name="Odeslat[Email]" Type="Hidden" Value="odeslano">

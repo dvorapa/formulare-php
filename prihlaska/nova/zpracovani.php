@@ -27,7 +27,9 @@ $PoleHodnot=array(
 /*Průběh zaměstnání*/
 "Zamestnavatel","Zarazeni","ZOd","ZDo",
 /*Předchozí vysoká škola*/
-"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul"
+"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul",
+/*Kontrola*/
+"ElPrijat"
 );
 /*Prospěch*/
 for($i=1;$i<=27;$i++){
@@ -46,7 +48,7 @@ foreach($PoleHodnot as $Promenna){
 if(!empty($_POST[$Promenna])){
 $_SESSION[$Promenna]=$_POST[$Promenna];
 }}}else{
-header("Location: /chyba.php".$_SESSION["c"]."&Kod=3");
+header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=3");
 }
 
 /*                               */

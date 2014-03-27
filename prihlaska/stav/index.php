@@ -21,11 +21,11 @@
 </Header>
 
 <Form Action="zpracovani.php" Method="Post">
-<Label For="">Ke zobrazení průběhu zpracování přihlášky zadejte prosím její kód:</Label><Br>
-<Input Autofocus Id="" Name="" Tabindex="1" Type="Text" Value=""><Br>
-<Label For="">a svoje rodné číslo:</Label><Br>
-<Input Autofocus Id="" Name="" Tabindex="2" Type="Text" Value=""><Br>
-<Button Name="" Tabindex="3" Type="Submit" Value="">Otevřít</Button>
+<Label For="ID">Ke zobrazení průběhu zpracování přihlášky zadejte prosím její kód:</Label><Br>
+<Input Autofocus Id="ID" Name="ID" Required Tabindex="1" Type="Text" Value="<?php echo $_COOKIE["PHPSESSID"]; ?>"><Br>
+<Label For="RCislo">a svoje rodné číslo:</Label><Br>
+<Input Id="RCislo" Name="RCislo" Required Tabindex="2" Type="Text" Value="<?php echo $_COOKIE["RCislo"]; ?>">><Br>
+<Button Tabindex="3" Type="Submit">Otevřít</Button>
 </Form>
 
 <Footer>
