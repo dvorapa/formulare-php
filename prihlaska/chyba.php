@@ -46,8 +46,10 @@ fclose($Soubor);
 <Body>
 <H1><I Class="icon-cross_mark icon3x"></I><Br>Chyba</H1>
 
+<P>
 Omlouváme se, ale stránku nelze správně načíst.<Br>
-Chyba je na naší straně, někde jsme na něco určitě zapomněli.<Br>
+Chyba je na naší straně, někde jsme na něco určitě zapomněli.
+</P>
 
 <A Class="Tlacitko" Href="/" Title="Zpět na domovskou stránku"><I Class="icon-home"></I></A>
 <A Class="Tlacitko" Href="javascript:window.close();" Title="Odejít pryč z aplikace"><I Class="icon-cross_mark"></I></A>
