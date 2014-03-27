@@ -1,14 +1,7 @@
 <?php
 
 ini_set("session.cookie_httponly","1");
-if(!empty($_POST["ID"])){
-session_start($_POST["ID"]);
-}else{
-header("Location: /prihlaska/chyba.php?Kod=3")
-}
-
-
-$PoleHodnot=array(
+$Pole=array(
 /*Úvod*/
 "AkadRok","Program","Forma","Jazyk",
 /*Vysoká škola*/
@@ -30,15 +23,25 @@ $PoleHodnot=array(
 /*Průběh zaměstnání*/
 "Zamestnavatel","Zarazeni","ZOd","ZDo",
 /*Předchozí vysoká škola*/
-"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul"
+"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul",
+/*Kontrola*/
+"ElPrijat"
 );
 /*Prospěch*/
 for($i=1;$i<=27;$i++){
-$PoleHodnot[]="Predmet".$i;
-$PoleHodnot[]="Maturita".$i;
+$Pole[]="Predmet".$i;
+$Pole[]="Maturita".$i;
 for($j=1;$j<=5;$j++){
-$PoleHodnot[]="Predmet".$i."Rocnik".$j;
+$Pole[]="Predmet".$i."Rocnik".$j;
 }}
+if(!empty($_POST["ID"])){
+session_start($_POST["ID"]);
+}else{
+header("Location: /prihlaska/chyba.php?Kod=3");
+}
+
+
+
 
 
 if(!empty($_COOKIE)){
@@ -50,5 +53,5 @@ header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4");
 }
 
 
-header("Location: /prihlaska/nova/".$_SESSION["c"])
+header("Location: /prihlaska/nova/".$_SESSION["c"]);
 ?>
