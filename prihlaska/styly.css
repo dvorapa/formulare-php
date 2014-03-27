@@ -1,6 +1,6 @@
 Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0 auto;Min-height:100%;Position:absolute;Left:10%;Right:10%}
 A{Color:#242424;Text-decoration:none}
-A.Tlacitko,Button,Input,P{Border-radius:0.25em;Margin-bottom:1em;Margin-right:1em}
+A.Tlacitko,Button,Input,P{Border-radius:0.25em;Margin:1em 0;Margin-right:1em}
 A.Tlacitko,Button{Background-color:#242424;Color:#FFBF00;Padding:0.5em 2em;Text-transform:uppercase}
 A.Tlacitko{Display:inline-block}
 Button{Border:0;Cursor:pointer;Font-size:1em}
