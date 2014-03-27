@@ -87,7 +87,7 @@ Textarea{Width:90%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
 
-Header{Background-color:#FFBF00;Width:100%}
+Header{Background-color:#FFBF00;;Margin:0 auto;Min-height:100%;Position:absolute;Left:10%;Right:10%}
 Fieldset{Background-color:white;Border:0;Margin-bottom:100%;Padding:1em}
 Table{Text-align:center}
 Th{Vertical-align:top}
