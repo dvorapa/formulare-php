@@ -87,7 +87,8 @@ Textarea{Width:90%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
 
-Header,Footer{Background-color:#FFBF00;Height:100%;Margin:auto;Padding-left:18%;Padding-right:18%;Position:absolute;Width:64%;Z-index:1;Top:0;Left:0;Bottom:0;Right:0}
+Header,Footer{Background-color:#FFBF00;Padding-left:18%;Padding-right:18%;Width:64%;Z-index:1}
+Header{Height:100%;Margin:auto;Position:absolute;Top:0;Left:0;Bottom:0;Right:0}
 Fieldset{Background-color:white;Border:0;Margin-top:100%;Padding:1em}
 Fieldset:last-of-type{Margin-bottom:100%}
 Table{Text-align:center}
