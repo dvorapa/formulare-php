@@ -29,19 +29,19 @@ a také svoje rodné číslo:<Br>
 </Header>
 
 <Nav>
-Vyberte prosím, jakým způsobem chcete přihlášku získat:<Br>
-<A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.html?Tisk" Title="Vytisknout přihlášku">Tisk</A><Br>
-<A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.pdf" Title="Stáhnout přihlášku">Pdf</A><Br>
-<A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.docx" Title="Stáhnout přihlášku">Docx</A><Br>
-<A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.html" Title="Zobrazit přihlášku">Html</A><Br>
-</Nav>
-
-<Nav>
 <A Class="Tlacitko" Href="/" Title="Zpět na domovskou stránku"><I Class="icon-home"></I></A>
 <A Class="Tlacitko" Href="javascript:window.close();" Title="Odejít pryč z aplikace"><I Class="icon-cross_mark"></I></A>
 <?php if(!empty($_SERVER["HTTP_REFERER"])): ?>
 <A Class="Tlacitko" Href="<?php echo $_SERVER["HTTP_REFERER"]; ?>" Title="Zpět na předcházející stránku"><I Class="icon-arrow_left"></I></A>
 <?php endif; ?>
+</Nav>
+
+<Nav>
+Vyberte prosím, jakým způsobem chcete přihlášku získat:<Br>
+<A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.html?Tisk" Title="Vytisknout přihlášku">Tisk</A>
+<A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.pdf" Title="Stáhnout přihlášku">Pdf</A>
+<A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.docx" Title="Stáhnout přihlášku">Docx</A>
+<A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.html" Title="Zobrazit přihlášku">Html</A>
 </Nav>
 
 <Footer>
