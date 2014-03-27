@@ -87,7 +87,7 @@ Textarea{Width:90%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
 
-Header{Background-color:#FFBF00;Height:100%;Margin:auto;Padding-left:18%;Position:absolute;Width:100%;Z-index:1;Top:0;Left:0;Bottom:0;Right:0}
+Header{Background-color:#FFBF00;Height:100%;Margin:auto;Padding-left:18%;Padding-right:18%;Position:absolute;Width:64%;Z-index:1;Top:0;Left:0;Bottom:0;Right:0}
 Fieldset{Background-color:white;Border:0;Margin-top:100%;Padding:1em}
 Table{Text-align:center}
 Th{Vertical-align:top}
@@ -99,7 +99,7 @@ Nav:last-of-type Button{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Widt
 @media (orientation:landscape){
 Nav{Position:fixed;Text-align:right;Width:18%}
 Nav:first-of-type{Top:0;Left:0}
-Form{Margin:auto;Position:absolute;Width:64%;Top:5%;Left:0;Right:0}
+Form{Margin:auto;Position:absolute;Width:64%;Top:0;Left:0;Right:0}
 Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }
