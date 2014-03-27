@@ -73,18 +73,39 @@ $_SESSION["c"]="?Cookie";
 <Link Rel="Stylesheet" Href="/aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
 <Style Type="Text/css">
+Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0}
+A{Color:#242424;Text-decoration:none}
+Button,Input,Textarea{Margin-top:1em;Margin-bottom:1em}
+Button{Background-color:white;Border:0;Color:#242424;Cursor:pointer;Font-size:1em;Padding:0.5em 2em;Text-transform:uppercase}
+A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
+Button:hover,Button:active{Box-shadow:0 0 0.5em white}
+Input:not([Type="Radio"]),Textarea{Border:1px solid silver;Border-radius:0.25em;Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Padding:0.5em}
+Input:not([Type="Radio"]){Width:18em}
+.Znamka{Width:1em !important}
+.Kratky{Width:6em !important}
+.Pulka{Width:9em !important}
+Textarea{Width:100%}
 
+Fieldset{Background-color:white;Border:0;Padding:1em}
+Table{Text-align:center}
+Th{Vertical-align:top}
+Form Button:not([Name="Zpet[Kam]"]){Background-color:#242424;Border-radius:0.25em;Color:white}
+Form Button:not([Name="Zpet[Kam]"]):hover,Form Button:not([Name="Zpet[Kam]"]):active{Box-shadow:0 0 0.5em #242424}
+Button[Name="Zpet[Kam]"]{Position:absolute;Right:100%}
+Nav:last-of-type Button{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
+
+@media (orientation:landscape){
+Nav{Position:fixed;Text-align:right;Width:18%}
+Nav:first-of-type{Top:0;Left:0}
+Form{Margin:auto;Position:absolute;Width:64%;Top:5%;Left:0;Right:0}
+Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
+Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
+}
 </Style>
 <!--[if lt IE 10]><Script Src="/aplikace/html5shiv.js"></Script><![endif]-->
 <Title>Přihláška</Title>
 </Head>
 <Body>
-<Header>
-<H1><I Class="icon-sheet icon3x"></I><Br>Přihláška</H1>
-<Input Form="Formular" Name="Dale[Cookie]" Type="Hidden" Value="1">
-<Button Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Uvod">Vyplnit</Button>
-</Header>
-
 <Nav>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="30">
 <Input Form="Formular" Name="Ulozit[Email]" Type="Hidden" Value="ulozeno">
@@ -98,6 +119,11 @@ $_SESSION["c"]="?Cookie";
 
 
 <Form Action="zpracovani.php<?php echo $_SESSION["c"]; ?>" Id="Formular" Method="Post">
+<Header>
+<H1><I Class="icon-sheet icon3x"></I><Br>Přihláška</H1>
+<Input Form="Formular" Name="Dale[Cookie]" Type="Hidden" Value="1">
+<Button Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Uvod">Vyplnit</Button>
+</Header>
 
 <Fieldset Id="Uvod">
 <H1>Úvod</H1>
