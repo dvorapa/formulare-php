@@ -105,7 +105,7 @@ fclose($Funkce);
 /* |_/ _  _    _ __  _  (_ _  _ _  _/|_    */
 /* | \(_)| )\/(-| /_(-  | (_)| |||(_||_|_| */
 /*                                         */
-require_once "/aplikace/CloudConvert.class.php";
+require_once "../../aplikace/CloudConvert.class.php";
 $Klic="PjhG91m1XL8USbB-aw-wLS9qCoVVnySTfYWZIfK3CLQtIFZ-CkgPpCSkZr1dZ10IwU_i4TltCmOau0MrdkWBiw";
 $Konverze=CloudConvert::createProcess("html","pdf",$Klic);
 $Konverze->upload($Cesta.".html","pdf");
