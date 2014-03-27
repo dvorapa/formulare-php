@@ -75,8 +75,7 @@ $_SESSION["c"]="?Cookie";
 <Style Type="Text/css">
 Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0}
 A{Color:#242424;Text-decoration:none}
-Button,Input,Textarea{Margin-top:1em;Margin-bottom:1em}
-Button{Background-color:white;Border:0;Color:#242424;Cursor:pointer;Font-size:1em;Padding:0.5em 2em;Text-transform:uppercase}
+Button{Background-color:white;Border:0;Color:#242424;Cursor:pointer;Font-size:1em;Margin:1em 0;Padding:0.5em 2em;Text-transform:uppercase}
 A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
 Button:hover,Button:active{Box-shadow:0 0 0.5em white}
 Input:not([Type="Radio"]),Textarea{Border:1px solid silver;Border-radius:0.25em;Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Padding:0.5em}
@@ -85,7 +84,8 @@ Input:not([Type="Radio"]){Width:18em}
 .Kratky{Width:6em !important}
 .Pulka{Width:9em !important}
 Textarea{Width:100%}
-Label:after{Content:"\A";White-space:pre}
+Label:before,Label:after{Content:"\A";White-space:pre}
+Input+Label:before{Content:""}
 
 Fieldset{Background-color:white;Border:0;Margin-bottom:100%;Padding:1em}
 Table{Text-align:center}
