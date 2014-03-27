@@ -102,7 +102,6 @@ Nav{Position:fixed;Text-align:right;Width:18%}
 Nav:first-of-type{Top:0;Left:0}
 Form{Margin:auto;Position:absolute;Width:64%;Top:0;Left:0;Right:0}
 Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
-Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }
 </Style>
 <!--[if lt IE 10]><Script Src="/aplikace/html5shiv.js"></Script><![endif]-->
