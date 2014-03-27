@@ -1,11 +1,11 @@
 <?php
-/* ___                            ______ __  */
-/*  _/ _  _ _  _ _    _/ _ /  |__| |  | |__) */
-/* /__|_)| (_|(_(_)\/(_|| )|  |  | |  | |    */
-/*    |                                      */
+/* ___                                 */
+/*  _/ _  _ _  _ _    _/ _  /  _| _ |_ */
+/* /__|_)| (_|(_(_)\/(_|| )|  (_|(_||_ */
+/*    |                                */
 ini_set("session.cookie_httponly","1");
 session_start();
-$PoleHodnot=array(
+$Pole=array(
 /*Úvod*/
 "AkadRok","Program","Forma","Jazyk",
 /*Vysoká škola*/
@@ -33,10 +33,10 @@ $PoleHodnot=array(
 );
 /*Prospěch*/
 for($i=1;$i<=27;$i++){
-$PoleHodnot[]="Predmet".$i;
-$PoleHodnot[]="Maturita".$i;
+$Pole[]="Predmet".$i;
+$Pole[]="Maturita".$i;
 for($j=1;$j<=5;$j++){
-$PoleHodnot[]="Predmet".$i."Rocnik".$j;
+$Pole[]="Predmet".$i."Rocnik".$j;
 }}
 
 /*  __                                    */
@@ -44,7 +44,7 @@ $PoleHodnot[]="Predmet".$i."Rocnik".$j;
 /* |  | (-|_)|_)  (_|(_)  _)(-_)_)|(_)| ) */
 /*        |                               */
 if(!empty($_POST)){
-foreach($PoleHodnot as $Promenna){
+foreach($Pole as $Promenna){
 if(!empty($_POST[$Promenna])){
 $_SESSION[$Promenna]=$_POST[$Promenna];
 }}}else{
@@ -64,7 +64,7 @@ if((is_array($Kolekce))&&(array_key_exists("Kam",$Kolekce))){
 /*       |                             */
 if(array_key_exists("Cookie",$Kolekce)){
 $d=time()+60*60*24*$Kolekce["Cookie"];
-foreach($PoleHodnot as $Promenna){
+foreach($Pole as $Promenna){
 if(!empty($_POST[$Promenna])){
 setcookie($Promenna,$_SESSION[$Promenna],$d);
 }}}
@@ -77,7 +77,7 @@ if(array_key_exists("Databaze",$Kolekce)){
 $Databaze=mysqli_connect("localhost","dvorapa","heslododatabaze","databazeprihlasek");
 mysqli_set_charset($Databaze,"utf8");
 $Prikaz="insert into Prihlasky set ";
-foreach($PoleHodnot as $Promenna){
+foreach($Pole as $Promenna){
 if(!empty($_POST[$Promenna])){
 $_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
 $Prikaz.="$Promenna='{$_SESSION[$Promenna]}',";
@@ -96,10 +96,31 @@ ob_start();
 include "prihlaska.php";
 $Prihlaska=ob_get_contents();
 ob_end_clean();
-$Funkce=fopen("../export/".session_id().".html","w+");
+$Cesta="../export/".session_id();
+$Funkce=fopen($Cesta.".html","w+");
 fwrite($Funkce,$Prihlaska);
 fclose($Funkce);
+
+/*                       _                 */
+/* |_/ _  _    _ __  _  (_ _  _ _  _/|_    */
+/* | \(_)| )\/(-| /_(-  | (_)| |||(_||_|_| */
+/*                                         */
+require_once "/aplikace/CloudConvert.class.php";
+$Klic="PjhG91m1XL8USbB-aw-wLS9qCoVVnySTfYWZIfK3CLQtIFZ-CkgPpCSkZr1dZ10IwU_i4TltCmOau0MrdkWBiw";
+$Konverze=CloudConvert::createProcess("html","pdf",$Klic);
+$Konverze->upload($Cesta.".html","pdf");
+if($Konverze->waitForConversion()){
+$Konverze->download($Cesta.".pdf");
+}else{
+header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=5")
 }
+$Konverze=CloudConvert::createProcess("html","docx",$Klic);
+$Konverze->upload($Cesta.".html","docx");
+if($Konverze->waitForConversion()){
+$Konverze->download($Cesta.".docx");
+}else{
+header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=5")
+}}
 
 /*  __                                */
 /* /  \ _| _ _| _/ _ /   _ _  _ .|    */

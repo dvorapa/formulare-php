@@ -1,8 +1,8 @@
 <?php
-/*                                    */
-/* \  /   _  _    |_ _/  _ _  _ | . _ */
-/*  \/ \/|_)| )|_||_(-  (_(_)(_)|(|(- */
-/*     / |                            */
+/*                                       */
+/* \  /   _  _    |_ _/   _ _  _ | . _ _ */
+/*  \/ \/|_)| )|_||_(_|  (_(_)(_)|(|(-_) */
+/*     / |                               */
 ini_set("session.cookie_httponly","1");
 session_start();
 if(!isset($_COOKIE["Cookie"])){
@@ -149,7 +149,7 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Input Id="distanční" Name="Forma" Tabindex="6" Type="Radio" Value="distanční"<?php echo (!empty($_SESSION['Forma'])&&$_SESSION['Forma']=='distanční')?' Checked':''; ?>>
 <Label For="distanční">distanční</Label>
 <Label For="Jazyk">Zvolený jazyk</Label>
-<Input Id="Jazyk" Name="Jazyk" Tabindex="7" Type="Text" Value="<?php echo !empty($_SESSION['Jazyk'])?$_SESSION['Jazyk']:''; ?>">
+<Input Id="Jazyk" Name="Jazyk" Tabindex="7" Type="Text" Value="<?php echo $_SESSION['Jazyk']; ?>">
 <Br>
 <<<<<<< HEAD:nova/index.php
 <<<<<<< HEAD
@@ -419,7 +419,7 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Tr><Th Rowspan="2">Předmět</Th><Th Colspan="5">Ročník</Th><Th Rowspan="2">Maturita</Th></Tr>
 <Tr><Th>I</Th><Th>II</Th><Th>III</Th><Th>IV</Th><Th>V</Th></Tr>
 <?php
-$PoleProspechu=array(
+$Pole=array(
 "<Td><Input Class='",
 "' Name='",
 "' Tabindex='",
@@ -434,13 +434,13 @@ $j=5;
 for($i=1;$i<=$j;$i++){
 $t=92+(($i-1)*7);
 echo "<Tr>"
-.$PoleProspechu[0].$PoleProspechu[1]."Predmet".$i.$PoleProspechu[2].(++$t).$PoleProspechu[3].(!empty($_SESSION["Predmet{$i}"])?$_SESSION["Predmet{$i}"]:"").$PoleProspechu[4]
-.$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik1".$PoleProspechu[2].(++$t).$PoleProspechu[3].(!empty($_SESSION["Predmet{$i}Rocnik1"])?$_SESSION["Predmet{$i}Rocnik1"]:"").$PoleProspechu[4]
-.$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik2".$PoleProspechu[2].(++$t).$PoleProspechu[3].(!empty($_SESSION["Predmet{$i}Rocnik2"])?$_SESSION["Predmet{$i}Rocnik2"]:"").$PoleProspechu[4]
-.$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik3".$PoleProspechu[2].(++$t).$PoleProspechu[3].(!empty($_SESSION["Predmet{$i}Rocnik3"])?$_SESSION["Predmet{$i}Rocnik3"]:"").$PoleProspechu[4]
-.$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik4".$PoleProspechu[2].(++$t).$PoleProspechu[3].(!empty($_SESSION["Predmet{$i}Rocnik4"])?$_SESSION["Predmet{$i}Rocnik4"]:"").$PoleProspechu[4]
-.$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Predmet".$i."Rocnik5".$PoleProspechu[2].(++$t).$PoleProspechu[3].(!empty($_SESSION["Predmet{$i}Rocnik5"])?$_SESSION["Predmet{$i}Rocnik5"]:"").$PoleProspechu[4]
-.$PoleProspechu[0]."Znamka".$PoleProspechu[1]."Maturita".$i.$PoleProspechu[2].(++$t).$PoleProspechu[3].(!empty($_SESSION["Maturita{$i}"])?$_SESSION["Maturita{$i}"]:"").$PoleProspechu[4]
+.$Pole[0].$Pole[1]."Predmet".$i.$Pole[2].(++$t).$Pole[3].(!empty($_SESSION["Predmet{$i}"])?$_SESSION["Predmet{$i}"]:"").$Pole[4]
+.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik1".$Pole[2].(++$t).$Pole[3].(!empty($_SESSION["Predmet{$i}Rocnik1"])?$_SESSION["Predmet{$i}Rocnik1"]:"").$Pole[4]
+.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik2".$Pole[2].(++$t).$Pole[3].(!empty($_SESSION["Predmet{$i}Rocnik2"])?$_SESSION["Predmet{$i}Rocnik2"]:"").$Pole[4]
+.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik3".$Pole[2].(++$t).$Pole[3].(!empty($_SESSION["Predmet{$i}Rocnik3"])?$_SESSION["Predmet{$i}Rocnik3"]:"").$Pole[4]
+.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik4".$Pole[2].(++$t).$Pole[3].(!empty($_SESSION["Predmet{$i}Rocnik4"])?$_SESSION["Predmet{$i}Rocnik4"]:"").$Pole[4]
+.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik5".$Pole[2].(++$t).$Pole[3].(!empty($_SESSION["Predmet{$i}Rocnik5"])?$_SESSION["Predmet{$i}Rocnik5"]:"").$Pole[4]
+.$Pole[0]."Znamka".$Pole[1]."Maturita".$i.$Pole[2].(++$t).$Pole[3].(!empty($_SESSION["Maturita{$i}"])?$_SESSION["Maturita{$i}"]:"").$Pole[4]
 ."</Tr>"
 .PHP_EOL;
 }
