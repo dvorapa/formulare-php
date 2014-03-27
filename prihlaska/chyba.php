@@ -52,7 +52,7 @@ Omlouváme se, ale stránku nelze správně načíst.<Br>
 Chyba je na naší straně, někde jsme na něco určitě zapomněli.<Br>
 
 <A Class="Tlacitko" Href="/" Title="Zpět na domovskou stránku"><I Class="icon-home"></I></A>
-<A Class="Tlacitko" Href="javascript:window.close();" Title="Odejít pryč z aplikace"><I Class="icon-cross_mark"></I>
+<A Class="Tlacitko" Href="javascript:window.close();" Title="Odejít pryč z aplikace"><I Class="icon-cross_mark"></I></A>
 <?php if(!empty($_SERVER["HTTP_REFERER"])): ?>
 <A Class="Tlacitko" Href="<?php echo $_SERVER["HTTP_REFERER"]; ?>" Title="Zpět na předcházející stránku"><I Class="icon-arrow_left"></I></A>
 <?php endif; ?>
