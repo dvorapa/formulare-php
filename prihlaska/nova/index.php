@@ -88,8 +88,10 @@ Input+Label:before{Content:""}
 
 Header,Footer{Background-color:#FFBF00;Margin-bottom:100%;Z-index:1}
 Header Button,Footer Button{Background-color:#242424;Border-radius:0.25em;Color:#FFBF00}
+Header Button:hover,Header Button:active,Footer Button:hover,Footer Button:active,Form Button:hover,Form Button:active{Box-shadow:0 0 0.5em #242424}
 Nav Button,Form Button[Name="Zpet[Kam]"]{Background-color:white;Color:#242424}
 Form Button[Name="Zpet[Kam]"]{Position:absolute;Right:100%}
+Nav Button:hover,Nav Button:active,Form Button[Name="Zpet[Kam]"]:hover,Form Button[Name="Zpet[Kam]"]:active{Box-shadow:0 0 0.5em white}
 Fieldset{Background-color:white;Border:0;Margin:0;Margin-top:100%;Padding:1em}
 Fieldset:last-of-type{Margin-bottom:100%}
 Form Button{Background-color:#242424;Border-radius:0.25em;Color:white}
