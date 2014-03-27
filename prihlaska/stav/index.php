@@ -25,7 +25,7 @@
 <Input Autofocus Id="" Name="" Tabindex="1" Type="Text" Value=""><Br>
 <Label For="">a svoje rodné číslo:</Label><Br>
 <Input Autofocus Id="" Name="" Tabindex="2" Type="Text" Value=""><Br>
-<Button Name="" Tabindex="3" Type="Submit" Value="">Načíst</Button>
+<Button Name="" Tabindex="3" Type="Submit" Value="">Otevřít</Button>
 </Form>
 
 <Footer>
