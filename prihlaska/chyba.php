@@ -22,7 +22,7 @@ $Text[]="Jiná chyba";
 $Text[]=print_r($GLOBALS,true);
 $Text[]=print_r(get_headers($_SERVER["HTTP_REFERER"]),true);
 }
-$Soubor=fopen("chyby.log","a+");
+$Soubor=fopen("/prihlaska/export/chyby.log","a+");
 fwrite($Soubor,implode(PHP_EOL,$Text).PHP_EOL.PHP_EOL);
 fclose($Soubor);
 }
