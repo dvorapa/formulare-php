@@ -17,10 +17,15 @@ CREATE TABLE `AdresaTrvalehoBydliste` (
   `TObec` varchar(40) NOT NULL,
   `TOkres` varchar(40) NOT NULL,
   `TPSC` mediumint(8) unsigned NOT NULL,
-  `TTel` varchar(20) NOT NULL,
-  `TEmail` varchar(40) NOT NULL,
   `TPosta` varchar(40) NOT NULL,
   `TStat` varchar(40) NOT NULL,
+  PRIMARY KEY (`PHPSESSID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `Kontakt` (
+  `PHPSESSID` varchar(40) NOT NULL,
+  `Telefon` varchar(20) NOT NULL,
+  `Email` varchar(40) NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -275,10 +280,12 @@ CREATE TABLE `PrubehZamestnani` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE `Stav` (
+  `PHPSESSID` varchar(40) NOT NULL,
   `ElPrijat` varchar(3) NOT NULL,
   `PiPrijat` varchar(3) NOT NULL,
   `PlPrijat` varchar(3) NOT NULL,
-  `Prijat` varchar(3) NOT NULL
+  `Prijat` varchar(3) NOT NULL,
+  PRIMARY KEY (`PHPSESSID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE `StredniSkola` (
@@ -323,6 +330,22 @@ CREATE TABLE `ZajmovaCinnost` (
   `Zajmy` text NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE Prihlasky AS
+SELECT * FROM Uvod
+JOIN VysokaSkola USING (PHPSESSID)
+JOIN OsobniUdaje USING (PHPSESSID)
+JOIN Narozeni USING (PHPSESSID)
+JOIN AdresaTrvalehoBydliste USING (PHPSESSID)
+JOIN KontaktniAdresa USING (PHPSESSID)
+JOIN StredniSkola USING (PHPSESSID)
+JOIN UchazecSeHlasi USING (PHPSESSID)
+JOIN Prospech USING (PHPSESSID)
+JOIN ZajmovaCinnost USING (PHPSESSID)
+JOIN PrubehZamestnani USING (PHPSESSID)
+JOIN PredchoziVysokaSkola USING (PHPSESSID)
+JOIN Kontakt USING (PHPSESSID)
+JOIN Stav USING (PHPSESSID);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -82,7 +82,7 @@ Input:not([Type="Radio"]){Width:18em}
 .Znamka{Width:1em !important}
 .Kratky{Width:6em !important}
 .Pulka{Width:9em !important}
-Textarea{Width:95%}
+Textarea{Width:98%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
 
@@ -271,12 +271,6 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Br>
 <Label For="TStat">Stát</Label>
 <Input Id="TStat" Name="TStat" Tabindex="41" Type="Text" Value="<?php echo !empty($_SESSION['TStat'])?$_SESSION['TStat']:''; ?>">
-<Br>
-<Label For="TTel">Telefon</Label>
-<Input Id="TTel" Name="TTel" Tabindex="42" Type="Tel" Value="<?php echo !empty($_SESSION['TTel'])?$_SESSION['TTel']:''; ?>">
-<Br>
-<Label For="TEmail">Email</Label>
-<Input Id="TEmail" Name="TEmail" Tabindex="43" Type="Email" Value="<?php echo !empty($_SESSION['TEmail'])?$_SESSION['TEmail']:''; ?>">
 <Br>
 <Button Name="Zpet[Kam]" Tabindex="45" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Narozeni">Zpět</Button>
 <Br>
@@ -506,6 +500,12 @@ foreach($PoleStran as $Promenna):
 
 <Footer Id="Kontrola">
 <H1><I Class="icon-sheet icon3x"></I><Br>Kontrola</H1>
+<Label For="Telefon">Telefon</Label>
+<Input Form="Formular" Id="Telefon" Name="Telefon" Tabindex="42" Type="Tel" Value="<?php echo !empty($_SESSION['Telefon'])?$_SESSION['Telefon']:''; ?>">
+<Br>
+<Label For="Email">Email</Label>
+<Input Form="Formular" Id="Email" Name="Email" Tabindex="43" Type="Email" Value="<?php echo !empty($_SESSION['Email'])?$_SESSION['Email']:''; ?>">
+<Br>
 <Button Form="Formular" Name="Zpet[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Prospech">Zpět</Button>
 <Br>
 <Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="odeslano.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>

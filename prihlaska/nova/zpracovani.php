@@ -5,31 +5,24 @@
 /*    |                                */
 ini_set("session.cookie_httponly","1");
 session_start();
+/*  __                                    */
+/* |__)_˅_ _ . _   _| _    _ _ _ _. _  _  */
+/* |  | (-|_)|_)  (_|(_)  _)(-_)_)|(_)| ) */
+/*        |                               */
 $Pole=array(
-/*Úvod*/
-"AkadRok","Program","Forma","Jazyk",
-/*Vysoká škola*/
-"VSkola","VFakulta","VProgram","VOborA","VOborB","VOborC",
-/*Osobní údaje*/
-"Jmeno","Prijmeni","Rodne","Tituly","Pohlavi","StatniPris",
-/*Narození*/
-"DatumNar","MistoNar","OkresNar","CisloOP","RCislo","CisloP",
-/*Adresa trvalého bydliště*/
-"TUlice","TCislo","TCast","TObec","TOkres","TPSC","TTel","TEmail","TPosta","TStat",
-/*Kontaktní adresa*/
-"KUlice","KCislo","KCast","KObec","KOkres","KPSC","KPosta","KStat",
-/*Střední škola*/
-"SSkola","SAdresa","SObor","SKKOV","SIZO","SRokMat",
-/*Uchazeč se hlásí*/
-"Odkud",
-/*Zájmová činnost*/
-"Zajmy",
-/*Průběh zaměstnání*/
-"Zamestnavatel","Zarazeni","ZOd","ZDo",
-/*Předchozí vysoká škola*/
-"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul",
-/*Kontrola*/
-"ElPrijat"
+/*Úvod*/"AkadRok","Program","Forma","Jazyk",
+/*Vysoká škola*/"VSkola","VFakulta","VProgram","VOborA","VOborB","VOborC",
+/*Osobní údaje*/"Jmeno","Prijmeni","Rodne","Tituly","Pohlavi","StatniPris",
+/*Narození*/"DatumNar","MistoNar","OkresNar","CisloOP","RCislo","CisloP",
+/*Adresa trvalého bydliště*/"TUlice","TCislo","TCast","TObec","TOkres","TPSC","TPosta","TStat",
+/*Kontaktní adresa*/"KUlice","KCislo","KCast","KObec","KOkres","KPSC","KPosta","KStat",
+/*Střední škola*/"SSkola","SAdresa","SObor","SKKOV","SIZO","SRokMat",
+/*Uchazeč se hlásí*/"Odkud",
+/*Zájmová činnost*/"Zajmy",
+/*Průběh zaměstnání*/"Zamestnavatel","Zarazeni","ZOd","ZDo",
+/*Předchozí vysoká škola*/"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul",
+/*Stav*/"ElPrijat",
+/*Kontakt*/"Telefon","Email"
 );
 /*Prospěch*/
 for($i=1;$i<=27;$i++){
@@ -38,11 +31,6 @@ $Pole[]="Maturita".$i;
 for($j=1;$j<=5;$j++){
 $Pole[]="Predmet".$i."Rocnik".$j;
 }}
-
-/*  __                                    */
-/* |__)_˅_ _ . _   _| _    _ _ _ _. _  _  */
-/* |  | (-|_)|_)  (_|(_)  _)(-_)_)|(_)| ) */
-/*        |                               */
 if(!empty($_POST)){
 foreach($Pole as $Promenna){
 if(!empty($_POST[$Promenna])){
@@ -50,14 +38,12 @@ $_SESSION[$Promenna]=$_POST[$Promenna];
 }}}else{
 header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=3");
 }
-
 /*                               */
 /* \  / /|_  _˅_  |  _ | _|  _ _ */
 /*  \/ \/|_)(-|   |((_)|(-|((_(- */
 /*     /                         */
 foreach($_POST as $Kolekce){
 if((is_array($Kolekce))&&(array_key_exists("Kam",$Kolekce))){
-
 /* ___                                 */
 /*  _/ _/ _ . _   _| _    _ _  _ | . _ */
 /* /__(_||_)|_)  (_|(_)  (_(_)(_)|(|(- */
@@ -68,7 +54,6 @@ foreach($Pole as $Promenna){
 if(!empty($_POST[$Promenna])){
 setcookie($Promenna,$_SESSION[$Promenna],$d);
 }}}
-
 /* ___                                         */
 /*  _/ _/ _ . _   _| _    _| _ |_ _ |_  _/_  _ */
 /* /__(_||_)|_)  (_|(_)  (_|(_||_(_||_)(_|/_(- */
@@ -86,7 +71,6 @@ $Prikaz.="PHPSESSID='".session_id()."'";
 mysqli_query($Databaze,$Prikaz);
 mysqli_close($Databaze);
 }
-
 /* ___                                       */
 /*  _/ _/ _ . _   _| _    _ _    |_  _  _    */
 /* /__(_||_)|_)  (_|(_)  _)(_)|_||_)(_)| |_| */
@@ -100,7 +84,6 @@ $Cesta="../export/".session_id();
 $Funkce=fopen($Cesta.".html","w+");
 fwrite($Funkce,$Prihlaska);
 fclose($Funkce);
-
 /*                       _                 */
 /* |_/ _  _    _ __  _  (_ _  _ _  _/|_    */
 /* | \(_)| )\/(-| /_(-  | (_)| |||(_||_|_| */
@@ -121,7 +104,6 @@ $Konverze->download($Cesta.".docx");
 }else{
 header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=5");
 }}
-
 /*  __                                */
 /* /  \ _| _ _| _/ _ /   _ _  _ .|    */
 /* \__/(_|(-_)|(_|| )|  (-|||(_||||_| */
@@ -137,7 +119,6 @@ $Hlavicka[]="Content-type: text/html; charset=utf-8";
 $Hlavicka[]="From: info@prihlaskanavs.8u.cz";
 mail($_SESSION["TEmail"],"Podrobnosti o přihlášce na VŠ",wordwrap($Email,70,"\r\n"),implode("\r\n",$Hlavicka));
 }
-
 /*  __                          */
 /* |__)_˅_ _ _  _˅_ _    _/ _ / */
 /* |  | (-_)|||(-| (_)\/(_|| )| */
