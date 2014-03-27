@@ -87,8 +87,9 @@ Textarea{Width:90%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
 
-Header{Background-color:#FFBF00;Height:100%;Margin:auto;Padding-left:18%;Padding-right:18%;Position:absolute;Width:64%;Z-index:1;Top:0;Left:0;Bottom:0;Right:0}
+Header,Footer{Background-color:#FFBF00;Height:100%;Margin:auto;Padding-left:18%;Padding-right:18%;Position:absolute;Width:64%;Z-index:1;Top:0;Left:0;Bottom:0;Right:0}
 Fieldset{Background-color:white;Border:0;Margin-top:100%;Padding:1em}
+Fieldset:last-of-type{Margin-bottom:100%}
 Table{Text-align:center}
 Th{Vertical-align:top}
 Form Button:not([Name="Zpet[Kam]"]){Background-color:#242424;Border-radius:0.25em;Color:white}
@@ -108,7 +109,7 @@ Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 <Title>Přihláška</Title>
 </Head>
 <Body>
-<Header>
+<Header Id="Vchod">
 <H1><I Class="icon-sheet icon3x"></I><Br>Přihláška</H1>
 <Input Form="Formular" Name="Dale[Cookie]" Type="Hidden" Value="1">
 <Button Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Uvod">Vyplnit</Button>
@@ -449,13 +450,6 @@ echo "<Tr>"
 <Br>
 <Button Name="Dale[Kam]" Tabindex="283" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Kontrola">Dále</Button>
 </Fieldset>
-
-<Fieldset Id="Kontrola">
-<H1>Kontrola</H1>
-<Button Name="Zpet[Kam]" Tabindex="286" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Prospech">Zpět</Button>
-<Br>
-<Button Name="Odeslat[Kam]" Tabindex="285" Type="Submit" Value="odeslano.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
-</Fieldset>
 </Form>
 
 
@@ -477,19 +471,20 @@ foreach($_SESSION["PoleStran"] as $Promenna){
 /*                                     */
 >>>>>>> 94d5719... Komplet přepracování celé struktury (fuj) 1/x:prihlaska/nova/index.php
 $PoleStran=array(
-array(1,"Uvod","Úvod"),
-array(2,"VysokaSkola","Vysoká škola"),
-array(3,"OsobniUdaje","Osobní údaje"),
-array(4,"Narozeni","Narození"),
-array(5,"AdresaTrvalehoBydliste","Adresa trvalého bydliště"),
-array(6,"KontaktniAdresa","Kontaktní adresa"),
-array(7,"StredniSkola","Střední škola"),
-array(8,"UchazecSeHlasi","Uchazeč se hlásí"),
-array(9,"ZajmovaCinnost","Zájmová činnost"),
-array(10,"PrubehZamestnani","Průběh zaměstnání"),
-array(11,"PredchoziVysokaSkola","Předchozí vysoká škola"),
-array(12,"Prospech","Prospěch"),
-array(13,"Kontrola","Kontrola")
+"Vchod",
+"Uvod",
+"VysokaSkola",
+"OsobniUdaje",
+"Narozeni",
+"AdresaTrvalehoBydliste",
+"KontaktniAdresa",
+"StredniSkola",
+"UchazecSeHlasi",
+"ZajmovaCinnost",
+"PrubehZamestnani",
+"PredchoziVysokaSkola",
+"Prospech",
+"Kontrola"
 );
 <<<<<<< HEAD:nova/index.php
 foreach($PoleStran as $Promenna){
@@ -500,14 +495,17 @@ echo "<Button Form='Formular' Name='Prejit[Kam]' Type='Submit' Value='nova/".$_S
 foreach($PoleStran as $Promenna):
 >>>>>>> 94d5719... Komplet přepracování celé struktury (fuj) 1/x:prihlaska/nova/index.php
 ?>
-<Button Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]."#".$Promenna[1]; ?>">&nbsp;</Button><Br>
+<Button Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]."#".$Promenna; ?>">&nbsp;</Button><Br>
 <?php endforeach; ?>
 </Nav>
 
 
 
-<Footer>
-<Endora>
+<Footer Id="Kontrola">
+<H1><I Class="icon-upload icon3x"></I><Br>Kontrola</H1>
+<Button Form="Formular" Name="Zpet[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Prospech">Zpět</Button>
+<Br>
+<Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="odeslano.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
 </Footer>
 </Body>
 </Html>
