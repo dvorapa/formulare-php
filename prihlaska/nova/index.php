@@ -85,8 +85,9 @@ Input:not([Type="Radio"]){Width:18em}
 .Kratky{Width:6em !important}
 .Pulka{Width:9em !important}
 Textarea{Width:100%}
+Label:after{Content:"\A";White-space:pre}
 
-Fieldset{Background-color:white;Border:0;Padding:1em}
+Fieldset{Background-color:white;Border:0;Margin-bottom:100%;Padding:1em}
 Table{Text-align:center}
 Th{Vertical-align:top}
 Form Button:not([Name="Zpet[Kam]"]){Background-color:#242424;Border-radius:0.25em;Color:white}
