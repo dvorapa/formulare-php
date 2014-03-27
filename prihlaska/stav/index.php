@@ -17,7 +17,7 @@
 </Head>
 <Body>
 <Header>
-<H1><I Class="icon-magnifying icon3x"></I><Br>Stav</H1>
+<H1><I Class="icon-magnifying icon3x"></I><Br>Stav zpracování</H1>
 </Header>
 
 <Form Action="zpracovani.php" Method="Post">

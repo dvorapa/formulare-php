@@ -1,4 +1,4 @@
-Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0 auto;Position:absolute;Left:10%;Right:10%}
+Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:auto;Position:absolute;Left:10%;Right:10%}
 A{Color:#242424;Text-decoration:none}
 A.Tlacitko,Button{Background-color:#242424;Border-radius:0.25em;Color:#FFBF00;Margin-right:1em;Padding:0.5em 2em;Text-transform:uppercase}
 A.Tlacitko{Display:inline-block}
@@ -11,5 +11,5 @@ Section{Border:1px dashed #242424;Padding:1em}
 @media (orientation:landscape){
 Body{Left:18%;Right:18%}
 Section{Float:left;Text-align:center;Width:40%}
-Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
+Footer{Margin:0 auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }
