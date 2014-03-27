@@ -87,8 +87,8 @@ Textarea{Width:90%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
 
-Header{Background-color:#FFBF00;;Margin:0 auto;Min-height:100%;Position:absolute;Left:10%;Right:10%}
-Fieldset{Background-color:white;Border:0;Margin-bottom:100%;Padding:1em}
+Header{Background-color:#FFBF00;Height:100%;Margin:auto;Position:absolute;Width:100%;Top:0;Left:0;Bottom:0;Right:0}
+Fieldset{Background-color:white;Border:0;Margin-top:100%;Padding:1em}
 Table{Text-align:center}
 Th{Vertical-align:top}
 Form Button:not([Name="Zpet[Kam]"]){Background-color:#242424;Border-radius:0.25em;Color:white}
@@ -108,6 +108,14 @@ Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 <Title>Přihláška</Title>
 </Head>
 <Body>
+<Header>
+<H1><I Class="icon-sheet icon3x"></I><Br>Přihláška</H1>
+<Input Form="Formular" Name="Dale[Cookie]" Type="Hidden" Value="1">
+<Button Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Uvod">Vyplnit</Button>
+</Header>
+
+
+
 <Nav>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="30">
 <Input Form="Formular" Name="Ulozit[Email]" Type="Hidden" Value="ulozeno">
@@ -117,15 +125,6 @@ Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 <Input Form="Formular" Name="Odeslat[Email]" Type="Hidden" Value="odeslano">
 <Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="odeslano.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
 </Nav>
-
-
-
-
-<Header>
-<H1><I Class="icon-sheet icon3x"></I><Br>Přihláška</H1>
-<Input Form="Formular" Name="Dale[Cookie]" Type="Hidden" Value="1">
-<Button Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Uvod">Vyplnit</Button>
-</Header>
 
 
 
