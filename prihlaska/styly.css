@@ -1,16 +1,14 @@
 Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0 auto;Min-height:100%;Position:absolute;Left:10%;Right:10%}
 A{Color:#242424;Text-decoration:none}
-A.Tlacitko,Button,Input,Section{Border-radius:0.25em;Margin-right:1em;Margin-bottom:1em}
+A.Tlacitko,Button,Input{Border-radius:0.25em;Margin-right:1em;Margin-bottom:1em}
 A.Tlacitko,Button{Background-color:#242424;Color:#FFBF00;Padding:0.5em 2em;Text-transform:uppercase}
 A.Tlacitko{Display:inline-block}
 Button{Border:0;Cursor:pointer;Font-size:1em}
 A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
 A.Tlacitko:hover,A.Tlacitko:active,Button:hover,Button:active{Box-shadow:0 0 0.5em #242424}
 Input{Border:1px solid silver;Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Padding:0.5em;Width:18em}
-Section{Border:1px dashed #242424;Padding:1em;Text-align:center}
 
 @media (orientation:landscape){
 Body{Left:18%;Right:18%}
-Section{Float:left;Width:40%}
 Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }
