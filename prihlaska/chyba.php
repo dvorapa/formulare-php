@@ -40,9 +40,7 @@ fclose($Soubor);
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="/favicon.ico">
 <Link Rel="Stylesheet" Href="/aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
-<Style Type="Text/css">
-
-</Style>
+<Link Type="Text/css" Rel="Stylesheet" Href="/prihlaska/styly.css">
 <Title>Chyba</Title>
 </Head>
 <Body>
