@@ -117,7 +117,7 @@ $Hlavicka=array();
 $Hlavicka[]="MIME-Version: 1.0";
 $Hlavicka[]="Content-type: text/html; charset=utf-8";
 $Hlavicka[]="From: info@prihlaskanavs.8u.cz";
-mail($_SESSION["TEmail"],"Podrobnosti o přihlášce na VŠ",wordwrap($Email,70,"\r\n"),implode("\r\n",$Hlavicka));
+mail($_SESSION["Email"],"Podrobnosti o přihlášce na VŠ",wordwrap($Email,70,"\r\n"),implode("\r\n",$Hlavicka));
 }
 /*  __                          */
 /* |__)_˅_ _ _  _˅_ _    _/ _ / */
