@@ -13,15 +13,10 @@ Postup
 
 1. ~~[✓] Vymyslet téma maturitní práce, podat příhlášku~~
 2. ~~[100%] Navrhnout aplikaci a funkce, napsat kód, základní testování (vzhled, funkčnost)~~
-3. [99%] Nahrát postupně kód na GitHub s poznámkami, rozvrhnout samotnou práci, pokročilé testování (prohlížeče, blbůvzdornost)
-4. [99%] Zpracovat verze a poznámky k předchozím bodům (zachytit postup), napsat první návrh práce (napsat postup), nechat zkritizovat
-5. [2-krát] Opravit práci, odeslat k další kritice
-6. [-] Odevzdat finální práci, zpřístupnit škole/školám
-7. [0%] Vytáhnout to na verzi 1.0.0
+3. ~~[100%] Nahrát postupně kód na GitHub s poznámkami, rozvrhnout samotnou práci, pokročilé testování (prohlížeče, blbůvzdornost)~~
+4. ~~[100%] Zpracovat verze a poznámky k předchozím bodům (zachytit postup), napsat první návrh práce (napsat postup), nechat zkritizovat~~
+5. ~~[✓] Opravit práci, odeslat k další kritice (vícekrát)~~
+6. ~~[✓] Odevzdat finální práci, zpřístupnit škole/školám~~
+7. [10%] Vytáhnout to na verzi 1.0.0
 8. [0%] Připravit podklady a prezentaci k obhajobě
 9. [-] Obhájit práci u obhajoby
-
-Deadline
---------
-
-**31.3.2013**
