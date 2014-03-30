@@ -86,7 +86,6 @@ Textarea{Width:98%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
 
-*{Z-index:0}
 Nav{Z-index:1}
 Header,Footer{Z-index:2}
 
