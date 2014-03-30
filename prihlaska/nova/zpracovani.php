@@ -91,22 +91,7 @@ fclose($Funkce);
 /* |_/ _  _    _ __  _  (_ _  _ _  _/|_    */
 /* | \(_)| )\/(-| /_(-  | (_)| |||(_||_|_| */
 /*                                         */
-require_once "../../aplikace/CloudConvert.class.php";
-$Klic="PjhG91m1XL8USbB-aw-wLS9qCoVVnySTfYWZIfK3CLQtIFZ-CkgPpCSkZr1dZ10IwU_i4TltCmOau0MrdkWBiw";
-$KonverzePdf=CloudConvert::createProcess("html","pdf",$Klic);
-$KonverzePdf->upload($Cesta.".html","pdf");
-if($KonverzePdf->waitForConversion()){
-$KonverzePdf->download($Cesta.".pdf");
-}else{
-header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=5");
-}
-$KonverzeDocx=CloudConvert::createProcess("html","docx",$Klic);
-$KonverzeDocx->upload($Cesta.".html","docx");
-if($KonverzeDocx->waitForConversion()){
-$KonverzeDocx->download($Cesta.".docx");
-}else{
-header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=5");
-}}
+
 /*  __                                */
 /* /  \ _| _ _| _/ _ /   _ _  _ .|    */
 /* \__/(_|(-_)|(_|| )|  (-|||(_||||_| */
