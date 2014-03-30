@@ -8,7 +8,7 @@ if((!empty($_POST["ID"]))&&(!empty($_POST["RCislo"]))){
 session_id($_POST["ID"]);
 session_start();
 }else{
-header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=3");
+header("Location: /prihlaska/chyba.php?Kod=3");
 }
 /*                                         */
 /* \  / / _ . _  _    _| _ |_ _ |_  _/_  _ */
@@ -27,5 +27,5 @@ mysqli_close($Databaze);
 /* |__)_˅_ _ _  _˅_ _    _/ _ / */
 /* |  | (-_)|||(-| (_)\/(_|| )| */
 /*                              */
-header("Location: /prihlaska/stav/stav.php".$_SESSION["c"]);
+header("Location: /prihlaska/stav/stav.php");
 ?>

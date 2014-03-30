@@ -7,14 +7,14 @@
 </Head>
 <Body>
 Vážený uchazeči,
-<Br>
-Vámi podaná přihláška na vysokou školu byla úspěšně uložena.
 <Br><Br>
-Vyplnění nové přihlášky nebo tisk, úprava, či odstranění této přihlášky je možné na webové adrese:
+Vámi podaná přihláška na vysokou školu byla úspěšně uložena do paměti Vašeho prohlížeče.
+<Br>
+Dokončení úprav této přihlášky je možné na webové adrese:
 <Br>
 <A Href="http://prihlaskanavs.8u.cz/uprava/">http://prihlaskanavs.8u.cz/uprava/</A>
 <Br><Br>
-K přihlášení budete potřebovat Vaše rodné číslo (<?php echo $_SESSION["RCislo"]; ?>) a tento kód:
+K přihlášení budete potřebovat tento kód:
 <Br>
 <H2><?php echo session_id(); ?></H2>
 <Br><Br>

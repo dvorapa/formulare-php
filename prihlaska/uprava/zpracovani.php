@@ -5,14 +5,15 @@
 /*    |                                */
 ini_set("session.cookie_httponly","1");
 if(!empty($_POST["ID"])){
-session_start($_POST["ID"]);
+session_id($_POST["ID"]);
+session_start();
 }else{
-header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=3");
+header("Location: /prihlaska/chyba.php?Kod=3");
 }
-/*  __                                    */
-/* |__)_˅_ _ . _   _| _    _ _ _ _. _  _  */
-/* |  | (-|_)|_)  (_|(_)  _)(-_)_)|(_)| ) */
-/*        |                               */
+/*                                 */
+/* \  / / _ . _  _    _ _  _ | . _ */
+/*  \/ \/|_)|_)  /_  (_(_)(_)|(|(- */
+/*     / |                         */
 $Pole=array(
 /*Úvod*/"AkadRok","Program","Forma","Jazyk",
 /*Vysoká škola*/"VSkola","VFakulta","VProgram","VOborA","VOborB","VOborC",
@@ -25,7 +26,6 @@ $Pole=array(
 /*Zájmová činnost*/"Zajmy",
 /*Průběh zaměstnání*/"Zamestnavatel","Zarazeni","ZOd","ZDo",
 /*Předchozí vysoká škola*/"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul",
-/*Stav*/"ElPrijat",
 /*Kontakt*/"Telefon","Email"
 );
 /*Prospěch*/
@@ -36,15 +36,15 @@ for($j=1;$j<=5;$j++){
 $Pole[]="Predmet".$i."Rocnik".$j;
 }}
 if(!empty($_COOKIE)){
-foreach($PoleHodnot as $Promenna){
+foreach($Pole as $Promenna){
 if(!empty($_COOKIE[$Promenna])){
 $_SESSION[$Promenna]=$_COOKIE[$Promenna];
 }}}else{
-header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4");
+header("Location: /prihlaska/chyba.php?Kod=4");
 }
 /*  __                          */
 /* |__)_˅_ _ _  _˅_ _    _/ _ / */
 /* |  | (-_)|||(-| (_)\/(_|| )| */
 /*                              */
-header("Location: /prihlaska/nova/".$_SESSION["c"]);
+header("Location: /prihlaska/nova/");
 ?>

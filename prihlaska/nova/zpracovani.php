@@ -98,7 +98,7 @@ fclose($Funkce);
 /*                                    */
 if(array_key_exists("Email",$Kolekce)){
 ob_start();
-include "email.php";
+include "email".$Kolekce["Email"].".php";
 $Email=ob_get_contents();
 ob_end_clean();
 $Hlavicka=array();

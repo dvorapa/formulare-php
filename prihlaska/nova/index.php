@@ -87,11 +87,11 @@ $_SESSION["c"]="?Cookie";
 
 <Nav>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="30">
-<Input Form="Formular" Name="Ulozit[Email]" Type="Hidden" Value="ulozeno">
+<Input Form="Formular" Name="Ulozit[Email]" Type="Hidden" Value="ul">
 <Button Class="Belotmavy" Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="ulozeno.php<?php echo $_SESSION["c"]; ?>">Uložit</Button><Br>
 <Input Form="Formular" Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Form="Formular" Name="Odeslat[Soubor]" Type="Hidden" Value="true">
-<Input Form="Formular" Name="Odeslat[Email]" Type="Hidden" Value="odeslano">
+<Input Form="Formular" Name="Odeslat[Email]" Type="Hidden" Value="od">
 <Button Class="Belotmavy" Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="odeslano.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
 </Nav>
 
