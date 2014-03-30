@@ -72,46 +72,7 @@ $_SESSION["c"]="?Cookie";
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="/favicon.ico">
 <Link Rel="Stylesheet" Href="/aplikace/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
-<Style Type="Text/css">
-Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0}
-A{Color:#242424;Text-decoration:none}
-Button{Border:0;Cursor:pointer;Font-size:1em;Margin:1em 0;Padding:0.5em 2em;Text-transform:uppercase}
-A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
-Input:not([Type="Radio"]),Textarea{Border:1px solid silver;Border-radius:0.25em;Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Padding:0.5em}
-Input:not([Type="Radio"]){Width:18em}
-.Znamka{Width:1em !important}
-.Kratky{Width:6em !important}
-.Pulka{Width:9em !important}
-Textarea{Width:98%}
-Label:before,Label:after{Content:"\A";White-space:pre}
-Input+Label:before{Content:""}
-
-Nav{Z-index:1}
-Header,Footer{Z-index:2}
-
-Header,Footer{Background-color:#FFBF00}
-Header Button,Footer Button{Background-color:#242424;Border-radius:0.25em;Color:#FFBF00}
-Header Button:hover,Header Button:active,Footer Button:hover,Footer Button:active,Form Button:hover,Form Button:active{Box-shadow:0 0 0.5em #242424}
-Nav Button,Form Button[Name="Zpet[Kam]"]{Background-color:white;Color:#242424}
-Form Button[Name="Zpet[Kam]"]{Position:absolute;Right:100%}
-Nav Button:hover,Nav Button:active,Form Button[Name="Zpet[Kam]"]:hover,Form Button[Name="Zpet[Kam]"]:active{Box-shadow:0 0 0.5em white}
-Fieldset{Background-color:white;Border:0;Margin:0;Margin-top:100%;Padding:1em}
-Fieldset:last-of-type{Margin-bottom:100%}
-Form Button{Background-color:#242424;Border-radius:0.25em;Color:white}
-Table{Text-align:center}
-Th{Vertical-align:top}
-Nav:last-of-type Button{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
-
-@media (orientation:landscape){
-Header,Footer{Padding-left:18%;Padding-right:18%;Position:absolute;Width:64%}
-Header{Top:0}
-Footer{Padding-bottom:100%}
-Nav{Position:fixed;Text-align:right;Width:18%}
-Nav:first-of-type{Top:0;Left:0}
-Form{Padding-left:18%;Padding-right:18%;Width:64%}
-Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
-}
-</Style>
+<Link Type="Text/css" Rel="Stylesheet" Href="styly.css">
 <!--[if lt IE 10]><Script Src="/aplikace/html5shiv.js"></Script><![endif]-->
 <Title>Přihláška</Title>
 </Head>
@@ -119,7 +80,7 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Header Id="Vchod">
 <H1><I Class="icon-sheet icon3x"></I><Br>Přihláška</H1>
 <Input Form="Formular" Name="Dale[Cookie]" Type="Hidden" Value="1">
-<Button Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Uvod">Vyplnit</Button>
+<Button Class="Tmavooranzovy" Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Uvod">Vyplnit</Button>
 </Header>
 
 
@@ -127,11 +88,11 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Nav>
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="30">
 <Input Form="Formular" Name="Ulozit[Email]" Type="Hidden" Value="ulozeno">
-<Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="ulozeno.php<?php echo $_SESSION["c"]; ?>">Uložit</Button><Br>
+<Button Class="Belotmavy" Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="ulozeno.php<?php echo $_SESSION["c"]; ?>">Uložit</Button><Br>
 <Input Form="Formular" Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Form="Formular" Name="Odeslat[Soubor]" Type="Hidden" Value="true">
 <Input Form="Formular" Name="Odeslat[Email]" Type="Hidden" Value="odeslano">
-<Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="odeslano.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
+<Button Class="Belotmavy" Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="odeslano.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
 </Nav>
 
 
@@ -158,6 +119,7 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Input Id="Jazyk" Name="Jazyk" Tabindex="7" Type="Text" Value="<?php echo $_SESSION['Jazyk']; ?>">
 <Br>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:nova/index.php
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -178,8 +140,11 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 =======
 <Button Name="Zpet[Kam]" Tabindex="9" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>">Zpět</Button>
 >>>>>>> 7e0a3d6... Chyba ve zobrazení tlačítka zpět?
+=======
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="9" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>">Zpět</Button>
+>>>>>>> 4d01068... Vyčlenění stylů z Nové + styly tlačítek do tříd
 <Br>
-<Button Name="Dale[Kam]" Tabindex="8" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#VysokaSkola">Dále</Button>
+<Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="8" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#VysokaSkola">Dále</Button>
 </Fieldset>
 >>>>>>> 94d5719... Komplet přepracování celé struktury (fuj) 1/x:prihlaska/nova/index.php
 
@@ -201,9 +166,9 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Br>
 <Input Id="VOborC" Name="VOborC" Tabindex="14" Type="Text" Value="<?php echo !empty($_SESSION['VOborC'])?$_SESSION['VOborC']:''; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="16" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Uvod">Zpět</Button>
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="16" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Uvod">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="15" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#OsobniUdaje">Dále</Button>
+<Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="15" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#OsobniUdaje">Dále</Button>
 </Fieldset>
 
 <Fieldset Id="OsobniUdaje">
@@ -228,9 +193,9 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Label For="StatniPris">Státní příslušnost</Label>
 <Input Id="StatniPris" Name="StatniPris" Tabindex="23" Type="Text" Value="<?php echo !empty($_SESSION['StatniPris'])?$_SESSION['StatniPris']:'Česká republika'; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="25" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#VysokaSkola">Zpět</Button>
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="25" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#VysokaSkola">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="24" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Narozeni">Dále</Button>
+<Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="24" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Narozeni">Dále</Button>
 </Fieldset>
 
 <Fieldset Id="Narozeni">
@@ -253,9 +218,9 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Label For="CisloP">Číslo pasu (u cizinců)</Label>
 <Input Id="CisloP" Name="CisloP" Tabindex="31" Type="Number" Value="<?php echo !empty($_SESSION['CisloP'])?$_SESSION['CisloP']:''; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="33" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#OsobniUdaje">Zpět</Button>
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="33" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#OsobniUdaje">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="32" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#AdresaTrvalehoBydliste">Dále</Button>
+<Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="32" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#AdresaTrvalehoBydliste">Dále</Button>
 </Fieldset>
 
 <Fieldset Id="AdresaTrvalehoBydliste">
@@ -280,9 +245,9 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Label For="TStat">Stát</Label>
 <Input Id="TStat" Name="TStat" Tabindex="41" Type="Text" Value="<?php echo !empty($_SESSION['TStat'])?$_SESSION['TStat']:''; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="45" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Narozeni">Zpět</Button>
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="45" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Narozeni">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="44" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#KontaktniAdresa">Dále</Button>
+<Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="44" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#KontaktniAdresa">Dále</Button>
 </Fieldset>
 
 <Fieldset Id="KontaktniAdresa">
@@ -307,9 +272,9 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Label For="KStat">Stát</Label>
 <Input Id="KStat" Name="KStat" Tabindex="53" Type="Text" Value="<?php echo !empty($_SESSION['KStat'])?$_SESSION['KStat']:''; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="55" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#AdresaTrvalehoBydliste">Zpět</Button>
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="55" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#AdresaTrvalehoBydliste">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="54" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#StredniSkola">Dále</Button>
+<Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="54" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#StredniSkola">Dále</Button>
 </Fieldset>
 
 <Fieldset Id="StredniSkola">
@@ -332,9 +297,9 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Label For="SRokMat">Rok maturitní zkoušky</Label>
 <Input Class="Kratky" Id="SRokMat" Name="SRokMat" Tabindex="61" Type="Number" Value="<?php echo !empty($_SESSION['SRokMat'])?$_SESSION['SRokMat']:idate("Y"); ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="63" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#KontaktniAdresa">Zpět</Button>
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="63" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#KontaktniAdresa">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="62" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#UchazecSeHlasi">Dále</Button>
+<Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="62" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#UchazecSeHlasi">Dále</Button>
 </Fieldset>
 
 <Fieldset Id="UchazecSeHlasi">
@@ -357,9 +322,9 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Label For="Voj">z vojenské služby</Label>
 <Input Id="Odj" Name="Odkud" Tabindex="72" Type="Radio" Value="jiné"<?php echo (!empty($_SESSION['Odkud'])&&$_SESSION['Odkud']=='jiné')?' Checked':''; ?>>
 <Label For="Odj">odjinud</Label>
-<Button Name="Zpet[Kam]" Tabindex="74" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#StredniSkola">Zpět</Button>
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="74" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#StredniSkola">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="73" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#ZajmovaCinnost">Dále</Button>
+<Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="73" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#ZajmovaCinnost">Dále</Button>
 </Fieldset>
 
 <Fieldset Id="ZajmovaCinnost">
@@ -369,9 +334,9 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <?php echo !empty($_SESSION['Zajmy'])?$_SESSION['Zajmy']:''; ?>
 </Textarea>
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="77" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#UchazecSeHlasi">Zpět</Button>
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="77" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#UchazecSeHlasi">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="76" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#PrubehZamestnani">Dále</Button>
+<Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="76" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#PrubehZamestnani">Dále</Button>
 </Fieldset>
 
 <Fieldset Id="PrubehZamestnani">
@@ -386,9 +351,9 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Input Class="Pulka" Id="ZOd" Name="ZOd" Tabindex="80" Type="Date" Value="<?php echo !empty($_SESSION['ZOd'])?$_SESSION['ZOd']:''; ?>">
 <Input Class="Pulka" Id="ZDo" Name="ZDo" Tabindex="81" Type="Date" Value="<?php echo !empty($_SESSION['ZDo'])?$_SESSION['ZDo']:''; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="83" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#ZajmovaCinnost">Zpět</Button>
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="83" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#ZajmovaCinnost">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="82" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Dále</Button>
+<Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="82" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Dále</Button>
 </Fieldset>
 
 <Fieldset Id="PredchoziVysokaSkola">
@@ -412,9 +377,9 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Label For="PTitul">Udělený titul</Label>
 <Input Id="PTitul" Name="PTitul" Tabindex="90" Type="Text" Value="<?php echo !empty($_SESSION['PTitul'])?$_SESSION['PTitul']:''; ?>">
 <Br>
-<Button Name="Zpet[Kam]" Tabindex="92" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#PrubehZamestnani">Zpět</Button>
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="92" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#PrubehZamestnani">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="91" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Prospech">Dále</Button>
+<Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="91" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Prospech">Dále</Button>
 </Fieldset>
 
 <Fieldset Id="Prospech">
@@ -451,9 +416,9 @@ echo "<Tr>"
 ?>
 <Tr><Td Colspan="7"><A Href="./<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech" Tabindex="282"><I Class="icon-plus"></I></A></Td></Tr>
 </Table>
-<Button Name="Zpet[Kam]" Tabindex="284" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Zpět</Button>
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="284" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Zpět</Button>
 <Br>
-<Button Name="Dale[Kam]" Tabindex="283" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Kontrola">Dále</Button>
+<Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="283" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Kontrola">Dále</Button>
 </Fieldset>
 </Form>
 
@@ -500,7 +465,7 @@ echo "<Button Form='Formular' Name='Prejit[Kam]' Type='Submit' Value='nova/".$_S
 foreach($PoleStran as $Promenna):
 >>>>>>> 94d5719... Komplet přepracování celé struktury (fuj) 1/x:prihlaska/nova/index.php
 ?>
-<Button Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]."#".$Promenna; ?>">&nbsp;</Button><Br>
+<Button Class="Belokulaty" Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]."#".$Promenna; ?>">&nbsp;</Button><Br>
 <?php endforeach; ?>
 </Nav>
 
@@ -514,9 +479,9 @@ foreach($PoleStran as $Promenna):
 <Label For="Email">Email</Label>
 <Input Form="Formular" Id="Email" Name="Email" Tabindex="43" Type="Email" Value="<?php echo !empty($_SESSION['Email'])?$_SESSION['Email']:''; ?>">
 <Br>
-<Button Form="Formular" Name="Zpet[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Prospech">Zpět</Button>
+<Button Class="Tmavooranzovy" Form="Formular" Name="Zpet[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Prospech">Zpět</Button>
 <Br>
-<Button Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="odeslano.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
+<Button Class="Tmavooranzovy" Form="Formular" Name="Odeslat[Kam]" Type="Submit" Value="odeslano.php<?php echo $_SESSION["c"]; ?>">Odeslat</Button>
 </Footer>
 </Body>
 </Html>

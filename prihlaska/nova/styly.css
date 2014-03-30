@@ -1,0 +1,38 @@
+Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-serif;Margin:0}
+A{Color:#242424;Text-decoration:none}
+Button{Border:0;Cursor:pointer;Font-size:1em;Margin:1em 0;Padding:0.5em 2em;Text-transform:uppercase}
+A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
+Input:not([Type="Radio"]),Textarea{Border:1px solid silver;Border-radius:0.25em;Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Padding:0.5em}
+Input:not([Type="Radio"]){Width:18em}
+.Znamka{Width:1em !important}
+.Kratky{Width:6em !important}
+.Pulka{Width:9em !important}
+Textarea{Width:98%}
+Label:before,Label:after{Content:"\A";White-space:pre}
+Input+Label:before{Content:""}
+
+.Tmavooranzovy,.Tmavobily{Background-color:#242424;Border-radius:0.25em}
+.Tmavooranzovy{Color:#FFBF00}
+.Tmavobily{Color:white}
+.Belotmavy,.Belokulaty{Background-color:white;Color:#242424}
+.Belokulaty{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
+.Belotmavy[Name="Zpet[Kam]"]{Position:absolute;Right:100%}
+.Tmavooranzovy:hover,.Tmavooranzovy:active,.Tmavobily:hover,.Tmavobily:active{Box-shadow:0 1px 1px #242424}
+.Belotmavy:hover,.Belotmavy:active,.Belokulaty:hover,.Belokulaty:active{Box-shadow:0 1px 1px white}
+
+Header,Footer{Background-color:#FFBF00;Z-index:2}
+Nav{Text-align:right;Z-index:1}
+Fieldset{Background-color:white;Border:0;Margin:0;Margin-top:100%;Padding:1em}
+Fieldset:last-of-type{Margin-bottom:100%}
+Table{Text-align:center}
+Th{Vertical-align:top}
+
+@media (orientation:landscape){
+Header,Footer{Padding-left:18%;Padding-right:18%;Position:absolute;Width:64%}
+Header{Top:0}
+Nav{Position:fixed;Width:18%}
+Nav:first-of-type{Top:0;Left:0}
+Form{Padding-left:18%;Padding-right:18%;Width:64%}
+Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
+Footer{Padding-bottom:100%}
+}
