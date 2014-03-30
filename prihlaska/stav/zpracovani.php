@@ -20,7 +20,7 @@ mysqli_set_charset($Databaze,"utf8");
 foreach($Pole as $Promenna){
 $Prikaz="select {$Promenna} from Prihlasky where PHPSESSID='{$_POST['ID']}' and RCislo='{$_POST['RCislo']}'";
 $_SESSION[$Promenna]=mysqli_query($Databaze,$Prikaz);
-echo $_SESSION[$Promenna];
+print_r($_SESSION[$Promenna]);
 }
 mysqli_close($Databaze);
 /*  __                          */
