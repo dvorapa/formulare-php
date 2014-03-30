@@ -19,8 +19,8 @@ $Databaze=mysqli_connect("localhost","dvorapa","heslododatabaze","databazeprihla
 mysqli_set_charset($Databaze,"utf8");
 foreach($Pole as $Promenna){
 $Prikaz="select {$Promenna} from Prihlasky where PHPSESSID='{$_POST['ID']}' and RCislo='{$_POST['RCislo']}'";
-$Promenna=mysqli_query($Databaze,$Prikaz);
-$_SESSION[$Promenna]=mysqli_fetch_object($Promenna)->$Promenna;
+$Rada=mysqli_fetch_assoc(mysqli_query($Databaze,$Prikaz));
+$_SESSION[$Promenna]=$Rada[$Promenna];
 }
 mysqli_close($Databaze);
 /*  __                          */
