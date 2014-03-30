@@ -16,13 +16,13 @@ Input+Label:before{Content:""}
 .Tmavobily{Color:white}
 .Belotmavy,.Belokulaty{Background-color:white;Color:#242424}
 .Belokulaty{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
-.Belotmavy[Name="Zpet[Kam]"]{Position:absolute;Right:64%}
+.Belotmavy[Name="Zpet[Kam]"]{Position:absolute;Right:100%}
 .Tmavooranzovy:hover,.Tmavooranzovy:active,.Tmavobily:hover,.Tmavobily:active{Box-shadow:0 1px 1px #242424}
 .Belotmavy:hover,.Belotmavy:active,.Belokulaty:hover,.Belokulaty:active{Box-shadow:0 1px 1px white}
 
-Header,Footer{Background-color:#FFBF00;Z-index:2}
+Header,Footer{Background-color:#FFBF00;Z-index:3}
 Nav{Text-align:right;Z-index:1}
-Fieldset{Background-color:white;Border:0;Margin:0;Margin-top:100%;Padding:1em}
+Fieldset{Background-color:white;Border:0;Margin:0;Margin-top:100%;Padding:1em;Z-index:2}
 Fieldset:last-of-type{Margin-bottom:100%}
 Table{Text-align:center}
 Th{Vertical-align:top}
