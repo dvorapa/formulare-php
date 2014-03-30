@@ -104,7 +104,7 @@ Th{Vertical-align:top}
 Nav:last-of-type Button{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
 
 @media (orientation:landscape){
-Header,Footer{Margin-bottom:50%;Padding-left:18%;Padding-right:18%;Position:absolute;Width:64%}
+Header,Footer{Padding-left:18%;Padding-right:18%;Position:absolute;Width:64%}
 Nav{Position:fixed;Text-align:right;Width:18%}
 Nav:first-of-type{Top:0;Left:0}
 Form{Padding-left:18%;Padding-right:18%;Width:64%}
