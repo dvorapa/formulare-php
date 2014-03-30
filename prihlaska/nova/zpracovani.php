@@ -66,11 +66,11 @@ if(!empty($_POST[$Promenna])){
 $_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
 $Prikaz.="$Promenna='{$_SESSION[$Promenna]}',";
 }}
+$Prikaz.="ElPrijat='ano',";
+$Prikaz.="PiPrijat='&#8987;',";
+$Prikaz.="PlPrijat='&#8987;',";
+$Prikaz.="Prijat='&#8987;',";
 $Prikaz.="PHPSESSID='".session_id()."'";
-$Prikaz.="ElPrijat='ano'";
-$Prikaz.="PiPrijat='&#8987;'";
-$Prikaz.="PlPrijat='&#8987;'";
-$Prikaz.="Prijat='&#8987;'";
 mysqli_query($Databaze,$Prikaz);
 mysqli_close($Databaze);
 }
