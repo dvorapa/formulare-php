@@ -21,7 +21,6 @@ $Pole=array(
 /*Zájmová činnost*/"Zajmy",
 /*Průběh zaměstnání*/"Zamestnavatel","Zarazeni","ZOd","ZDo",
 /*Předchozí vysoká škola*/"PSkola","PFakulta","PProgram","PObor","POd","PDo","PTitul",
-/*Stav*/"ElPrijat",
 /*Kontakt*/"Telefon","Email"
 );
 /*Prospěch*/
@@ -68,6 +67,10 @@ $_SESSION[$Promenna]=mysqli_real_escape_string($Databaze,$_SESSION[$Promenna]);
 $Prikaz.="$Promenna='{$_SESSION[$Promenna]}',";
 }}
 $Prikaz.="PHPSESSID='".session_id()."'";
+$Prikaz.="ElPrijat='ano'";
+$Prikaz.="PiPrijat='&#8987;'";
+$Prikaz.="PlPrijat='&#8987;'";
+$Prikaz.="Prijat='&#8987;'";
 mysqli_query($Databaze,$Prikaz);
 mysqli_close($Databaze);
 }

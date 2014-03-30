@@ -127,7 +127,6 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Input Form="Formular" Name="Ulozit[Cookie]" Type="Hidden" Value="30">
 <Input Form="Formular" Name="Ulozit[Email]" Type="Hidden" Value="ulozeno">
 <Button Form="Formular" Name="Ulozit[Kam]" Type="Submit" Value="ulozeno.php<?php echo $_SESSION["c"]; ?>">Uložit</Button><Br>
-<Input Form="Formular" Name="ElPrijat" Type="Hidden" Value="ano">
 <Input Form="Formular" Name="Odeslat[Databaze]" Type="Hidden" Value="true">
 <Input Form="Formular" Name="Odeslat[Soubor]" Type="Hidden" Value="true">
 <Input Form="Formular" Name="Odeslat[Email]" Type="Hidden" Value="odeslano">
