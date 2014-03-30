@@ -103,7 +103,9 @@ Th{Vertical-align:top}
 Nav:last-of-type Button{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
 
 @media (orientation:landscape){
-Header,Footer{Padding-left:18%;Padding-right:18%;Position:absolute;Top:0;Width:64%}
+Header,Footer{Padding-left:18%;Padding-right:18%;Position:absolute;Width:64%}
+Header{Top:0}
+Footer{Padding-bottom:100%}
 Nav{Position:fixed;Text-align:right;Width:18%}
 Nav:first-of-type{Top:0;Left:0}
 Form{Padding-left:18%;Padding-right:18%;Width:64%}
@@ -155,6 +157,7 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 <Label For="Jazyk">Zvolený jazyk</Label>
 <Input Id="Jazyk" Name="Jazyk" Tabindex="7" Type="Text" Value="<?php echo $_SESSION['Jazyk']; ?>">
 <Br>
+<<<<<<< HEAD
 <<<<<<< HEAD:nova/index.php
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,8 +175,11 @@ Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
 </Section>
 =======
 <Button Name="Zpet[Kam]" Tabindex="8" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>">Zpět</Button>
+=======
+<Button Name="Zpet[Kam]" Tabindex="9" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>">Zpět</Button>
+>>>>>>> 7e0a3d6... Chyba ve zobrazení tlačítka zpět?
 <Br>
-<Button Name="Dale[Kam]" Tabindex="7" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#VysokaSkola">Dále</Button>
+<Button Name="Dale[Kam]" Tabindex="8" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#VysokaSkola">Dále</Button>
 </Fieldset>
 >>>>>>> 94d5719... Komplet přepracování celé struktury (fuj) 1/x:prihlaska/nova/index.php
 
