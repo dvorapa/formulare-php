@@ -2,7 +2,7 @@ Body{Background-color:#FFBF00;Color:#242424;Font-family:Ubuntu,"Open Sans",sans-
 A{Color:#242424;Text-decoration:none}
 Button{Border:0;Cursor:pointer;Font-size:1em;Margin:1em 0;Padding:0.5em 2em;Text-transform:uppercase}
 A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
-Input:not([Type="Radio"]),Textarea{Border:1px solid silver;Border-radius:0.25em;Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Padding:0.5em}
+Input:not([Type="Radio"]),Textarea{Border:1px solid silver;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;Border-radius:0.25em;-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Padding:0.5em}
 Input:not([Type="Radio"]){Width:18em}
 .Znamka{Width:1em !important}
 .Kratky{Width:6em !important}
@@ -11,14 +11,14 @@ Textarea{Width:98%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
 
-.Tmavooranzovy,.Tmavobily{Background-color:#242424;Border-radius:0.25em}
+.Tmavooranzovy,.Tmavobily{Background-color:#242424;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;Border-radius:0.25em}
 .Tmavooranzovy{Color:#FFBF00}
 .Tmavobily{Color:white}
 .Belotmavy,.Belokulaty{Background-color:white;Color:#242424}
-.Belokulaty{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
+.Belokulaty{-moz-border-radius:8px;-webkit-border-radius:8px;Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
 .Belotmavy[Name="Zpet[Kam]"]{Position:absolute;Right:82%}
-.Tmavooranzovy:hover,.Tmavooranzovy:active,.Tmavobily:hover,.Tmavobily:active{Box-shadow:0 1px 1px #242424}
-.Belotmavy:hover,.Belotmavy:active,.Belokulaty:hover,.Belokulaty:active{Box-shadow:0 1px 1px white}
+.Tmavooranzovy:hover,.Tmavooranzovy:active,.Tmavobily:hover,.Tmavobily:active{-moz-box-shadow:0 1px 1px #242424;-webkit-box-shadow:0 1px 1px #242424;Box-shadow:0 1px 1px #242424}
+.Belotmavy:hover,.Belotmavy:active,.Belokulaty:hover,.Belokulaty:active{-moz-box-shadow:0 1px 1px white;-webkit-box-shadow:0 1px 1px white;Box-shadow:0 1px 1px white}
 
 Header,Footer{Background-color:#FFBF00;Z-index:3}
 Nav{Text-align:right;Z-index:1}

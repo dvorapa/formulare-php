@@ -281,10 +281,10 @@ CREATE TABLE `PrubehZamestnani` (
 
 CREATE TABLE `Stav` (
   `PHPSESSID` varchar(40) NOT NULL,
-  `ElPrijat` varchar(3) NOT NULL,
-  `PiPrijat` varchar(3) NOT NULL,
-  `PlPrijat` varchar(3) NOT NULL,
-  `Prijat` varchar(3) NOT NULL,
+  `ElPrijat` varchar(7) NOT NULL,
+  `PiPrijat` varchar(7) NOT NULL,
+  `PlPrijat` varchar(7) NOT NULL,
+  `Prijat` varchar(7) NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
