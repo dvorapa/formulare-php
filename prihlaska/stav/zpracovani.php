@@ -5,7 +5,8 @@
 /*    |                                */
 ini_set("session.cookie_httponly","1");
 if((!empty($_POST["ID"]))&&(!empty($_POST["RCislo"]))){
-session_start($_POST["ID"]);
+session_id($_POST["ID"]);
+session_start();
 }else{
 header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=3");
 }
@@ -19,11 +20,12 @@ mysqli_set_charset($Databaze,"utf8");
 foreach($Pole as $Promenna){
 $Prikaz="select {$Promenna} from Prihlasky where PHPSESSID='{$_POST['ID']}' and RCislo='{$_POST['RCislo']}'";
 $_SESSION[$Promenna]=mysqli_query($Databaze,$Prikaz);
+echo $_SESSION[$Promenna];
 }
 mysqli_close($Databaze);
 /*  __                          */
 /* |__)_˅_ _ _  _˅_ _    _/ _ / */
 /* |  | (-_)|||(-| (_)\/(_|| )| */
 /*                              */
-header("Location: /prihlaska/stav/stav.php".$_SESSION["c"]);
+#header("Location: /prihlaska/stav/stav.php".$_SESSION["c"]);
 ?>

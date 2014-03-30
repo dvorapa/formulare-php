@@ -86,7 +86,11 @@ Textarea{Width:98%}
 Label:before,Label:after{Content:"\A";White-space:pre}
 Input+Label:before{Content:""}
 
-Header,Footer{Background-color:#FFBF00;Margin-bottom:100%;Z-index:1}
+*{Z-index:0}
+Nav{Z-index:1}
+Header,Footer{Z-index:2}
+
+Header,Footer{Background-color:#FFBF00}
 Header Button,Footer Button{Background-color:#242424;Border-radius:0.25em;Color:#FFBF00}
 Header Button:hover,Header Button:active,Footer Button:hover,Footer Button:active,Form Button:hover,Form Button:active{Box-shadow:0 0 0.5em #242424}
 Nav Button,Form Button[Name="Zpet[Kam]"]{Background-color:white;Color:#242424}
@@ -100,7 +104,7 @@ Th{Vertical-align:top}
 Nav:last-of-type Button{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
 
 @media (orientation:landscape){
-Header,Footer{Padding-left:18%;Padding-right:18%;Width:64%}
+Header,Footer{Padding-left:18%;Padding-bottom:50%;Padding-right:18%;Position:absolute;Width:64%}
 Nav{Position:fixed;Text-align:right;Width:18%}
 Nav:first-of-type{Top:0;Left:0}
 Form{Padding-left:18%;Padding-right:18%;Width:64%}
