@@ -16,7 +16,7 @@ Input+Label:before{Content:""}
 .Tmavobily{Color:white}
 .Belotmavy,.Belokulaty{Background-color:white;Color:#242424}
 .Belokulaty{Border-radius:8px;Height:8px;Margin:0 1em;Padding:0;Width:8px}
-.Belotmavy[Name="Zpet[Kam]"]{Position:absolute;Right:100%}
+.Belotmavy[Name="Zpet[Kam]"]{Position:absolute;Right:64%}
 .Tmavooranzovy:hover,.Tmavooranzovy:active,.Tmavobily:hover,.Tmavobily:active{Box-shadow:0 1px 1px #242424}
 .Belotmavy:hover,.Belotmavy:active,.Belokulaty:hover,.Belokulaty:active{Box-shadow:0 1px 1px white}
 
