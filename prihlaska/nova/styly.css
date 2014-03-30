@@ -4,7 +4,7 @@ Button{Border:0;Cursor:pointer;Font-size:1em;Margin:1em 0;Padding:0.5em 2em;Text
 A:hover,A:active,Button:hover,Button:active{Text-shadow:0 0 0.5em}
 Input:not([Type="Radio"]),Textarea{Border:1px solid silver;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;Border-radius:0.25em;-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);Padding:0.5em}
 Input:not([Type="Radio"]){Width:18em}
-.Znamka{Width:1em !important}
+.Znamka{Width:3em !important}
 .Kratky{Width:6em !important}
 .Pulka{Width:9em !important}
 Textarea{Width:98%}
@@ -29,7 +29,7 @@ Th{Vertical-align:top}
 
 @media (orientation:landscape){
 Header,Footer{Padding-left:18%;Padding-right:18%;Position:absolute;Width:64%}
-Header{Top:0}
+Header{Padding-bottom:20%;Top:0}
 Nav{Position:fixed;Width:18%}
 Nav:first-of-type{Top:0;Left:0}
 Form{Padding-left:18%;Padding-right:18%;Width:64%}
