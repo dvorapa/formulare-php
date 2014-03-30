@@ -19,13 +19,13 @@ $Databaze=mysqli_connect("localhost","dvorapa","heslododatabaze","databazeprihla
 mysqli_set_charset($Databaze,"utf8");
 foreach($Pole as $Promenna){
 $Prikaz="select {$Promenna} from Prihlasky where PHPSESSID='{$_POST['ID']}' and RCislo='{$_POST['RCislo']}'";
-$_SESSION[$Promenna]=mysqli_query($Databaze,$Prikaz);
-print_r($_SESSION[$Promenna]);
+$Promenna=mysqli_query($Databaze,$Prikaz);
+$_SESSION[$Promenna]=mysqli_fetch_object($Promenna)->$Promenna;
 }
 mysqli_close($Databaze);
 /*  __                          */
 /* |__)_˅_ _ _  _˅_ _    _/ _ / */
 /* |  | (-_)|||(-| (_)\/(_|| )| */
 /*                              */
-#header("Location: /prihlaska/stav/stav.php".$_SESSION["c"]);
+header("Location: /prihlaska/stav/stav.php".$_SESSION["c"]);
 ?>
