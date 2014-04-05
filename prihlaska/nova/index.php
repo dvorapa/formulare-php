@@ -101,15 +101,15 @@ $_SESSION["c"]="?Cookie";
 <Fieldset Id="Uvod">
 <H1>Úvod</H1>
 <Label For="AkadRok">Akademický rok (vyžadováno)</Label>
-<Input Id="AkadRok" Name="AkadRok" Required Tabindex="1" Type="Text" Value="<?php echo !empty($_SESSION['AkadRok'])?$_SESSION['AkadRok']:idate("Y")."/".(idate("Y")+1); ?>">
+<Input Id="AkadRok" Name="AkadRok" Tabindex="1" Type="Text" Value="<?php echo !empty($_SESSION['AkadRok'])?$_SESSION['AkadRok']:idate("Y")."/".(idate("Y")+1); ?>">
 <Br>
 <Label>Studijní program (vyžadováno)</Label>
-<Input Id="bakalářský" Name="Program" Required Tabindex="2" Type="Radio" Value="bakalářský"<?php echo ($_SESSION['Program']=='bakalářský')?' Checked':''; ?>>
+<Input Id="bakalářský" Name="Program" Tabindex="2" Type="Radio" Value="bakalářský"<?php echo ($_SESSION['Program']=='bakalářský')?' Checked':''; ?>>
 <Label For="bakalářský">bakalářský</Label>
 <Input Id="magisterský" Name="Program" Tabindex="3" Type="Radio" Value="magisterský"<?php echo ($_SESSION['Program']=='magisterský')?' Checked':''; ?>>
 <Label For="magisterský">magisterský</Label>
 <Label>Forma studia (vyžadováno)</Label>
-<Input Id="prezenční" Name="Forma" Required Tabindex="4" Type="Radio" Value="prezenční"<?php echo ($_SESSION['Forma']=='prezenční')?' Checked':''; ?>>
+<Input Id="prezenční" Name="Forma" Tabindex="4" Type="Radio" Value="prezenční"<?php echo ($_SESSION['Forma']=='prezenční')?' Checked':''; ?>>
 <Label For="prezenční">prezenční</Label>
 <Input Id="kombinované" Name="Forma" Tabindex="5" Type="Radio" Value="kombinované"<?php echo ($_SESSION['Forma']=='kombinované')?' Checked':''; ?>>
 <Label For="kombinované">kombinovaná</Label>
@@ -151,13 +151,13 @@ $_SESSION["c"]="?Cookie";
 <Fieldset Id="VysokaSkola">
 <H1>Vysoká škola</H1>
 <Label For="VSkola">Vysoká škola (vyžadováno)</Label>
-<Input Id="VSkola" Name="VSkola" Required Tabindex="10" Type="Text" Value="<?php echo $_SESSION['VSkola']; ?>">
+<Input Id="VSkola" Name="VSkola" Tabindex="10" Type="Text" Value="<?php echo $_SESSION['VSkola']; ?>">
 <Br>
 <Label For="VFakulta">Fakulta (vyžadováno)</Label>
-<Input Id="VFakulta" Name="VFakulta" Required Tabindex="11" Type="Text" Value="<?php echo $_SESSION['VFakulta']; ?>">
+<Input Id="VFakulta" Name="VFakulta" Tabindex="11" Type="Text" Value="<?php echo $_SESSION['VFakulta']; ?>">
 <Br>
 <Label For="VProgram">Studijní program (vyžadováno)</Label>
-<Input Id="VProgram" Name="VProgram" Required Tabindex="12" Type="Text" Value="<?php echo $_SESSION['VProgram']; ?>">
+<Input Id="VProgram" Name="VProgram" Tabindex="12" Type="Text" Value="<?php echo $_SESSION['VProgram']; ?>">
 <Br>
 <Label>Studijní obory</Label>
 <Input Id="VOborA" Name="VOborA" Tabindex="13" Type="Text" Value="<?php echo $_SESSION['VOborA']; ?>">
@@ -174,10 +174,10 @@ $_SESSION["c"]="?Cookie";
 <Fieldset Id="OsobniUdaje">
 <H1>Osobní údaje</H1>
 <Label For="Jmeno">Jméno (vyžadováno)</Label>
-<Input Id="Jmeno" Name="Jmeno" Required Tabindex="18" Type="Text" Value="<?php echo $_SESSION['Jmeno']; ?>">
+<Input Id="Jmeno" Name="Jmeno" Tabindex="18" Type="Text" Value="<?php echo $_SESSION['Jmeno']; ?>">
 <Br>
 <Label For="Prijmeni">Příjmení (vyžadováno)</Label>
-<Input Id="Prijmeni" Name="Prijmeni" Required Tabindex="19" Type="Text" Value="<?php echo $_SESSION['Prijmeni']; ?>">
+<Input Id="Prijmeni" Name="Prijmeni" Tabindex="19" Type="Text" Value="<?php echo $_SESSION['Prijmeni']; ?>">
 <Br>
 <Label For="Rodne">Rodné</Label>
 <Input Id="Rodne" Name="Rodne" Tabindex="20" Type="Text" Value="<?php echo $_SESSION['Rodne']; ?>">
@@ -186,12 +186,12 @@ $_SESSION["c"]="?Cookie";
 <Input Id="Tituly" Name="Tituly" Tabindex="21" Type="Text" Value="<?php echo $_SESSION['Tituly']; ?>">
 <Br>
 <Label>Pohlaví (vyžadováno)</Label>
-<Input Id="muz" Name="Pohlavi" Required Tabindex="22" Type="Radio" Value="muž"<?php echo ($_SESSION['Pohlavi']=='muž')?' Checked':''; ?>>
+<Input Id="muz" Name="Pohlavi" Tabindex="22" Type="Radio" Value="muž"<?php echo ($_SESSION['Pohlavi']=='muž')?' Checked':''; ?>>
 <Label For="muz">muž</Label>
 <Input Id="zena" Name="Pohlavi" Tabindex="23" Type="Radio" Value="žena"<?php echo ($_SESSION['Pohlavi']=='žena')?' Checked':''; ?>>
 <Label For="zena">žena</Label>
 <Label For="StatniPris">Státní příslušnost (vyžadováno)</Label>
-<Input Id="StatniPris" Name="StatniPris" Required Tabindex="24" Type="Text" Value="<?php echo $_SESSION['StatniPris']; ?>">
+<Input Id="StatniPris" Name="StatniPris" Tabindex="24" Type="Text" Value="<?php echo $_SESSION['StatniPris']; ?>">
 <Br>
 <Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="26" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#VysokaSkola">Zpět</Button>
 <Br>
@@ -201,19 +201,19 @@ $_SESSION["c"]="?Cookie";
 <Fieldset Id="Narozeni">
 <H1>Narození</H1>
 <Label For="DatumNar">Datum narození (vyžadováno)</Label>
-<Input Id="DatumNar" Name="DatumNar" Required Tabindex="27" Type="Date" Value="<?php echo $_SESSION['DatumNar']; ?>">
+<Input Id="DatumNar" Name="DatumNar" Tabindex="27" Type="Date" Value="<?php echo $_SESSION['DatumNar']; ?>">
 <Br>
 <Label For="MistoNar">Místo narození (vyžadováno)</Label>
-<Input Id="MistoNar" Name="MistoNar" Required Tabindex="28" Type="Text" Value="<?php echo $_SESSION['MistoNar']; ?>">
+<Input Id="MistoNar" Name="MistoNar" Tabindex="28" Type="Text" Value="<?php echo $_SESSION['MistoNar']; ?>">
 <Br>
 <Label For="OkresNar">Okres (vyžadováno)</Label>
-<Input Id="OkresNar" Name="OkresNar" Required Tabindex="29" Type="Text" Value="<?php echo $_SESSION['OkresNar']; ?>">
+<Input Id="OkresNar" Name="OkresNar" Tabindex="29" Type="Text" Value="<?php echo $_SESSION['OkresNar']; ?>">
 <Br>
 <Label For="CisloOP">Číslo občanského průkazu (vyžadováno)</Label>
-<Input Id="CisloOP" Name="CisloOP" Required Tabindex="30" Type="Number" Value="<?php echo $_SESSION['CisloOP']; ?>">
+<Input Id="CisloOP" Name="CisloOP" Tabindex="30" Type="Number" Value="<?php echo $_SESSION['CisloOP']; ?>">
 <Br>
 <Label For="RCislo">Rodné číslo (vyžadováno)</Label>
-<Input Id="RCislo" Name="RCislo" Required Tabindex="31" Type="Number" Value="<?php echo $_SESSION['RCislo']; ?>">
+<Input Id="RCislo" Name="RCislo" Tabindex="31" Type="Number" Value="<?php echo $_SESSION['RCislo']; ?>">
 <Br>
 <Label For="CisloP">Číslo pasu (u cizinců)</Label>
 <Input Id="CisloP" Name="CisloP" Tabindex="32" Type="Number" Value="<?php echo $_SESSION['CisloP']; ?>">
@@ -226,24 +226,24 @@ $_SESSION["c"]="?Cookie";
 <Fieldset Id="AdresaTrvalehoBydliste">
 <H1>Adresa trvalého bydliště</H1>
 <Label For="TUlice">Ulice a číslo domu (vyžadováno)</Label>
-<Input Id="TUlice" Name="TUlice" Required Tabindex="35" Type="Text" Value="<?php echo $_SESSION['TUlice']; ?>">
-<Input Class="Kratky" Id="TCislo" Name="TCislo" Required Tabindex="36" Type="Text" Value="<?php echo $_SESSION['TCislo']; ?>">
+<Input Id="TUlice" Name="TUlice" Tabindex="35" Type="Text" Value="<?php echo $_SESSION['TUlice']; ?>">
+<Input Class="Kratky" Id="TCislo" Name="TCislo" Tabindex="36" Type="Text" Value="<?php echo $_SESSION['TCislo']; ?>">
 <Br>
 <Label For="TCast">Část obce</Label>
 <Input Id="TCast" Name="TCast" Tabindex="37" Type="Text" Value="<?php echo $_SESSION['TCast']; ?>">
 <Br>
 <Label For="TObec">Obec a PSČ (vyžadováno)</Label>
-<Input Id="TObec" Name="TObec" Required Tabindex="38" Type="Text" Value="<?php echo $_SESSION['TObec']; ?>">
-<Input Class="Kratky" Id="TPSC" Name="TPSC" Required Tabindex="39" Type="Number" Value="<?php echo $_SESSION['TPSC']; ?>">
+<Input Id="TObec" Name="TObec" Tabindex="38" Type="Text" Value="<?php echo $_SESSION['TObec']; ?>">
+<Input Class="Kratky" Id="TPSC" Name="TPSC" Tabindex="39" Type="Number" Value="<?php echo $_SESSION['TPSC']; ?>">
 <Br>
 <Label For="TPosta">Pošta</Label>
 <Input Id="TPosta" Name="TPosta" Tabindex="40" Type="Text" Value="<?php echo $_SESSION['TPosta']; ?>">
 <Br>
 <Label For="TOkres">Okres (vyžadováno)</Label>
-<Input Id="TOkres" Name="TOkres" Required Tabindex="41" Type="Text" Value="<?php echo $_SESSION['TOkres']; ?>">
+<Input Id="TOkres" Name="TOkres" Tabindex="41" Type="Text" Value="<?php echo $_SESSION['TOkres']; ?>">
 <Br>
 <Label For="TStat">Stát (vyžadováno)</Label>
-<Input Id="TStat" Name="TStat" Required Tabindex="42" Type="Text" Value="<?php echo $_SESSION['TStat']; ?>">
+<Input Id="TStat" Name="TStat" Tabindex="42" Type="Text" Value="<?php echo $_SESSION['TStat']; ?>">
 <Br>
 <Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="44" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Narozeni">Zpět</Button>
 <Br>
@@ -280,22 +280,22 @@ $_SESSION["c"]="?Cookie";
 <Fieldset Id="StredniSkola">
 <H1>Střední škola</H1>
 <Label For="SSkola">Název (vyžadováno)</Label>
-<Input Id="SSkola" Name="SSkola" Required Tabindex="55" Type="Text" Value="<?php echo $_SESSION['SSkola']; ?>">
+<Input Id="SSkola" Name="SSkola" Tabindex="55" Type="Text" Value="<?php echo $_SESSION['SSkola']; ?>">
 <Br>
 <Label For="SAdresa">Adresa (vyžadováno)</Label>
-<Input Id="SAdresa" Name="SAdresa" Required Tabindex="56" Type="Text" Value="<?php echo $_SESSION['SAdresa']; ?>">
+<Input Id="SAdresa" Name="SAdresa" Tabindex="56" Type="Text" Value="<?php echo $_SESSION['SAdresa']; ?>">
 <Br>
 <Label For="SObor">Obor (vyžadováno)</Label>
-<Input Id="SObor" Name="SObor" Required Tabindex="57" Type="Text" Value="<?php echo $_SESSION['SObor']; ?>">
+<Input Id="SObor" Name="SObor" Tabindex="57" Type="Text" Value="<?php echo $_SESSION['SObor']; ?>">
 <Br>
 <Label For="SKKOV">KKOV (vyžadováno)</Label>
-<Input Id="SKKOV" Name="SKKOV" Required Tabindex="58" Type="Text" Value="<?php echo $_SESSION['SKKOV']; ?>">
+<Input Id="SKKOV" Name="SKKOV" Tabindex="58" Type="Text" Value="<?php echo $_SESSION['SKKOV']; ?>">
 <Br>
 <Label For="SIZO">IZO (vyžadováno)</Label>
-<Input Id="SIZO" Name="SIZO" Required Tabindex="59" Type="Text" Value="<?php echo $_SESSION['SIZO']; ?>">
+<Input Id="SIZO" Name="SIZO" Tabindex="59" Type="Text" Value="<?php echo $_SESSION['SIZO']; ?>">
 <Br>
 <Label For="SRokMat">Rok maturitní zkoušky (vyžadováno)</Label>
-<Input Class="Kratky" Id="SRokMat" Name="SRokMat" Required Tabindex="60" Type="Number" Value="<?php echo !empty($_SESSION['SRokMat'])?$_SESSION['SRokMat']:idate("Y"); ?>">
+<Input Class="Kratky" Id="SRokMat" Name="SRokMat" Tabindex="60" Type="Number" Value="<?php echo !empty($_SESSION['SRokMat'])?$_SESSION['SRokMat']:idate("Y"); ?>">
 <Br>
 <Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="62" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#KontaktniAdresa">Zpět</Button>
 <Br>
@@ -304,7 +304,7 @@ $_SESSION["c"]="?Cookie";
 
 <Fieldset Id="UchazecSeHlasi">
 <H1>Uchazeč se hlásí (vyžadováno)</H1>
-<Input Id="ZS" Name="Odkud" Required Tabindex="63" Type="Radio" Value="ZŠ"<?php echo ($_SESSION['Odkud']=='ZŠ')?' Checked':''; ?>>
+<Input Id="ZS" Name="Odkud" Tabindex="63" Type="Radio" Value="ZŠ"<?php echo ($_SESSION['Odkud']=='ZŠ')?' Checked':''; ?>>
 <Label For="ZS">ze ZŠ</Label>
 <Input Id="SS" Name="Odkud" Tabindex="64" Type="Radio" Value="SŠ"<?php echo ($_SESSION['Odkud']=='SŠ')?' Checked':''; ?>>
 <Label For="SS">ze SŠ</Label>
