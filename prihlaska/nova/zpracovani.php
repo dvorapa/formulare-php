@@ -83,8 +83,8 @@ ob_start();
 include "prihlaska.php";
 $Prihlaska=ob_get_contents();
 ob_end_clean();
-$Cesta="../export/".session_id();
-$Funkce=fopen($Cesta.".html","w+");
+$Cesta="../export/".session_id().".html";
+$Funkce=fopen($Cesta,"w+");
 fwrite($Funkce,$Prihlaska);
 fclose($Funkce);
 /*                       _                 */
