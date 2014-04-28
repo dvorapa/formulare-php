@@ -15,7 +15,7 @@ header("Location: /prihlaska/chyba.php?Kod=3");
 /*  \/ \/|_)|_)  /_  (_|(_||_(_||_)(_|/_(- */
 /*     / |                                 */
 $Pole=array("AkadRok","VSkola","VFakulta","ElPrijat","PiPrijat","PlPrijat","Prijat");
-$Databaze=mysqli_connect("localhost","dvorapa","heslododatabaze","databazeprihlasek");
+$Databaze=mysqli_connect("localhost","czprihlaskanav93","heslododatabaze","czprihlaskanavs");
 mysqli_set_charset($Databaze,"utf8");
 foreach($Pole as $Promenna){
 $Prikaz="select {$Promenna} from Prihlasky where PHPSESSID='{$_POST['ID']}' and RCislo='{$_POST['RCislo']}'";

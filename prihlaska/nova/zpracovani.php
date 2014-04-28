@@ -58,7 +58,7 @@ setcookie($Promenna,$_SESSION[$Promenna],$d);
 /* /__(_||_)|_)  (_|(_)  (_|(_||_(_||_)(_|/_(- */
 /*       |                                     */
 if(array_key_exists("Databaze",$Kolekce)){
-$Databaze=mysqli_connect("localhost","dvorapa","heslododatabaze","databazeprihlasek");
+$Databaze=mysqli_connect("localhost","czprihlaskanav93","heslododatabaze","czprihlaskanavs");
 mysqli_set_charset($Databaze,"utf8");
 $Prikaz="insert into Prihlasky set ";
 foreach($Pole as $Promenna){
