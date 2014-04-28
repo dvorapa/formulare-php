@@ -25,9 +25,5 @@
 <Input Autofocus Id="ID" Name="ID" Required Tabindex="1" Type="Text" Value="<?php echo $_COOKIE["PHPSESSID"]; ?>"><Br>
 <Button Tabindex="2" Type="Submit">Načíst</Button>
 </Form>
-
-<Footer>
-<Endora>
-</Footer>
 </Body>
 </Html>

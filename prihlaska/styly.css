@@ -13,5 +13,4 @@ Th,Td{Border:1px solid #FFBF00;Padding:0.5em}
 
 @media (orientation:landscape){
 Body{Left:18%;Right:18%}
-Footer{Margin:auto;Position:absolute;Z-index:-1;Left:0;Bottom:0;Right:0}
 }

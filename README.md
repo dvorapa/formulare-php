@@ -3,7 +3,7 @@
 
 Maturitní práce zabývající se tématem digitalizace formuláře pomocí programovacího jazyka PHP v předmětu Informačních a komunikačních technologií.
 
-[Přihláška na VŠ](http://prihlaskanavs.8u.cz/)
+[Přihláška na VŠ](http://prihlaskanavs.php5.cz/)
 ---------------
 
 Výstupem této práce je online formulář k vyplnění a případnému zpracování, či odeslání na vysokou školu.
@@ -17,6 +17,6 @@ Postup
 4. ~~[100%] Zpracovat verze a poznámky k předchozím bodům (zachytit postup), napsat první návrh práce (napsat postup), nechat zkritizovat~~
 5. ~~[✓] Opravit práci, odeslat k další kritice (vícekrát)~~
 6. ~~[✓] Odevzdat finální práci, zpřístupnit škole/školám~~
-7. [10%] Vytáhnout to na verzi 1.0.0
+7. [20%] Vytáhnout to na verzi 1.0.0
 8. [0%] Připravit podklady a prezentaci k obhajobě
 9. [-] Obhájit práci u obhajoby

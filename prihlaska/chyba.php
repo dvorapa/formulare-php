@@ -61,7 +61,5 @@ Chyba je na naší straně, někde jsme na něco určitě zapomněli.
 <?php if(!empty($_SERVER["HTTP_REFERER"])): ?>
 <A Class="Tlacitko" Href="<?php echo $_SERVER["HTTP_REFERER"]; ?>" Title="Zpět na předcházející stránku"><I Class="icon-arrow_left"></I></A>
 <?php endif; ?>
-
-<Endora>
 </Body>
 </Html>

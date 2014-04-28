@@ -27,9 +27,5 @@
 <Input Id="RCislo" Name="RCislo" Required Tabindex="2" Type="Text" Value="<?php echo $_COOKIE["RCislo"]; ?>"><Br>
 <Button Tabindex="3" Type="Submit">Otevřít</Button>
 </Form>
-
-<Footer>
-<Endora>
-</Footer>
 </Body>
 </Html>

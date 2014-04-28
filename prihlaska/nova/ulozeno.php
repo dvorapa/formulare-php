@@ -33,9 +33,5 @@ Budete-li v budoucnu chtít pokračovat ve vyplňování, zapište si prosím n�
 <A Class="Tlacitko" Href="<?php echo $_SERVER["HTTP_REFERER"]; ?>" Title="Zpět na předcházející stránku"><I Class="icon-arrow_left"></I></A>
 <?php endif; ?>
 </Nav>
-
-<Footer>
-<Endora>
-</Footer>
 </Body>
 </Html>

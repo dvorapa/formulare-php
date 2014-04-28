@@ -1,3 +1,2 @@
-ErrorDocument 403 /prihlaska/chyba.php?Kod=1
 ErrorDocument 404 /prihlaska/chyba.php?Kod=1
 ErrorDocument 503 /prihlaska/chyba.php?Kod=2

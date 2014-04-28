@@ -28,9 +28,5 @@ session_start();
 <Tr><Th>Rok</Th><Th>Škola</Th><Th>Fakulta</Th><Th>Elektronicky</Th><Th>Písemně</Th><Th>Platba</Th><Th>Přijat</Th></Tr>
 <Tr><Td><?php echo $_SESSION["AkadRok"]; ?></Td><Td><?php echo $_SESSION["VSkola"]; ?></Td><Td><?php echo $_SESSION["VFakulta"]; ?></Td><Td><?php echo $_SESSION["ElPrijat"]; ?></Td><Td><?php echo $_SESSION["PiPrijat"]; ?></Td><Td><?php echo $_SESSION["PlPrijat"]; ?></Td><Td><?php echo $_SESSION["Prijat"]; ?></Td></Tr>
 </Table>
-
-<Footer>
-<Endora>
-</Footer>
 </Body>
 </Html>

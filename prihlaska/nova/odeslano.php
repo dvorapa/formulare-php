@@ -43,9 +43,5 @@ Vyberte prosím, jakým způsobem chcete přihlášku získat:<Br>
 <A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.docx" Title="Stáhnout přihlášku">Docx</A>
 <A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.html" Title="Zobrazit přihlášku">Html</A>
 </Nav>
-
-<Footer>
-<Endora>
-</Footer>
 </Body>
 </Html>
