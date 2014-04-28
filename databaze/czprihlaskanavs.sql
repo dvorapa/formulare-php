@@ -6,8 +6,8 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
-CREATE DATABASE IF NOT EXISTS `databazeprihlasek` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `databazeprihlasek`;
+CREATE DATABASE IF NOT EXISTS `czprihlaskanavs` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `czprihlaskanavs`;
 
 CREATE TABLE `AdresaTrvalehoBydliste` (
   `PHPSESSID` varchar(40) NOT NULL,
