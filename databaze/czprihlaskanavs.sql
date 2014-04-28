@@ -20,14 +20,14 @@ CREATE TABLE `AdresaTrvalehoBydliste` (
   `TPosta` varchar(40) NOT NULL,
   `TStat` varchar(40) NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `Kontakt` (
   `PHPSESSID` varchar(40) NOT NULL,
   `Telefon` varchar(20) NOT NULL,
   `Email` varchar(40) NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `KontaktniAdresa` (
   `PHPSESSID` varchar(40) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE `KontaktniAdresa` (
   `KPosta` varchar(40) NOT NULL,
   `KStat` varchar(40) NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `Narozeni` (
   `PHPSESSID` varchar(40) NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE `Narozeni` (
   `RCislo` bigint(20) unsigned NOT NULL,
   `CisloP` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `OsobniUdaje` (
   `PHPSESSID` varchar(40) NOT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE `OsobniUdaje` (
   `Pohlavi` enum('muž','žena') NOT NULL,
   `StatniPris` varchar(40) NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `PredchoziVysokaSkola` (
   `PHPSESSID` varchar(40) NOT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE `PredchoziVysokaSkola` (
   `PDo` date NOT NULL,
   `PTitul` varchar(40) NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `Prospech` (
   `PHPSESSID` varchar(40) NOT NULL,
@@ -268,7 +268,7 @@ CREATE TABLE `Prospech` (
   `Predmet27Rocnik4` tinyint(5) unsigned NOT NULL,
   `Predmet27Rocnik5` tinyint(5) unsigned NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `PrubehZamestnani` (
   `PHPSESSID` varchar(40) NOT NULL,
@@ -277,7 +277,7 @@ CREATE TABLE `PrubehZamestnani` (
   `ZOd` date NOT NULL,
   `ZDo` date NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `Stav` (
   `PHPSESSID` varchar(40) NOT NULL,
@@ -286,7 +286,7 @@ CREATE TABLE `Stav` (
   `PlPrijat` varchar(7) NOT NULL,
   `Prijat` varchar(7) NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `StredniSkola` (
   `PHPSESSID` varchar(40) NOT NULL,
@@ -297,13 +297,13 @@ CREATE TABLE `StredniSkola` (
   `SIZO` varchar(40) NOT NULL,
   `SRokMat` year(4) NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `UchazecSeHlasi` (
   `PHPSESSID` varchar(40) NOT NULL,
   `Odkud` enum('ZŠ','SŠ','VOŠ','VŠ','DZS','Zam','Dom','Voj','Odj') NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `Uvod` (
   `PHPSESSID` varchar(40) NOT NULL,
@@ -312,7 +312,7 @@ CREATE TABLE `Uvod` (
   `Forma` enum('prezenční','kombinované','distanční') NOT NULL,
   `Jazyk` varchar(40) NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `VysokaSkola` (
   `PHPSESSID` varchar(40) NOT NULL,
@@ -323,13 +323,13 @@ CREATE TABLE `VysokaSkola` (
   `VOborB` varchar(40) NOT NULL,
   `VOborC` varchar(40) NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `ZajmovaCinnost` (
   `PHPSESSID` varchar(40) NOT NULL,
   `Zajmy` text NOT NULL,
   PRIMARY KEY (`PHPSESSID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8;
 
 CREATE TABLE Prihlasky AS
 SELECT * FROM Uvod
