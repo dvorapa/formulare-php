@@ -83,16 +83,30 @@ ob_start();
 include "prihlaska.php";
 $Prihlaska=ob_get_contents();
 ob_end_clean();
-$Cesta="../export/".session_id().".html";
-$Funkce=fopen($Cesta,"w+");
+$Cesta="../export/".session_id();
+$Funkce=fopen($Cesta.".html","w+");
 fwrite($Funkce,$Prihlaska);
 fclose($Funkce);
 /*                       _                 */
 /* |_/ _  _    _ __  _  (_ _  _ _  _/|_    */
 /* | \(_)| )\/(-| /_(-  | (_)| |||(_||_|_| */
 /*                                         */
-
+require_once "../../aplikace/CloudConvert.class.php";
+$Klic="50iWyJZZ0W6pEShR_Y46KdwK2oEo2P8J2cEc95y72XTOpVPWPPv5PQQuDu5ISxIufnQI5sX99rRWiTiJ5Q0lbg";
+$KonverzePdf=CloudConvert::createProcess("html","pdf",$Klic);
+$KonverzePdf->upload($Cesta.".html","pdf");
+if($KonverzePdf->waitForConversion()){
+$KonverzePdf->download($Cesta.".pdf");
+}else{
+header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=5");
 }
+$KonverzeDocx=CloudConvert::createProcess("html","docx",$Klic);
+$KonverzeDocx->upload($Cesta.".html","docx");
+if($KonverzeDocx->waitForConversion()){
+$KonverzeDocx->download($Cesta.".docx");
+}else{
+header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=5");
+}}
 /*  __                                */
 /* /  \ _| _ _| _/ _ /   _ _  _ .|    */
 /* \__/(_|(-_)|(_|| )|  (-|||(_||||_| */

@@ -5,6 +5,7 @@ Maturitní práce zabývající se tématem digitalizace formuláře pomocí pro
 
 [Přihláška na VŠ](http://prihlaskanavs.php5.cz/)
 ---------------
+([Mirror](http://prihlaskanavs.dvorapa.cz/))
 
 Výstupem této práce je online formulář k vyplnění a případnému zpracování, či odeslání na vysokou školu.
 
