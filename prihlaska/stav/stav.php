@@ -13,10 +13,10 @@ session_start();
 <Meta Name="Robots" Content="Follow,noindex">
 <Meta Name="Viewport" Content="width=device-width,user-scalable=no">
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="/favicon.ico">
-<Link Rel="Stylesheet" Href="/aplikace/mfglabs_iconset.css">
+<Link Rel="Stylesheet" Href="/aplikace/mfglabs_iconset/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
 <Link Type="Text/css" Rel="Stylesheet" Href="../styly.css">
-<!--[if lt IE 10]><Script Src="/aplikace/html5shiv.js"></Script><![endif]-->
+<!--[if lt IE 10]><Script Src="/aplikace/html5shiv/html5shiv.js"></Script><![endif]-->
 <Title>Stav</Title>
 </Head>
 <Body>

@@ -43,7 +43,7 @@ fclose($Soubor);
 <Meta Name="Robots" Content="Nofollow,noindex">
 <Meta Name="Viewport" Content="width=device-width,user-scalable=no">
 <Link Type="Image/x-icon" Rel="Shortcut icon" Href="/favicon.ico">
-<Link Rel="Stylesheet" Href="/aplikace/mfglabs_iconset.css">
+<Link Rel="Stylesheet" Href="/aplikace/mfglabs_iconset/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
 <Link Type="Text/css" Rel="Stylesheet" Href="/prihlaska/styly.css">
 <Title>Chyba</Title>

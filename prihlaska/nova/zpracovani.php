@@ -91,16 +91,25 @@ fclose($Funkce);
 /* |_/ _  _    _ __  _  (_ _  _ _  _/|_    */
 /* | \(_)| )\/(-| /_(-  | (_)| |||(_||_|_| */
 /*                                         */
-require "../../aplikace/pdfcrowd.php";
+require_once "../../aplikace/dompdf/dompdf_config.inc.php";
 try{
-$KonverzePdf=new Pdfcrowd("dvorapa","537041f7f845c477a5037d401e91fbfb");
-$SouborPdf=fopen($Cesta.".pdf","wb");
-$KonverzePdf->convertFile($Cesta.".html",$SouborPdf);
-fclose($SouborPdf);
-}catch(PdfCrowdEsception $Chyba){
-header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4&Chyba=".$Chyba);
+$KonverzePdf=new DOMPDF();
+$KonverzePdf->load_html_file($Cesta.".html");
+$KonverzePdf->set_paper("A4");
+$KonverzePdf->render();
+$KonverzePdf->output();
+}catch(_dompdf_warnings){
+header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4&Chyba=Pdf:"._dompdf_warnings);
 }
-}
+require_once "../../aplikace/htmltodocx/htmltodocx.php";
+try{
+$KonverzeDocx=new HtmlToDocx("/prihlaska/export/");
+$KonverzeDocx->input_file($Cesta.".html");
+$KonverzeDocx->output_file($Cesta.".docx");
+$KonverzeDocx->close();
+}catch($Chyba){
+header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4&Chyba=Pdf:".$Chyba);
+}}
 /*  __                                */
 /* /  \ _| _ _| _/ _ /   _ _  _ .|    */
 /* \__/(_|(-_)|(_|| )|  (-|||(_||||_| */
