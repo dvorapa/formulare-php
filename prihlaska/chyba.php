@@ -9,21 +9,21 @@ $Text[]="HTTP 403/404";
 $Text[]=$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
 $Text[]=$_SERVER["HTTP_REFERER"];
 }elseif($_GET["Kod"]==2){
-$Text[]="HTTP 503";
-$Text[]=$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-$Text[]=$_SERVER["HTTP_REFERER"];
-}elseif($_GET["Kod"]==3){
-$Text[]="empty POST";
+$Text[]="prázdné pole POST";
 $Text[]=print_r($_POST,true);
 $Text[]=$_SERVER["REQUEST_METHOD"];
 $Text[]=$_SERVER["HTTP_USER_AGENT"];
-}elseif($_GET["Kod"]==4){
-$Text[]="empty COOKIE";
+}elseif($_GET["Kod"]==3){
+$Text[]="prázdné pole COOKIE";
 $Text[]=print_r($_COOKIE,true);
 $Text[]=$_SERVER["REQUEST_METHOD"];
 $Text[]=$_SERVER["HTTP_USER_AGENT"];
+}elseif($_GET["Kod"]==4){
+$Text[]="chybná konverze";
+$Text[]=$_GET["Chyba"];
+$Text[]=$_SERVER["HTTP_USER_AGENT"];
 }else{
-$Text[]="Jiná chyba";
+$Text[]="jiná chyba";
 $Text[]=print_r($GLOBALS,true);
 $Text[]=print_r(get_headers($_SERVER["HTTP_REFERER"]),true);
 }

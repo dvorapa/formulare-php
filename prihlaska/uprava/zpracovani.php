@@ -8,7 +8,7 @@ if(!empty($_POST["ID"])){
 session_id($_POST["ID"]);
 session_start();
 }else{
-header("Location: /prihlaska/chyba.php?Kod=3");
+header("Location: /prihlaska/chyba.php?Kod=2");
 }
 /*                                 */
 /* \  / / _ . _  _    _ _  _ | . _ */
@@ -40,7 +40,7 @@ foreach($Pole as $Promenna){
 if(!empty($_COOKIE[$Promenna])){
 $_SESSION[$Promenna]=$_COOKIE[$Promenna];
 }}}else{
-header("Location: /prihlaska/chyba.php?Kod=4");
+header("Location: /prihlaska/chyba.php?Kod=3");
 }
 /*  __                          */
 /* |__)_˅_ _ _  _˅_ _    _/ _ / */

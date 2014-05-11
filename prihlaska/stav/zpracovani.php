@@ -8,7 +8,7 @@ if((!empty($_POST["ID"]))&&(!empty($_POST["RCislo"]))){
 session_id($_POST["ID"]);
 session_start();
 }else{
-header("Location: /prihlaska/chyba.php?Kod=3");
+header("Location: /prihlaska/chyba.php?Kod=2");
 }
 /*                                         */
 /* \  / / _ . _  _    _| _ |_ _ |_  _/_  _ */

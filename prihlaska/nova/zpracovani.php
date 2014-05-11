@@ -35,7 +35,7 @@ foreach($Pole as $Promenna){
 if(!empty($_POST[$Promenna])){
 $_SESSION[$Promenna]=$_POST[$Promenna];
 }}}else{
-header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=3");
+header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=2");
 }
 /*                               */
 /* \  / /|_  _˅_  |  _ | _|  _ _ */
@@ -91,22 +91,16 @@ fclose($Funkce);
 /* |_/ _  _    _ __  _  (_ _  _ _  _/|_    */
 /* | \(_)| )\/(-| /_(-  | (_)| |||(_||_|_| */
 /*                                         */
-require_once "../../aplikace/CloudConvert.class.php";
-$Klic="50iWyJZZ0W6pEShR_Y46KdwK2oEo2P8J2cEc95y72XTOpVPWPPv5PQQuDu5ISxIufnQI5sX99rRWiTiJ5Q0lbg";
-$KonverzePdf=CloudConvert::createProcess("html","pdf",$Klic);
-$KonverzePdf->upload($Cesta.".html","pdf");
-if($KonverzePdf->waitForConversion()){
-$KonverzePdf->download($Cesta.".pdf");
-}else{
-header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=5");
+require "../../aplikace/pdfcrowd.php";
+try{
+$KonverzePdf=new Pdfcrowd("dvorapa","537041f7f845c477a5037d401e91fbfb");
+$SouborPdf=fopen($Cesta.".pdf","wb");
+$KonverzePdf->convertFile($Cesta.".html",$SouborPdf);
+fclose($SouborPdf);
+}catch(PdfCrowdEsception $Chyba){
+header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4&Chyba=".$Chyba);
 }
-$KonverzeDocx=CloudConvert::createProcess("html","docx",$Klic);
-$KonverzeDocx->upload($Cesta.".html","docx");
-if($KonverzeDocx->waitForConversion()){
-$KonverzeDocx->download($Cesta.".docx");
-}else{
-header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=5");
-}}
+}
 /*  __                                */
 /* /  \ _| _ _| _/ _ /   _ _  _ .|    */
 /* \__/(_|(-_)|(_|| )|  (-|||(_||||_| */
