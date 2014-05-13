@@ -78,7 +78,7 @@ $initial_state=array(
 );
 
 // Create a DOM object
-$html=new simple_html_dom();
+$this->html=new simple_html_dom();
 }
 
 /// input_string
