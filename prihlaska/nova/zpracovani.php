@@ -91,7 +91,7 @@ fclose($Funkce);
 /* |_/ _  _    _ __  _  (_ _  _ _  _/|_    */
 /* | \(_)| )\/(-| /_(-  | (_)| |||(_||_|_| */
 /*                                         */
-require_once "../../aplikace/dompdf/dompdf_config.inc.php";
+/*require_once "../../aplikace/dompdf/dompdf_config.inc.php";
 try{
 $KonverzePdf=new DOMPDF();
 $KonverzePdf->load_html_file($Cesta.".html");
@@ -109,7 +109,7 @@ $KonverzeDocx->output_file($Cesta.".docx");
 $KonverzeDocx->close();
 }catch(Exception $Chyba){
 header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4&Chyba=Docx:".$Chyba->getMessage());
-}}
+}*/}
 /*  __                                */
 /* /  \ _| _ _| _/ _ /   _ _  _ .|    */
 /* \__/(_|(-_)|(_|| )|  (-|||(_||||_| */
