@@ -98,8 +98,8 @@ $KonverzePdf->load_html_file($Cesta.".html");
 $KonverzePdf->set_paper("A4");
 $KonverzePdf->render();
 $KonverzePdf->output();
-}catch(_dompdf_warnings){
-header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4&Chyba=Pdf:"._dompdf_warnings);
+}catch(Exception $Chyba){
+header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4&Chyba=Pdf:".$Chyba->getMessage());
 }
 require_once "../../aplikace/htmltodocx/htmltodocx.php";
 try{
@@ -107,8 +107,8 @@ $KonverzeDocx=new HtmlToDocx("/prihlaska/export/");
 $KonverzeDocx->input_file($Cesta.".html");
 $KonverzeDocx->output_file($Cesta.".docx");
 $KonverzeDocx->close();
-}catch($Chyba){
-header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4&Chyba=Pdf:".$Chyba);
+}catch(Exception $Chyba){
+header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4&Chyba=Docx:".$Chyba->getMessage());
 }}
 /*  __                                */
 /* /  \ _| _ _| _/ _ /   _ _  _ .|    */

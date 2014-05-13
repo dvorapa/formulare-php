@@ -16,8 +16,32 @@ public $base_path;
 public $base_root;
 
 /// __construct
-public function __contruct($base_path=substr($_SERVER['PHP_SELF'],0,(strrpos($_SERVER['PHP_SELF'],"/")+1)),$base_root="http://".$_SERVER['HTTP_HOST']){
+public function __contruct(){
+$a=func_get_args();
+$i=func_num_args();
+if(method_exists($this,$f='__construct'.$i)){
+call_user_func_array(array($this,$f),$a);
+}}
 
+/// __construct0
+public function __contruct0(){
+$base_path=substr($_SERVER['PHP_SELF'],0,((strrpos($_SERVER['PHP_SELF'],'/'))+1));
+$base_root="http://".$_SERVER['HTTP_HOST'];
+$this->process();
+}
+
+/// __construct1
+public function __contruct1($base_path){
+$base_root="http://".$_SERVER['HTTP_HOST'];
+$this->process();
+}
+
+/// __construct2
+public function __contruct2($base_path,$base_root){
+$this->process();
+}
+
+protected function process(){
 // Create a new PHPWord Object
 $PHPWord = new PHPWord();
 
@@ -57,7 +81,7 @@ $html = new simple_html_dom();
 /// input_string
 public function input_string(&$input_string){
 // Load HTML from a string
-load_string:
+load_string:{
 $html->load($input_string);
 
 // Create the dom array of elements which we are going to work on:
@@ -66,7 +90,7 @@ $html_array = $html->find('body');
 if(empty($html_array)){
 $input_string="<body>".$input_string."</body>";
 goto load_string;
-}}
+}}}
 
 /// input_file
 public function input_file($input_file){
@@ -74,16 +98,19 @@ public function input_file($input_file){
 $html->load_file($input_file);
 
 // Create the dom array of elements which we are going to work on:
-load_file:
+load_file:{
 $html_array = $html->find('body');
 
 if(empty($html_array)){
 $html->outertext="<body>".$html->outertext."</body>";
 goto load_file;
-}}
+}}}
 
 /// output_file
-public function output_file($output_file=tempnam(sys_get_temp_dir(), 'htd')){
+public function output_file(array $output_file){
+$base_output_file=array(tempnam(sys_get_temp_dir(), 'htd'));
+array_merge($base_output_file,$output_file);
+
 // Convert the HTML and put it into the PHPWord object
 htmltodocx_insert_html($section, $html_array[0]->nodes, $initial_state);
 
@@ -107,7 +134,17 @@ header('Content-Length: ' . filesize($output_file));
 
 /// close
 public function close(){
-exit;
+// Clear the HTML dom object:
+$html->clear();
+unset($html);
+$this->base_path=null;
+unset($this->base_path);
+$this->base_root=null;
+unset($this->base_root);
+unset($this);
+ob_clean();
+flush();
+gc_collect_cycles();
 }
 
 /// delete_file
@@ -117,17 +154,6 @@ unlink($output_file);
 
 /// __destruct
 public function __destruct(){
-// Clear the HTML dom object:
-$html->clear();
-unset($html);
-$this->base_path=null;
-unset($this->base_path);
-$this->base_root=null;
-unset($this->base_root);
-$this=null;
-unset($this);
-ob_clean();
-flush();
-gc_collect_cycles();
+$this->close();
 }}
 ?>
