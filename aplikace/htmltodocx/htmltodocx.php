@@ -41,10 +41,10 @@ $this->process();
 
 /// __construct2
 public function __contruct2($base_path,$base_root){
-$this->process();
+$this->process($base_path,$base_root);
 }
 
-protected function process(){
+public function process($base_path,$base_root){
 // Create a new PHPWord Object
 $PHPWord=new PHPWord();
 
