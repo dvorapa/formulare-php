@@ -97,7 +97,7 @@ $KonverzePdf=new DOMPDF();
 $KonverzePdf->load_html_file($Cesta.".html");
 $KonverzePdf->set_paper("A4");
 $KonverzePdf->render();
-$KonverzePdf->output();
+$KonverzePdf->stream($Cesta.".pdf");
 }catch(Exception $Chyba){
 header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4&Chyba=Pdf:".$Chyba->getMessage());
 }

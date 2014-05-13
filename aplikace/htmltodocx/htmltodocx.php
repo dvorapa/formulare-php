@@ -4,10 +4,10 @@
  */
 
 // Load the files we need:
-require_once 'htmltodocx/phpword/PHPWord.php';
-require_once 'htmltodocx/simplehtmldom/simple_html_dom.php';
-require_once 'htmltodocx/htmltodocx_converter/h2d_htmlconverter.php';
-require_once 'htmltodocx/example_files/styles.inc';
+require_once 'phpword/PHPWord.php';
+require_once 'simplehtmldom/simple_html_dom.php';
+require_once 'htmltodocx_converter/h2d_htmlconverter.php';
+require_once 'example_files/styles.inc';
 
 /// Initiate the class
 class HtmlToDocx{

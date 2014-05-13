@@ -10,18 +10,13 @@ if(!isset($_GET["Cookie"])){
 setcookie("Cookie","1");
 $_SESSION["c"]="?Cookie";
 if(empty($_SESSION["Kam"])){
-$_SESSION["Kam"]=$_SESSION['c'];
+$_SESSION["Kam"]=$_SESSION["c"];
 }
 header("Location: /prihlaska/nova/{$_SESSION['Kam']}");
 }else{
-<<<<<<< HEAD
-$_SESSION["c"]="?".session_id();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+$_SESSION["c"]="?".htmlspecialchars(SID);
 }}else{
-setcookie("Co","To",time()+60*60);
-header("Location: ./?Cookie=true{$_SESSION['Kam']}");
+$_SESSION["c"]="?Cookie";
 }
 
 /*  __                         */
@@ -43,21 +38,6 @@ array(11,"PredchoziVysokaSkola","Předchozí vysoká škola"),
 array(12,"Prospech","Prospěch"),
 array(13,"Kontrola","Kontrola")
 );
-=======
-=======
-}else{
-$_SESSION["c"]="?Cookie";
->>>>>>> c809163... Oprava bugu
-}}
->>>>>>> 2a4b6df... Navigace
-=======
-=======
-$_SESSION["c"]="?".htmlspecialchars(SID);
->>>>>>> c9fb372... Oprava předávání SID
-}}else{
-$_SESSION["c"]="?Cookie";
-}
->>>>>>> 903a586... Oprava bugu, výmaz kontroly (je v historii)
 ?>
 <!Doctype Html>
 <Html Lang="Cs">
@@ -118,35 +98,10 @@ $_SESSION["c"]="?Cookie";
 <Label For="Jazyk">Zvolený jazyk</Label>
 <Input Id="Jazyk" Name="Jazyk" Tabindex="7" Type="Text" Value="<?php echo $_SESSION['Jazyk']; ?>">
 <Br>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:nova/index.php
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<Button Name="Prejit[Kam]" Tabindex="8" Type="Submit" Value="./#VysokaSkola">Dále</Button>
-=======
-<Button Name="Prejit[Kam]" Tabindex="8" Type="Submit" Value="nova/#VysokaSkola">Dále</Button>
->>>>>>> d43a8f2... Závěrečné opravy navigace
-=======
-<Button Name="Prejit[Kam]" Tabindex="8" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#VysokaSkola">Dále</Button>
->>>>>>> 2a4b6df... Navigace
-=======
-<Button Name="Dale[Kam]" Tabindex="8" Type="Submit" Value="nova/<?php echo $_SESSION["c"]; ?>#VysokaSkola">Dále</Button>
->>>>>>> 6640e42... Tlačítko zpět IV
-</Section>
-=======
-<Button Name="Zpet[Kam]" Tabindex="8" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>">Zpět</Button>
-=======
-<Button Name="Zpet[Kam]" Tabindex="9" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>">Zpět</Button>
->>>>>>> 7e0a3d6... Chyba ve zobrazení tlačítka zpět?
-=======
-<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="9" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>">Zpět</Button>
->>>>>>> 4d01068... Vyčlenění stylů z Nové + styly tlačítek do tříd
+<Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="9" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#Vchod">Zpět</Button>
 <Br>
 <Button Class="Tmavobily" Name="Dale[Kam]" Tabindex="8" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#VysokaSkola">Dále</Button>
 </Fieldset>
->>>>>>> 94d5719... Komplet přepracování celé struktury (fuj) 1/x:prihlaska/nova/index.php
 
 <Fieldset Id="VysokaSkola">
 <H1>Vysoká škola</H1>
@@ -426,20 +381,10 @@ echo "<Tr>"
 
 <Nav>
 <?php
-<<<<<<< HEAD:nova/index.php
-<<<<<<< HEAD
-foreach($_SESSION["PoleStran"] as $Promenna){
-=======
-/*  __                         */
-/* (_ |_ _ _/ _ |  _    _/ _ / */
-/* __)|_| (_|| )|((_)\/(_|| )| */
-/*                             */
-=======
 /*  __                                 */
 /* |__)    _ |_/|  _    _/  _  _ _     */
 /* |   |_|| )|_||((_)\/(-  |||(-| )|_| */
 /*                                     */
->>>>>>> 94d5719... Komplet přepracování celé struktury (fuj) 1/x:prihlaska/nova/index.php
 $PoleStran=array(
 "Vchod",
 "Uvod",
@@ -456,14 +401,7 @@ $PoleStran=array(
 "Prospech",
 "Kontrola"
 );
-<<<<<<< HEAD:nova/index.php
-foreach($PoleStran as $Promenna){
->>>>>>> 6d35a35... Drobné opravy
-echo "<Button Form='Formular' Name='Prejit[Kam]' Type='Submit' Value='nova/".$_SESSION["c"]."#{$Promenna[1]}'>&nbsp;</Button><Br>".PHP_EOL;
-}
-=======
 foreach($PoleStran as $Promenna):
->>>>>>> 94d5719... Komplet přepracování celé struktury (fuj) 1/x:prihlaska/nova/index.php
 ?>
 <Button Class="Belokulaty" Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]."#".$Promenna; ?>">&nbsp;</Button><Br>
 <?php endforeach; ?>
