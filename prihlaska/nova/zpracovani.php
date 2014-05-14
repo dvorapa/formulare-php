@@ -79,37 +79,30 @@ mysqli_close($Databaze);
 /* /__(_||_)|_)  (_|(_)  _)(_)|_||_)(_)| |_| */
 /*       |                                   */
 if(array_key_exists("Soubor",$Kolekce)){
+$Cesta="../export/".session_id();
 ob_start();
 include "prihlaska.php";
-$Prihlaska=ob_get_contents();
+$VlaknoHtml=ob_get_contents();
 ob_end_clean();
-$Cesta="../export/".session_id();
-$Funkce=fopen($Cesta.".html","w+");
-fwrite($Funkce,$Prihlaska);
-fclose($Funkce);
-/*                       _                 */
-/* |_/ _  _    _ __  _  (_ _  _ _  _/|_    */
-/* | \(_)| )\/(-| /_(-  | (_)| |||(_||_|_| */
-/*                                         */
-/*require_once "../../aplikace/dompdf/dompdf_config.inc.php";
+$SouborHtml=fopen($Cesta.".html","w+");
+fwrite($SouborHtml,$VlaknoHtml);
+fclose($SouborHtml);
+/*                                     _ */
+/* |_/ _  _    _ __  _   _| _    _  _|(_ */
+/* | \(_)| )\/(-| /_(-  (_|(_)  |_)(_||  */
+/*                              |        */
+require_once "../../aplikace/dompdf/dompdf_config.inc.php";
 try{
 $KonverzePdf=new DOMPDF();
 $KonverzePdf->load_html_file($Cesta.".html");
-$KonverzePdf->set_paper("A4");
 $KonverzePdf->render();
-$KonverzePdf->stream($Cesta.".pdf");
+$VlaknoPdf=$KonverzePdf->output();
+$SouborPdf=fopen($Cesta.".pdf","w+");
+fwrite($SouborPdf,$VlaknoPdf);
+fclose($SouborPdf);
 }catch(Exception $Chyba){
 header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4&Chyba=Pdf:".$Chyba->getMessage());
-}
-require_once "../../aplikace/htmltodocx/htmltodocx.php";
-try{
-$KonverzeDocx=new HtmlToDocx("/prihlaska/export/");
-$KonverzeDocx->input_file($Cesta.".html");
-$KonverzeDocx->output_file($Cesta.".docx");
-$KonverzeDocx->close();
-}catch(Exception $Chyba){
-header("Location: /prihlaska/chyba.php".$_SESSION["c"]."&Kod=4&Chyba=Docx:".$Chyba->getMessage());
-}*/}
+}}
 /*  __                                */
 /* /  \ _| _ _| _/ _ /   _ _  _ .|    */
 /* \__/(_|(-_)|(_|| )|  (-|||(_||||_| */
