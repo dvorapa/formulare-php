@@ -1,6 +1,6 @@
 <?php 
-define("DOMPDF_TEMP_DIR", "http://".$_SERVER['HTTP_HOST']."/prihlaska/export/");
-define("DOMPDF_CHROOT", "http://".$_SERVER['HTTP_HOST']."/prihlaska/export/");
+define("DOMPDF_TEMP_DIR", substr($_SERVER['SCRIPT_FILENAME'],0,strrpos($_SERVER['SCRIPT_FILENAME'],"/"))."/prihlaska/export/");
+define("DOMPDF_CHROOT", substr($_SERVER['SCRIPT_FILENAME'],0,strrpos($_SERVER['SCRIPT_FILENAME'],"/"))."/prihlaska/export/");
 //define("DOMPDF_FONT_DIR", DOMPDF_DIR."/lib/fonts/");
 //define("DOMPDF_FONT_CACHE", DOMPDF_DIR."/lib/fonts/");
 //define("DOMPDF_UNICODE_ENABLED", true);
