@@ -38,7 +38,7 @@ a také svoje rodné číslo:<Br>
 
 <Nav>
 Vyberte prosím, jakým způsobem chcete přihlášku získat:<Br>
-<A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.html?Tisk" Title="Vytisknout přihlášku">Tisk</A>
+<A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.html#Tisk" Title="Vytisknout přihlášku">Tisk</A>
 <A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.pdf" Title="Stáhnout přihlášku">Pdf</A>
 <A Class="Tlacitko" Href="../export/<?php echo session_id(); ?>.html" Title="Zobrazit přihlášku">Html</A>
 </Nav>
