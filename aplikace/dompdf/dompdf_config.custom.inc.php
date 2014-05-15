@@ -1,5 +1,5 @@
 <?php 
-define("DOMPDF_TEMP_DIR", DOMPDF_CHROOT);
+define("DOMPDF_TEMP_DIR", DOMPDF_DIR."/../../prihlaska/export/");
 define("DOMPDF_CHROOT", DOMPDF_DIR."/../../prihlaska/export/");
 //define("DOMPDF_FONT_DIR", DOMPDF_DIR."/lib/fonts/");
 //define("DOMPDF_FONT_CACHE", DOMPDF_DIR."/lib/fonts/");
