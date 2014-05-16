@@ -94,7 +94,7 @@ fclose($SouborHtml);
 require_once "../../aplikace/dompdf/dompdf_config.inc.php";
 try{
 $KonverzePdf=new DOMPDF();
-$KonverzePdf->load_html_file($Cesta.".html");
+$KonverzePdf->load_html($VlaknoHtml);
 $KonverzePdf->render();
 $VlaknoPdf=$KonverzePdf->output();
 $SouborPdf=fopen($Cesta.".pdf","w+");
