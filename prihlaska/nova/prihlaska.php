@@ -135,7 +135,7 @@ window.print();
   <tr>
     <td rowspan="3">Narození</td>
     <td>Datum</td>
-    <td colspan="2"><?php echo $_SESSION["DatumNar"]; ?></td>
+    <td colspan="2"><?php echo date("j.n.Y",strtodate($_SESSION["DatumNar"])); ?></td>
     <td>Číslo občanského průkazu</td>
     <td colspan="3"><?php echo $_SESSION["CisloOP"]; ?></td>
   </tr>
@@ -157,7 +157,7 @@ window.print();
   <tr>
     <td rowspan="4">Adresa trvalého bydliště</td>
     <td>Ulice a číslo</td>
-    <td colspan="6"><?php echo $_SESSION["TUlice"]; ?> <?php echo $_SESSION["TUlice"]; ?></td>
+    <td colspan="6"><?php echo $_SESSION["TUlice"]; ?> <?php echo $_SESSION["TCislo"]; ?></td>
   </tr>
   <tr>
     <td>PSČ</td>
@@ -181,7 +181,7 @@ window.print();
   <tr>
     <td rowspan="4">Kontaktní adresa</td>
     <td>Ulice a číslo</td>
-    <td colspan="6"><?php echo $_SESSION["KUlice"]; ?> <?php echo $_SESSION["KUlice"]; ?></td>
+    <td colspan="6"><?php echo $_SESSION["KUlice"]; ?> <?php echo $_SESSION["KCislo"]; ?></td>
   </tr>
   <tr>
     <td>PSČ</td>
@@ -227,7 +227,7 @@ window.print();
     <td colspan="8"></td>
   </tr>
   <tr>
-    <td colspan="2">Datum přihlášky: <?php echo date("j.n.Y G:i"); ?></td>
+    <td colspan="2">Datum doručení přihlášky: <?php echo date("j.n.Y G:i"); ?></td>
     <td colspan="4">Číslo uchazeče: <?php echo session_id(); ?></td>
     <td colspan="2">Strana 1/4</td>
   </tr>
