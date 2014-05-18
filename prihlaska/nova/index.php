@@ -191,9 +191,6 @@ array(13,"Kontrola","Kontrola")
 <Input Id="TObec" Name="TObec" Tabindex="38" Type="Text" Value="<?php echo $_SESSION['TObec']; ?>">
 <Input Class="Kratky" Id="TPSC" Name="TPSC" Tabindex="39" Type="Number" Value="<?php echo $_SESSION['TPSC']; ?>">
 <Br>
-<Label For="TPosta">Pošta</Label>
-<Input Id="TPosta" Name="TPosta" Tabindex="40" Type="Text" Value="<?php echo $_SESSION['TPosta']; ?>">
-<Br>
 <Label For="TOkres">Okres (vyžadováno)</Label>
 <Input Id="TOkres" Name="TOkres" Tabindex="41" Type="Text" Value="<?php echo $_SESSION['TOkres']; ?>">
 <Br>
@@ -217,9 +214,6 @@ array(13,"Kontrola","Kontrola")
 <Label For="KObec">Obec a PSČ</Label>
 <Input Id="KObec" Name="KObec" Tabindex="48" Type="Text" Value="<?php echo $_SESSION['KObec']; ?>">
 <Input Class="Kratky" Id="KPSC" Name="KPSC" Tabindex="49" Type="Number" Value="<?php echo $_SESSION['KPSC']; ?>">
-<Br>
-<Label For="KPosta">Pošta</Label>
-<Input Id="KPosta" Name="KPosta" Tabindex="50" Type="Text" Value="<?php echo $_SESSION['KPosta']; ?>">
 <Br>
 <Label For="KOkres">Okres</Label>
 <Input Id="KOkres" Name="KOkres" Tabindex="51" Type="Text" Value="<?php echo $_SESSION['KOkres']; ?>">
