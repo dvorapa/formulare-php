@@ -235,21 +235,15 @@ window.print();
 </Div>
 
 <Div>
-<Table>
 
-</Table>
 </Div>
 
 <Div>
-<Table>
 
-</Table>
 </Div>
 
 <Div>
-<Table>
 
-</Table>
 </Div>
 </Body>
 </Html>
