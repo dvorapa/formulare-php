@@ -2,7 +2,7 @@
 <!Doctype Html>
 <Html>
 <Head>
-<Meta Charset="Utf-8">
+<Meta Http-equiv="Content-type" Content="Text/html; charset=utf-8">
 <Style Type="Text/css">
 *{Margin:0}
 Body{Font-family:serif}

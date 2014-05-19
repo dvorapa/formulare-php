@@ -2,7 +2,7 @@
 <!Doctype Html>
 <Html>
 <Head>
-<Meta Charset="Utf-8">
+<Meta Http-equiv="Content-type" Content="Text/html; charset=utf-8">
 <Title>Přihláška na VŠ</Title>
 </Head>
 <Body>
