@@ -135,7 +135,7 @@ window.print();
   <tr>
     <td rowspan="3">Narození</td>
     <td>Datum</td>
-    <td colspan="2"><?php echo date("j.n.Y",strtodate($_SESSION["DatumNar"])); ?></td>
+    <td colspan="2"><?php echo date("j.n.Y",strtotime($_SESSION["DatumNar"])); ?></td>
     <td>Číslo občanského průkazu</td>
     <td colspan="3"><?php echo $_SESSION["CisloOP"]; ?></td>
   </tr>
