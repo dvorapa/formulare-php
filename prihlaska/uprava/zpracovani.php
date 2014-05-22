@@ -8,7 +8,7 @@ if(!empty($_POST["ID"])){
 session_id($_POST["ID"]);
 session_start();
 if(!isset($_COOKIE["Cookie"])){
-$_SESSION["c"]="?".htmlspecialchars(SID);
+$_SESSION["c"]="?".htmlspecialchars(SID)."&Cookie";
 }else{
 $_SESSION["c"]="?Cookie";
 }}else{

@@ -14,7 +14,7 @@ $_SESSION["Kam"]=$_SESSION["c"];
 }
 header("Location: /prihlaska/nova/{$_SESSION['Kam']}");
 }else{
-$_SESSION["c"]="?".htmlspecialchars(SID);
+$_SESSION["c"]="?".htmlspecialchars(SID)."&Cookie";
 }}else{
 $_SESSION["c"]="?Cookie";
 }
