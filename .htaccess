@@ -1,2 +1,5 @@
 ErrorDocument 403 /prihlaska/chyba.php?Kod=1
 ErrorDocument 404 /prihlaska/chyba.php?Kod=1
+
+php_flag session.cookie_httponly on
+php_flag session.use_only_cookies off
