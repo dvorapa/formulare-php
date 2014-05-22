@@ -7,7 +7,11 @@ ini_set("session.cookie_httponly","1");
 if(!empty($_POST["ID"])){
 session_id($_POST["ID"]);
 session_start();
+if(!isset($_COOKIE["Cookie"])){
+$_SESSION["c"]="?".htmlspecialchars(SID);
 }else{
+$_SESSION["c"]="?Cookie";
+}}else{
 header("Location: /prihlaska/chyba.php?Kod=2");
 }
 /*                                 */
@@ -46,5 +50,5 @@ header("Location: /prihlaska/chyba.php?Kod=3");
 /* |__)_˅_ _ _  _˅_ _    _/ _ / */
 /* |  | (-_)|||(-| (_)\/(_|| )| */
 /*                              */
-header("Location: /prihlaska/nova/");
+header("Location: /prihlaska/nova/".$_SESSION["c"]);
 ?>

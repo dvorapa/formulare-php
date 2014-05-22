@@ -7,7 +7,11 @@ ini_set("session.cookie_httponly","1");
 if((!empty($_POST["ID"]))&&(!empty($_POST["RCislo"]))){
 session_id($_POST["ID"]);
 session_start();
+if(!isset($_COOKIE["Cookie"])){
+$_SESSION["c"]="?".htmlspecialchars(SID);
 }else{
+$_SESSION["c"]="?Cookie";
+}}else{
 header("Location: /prihlaska/chyba.php?Kod=2");
 }
 /*                                         */
@@ -27,5 +31,5 @@ mysqli_close($Databaze);
 /* |__)_˅_ _ _  _˅_ _    _/ _ / */
 /* |  | (-_)|||(-| (_)\/(_|| )| */
 /*                              */
-header("Location: /prihlaska/stav/stav.php");
+header("Location: /prihlaska/uprava/stav.php".$_SESSION["c"]);
 ?>

@@ -1,3 +1,6 @@
+<?php
+setcookie("Cookie","1");
+?>
 <!Doctype Html>
 <Html Lang="Cs">
 <Head>
