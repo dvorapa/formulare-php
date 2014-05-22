@@ -31,5 +31,5 @@ mysqli_close($Databaze);
 /* |__)_˅_ _ _  _˅_ _    _/ _ / */
 /* |  | (-_)|||(-| (_)\/(_|| )| */
 /*                              */
-header("Location: /prihlaska/uprava/stav.php".$_SESSION["c"]);
+header("Location: /prihlaska/stav/stav.php".$_SESSION["c"]);
 ?>
