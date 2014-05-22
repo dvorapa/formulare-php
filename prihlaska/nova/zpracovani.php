@@ -48,10 +48,9 @@ if((is_array($Kolekce))&&(array_key_exists("Kam",$Kolekce))){
 /* /__(_||_)|_)  (_|(_)  (_(_)(_)|(|(- */
 /*       |                             */
 if(array_key_exists("Cookie",$Kolekce)){
-$d=time()+60*60*24*$Kolekce["Cookie"];
 foreach($Pole as $Promenna){
 if(!empty($_POST[$Promenna])){
-setcookie($Promenna,$_SESSION[$Promenna],$d);
+setcookie($Promenna,$_SESSION[$Promenna],strtotime("+".$Kolekce["Cookie"]." days"));
 }}}
 /* ___                                         */
 /*  _/ _/ _ . _   _| _    _| _ |_ _ |_  _/_  _ */
