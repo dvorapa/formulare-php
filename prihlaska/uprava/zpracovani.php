@@ -3,7 +3,6 @@
 /*  _/ _  _ _  _ _    _/ _  /  _| _ |_ */
 /* /__|_)| (_|(_(_)\/(_|| )|  (_|(_||_ */
 /*    |                                */
-ini_set("session.cookie_httponly","1");
 if(!empty($_POST["ID"])){
 session_id($_POST["ID"]);
 session_start();

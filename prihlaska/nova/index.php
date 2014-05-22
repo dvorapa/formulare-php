@@ -3,7 +3,6 @@
 /* \  /   _  _    |_ _/   _ _  _ | . _ _ */
 /*  \/ \/|_)| )|_||_(_|  (_(_)(_)|(|(-_) */
 /*     / |                               */
-ini_set("session.cookie_httponly","1");
 session_start();
 if(!isset($_COOKIE["Cookie"])){
 if(!isset($_GET["Cookie"])){
