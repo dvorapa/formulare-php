@@ -16,7 +16,7 @@ setcookie("Cookie","1");
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
 <Link Type="Text/css" Rel="Stylesheet" Href="../styly.css">
 <!--[if lt IE 10]><Script Src="/aplikace/html5shiv/html5shiv.js"></Script><![endif]-->
-<Title>Stav</Title>
+<Title>Stav | Přihláška na VŠ</Title>
 </Head>
 <Body>
 <Header>
