@@ -19,5 +19,5 @@ Postup
 5. ~~[✓] Opravit práci, odeslat k další kritice (vícekrát)~~
 6. ~~[✓] Odevzdat finální práci, zpřístupnit škole/školám~~
 7. [80%] Vytáhnout to na verzi 1.0.0
-8. [5%] Připravit podklady a prezentaci k obhajobě
+8. [80%] Připravit podklady a prezentaci k obhajobě
 9. [-] Obhájit práci u obhajoby
