@@ -18,6 +18,11 @@ Postup
 4. ~~[100%] Zpracovat verze a poznámky k předchozím bodům (zachytit postup), napsat první návrh práce (napsat postup), nechat zkritizovat~~
 5. ~~[✓] Opravit práci, odeslat k další kritice (vícekrát)~~
 6. ~~[✓] Odevzdat finální práci, zpřístupnit škole/školám~~
-7. [80%] Vytáhnout to na verzi 1.0.0
-8. [80%] Připravit podklady a prezentaci k obhajobě
-9. [-] Obhájit práci u obhajoby
+7. ~~[100%] Připravit podklady a prezentaci k obhajobě~~
+8. ~~[✓] Obhájit práci u obhajoby~~
+9. [80%] Vytáhnout to na verzi 1.0.0
+
+Deadline
+--------
+
+~~30.5.2014~~
