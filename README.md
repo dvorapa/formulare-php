@@ -20,7 +20,7 @@ Postup
 6. ~~[✓] Odevzdat finální práci, zpřístupnit škole/školám~~
 7. ~~[100%] Připravit podklady a prezentaci k obhajobě~~
 8. ~~[✓] Obhájit práci u obhajoby~~
-9. [80%] Vytáhnout to na verzi 1.0.0
+9. ~~[100%] Vytáhnout to na verzi 1.0.0~~
 
 Deadline
 --------
