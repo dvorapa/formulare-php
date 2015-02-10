@@ -337,8 +337,7 @@ array(13,"Kontrola","Kontrola")
 <Th Rowspan="2">Předmět</Th><Th Colspan="5">Ročník</Th><Th Rowspan="2">Maturita</Th>
 </Tr><Tr>
 <Th>I</Th><Th>II</Th><Th>III</Th><Th>IV</Th><Th>V</Th>
-</Tr>
-<?php
+</Tr><?php
 $Pole=array(
 "<Td><Input Class='",
 "' Name='",
@@ -385,8 +384,11 @@ echo "<Tr>".PHP_EOL
 foreach($_SESSION["PoleStran"] as $Promenna):
 ?>
 <Button Class="Belokulaty" Form="Formular" Name="Dale[Kam]" Title="<?php echo $Promenna[2]; ?>" Type="Submit" Value="<?php echo $_SESSION["c"]."#".$Promenna[1]; ?>">&nbsp;</Button>
-<?php if($Promenna[0]<13){echo "<Br>";} ?>
-<?php endforeach; ?>
+<?php
+if($Promenna[0]<13){echo "<Br>";}
+echo PHP_EOL;
+endforeach;
+?>
 </Nav>
 
 
