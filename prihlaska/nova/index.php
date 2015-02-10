@@ -385,8 +385,7 @@ foreach($_SESSION["PoleStran"] as $Promenna):
 ?>
 <Button Class="Belokulaty" Form="Formular" Name="Dale[Kam]" Title="<?php echo $Promenna[2]; ?>" Type="Submit" Value="<?php echo $_SESSION["c"]."#".$Promenna[1]; ?>">&nbsp;</Button>
 <?php
-if($Promenna[0]<13){echo "<Br>";}
-echo PHP_EOL;
+if($Promenna[0]<13){echo "<Br>".PHP_EOL;}
 endforeach;
 ?>
 </Nav>
