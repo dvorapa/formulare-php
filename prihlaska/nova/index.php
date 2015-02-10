@@ -350,16 +350,15 @@ $j=5;
 }
 for($i=1;$i<=$j;$i++){
 $t=91+(($i-1)*7);
-echo "<Tr>"
-.$Pole[0].$Pole[1]."Predmet".$i.$Pole[2].(++$t).$Pole[3].$_SESSION["Predmet{$i}"].$Pole[4]
-.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik1".$Pole[2].(++$t).$Pole[3].$_SESSION["Predmet{$i}Rocnik1"].$Pole[4]
-.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik2".$Pole[2].(++$t).$Pole[3].$_SESSION["Predmet{$i}Rocnik2"].$Pole[4]
-.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik3".$Pole[2].(++$t).$Pole[3].$_SESSION["Predmet{$i}Rocnik3"].$Pole[4]
-.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik4".$Pole[2].(++$t).$Pole[3].$_SESSION["Predmet{$i}Rocnik4"].$Pole[4]
-.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik5".$Pole[2].(++$t).$Pole[3].$_SESSION["Predmet{$i}Rocnik5"].$Pole[4]
-.$Pole[0]."Znamka".$Pole[1]."Maturita".$i.$Pole[2].(++$t).$Pole[3].$_SESSION["Maturita{$i}"].$Pole[4]
-."</Tr>"
-.PHP_EOL;
+echo "<Tr>".PHP_EOL
+.$Pole[0].$Pole[1]."Predmet".$i.$Pole[2].(++$t).$Pole[3].$_SESSION["Predmet{$i}"].$Pole[4].PHP_EOL
+.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik1".$Pole[2].(++$t).$Pole[3].$_SESSION["Predmet{$i}Rocnik1"].$Pole[4].PHP_EOL
+.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik2".$Pole[2].(++$t).$Pole[3].$_SESSION["Predmet{$i}Rocnik2"].$Pole[4].PHP_EOL
+.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik3".$Pole[2].(++$t).$Pole[3].$_SESSION["Predmet{$i}Rocnik3"].$Pole[4].PHP_EOL
+.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik4".$Pole[2].(++$t).$Pole[3].$_SESSION["Predmet{$i}Rocnik4"].$Pole[4].PHP_EOL
+.$Pole[0]."Znamka".$Pole[1]."Predmet".$i."Rocnik5".$Pole[2].(++$t).$Pole[3].$_SESSION["Predmet{$i}Rocnik5"].$Pole[4].PHP_EOL
+.$Pole[0]."Znamka".$Pole[1]."Maturita".$i.$Pole[2].(++$t).$Pole[3].$_SESSION["Maturita{$i}"].$Pole[4].PHP_EOL
+."</Tr>";
 }
 ?>
 <Tr><Td Colspan="7"><A Href="./<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech" Tabindex="281"><I Class="icon-plus"></I></A></Td></Tr>
@@ -378,25 +377,9 @@ echo "<Tr>"
 /* |__)    _ |_/|  _    _/  _  _ _     */
 /* |   |_|| )|_||((_)\/(-  |||(-| )|_| */
 /*                                     */
-$PoleStran=array(
-"Vchod",
-"Uvod",
-"VysokaSkola",
-"OsobniUdaje",
-"Narozeni",
-"AdresaTrvalehoBydliste",
-"KontaktniAdresa",
-"StredniSkola",
-"UchazecSeHlasi",
-"ZajmovaCinnost",
-"PrubehZamestnani",
-"PredchoziVysokaSkola",
-"Prospech",
-"Kontrola"
-);
-foreach($PoleStran as $Promenna):
+foreach($_SESSION["PoleStran"] as $Promenna):
 ?>
-<Button Class="Belokulaty" Form="Formular" Name="Dale[Kam]" Type="Submit" Value="<?php echo $_SESSION["c"]."#".$Promenna; ?>">&nbsp;</Button><Br>
+<Button Class="Belokulaty" Form="Formular" Name="Dale[Kam]" Title="<?php echo $Promenna[2]; ?>" Type="Submit" Value="<?php echo $_SESSION["c"]."#".$Promenna[1]; ?>">&nbsp;</Button><?php if($Promenna[0]<count($Promenna)){echo "<Br>";} ?>
 <?php endforeach; ?>
 </Nav>
 

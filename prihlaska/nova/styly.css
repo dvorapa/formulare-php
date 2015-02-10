@@ -21,7 +21,7 @@ Input+Label:before{Content:""}
 .Belotmavy:hover,.Belotmavy:active,.Belokulaty:hover,.Belokulaty:active{-moz-box-shadow:0 1px 1px white;-webkit-box-shadow:0 1px 1px white;Box-shadow:0 1px 1px white}
 
 Header,Footer{Background-color:#FFBF00;Z-index:3}
-Nav{Text-align:right;Z-index:1}
+Nav{Z-index:1}
 Fieldset{Background-color:white;Border:0;Margin:0;Margin-top:100%;Padding:1em;Z-index:2}
 Fieldset:last-of-type{Margin-bottom:100%}
 Table{Text-align:center}
@@ -31,8 +31,8 @@ Th{Vertical-align:top}
 Header,Footer{Padding-left:18%;Padding-right:18%;Position:absolute;Width:64%}
 Header{Padding-bottom:20%;Top:0}
 Nav{Position:fixed;Width:18%}
-Nav:first-of-type{Top:0;Left:0}
+Nav:first-of-type{Text-align:right;Top:0;Left:0}
 Form{Padding-left:18%;Padding-right:18%;Width:64%}
-Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:0;Right:0}
+Nav:last-of-type{Height:13.5em;Margin:auto;Top:0;Bottom:25%;Right:0}
 Footer{Padding-bottom:100%}
 }
