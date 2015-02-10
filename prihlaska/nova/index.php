@@ -361,7 +361,9 @@ echo "<Tr>".PHP_EOL
 ."</Tr>";
 }
 ?>
-<Tr><Td Colspan="7"><A Href="./<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech" Tabindex="281"><I Class="icon-plus"></I></A></Td></Tr>
+<Tr>
+<Td Colspan="7"><A Href="./<?php echo $_SESSION["c"]; ?>&j=<?php echo ++$j; ?>#Prospech" Tabindex="281"><I Class="icon-plus"></I></A></Td>
+</Tr>
 </Table>
 <Button Class="Belotmavy" Name="Zpet[Kam]" Tabindex="283" Type="Submit" Value="<?php echo $_SESSION["c"]; ?>#PredchoziVysokaSkola">Zpět</Button>
 <Br>
@@ -379,8 +381,12 @@ echo "<Tr>".PHP_EOL
 /*                                     */
 foreach($_SESSION["PoleStran"] as $Promenna):
 ?>
-<Button Class="Belokulaty" Form="Formular" Name="Dale[Kam]" Title="<?php echo $Promenna[2]; ?>" Type="Submit" Value="<?php echo $_SESSION["c"]."#".$Promenna[1]; ?>">&nbsp;</Button><?php if($Promenna[0]<count($Promenna)){echo "<Br>";} ?>
-<?php endforeach; ?>
+<Button Class="Belokulaty" Form="Formular" Name="Dale[Kam]" Title="<?php echo $Promenna[2]; ?>" Type="Submit" Value="<?php echo $_SESSION["c"]."#".$Promenna[1]; ?>">&nbsp;</Button>
+<?php
+if($Promenna[0]<=13){echo "<Br>";}
+echo PHP_EOL;
+endforeach;
+?>
 </Nav>
 
 
