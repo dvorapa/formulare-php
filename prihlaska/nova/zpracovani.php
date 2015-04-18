@@ -56,7 +56,7 @@ setcookie($Promenna,$_SESSION[$Promenna],strtotime("+".$Kolekce["Cookie"]." days
 /* /__(_||_)|_)  (_|(_)  (_|(_||_(_||_)(_|/_(- */
 /*       |                                     */
 if(array_key_exists("Databaze",$Kolekce)){
-$Databaze=mysqli_connect("localhost","czprihlaskanav93","heslododatabaze","czprihlaskanavs");
+$Databaze=mysqli_connect("localhost","czprihlaskanav93","Heslododatabaze1","czprihlaskanavs");
 mysqli_set_charset($Databaze,"utf8");
 $Prikaz="insert into Prihlasky set ";
 foreach($Pole as $Promenna){
@@ -113,7 +113,7 @@ ob_end_clean();
 $Hlavicka=array();
 $Hlavicka[]="MIME-Version: 1.0";
 $Hlavicka[]="Content-type: text/html; charset=utf-8";
-$Hlavicka[]="From: info@prihlaskanavs.8u.cz";
+$Hlavicka[]="From: info@prihlaskanavs.php5.cz";
 mail($_SESSION["Email"],"Podrobnosti o přihlášce na VŠ",wordwrap($Email,70,"\r\n"),implode("\r\n",$Hlavicka));
 }
 /*  __                          */

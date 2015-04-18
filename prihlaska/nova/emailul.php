@@ -12,7 +12,7 @@ Vámi podaná přihláška na vysokou školu byla úspěšně uložena do pamět
 <Br>
 Dokončení úprav této přihlášky je možné na webové adrese:
 <Br>
-<A Href="http://prihlaskanavs.8u.cz/uprava/">http://prihlaskanavs.8u.cz/uprava/</A>
+<A Href="http://prihlaskanavs.php5.cz/uprava/">http://prihlaskanavs.php5.cz/uprava/</A>
 <Br><Br>
 K přihlášení budete potřebovat tento kód:
 <Br>
