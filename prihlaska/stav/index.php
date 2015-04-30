@@ -15,7 +15,7 @@ setcookie("Cookie","1");
 <Link Rel="Stylesheet" Href="/aplikace/mfglabs_iconset/mfglabs_iconset.css">
 <Link Type="Text/css" Rel="Stylesheet" Href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans&subset=latin,latin-ext">
 <Link Type="Text/css" Rel="Stylesheet" Href="../styly.css">
-<!--[if lt IE 10]><Script Src="/aplikace/html5shiv/html5shiv.js"></Script><![endif]-->
+<!--[if IE]><Script Src="/aplikace/html5shiv/html5shiv.js"></Script><![endif]-->
 <Title>Stav | Přihláška na VŠ</Title>
 </Head>
 <Body>
