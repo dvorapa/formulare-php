@@ -89,12 +89,14 @@ fclose($SouborHtml);
 /* |_/ _  _    _ __  _   _| _    _  _|(_ */
 /* | \(_)| )\/(-| /_(-  (_|(_)  |_)(_||  */
 /*                              |        */
-require_once "../../aplikace/dompdf/dompdf_config.inc.php";
+require_once "../../aplikace/dompdf/autoload.inc.php";
+use Dompdf\Dompdf;
 try{
-$KonverzePdf=new DOMPDF();
-$KonverzePdf->load_html($VlaknoHtml);
+$KonverzePdf=new Dompdf();
+$KonverzePdf->loadHtml($VlaknoHtml);
+$KonverzePdf->setPaper("A4", "portrait");
 $KonverzePdf->render();
-$VlaknoPdf=$KonverzePdf->output();
+$VlaknoPdf=$KonverzePdf->stream();
 $SouborPdf=fopen($Cesta.".pdf","w+");
 fwrite($SouborPdf,$VlaknoPdf);
 fclose($SouborPdf);
