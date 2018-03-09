@@ -1,7 +1,7 @@
 /*  MFG Labs iconset 1.0
-
+    
     -------------------------------------------------------
-
+    
     License
     -------------------------------------------------------
     • The MFG Labs iconset font is licensed under the SIL Open Font License - http://scripts.sil.org/OFL
@@ -15,7 +15,7 @@
     -------------------------------------------------------
     Email: martin.charpentier@mfglabs.com
     Twitter: http://twitter.com/mfg_labs
-
+    
 
     */
 @font-face {
@@ -48,7 +48,7 @@ i:before, .icon {
 .gradient {
   color: #999;
   text-shadow: 1px 1px 1px rgba(27, 27, 27, 0.19);
-
+  
   background-image: -webkit-gradient(
   linear,
   left top, left bottom,
@@ -66,14 +66,14 @@ i:before, .icon {
 .gradient:hover, .gradient .current {
   color: #eee;
 	text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.25);
-
+	
   background-image: -webkit-gradient(
   linear,
   left top, left bottom,
   from(rgba( 255, 255, 255, 1)),
   to(rgba(187, 187, 187, 1))
   );
-
+  
 }
 
 /*  MFG Labs iconset uses the Unicode Private Use Area (PUA) to ensure screen
