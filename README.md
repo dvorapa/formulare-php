@@ -3,7 +3,7 @@
 
 Maturitní práce zabývající se tématem digitalizace formuláře pomocí programovacího jazyka PHP v předmětu Informačních a komunikačních technologií.
 
-[Přihláška na VŠ](http://prihlaskanavs.php5.cz/)
+Přihláška na VŠ
 ---------------
 
 Výstupem této práce je online formulář k vyplnění a případnému zpracování, či odeslání na vysokou školu.

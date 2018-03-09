@@ -93,6 +93,7 @@ require_once "../../aplikace/dompdf/autoload.inc.php";
 use Dompdf\Dompdf;
 try{
 $KonverzePdf=new Dompdf();
+$KonverzePdf->set_option("defaultMediaType", "print");
 $KonverzePdf->loadHtml($VlaknoHtml);
 $KonverzePdf->setPaper("A4", "portrait");
 $KonverzePdf->render();
